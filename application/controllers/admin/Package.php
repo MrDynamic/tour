@@ -1,6 +1,7 @@
 <?php
 
 class Package extends Abstract_Controller{
+
 	function __construct()
 	{
 		parent::__construct();
@@ -13,9 +14,15 @@ class Package extends Abstract_Controller{
 
     }
 
+    function initCategory(){
+        $this->html["active_menu"] = array("MAIN_MANAGE_PACK","CAT_PACK");
+        // // Get Data
+        $subView["body_detail"] = $this->cat_model->getAllData(TBL_PACKAGE_TYPE);
+        $this->html["body"] = $this->load->view("admin/form_package_add",$subView,true);
+    }
+
     function category(){
-    	$this->html["body"] = $this->load->view("admin/form_package_add",'',true);
-    	$this->html["active_menu"] = array("MAIN_MANAGE_PACK","CAT_PACK");
+    	$this->initCategory();
     	$this->load->view("admin/layout",$this->html);
     }
 
@@ -26,8 +33,11 @@ class Package extends Abstract_Controller{
                 "package_type_desc"=> $this->input->post("desc"),
                 "u_date"=>date('Y-m-d')
             );
-        echo $this->cat_model->insert($data);
-        // print_r($data);
+        // Insert Data
+        print_r($this->cat_model->insert(TBL_PACKAGE_TYPE,$data));
+        
+        // $this->load->view("admin/layout",$this->html);
+        
     }
 }
 

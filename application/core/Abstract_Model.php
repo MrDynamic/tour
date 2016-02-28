@@ -21,7 +21,9 @@ class Abstract_Model extends CI_Model{
         return $query->result();
     }
 
-    public function getDataByCriteria($tableName,$criteria){
-    	$query = $this->db->get_where($tableName,)
+    public function getDataByCriteria($tableName,$criteria,$limit=""){
+    	$query = $this->db->get_where($tableName,$criteria);
+    	return $query->result();
     }
+
 }

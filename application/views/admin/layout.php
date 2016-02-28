@@ -144,11 +144,23 @@
     <script src="resources/admin/js/jquery.scrollTo.min.js"></script>
     <script src="resources/admin/js/jquery.nicescroll.js" type="text/javascript"></script>
     <script src="resources/admin/js/respond.min.js" ></script>
-
+    <script type="text/javascript" src="resources/admin/assets/data-tables/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="resources/admin/assets/data-tables/DT_bootstrap.js"></script>
+    
     <!--common script for all pages-->
     <script src="resources/admin/js/common-scripts.js"></script>
     <script src="resources/js/jquery.validate.min.js"></script>
-    <script src="resources/js/my-script.js"></script>
     <script src="resources/js/jquery.blockUI.js"></script>
+    <script src="resources/js/my-script.js"></script>
+
+    <!-- Scripit for page -->
+    <?php
+        if(in_array("CAT_PACK",$active_menu)){
+          echo '<script src="resources/admin/js/editable-table.js"></script>';
+          echo '<script src="resources/admin/js/package.js"></script>';
+          echo '<script type="text/javascript" src="resources/admin/assets/data-tables/jquery.dataTables.js"></script>';
+        }
+    ?>
+
   </body>
 </html>

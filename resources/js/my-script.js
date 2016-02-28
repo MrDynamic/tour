@@ -1,4 +1,5 @@
 $().ready(function() {
+  EditableTable.init();
   $("#formPackage").validate({
   	submitHandler: function() {
 				var formData = $("#formPackage").serializeArray();
@@ -51,7 +52,7 @@ function callService(url,data,callback){
 			url:url,
 			data:data,
 			async:true,
-			success: function(response) { $("#errorDetail").html(response);
+			success: function(response) { $("#bodyDetail").html(response);
 			  	overlay(false);
 			  	callback();
 			  }
