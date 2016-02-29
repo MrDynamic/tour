@@ -1,26 +1,5 @@
 <div class="rows">
-  <div class="col-lg-6">
-      <section class="panel">
-          <header class="panel-heading">
-              เพิ่มประเภทแพคเก็จ
-          </header>
-          <div class="panel-body">
-              <form role="form" id="formPackage">
-                  <div class="form-group">
-                      <label for="name">ประเภทแพคเก็จ</label>
-                      <input type="text" class="form-control" id="name" name="name" required>
-                  </div>
-                  <div class="form-group">
-                      <label for="desc">รายละเอียด</label>
-                      <textarea class="wysihtml5 form-control" rows="10" id="desc" name="desc"></textarea>
-                  </div>
-                  <button type="submit" class="btn btn-info">บันทึก</button>
-                  <button type="reset" class="btn btn-info">ยกเลิก</button>
-              </form>
-          </div>
-      </section>
-  </div>
-  <div class="col-lg-6">
+  <div class="col-lg-12">
        <section class="panel">
           <header class="panel-heading">
                       Editable Table
@@ -30,130 +9,41 @@
                           <div class="clearfix">
                               <div class="btn-group">
                                   <button id="editable-sample_new" class="btn green">
-                                      Add New <i class="fa fa-plus"></i>
+                                      เพิ่ม <i class="fa fa-plus"></i>
                                   </button>
-                              </div>
-                              <div class="btn-group pull-right">
-                                  <button class="btn dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-                                  </button>
-                                  <ul class="dropdown-menu pull-right">
-                                      <li><a href="#">Print</a></li>
-                                      <li><a href="#">Save as PDF</a></li>
-                                      <li><a href="#">Export to Excel</a></li>
-                                  </ul>
                               </div>
                           </div>
                           <div class="space15"></div>
+                          <?php 
+
+                          if(!isset($body_detail)|| empty($body_detail)) { 
+                               echo "ไม่พบข้อมูล";
+                          } else{
+
+                          ?>
                           <table class="table table-striped table-hover table-bordered" id="editable-sample">
                               <thead>
                               <tr>
-                                  <th>Username</th>
-                                  <th>Full Name</th>
-                                  <th>Points</th>
-                                  <th>Notes</th>
+                                  <th>ประเภทแพคเก็จ</th>
+                                  <th>รายละเอียด</th>
                                   <th>Edit</th>
                                   <th>Delete</th>
                               </tr>
                               </thead>
                               <tbody>
-                              <tr class="">
-                                  <td>Jondi Rose</td>
-                                  <td>Alfred Jondi Rose</td>
-                                  <td>1234</td>
-                                  <td class="center">super user</td>
-                                  <td><a class="edit" href="javascript:;">Edit</a></td>
-                                  <td><a class="delete" href="javascript:;">Delete</a></td>
-                              </tr>
-                              <tr class="">
-                                  <td>Dulal</td>
-                                  <td>Jonathan Smith</td>
-                                  <td>434</td>
-                                  <td class="center">new user</td>
-                                  <td><a class="edit" href="javascript:;">Edit</a></td>
-                                  <td><a class="delete" href="javascript:;">Delete</a></td>
-                              </tr>
-                              <tr class="">
-                                  <td>Sumon</td>
-                                  <td> Sumon Ahmed</td>
-                                  <td>232</td>
-                                  <td class="center">super user</td>
-                                  <td><a class="edit" href="javascript:;">Edit</a></td>
-                                  <td><a class="delete" href="javascript:;">Delete</a></td>
-                              </tr>
-                              <tr class="">
-                                  <td>vectorlab</td>
-                                  <td>dk mosa</td>
-                                  <td>132</td>
-                                  <td class="center">elite user</td>
-                                  <td><a class="edit" href="javascript:;">Edit</a></td>
-                                  <td><a class="delete" href="javascript:;">Delete</a></td>
-                              </tr>
-                              <tr class="">
-                                  <td>Admin</td>
-                                  <td> Flat Lab</td>
-                                  <td>462</td>
-                                  <td class="center">new user</td>
-                                  <td><a class="edit" href="javascript:;">Edit</a></td>
-                                  <td><a class="delete" href="javascript:;">Delete</a></td>
-                              </tr>
-                              <tr class="">
-                                  <td>Rafiqul</td>
-                                  <td>Rafiqul dulal</td>
-                                  <td>62</td>
-                                  <td class="center">new user</td>
-                                  <td><a class="edit" href="javascript:;">Edit</a></td>
-                                  <td><a class="delete" href="javascript:;">Delete</a></td>
-                              </tr>
-                              <tr class="">
-                                  <td>Jhon Doe</td>
-                                  <td>Jhon Doe </td>
-                                  <td>1234</td>
-                                  <td class="center">super user</td>
-                                  <td><a class="edit" href="javascript:;">Edit</a></td>
-                                  <td><a class="delete" href="javascript:;">Delete</a></td>
-                              </tr>
-                              <tr class="">
-                                  <td>Dulal</td>
-                                  <td>Jonathan Smith</td>
-                                  <td>434</td>
-                                  <td class="center">new user</td>
-                                  <td><a class="edit" href="javascript:;">Edit</a></td>
-                                  <td><a class="delete" href="javascript:;">Delete</a></td>
-                              </tr>
-                              <tr class="">
-                                  <td>Sumon</td>
-                                  <td> Sumon Ahmed</td>
-                                  <td>232</td>
-                                  <td class="center">super user</td>
-                                  <td><a class="edit" href="javascript:;">Edit</a></td>
-                                  <td><a class="delete" href="javascript:;">Delete</a></td>
-                              </tr>
-                              <tr class="">
-                                  <td>vectorlab</td>
-                                  <td>dk mosa</td>
-                                  <td>132</td>
-                                  <td class="center">elite user</td>
-                                  <td><a class="edit" href="javascript:;">Edit</a></td>
-                                  <td><a class="delete" href="javascript:;">Delete</a></td>
-                              </tr>
-                              <tr class="">
-                                  <td>Admin</td>
-                                  <td> Flat Lab</td>
-                                  <td>462</td>
-                                  <td class="center">new user</td>
-                                  <td><a class="edit" href="javascript:;">Edit</a></td>
-                                  <td><a class="delete" href="javascript:;">Delete</a></td>
-                              </tr>
-                              <tr class="">
-                                  <td>Rafiqul</td>
-                                  <td>Rafiqul dulal</td>
-                                  <td>62</td>
-                                  <td class="center">new user</td>
-                                  <td><a class="edit" href="javascript:;">Edit</a></td>
-                                  <td><a class="delete" href="javascript:;">Delete</a></td>
-                              </tr>
+                              <?php
+                                  foreach ($body_detail as $rows){
+                                    echo "<tr class=''>";
+                                    echo "<td>$rows->package_type_name</td>";
+                                    echo "<td>$rows->package_type_desc</td>";
+                                    echo '<td><a class="edit" href="javascript:;">Edit</a></td>';
+                                    echo '<td><a class="delete" href="javascript:;">Delete</a></td>';
+                                    echo "</tr>";
+                                  }
+                              ?>
                               </tbody>
                           </table>
+                        <?php } ?>
                       </div>
                   </div>
       </section>

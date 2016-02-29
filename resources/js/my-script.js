@@ -1,5 +1,4 @@
 $().ready(function() {
-  EditableTable.init();
   $("#formPackage").validate({
   	submitHandler: function() {
 				var formData = $("#formPackage").serializeArray();

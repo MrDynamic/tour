@@ -138,7 +138,7 @@
   </section>
 
     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="resources/js/jquery.js"></script>
+    <script src="resources/js/jquery-1.8.3.min.js"></script>
     <script src="resources/admin/js/bootstrap.min.js"></script>
     <script class="include" type="text/javascript" src="resources/admin/js/jquery.dcjqaccordion.2.7.js"></script>
     <script src="resources/admin/js/jquery.scrollTo.min.js"></script>
@@ -156,7 +156,7 @@
     <!-- Scripit for page -->
     <?php
         if(in_array("CAT_PACK",$active_menu)){
-          echo '<script src="resources/admin/js/editable-table.js"></script>';
+          // echo '<script src="resources/admin/js/editable-table.js"></script>';
           echo '<script src="resources/admin/js/package.js"></script>';
           echo '<script type="text/javascript" src="resources/admin/assets/data-tables/jquery.dataTables.js"></script>';
         }
