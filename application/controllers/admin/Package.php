@@ -10,6 +10,7 @@ class Package extends Abstract_Controller{
 	}
 
 	function index(){
+	    
         $this->load->view("admin/layout",$this->html);
 
     }
@@ -17,8 +18,10 @@ class Package extends Abstract_Controller{
     function initCategory(){
         $this->html["active_menu"] = array("MAIN_MANAGE_PACK","CAT_PACK");
         // // Get Data
-        $subView["body_detail"] = $this->cat_model->getAllData(TBL_PACKAGE_TYPE);
-        $this->html["body"] = $this->load->view("admin/form_package_add",$subView,true);
+        $subView['master'] = $this->load->view("admin/form_add_package",null,true);
+        $data['list'] = $this->cat_model->getAllData(TBL_PACKAGE_TYPE);
+        $subView['detail'] = $this->load->view('admin/list_package_type',$data,true);
+        $this->html["body"] = $this->load->view("admin/main_package_type",$subView,true);
     }
 
     function category(){
