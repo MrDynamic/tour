@@ -50,6 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'package';
+$route['admin/package/type/add'] = 'admin/package/saveCategory';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['admin/package/category/save'] = 'admin/package/saveCategory';

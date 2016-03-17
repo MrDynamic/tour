@@ -5,41 +5,37 @@ class Package extends Abstract_Controller{
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model(array('PackageCategory_model'=>'cat_model'));
+		$this->load->model(array('M_PackageCategory'=>'mCat'));
 		
 	}
 
 	function index(){
 	    
-        $this->load->view("admin/layout",$this->html);
+        $this->load->view(ADMIN_LAYOUT,$this->html);
 
     }
 
-    function initCategory(){
-        $this->html["active_menu"] = array("MAIN_MANAGE_PACK","CAT_PACK");
+    function loadPageManageType(){
+        $this->html['active_menu'] = array('MAIN_MANAGE_PACK','CAT_PACK');
         // // Get Data
-        $subView['master'] = $this->load->view("admin/form_add_package",null,true);
-        $data['list'] = $this->cat_model->getAllData(TBL_PACKAGE_TYPE);
+        $subView['master'] = $this->load->view('admin/form_add_package','',true);
+        $data['list'] = $this->mCat->getAllData(TBL_PACKAGE_TYPE);
         $subView['detail'] = $this->load->view('admin/list_package_type',$data,true);
-        $this->html["body"] = $this->load->view("admin/main_package_type",$subView,true);
+        $this->html['body'] = $this->load->view('admin/main_package_type',$subView,true);
+        $this->load->view(ADMIN_LAYOUT,$this->html);
     }
 
     function category(){
-    	$this->initCategory();
-    	$this->load->view("admin/layout",$this->html);
+    	$this->loadPageManageType();
     }
 
     function saveCategory(){
 
-    	$data = array(
-                "package_type_name"=> $this->input->post("name"),
-                "package_type_desc"=> $this->input->post("desc"),
-                "u_date"=>date('Y-m-d')
-            );
-        // Insert Data
-        print_r($this->cat_model->insert(TBL_PACKAGE_TYPE,$data));
+    	$data = $this->input->post();
+        $data['u_date'] = date('Y-m-d');
+        $this->mCat->insert(TBL_PACKAGE_TYPE,$data);
+        $this->loadPageManageType();
         
-        // $this->load->view("admin/layout",$this->html);
         
     }
 }

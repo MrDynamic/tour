@@ -35,7 +35,7 @@ $config['base_url'] = 'http://localhost:8080/tour';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -514,6 +514,9 @@ $config['proxy_ips'] = '';
 
 // Constants Variables
 define("TBL_PACKAGE_TYPE", "TBL_PACKAGE_TYPE");
+define('OPEN_FORM_GROUP', '<div class="form-group">');
+define('CLOSE_FORM_GROUP', '</div>');
+define('ADMIN_LAYOUT', 'admin/layout');
 
 
 

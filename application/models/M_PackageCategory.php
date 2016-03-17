@@ -1,6 +1,6 @@
 <?php
 
-class PackageCategory_model extends Abstract_Model{
+class M_PackageCategory extends Abstract_Model{
     
     public function __construct()
     {

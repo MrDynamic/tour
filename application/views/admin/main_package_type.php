@@ -1,5 +1,5 @@
 <div class="rows">
-  <div class="col-lg-12">
+  <div class="col-lg-8">
     <section class="panel">
         <?php 
           (isset($master) && !empty($master))? print $master:'';
