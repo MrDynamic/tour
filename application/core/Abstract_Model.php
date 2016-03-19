@@ -12,13 +12,26 @@ class Abstract_Model extends CI_Model{
     }
 
     public function getAllData($tableName){
-        $query =  $this->db->get($tableName,array('delete_flag'=>'N'));
-        return $query->result();
+        return $this->getDataByCriteria($tableName,array('delete_flag'=>'N'));
     }
 
     public function getDataByCriteria($tableName,$criteria,$limit=""){
     	$query = $this->db->get_where($tableName,$criteria);
     	return $query->result();
+    }
+
+    public function getDataSpecifyField($fieldName,$tableName,$criteria=array(),$limit=''){
+        $this->db->select($fieldName);
+        return $this->getDataByCriteria($tableName,$criteria,$limit);
+
+    }
+
+    public function getLastQuery(){
+        return $this->db->last_query();
+    }
+
+    public function __deconstruct(){
+        $this->db->close();
     }
 
 }

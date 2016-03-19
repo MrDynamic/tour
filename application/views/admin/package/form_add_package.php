@@ -3,20 +3,23 @@
 </header>
 <div class='panel-body'>
     <?php
+    	$selectType = array('class'=>'form-control','id'=>'packageTypeId','required'=>'');
+    	$inputName = array('name'=>'package_name','id'=>'packageName','class'=>'form-control','required'=>'');
+		$textDesc = array('name'=>'package_desc','id'=>'packageDesc','class'=>'form-control');
+		$uploadThumbnail = array('name'=>'thumbnail','id'=>'thumbnail','class'=>'form-control','required'=>'');
+		$inputTravelDate = array('name'=>'travel_date','id'=>'travleDate','class'=>'form-control','type'=>'date','required'=>'');
+		$inputExpireDate = array('name'=>'expire_date','id'=>'expireDate','class'=>'form-control','type'=>'date','required'=>'');
 
-		$inputName = array('name'=>'package_type_name','id'=>'packageTypeName','class'=>'form-control','required'=>'');
-		$inputDesc = array('name'=>'package_type_desc','id'=>'packageTypeDesc','class'=>'form-control');
-		$selectType = array('name'=>'package_type_id');
+    	
+
 		$action = 'admin/package/add';
 		echo form_open($action,array('id'=>'formPackage'));
-		echo OPEN_FORM_GROUP;
-		echo form_label('Package Type Name','packageTypeName');
-		echo form_input($inputName);
-		echo CLOSE_FORM_GROUP;
-		echo OPEN_FORM_GROUP;
-		echo form_label('Package Type Description','packageTypeDesc');
-		echo form_input($inputDesc);
-		echo CLOSE_FORM_GROUP;
+		echo create_dropdown(array('ประเภทแพคเก็จ','packageTypeId'),'package_type_id',$packageType,$selectType);
+		echo create_input(array('ชื่อแพคเก็จ','packageName'),$inputName);
+		echo create_textarea(array('รายละเอียด','packageDesc'),$textDesc);
+		echo create_upload(array('ภาพย่อ','thumbnail'),$uploadThumbnail);
+		echo create_input(array('วันที่เดินทาง','travelDate'),$inputTravelDate);
+		echo create_input(array('วันสิ้นสุด','expireDate'),$inputExpireDate);
 		echo form_button(array('type'=>'submit','class'=>'btn btn-primary','content'=>'Save'));
 		echo form_button(array('type'=>'reset','class'=>'btn btn-info','content'=>'Cancel'));
 		echo form_close();

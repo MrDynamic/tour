@@ -17,6 +17,16 @@ class Abstract_Controller extends CI_Controller {
         $this->html['active_menu'] = array($mainName,$subName);
     }
 
+    function generateSelectItems($data){
+    	$result = array(''=>'กรุณาเลือก');
+    	if(isset($data)){
+    		foreach($data as $value){
+    			$result[$value->id] = $value->label;
+    		}
+    	}
+    	return $result;
+    }
+
  	function generateMenu(){
 		$this->html['slide_menu'] = array(
 							array(

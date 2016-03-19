@@ -5,8 +5,8 @@
       <table class="table table-striped table-hover table-bordered">
           <thead>
           <tr>
-              <th>Type Name</th>
-              <th>Type Description</th>
+              <th>ประเภท</th>
+              <th>รายละเอียด</th>
               <th>Edit</th>
               <th>Delete</th>
           </tr>
