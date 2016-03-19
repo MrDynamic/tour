@@ -49,8 +49,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'package';
-$route['admin/package/type/add'] = 'admin/package/saveCategory';
+$route['default_controller'] = 'admin';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-$route['admin/package/category/save'] = 'admin/package/saveCategory';
+$route['admin/package/category/save'] = 'admin/packageType/saveCategory';
+$route['admin/package/category'] = 'admin/packageType/index';

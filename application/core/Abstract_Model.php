@@ -8,16 +8,11 @@ class Abstract_Model extends CI_Model{
     }
 
     public function insert($tableName,$data){
-        try {
-            $this->db->insert($tableName,$data);
-        } catch (Exception $e) {
-            $e->getMessage();
-        }
-        
+        $this->db->insert($tableName,$data);
     }
 
     public function getAllData($tableName){
-        $query =  $this->db->get($tableName);
+        $query =  $this->db->get($tableName,array('delete_flag'=>'N'));
         return $query->result();
     }
 

@@ -17,7 +17,7 @@
 		echo form_label('Package Type Description','packageTypeDesc');
 		echo form_input($inputDesc);
 		echo CLOSE_FORM_GROUP;
-		echo form_button(array('type'=>'submit','class'=>'btn btn-info','content'=>'Save'));
+		echo form_button(array('type'=>'submit','class'=>'btn btn-primary','content'=>'Save'));
 		echo form_button(array('type'=>'reset','class'=>'btn btn-info','content'=>'Cancel'));
 		echo form_close();
     ?>

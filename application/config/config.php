@@ -513,10 +513,15 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 
 // Constants Variables
-define("TBL_PACKAGE_TYPE", "TBL_PACKAGE_TYPE");
 define('OPEN_FORM_GROUP', '<div class="form-group">');
 define('CLOSE_FORM_GROUP', '</div>');
 define('ADMIN_LAYOUT', 'admin/layout');
+define('MAIN_CONTAINER','admin/main_container');
+
+// Package
+define('TBL_PACKAGE_TYPE', 'TBL_PACKAGE_TYPE');
+define('TBL_PACKAGE', 'TBL_PACKAGE');
+define('PACKAGE_MENU','MAIN_MANAGE_PACK');
 
 
 
