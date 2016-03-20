@@ -218,3 +218,30 @@ DEBUG - 2016-03-20 10:31:28 --> Total execution time: 0.0232
 DEBUG - 2016-03-20 10:31:55 --> UTF-8 Support Enabled
 DEBUG - 2016-03-20 10:31:55 --> Global POST, GET and COOKIE data sanitized
 DEBUG - 2016-03-20 10:31:55 --> Total execution time: 0.0204
+DEBUG - 2016-03-20 17:11:47 --> UTF-8 Support Enabled
+DEBUG - 2016-03-20 17:11:47 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-03-20 17:11:47 --> Total execution time: 0.0579
+DEBUG - 2016-03-20 17:14:11 --> UTF-8 Support Enabled
+DEBUG - 2016-03-20 17:14:11 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-03-20 17:14:11 --> folder upload/Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package
+DEBUG - 2016-03-20 17:14:11 --> You did not select a file to upload.
+ERROR - 2016-03-20 17:14:11 --> <p>You did not select a file to upload.</p>
+DEBUG - 2016-03-20 17:14:11 --> Total execution time: 0.0288
+DEBUG - 2016-03-20 17:14:12 --> UTF-8 Support Enabled
+DEBUG - 2016-03-20 17:14:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-03-20 17:14:12 --> Total execution time: 0.0227
+DEBUG - 2016-03-20 17:14:25 --> UTF-8 Support Enabled
+DEBUG - 2016-03-20 17:14:25 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-03-20 17:14:25 --> Total execution time: 0.0234
+DEBUG - 2016-03-20 17:21:46 --> UTF-8 Support Enabled
+DEBUG - 2016-03-20 17:21:46 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-03-20 17:21:46 --> Total execution time: 0.0252
+DEBUG - 2016-03-20 17:22:21 --> UTF-8 Support Enabled
+DEBUG - 2016-03-20 17:22:21 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-03-20 17:22:21 --> Total execution time: 0.0260
+DEBUG - 2016-03-20 17:22:24 --> UTF-8 Support Enabled
+DEBUG - 2016-03-20 17:22:24 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-03-20 17:22:24 --> Total execution time: 0.0204
+DEBUG - 2016-03-20 17:22:31 --> UTF-8 Support Enabled
+DEBUG - 2016-03-20 17:22:31 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-03-20 17:22:31 --> Total execution time: 0.0253
