@@ -17,7 +17,7 @@
 		echo create_dropdown(array('ประเภทแพคเก็จ','packageTypeId'),'package_type_id',$packageType,$selectType);
 		echo create_input(array('ชื่อแพ็คเกจ','packageName'),$inputName);
 		echo create_upload(array('ภาพย่อ','thumbnail'),$uploadThumbnail);
-		echo create_upload(array('โปรแกรมทัวร์','programTour'),$uploadPdf);
+		// echo create_upload(array('โปรแกรมทัวร์','programTour'),$uploadPdf);
 		echo create_input(array('วันที่เดินทาง','travelDate'),$inputTravelDate);
 		echo create_input(array('วันสิ้นสุด','expireDate'),$inputExpireDate);
 		echo create_textarea(array('คำอธิบาย','packageDesc'),$textDesc);
