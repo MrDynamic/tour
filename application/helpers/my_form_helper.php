@@ -37,3 +37,18 @@ if(!function_exists('create_input')){
 		$result .= CLOSE_FORM_GROUP;
 		return $result;
 	}
+
+	function create_dropzone($labelValue,$formAttr){
+		$result = "<form method='post' class='dropzone ' enctype='multipart/form-data' ";
+		foreach($formAttr as $key=>$value){
+			$result .=$key .'='.$value.' ';
+		}
+		$result .= "/>";
+		$result .= "<div class='dropzone-previews'></div>";
+		$result .= "<div class='fallback form-group'>";
+		$result .= form_label($labelValue[0],$labelValue[1]);
+		$result .= "<input name='file' type='file' multiple />";
+		$result .= "</div>";
+		$result .= "</form>";
+		return $result;
+	}

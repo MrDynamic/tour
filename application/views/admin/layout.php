@@ -150,7 +150,7 @@
     <script src="resources/admin/js/common-scripts.js"></script>
     <script src="resources/js/jquery.validate.min.js"></script>
     <script src="resources/js/jquery.blockUI.js"></script>
-    <script src="resources/js/dropzone.js"></script>
+    <script src="resources/admin/js/dropzone.js"></script>
     <!-- <script src="resources/js/my-script.js"></script> -->
 
     <!-- Scripit for page -->
