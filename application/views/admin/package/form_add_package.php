@@ -7,7 +7,7 @@
     	$inputName = array('name'=>'package_name','id'=>'packageName','class'=>'form-control','required'=>'');
 		$textDesc = array('name'=>'package_desc','id'=>'packageDesc','class'=>'form-control');
 		$uploadThumbnail = array('name'=>'thumbnail','id'=>'thumbnail','class'=>'form-control','required'=>'');
-		$uploadPdf = array('name'=>'programTour','id'=>'programTour','class'=>'form-control');
+		$uploadPdf = array('name'=>'tourProgram','id'=>'tourProgram','class'=>'form-control');
 		$inputTravelDate = array('name'=>'travel_date','id'=>'travleDate','class'=>'form-control','type'=>'date','required'=>'');
 		$inputExpireDate = array('name'=>'expire_date','id'=>'expireDate','class'=>'form-control','type'=>'date','required'=>'');
     	
@@ -17,7 +17,7 @@
 		echo create_dropdown(array('ประเภทแพคเก็จ','packageTypeId'),'package_type_id',$packageType,$selectType);
 		echo create_input(array('ชื่อแพ็คเกจ','packageName'),$inputName);
 		echo create_upload(array('ภาพย่อ','thumbnail'),$uploadThumbnail);
-		// echo create_upload(array('โปรแกรมทัวร์','programTour'),$uploadPdf);
+		echo create_upload(array('โปรแกรมทัวร์ (pdf only)','tourProgram'),$uploadPdf);
 		echo create_input(array('วันที่เดินทาง','travelDate'),$inputTravelDate);
 		echo create_input(array('วันสิ้นสุด','expireDate'),$inputExpireDate);
 		echo create_textarea(array('คำอธิบาย','packageDesc'),$textDesc);

@@ -19,16 +19,23 @@
 		function add(){
 			try
 	        {
-	        	$config['upload_path'] = dirname($_SERVER["SCRIPT_FILENAME"])."/upload/package"; 
+	        	$folderName = dirname($_SERVER["SCRIPT_FILENAME"])."/resources/upload/package";
+	        	log_message('debug','folder upload'.$folderName);
+
+	        	if(!is_dir($folderName))
+				{
+				   mkdir($folderName,0777,true);
+				}
+
+	        	$config['upload_path'] = $folderName; 
 				$config['allowed_types'] = 'gif|jpg|png';
-				$config['max_size']	= '100';
+				$config['max_size']	= '2048';
 				$config['max_width']  = '1024';
 				$config['max_height']  = '768';
 
 				$this->load->library('upload', $config);
-				log_message('debug',$config['upload_path']);
-
-				if (!$this->upload->do_upload())
+				
+				if (!$this->upload->do_upload('thumbnail'))
 				{
 					$error = array('error' => $this->upload->display_errors());
 					log_message("error",$error['error']);
@@ -50,6 +57,10 @@
 	        }
 			
 			// print_r($this->input->post());
+		}
+
+		function uploadThumbnail(){
+			
 		}
 		
 	}
