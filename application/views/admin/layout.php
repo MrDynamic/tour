@@ -19,6 +19,7 @@
     <link href="resources/admin/css/style.css" rel="stylesheet">
     <link href="resources/admin/css/style-responsive.css" rel="stylesheet" />
     <link href="resources/css/my-style.css" rel="stylesheet">
+    <link href="resources/admin/css/dropzone.css" rel="stylesheet" />
 
     <script type="text/javascript">
       var base_url = "<?php print base_url(); ?>";
@@ -149,6 +150,7 @@
     <script src="resources/admin/js/common-scripts.js"></script>
     <script src="resources/js/jquery.validate.min.js"></script>
     <script src="resources/js/jquery.blockUI.js"></script>
+    <script src="resources/js/dropzone.js"></script>
     <!-- <script src="resources/js/my-script.js"></script> -->
 
     <!-- Scripit for page -->
