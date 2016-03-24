@@ -149,6 +149,7 @@
     <!--common script for all pages-->
     <script src="resources/admin/js/common-scripts.js"></script>
     <script src="resources/js/jquery.blockUI.js"></script>
+    <script src="resources/js/main.js"></script>
     <!-- <script src="resources/admin/js/dropzone.js"></script> -->
 
     <!-- Scripit for page -->

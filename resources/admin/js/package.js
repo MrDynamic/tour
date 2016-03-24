@@ -11,21 +11,23 @@ $("#formPackage").validate({
 		    }
 		},
 	submitHandler: function() {
-			var formData = $("#formPackage").serializeArray();
-			var action = $('#formPackage').attr('action');
-			callService(action,formData,test);
+			overlay();
+			// var formData = $("#formPackage").serializeObject();  
+			var formData = new FormData($("#formPackage")[0]);
+			callService($('#action').val(),formData,addPackageResponse);
 		}
+
 });
 
 
-function test(){
-	alert('test');
+function addPackageResponse(response){
+	alert("response callback=" +response);
 }
 
 
 jQuery.validator.addMethod("greaterThan", function(value, element, params) { 
-    if ($(params[0]).val() != '') {    
-        if (!/Invalid|NaN/.test(new Date(value))) {
+    if ($(params[0]).val() != '') {  
+        if (!/Invalid|NaN/.test(new Date(value))) { 
             return new Date(value) > new Date($(params[0]).val());
         }    
         return isNaN(value) && isNaN($(params[0]).val()) || (Number(value) > Number($(params[0]).val()));

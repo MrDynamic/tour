@@ -17,6 +17,8 @@
 		}
 
 		function add(){
+			$response = true;
+			log_message('debug','########## function add package');
 			try
 	        {
 	        	$folderName = dirname($_SERVER["SCRIPT_FILENAME"])."/resources/upload/package";
@@ -28,24 +30,30 @@
 				}
 
 	        	$config['upload_path'] = $folderName; 
-				$config['allowed_types'] = 'gif|jpg|png';
+				$config['allowed_types'] = 'gif|jpg|png|pdf';
 				$config['max_size']	= '2048';
 				$config['max_width']  = '1024';
 				$config['max_height']  = '768';
+				$pathThumbnail = '';
+				$pathPdf = '';
 
 				$this->load->library('upload', $config);
 				
-				if (!$this->upload->do_upload('thumbnail'))
-				{
-					$error = array('error' => $this->upload->display_errors());
-					log_message("error",$error['error']);
-					echo $error['error'];
-					// $this->load->view('', $error);
-				}
-				else
-				{
-					$data = array('upload_data' => $this->upload->data());
-					// $this->load->view('upload_success', $data);
+				if (!$this->upload->do_upload('thumbnail')){
+					$response = false;
+				}else{
+					$pathThumbnail = $this->upload->data()['full_path'];
+					if($this->upload->do_upload('tourProgram')){
+						$pathPdf = $this->upload->data()['full_path'];
+
+						$packageData = $this->input->post();
+						$packageData['thumbnail'] = $pathThumbnail;
+						$packageData['pdf_path'] = $pathPdf;
+						// log_message('debug',$this->mPackage->tableName);
+						$response = $this->mPackage->insert('TBL_PACKAGE',$packageData);
+
+					}
+
 				}
 	             
 	        }
@@ -55,8 +63,7 @@
 	            echo $err->getMessage();
 	            //return show_error($err->getMessage());
 	        }
-			
-			// print_r($this->input->post());
+			echo $response;
 		}
 
 		function uploadThumbnail(){
