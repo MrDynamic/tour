@@ -12,6 +12,8 @@
 		}
 
 		public function test(){
-			echo $this->mMenu->getTableName();
+			$filed = 'menu_id,menu_type,menu_name,menu_url,is_main';
+			$result = $this->mMenu->getDataSpecifyField($filed,$this->mMenu->getTableName(),array('delete_flag'=>'N'));
+			print_r($result);
 		}
 	}
