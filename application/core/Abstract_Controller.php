@@ -2,7 +2,6 @@
 class Abstract_Controller extends CI_Controller {
 	protected $html;
 
-
 	function __construct()
 	{
 		parent::__construct();
@@ -65,6 +64,16 @@ class Abstract_Controller extends CI_Controller {
 		$this->html['active_menu'] = array();
 
 	}
+	/*
+		menu_id
+		menu_type
+		menu_name
+		menu_key
+		menu_url
+		parent_id
+		delete_flag
+	
+	*/
 
 }
 

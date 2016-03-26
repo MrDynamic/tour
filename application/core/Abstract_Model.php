@@ -1,14 +1,15 @@
 <?php
+abstract class Abstract_Model extends CI_Model{
 
-class Abstract_Model extends CI_Model{
-
+    protected abstract function getTableName();
+    
 	public function __construct()
     {
         parent::__construct();
     }
 
     public function insert($tableName,$data){
-        $this->db->insert($tableName,$data);
+        return $this->db->insert($tableName,$data);
     }
 
     public function getAllData($tableName){

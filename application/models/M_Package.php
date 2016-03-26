@@ -1,5 +1,7 @@
 <?php
-
 	class M_Package extends Abstract_Model{
-		protected $tableName = "tbl_package";
+
+		public function getTableName(){
+			return 'tbl_package';
+		}
 	}

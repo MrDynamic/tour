@@ -8,6 +8,9 @@ $("#formPackage").validate({
 		    },
 		    tourProgram:{
 		    	extension: "pdf"
+		    },
+		    price:{
+		    	number:true
 		    }
 		},
 	submitHandler: function() {
