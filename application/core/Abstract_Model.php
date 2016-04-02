@@ -8,22 +8,22 @@ abstract class Abstract_Model extends CI_Model{
         parent::__construct();
     }
 
-    public function insert($tableName,$data){
-        return $this->db->insert($tableName,$data);
+    public function insert($data){
+        return $this->db->insert($this->getTableName(),$data);
     }
 
-    public function getAllData($tableName){
-        return $this->getDataByCriteria($tableName,array('delete_flag'=>'N'));
+    public function getAllData(){
+        return $this->getDataByCriteria($this->getTableName(),array('delete_flag'=>'N'));
     }
-
+    
     public function getDataByCriteria($tableName,$criteria,$limit=""){
     	$query = $this->db->get_where($tableName,$criteria);
     	return $query->result();
     }
 
-    public function getDataSpecifyField($fieldName,$tableName,$criteria=array(),$limit=''){
+    public function getDataSpecifyField($fieldName,$criteria=array(),$limit=''){
         $this->db->select($fieldName);
-        return $this->getDataByCriteria($tableName,$criteria,$limit);
+        return $this->getDataByCriteria($this->getTableName(),$criteria,$limit);
 
     }
 

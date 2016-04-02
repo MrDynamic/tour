@@ -1,7 +1,6 @@
 <?php if (! defined('BASEPATH')) exit ('No direct script asscess allowed');
 
-if(!function_exists('create_input')){
-	function create_input($labelValue,$attributes){
+    function create_input($labelValue,$attributes){
 		$result ='';
 		$result .= OPEN_FORM_GROUP;
 		$result .= form_label($labelValue[0],$labelValue[1]);
@@ -9,7 +8,6 @@ if(!function_exists('create_input')){
 		$result .= CLOSE_FORM_GROUP;
 		return $result;
 	}
-}
 
 	function create_textarea($labelValue,$attributes){
 		$result ='';
@@ -38,12 +36,22 @@ if(!function_exists('create_input')){
 		return $result;
 	}
 
-	function create_dropzone($labelValue,$formAttr){
+	function create_dropzone($labelValue,$formAttr,$hiddenFieldArr=array()){
 		$result = "<form method='post' class='dropzone ' enctype='multipart/form-data' ";
 		foreach($formAttr as $key=>$value){
 			$result .=$key .'='.$value.' ';
 		}
 		$result .= "/>";
+		
+		foreach($hiddenFieldArr as $hiddenField){
+		    $result .= "<input type='hidden' ";
+    		foreach($hiddenField as $key=>$value){
+    		    $result .= $key . "=" . $value.' ';
+    		}
+    		$result .= " />";
+		}
+		
+		
 		$result .= "<div class='dropzone-previews'></div>";
 		$result .= "<div class='fallback form-group'>";
 		$result .= form_label($labelValue[0],$labelValue[1]);

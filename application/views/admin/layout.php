@@ -150,17 +150,20 @@
     <script src="resources/admin/js/common-scripts.js"></script>
     <script src="resources/js/jquery.blockUI.js"></script>
     <script src="resources/js/main.js"></script>
-    <!-- <script src="resources/admin/js/dropzone.js"></script> -->
+    
 
     <!-- Scripit for page -->
     <?php
-        if(in_array(PACKAGE_MENU,$active_menu)){
+        
+        if(in_array(MENU_MAIN_PACKAGE,$active_menu)){
           echo '<script src="resources/js/jquery.validate.min.js"></script>';
           echo '<script src="resources/js/additional-methods.min.js"></script>';
+          echo '<script src="resources/admin/js/dropzone.js"></script>';
           echo '<script src="resources/admin/js/package.js"></script>';
           // echo '<script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>';
           // echo '<script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>';
         }
+       
     ?>
 
   </body>

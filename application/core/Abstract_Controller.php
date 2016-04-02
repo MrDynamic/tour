@@ -46,18 +46,23 @@ class Abstract_Controller extends CI_Controller {
 								),
 							array(
 									'MENU_NAME'=>'จัดโปรแกรม',
-									'KEY'=>'MAIN_MANAGE_PACK',
+									'KEY'=>MENU_MAIN_PACKAGE,
 									'SUB_MENU'=> array(
 											array(
 												'NAME'=>'ประเภทโปรแกรม',
 												'URL'=>'admin/package/category',
-												'KEY'=>'CAT_PACK'
+												'KEY'=>MENU_PACKAGE_TYPE
 												)
 											,array(
-												'NAME'=>'จัดโปรแกรม',
+												'NAME'=>'โปรแกรม',
 												'URL'=>'admin/package',
-												'KEY'=>'MANAGE_PACK'
+												'KEY'=>MENU_PACKAGE
 												)
+    									    ,array(
+    									        'NAME'=>'ภาพโปรแกรม',
+    									        'URL'=>'admin/packagePicture',
+    									        'KEY'=>MENU_PACKAGE_PICTURE
+    									       )
 										)
 								)
 							);

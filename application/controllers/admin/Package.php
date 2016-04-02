@@ -7,10 +7,10 @@
 		}
 
 		function index(){
-		    $this->setActiveMenu(PACKAGE_MENU,'MANAGE_PACK');
-		    $formData['packageType'] = $this->generateSelectItems($this->mPackage->getDataSpecifyField('package_type_id as id,package_type_name as label',TBL_PACKAGE_TYPE));
+		    $this->setActiveMenu(MENU_MAIN_PACKAGE,MENU_PACKAGE);
+		    $formData['packageType'] = $this->generateSelectItems($this->mCat->getDataSpecifyField('package_type_id as id,package_type_name as label'));
 		    $data['form'] = $this->load->view('admin/package/form_add_package',$formData,true);
-		    $data['list'] = $this->mPackage->getAllData(TBL_PACKAGE);
+		    $data['list'] = $this->mPackage->getAllData();
 		    $this->html['body'] = $this->load->view(MAIN_CONTAINER,$data,true);
 			$this->load->view(ADMIN_LAYOUT,$this->html);
 
@@ -50,7 +50,7 @@
 						$packageData['thumbnail'] = $pathThumbnail;
 						$packageData['pdf_path'] = $pathPdf;
 						// log_message('debug',$this->mPackage->tableName);
-						$response = $this->mPackage->insert('TBL_PACKAGE',$packageData);
+						$response = $this->mPackage->insert($packageData);
 
 					}
 

@@ -521,7 +521,12 @@ define('MAIN_CONTAINER','admin/main_container');
 // Package
 define('TBL_PACKAGE_TYPE', 'TBL_PACKAGE_TYPE');
 define('TBL_PACKAGE', 'TBL_PACKAGE');
-define('PACKAGE_MENU','MAIN_MANAGE_PACK');
+
+// MENU
+define('MENU_MAIN_PACKAGE','MAIN_PACKAGE');
+define('MENU_PACKAGE','PACKAGE');
+define('MENU_PACKAGE_TYPE','PACKAGE_TYPE');
+define('MENU_PACKAGE_PICTURE','PACKAGE_PICTURE');
 
 
 
