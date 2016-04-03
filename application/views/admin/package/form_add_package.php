@@ -14,31 +14,50 @@
     	
         if($action==ACTION_ADD){
             $action = 'admin/package/add';
+            $selected = '';
+            $pdfPath = '';
+            $thumbnailPath = '';
+        }else{
+            $action = 'admin/package/update';
+            $selected = $editData->package_type_id;
+            $inputName['value'] = $editData->package_name;
+            $inputPrice['value'] = $editData->price;
+            $textDesc['value'] = $editData->package_desc;
+            $inputTravelDate['value'] = $editData->travel_date;
+            $inputExpireDate['value'] = $editData->expire_date;
+            $pdfPath = $editData->pdf_path;
+            $thumbnailPath = $editData->thumbnail;
+            
         }
 		
-        $action = 'admin/package/add';
-        
-        
-		echo form_open_multipart('',array('id'=>'formPackage'));
+        echo form_open_multipart('',array('id'=>'formPackage'));
 		echo form_input(array('type'=>'hidden','value'=>site_url($action),'id'=>'action'));
-		echo create_dropdown(array('ประเภทแพคเก็จ','packageTypeId'),'package_type_id',$packageType,$selectType);
+		echo create_dropdown(array('ประเภทแพคเก็จ','packageTypeId'),'package_type_id',$packageType,$selectType,$selected);
 		echo create_input(array('ชื่อแพ็คเกจ','packageName'),$inputName);
 		echo create_input(array('ราคา','packagePrice'),$inputPrice);
-		echo create_upload(array('ภาพย่อ','thumbnail'),$uploadThumbnail);
-		echo create_upload(array('โปรแกรมทัวร์ (PDF)','tourProgram'),$uploadPdf);
+		
+		if($thumbnailPath == ''){
+		  echo create_upload(array('ภาพย่อ','thumbnail'),$uploadThumbnail);
+		  
+		}else{
+		  echo create_thumbnail(array('ภาพย่อ',''), array('src'=>$thumbnailPath),$thumbnailPath,$uploadThumbnail);  
+		}
+		
+		if($pdfPath == ''){
+		    echo create_upload(array('โปรแกรมทัวร์ (PDF)','tourProgram'),$pdfPath);
+		}else{
+		    echo create_link_icon(array('โปรแกรมทัวร์ (PDF)',''), array('src'=>'resources/img/pdf.png','atl'=>'View Package'), $pdfPath,$uploadPdf);
+		}
+		
 		echo create_input(array('วันที่เดินทาง','travelDate'),$inputTravelDate);
 		echo create_input(array('วันสิ้นสุด','expireDate'),$inputExpireDate);
 		echo create_textarea(array('คำอธิบาย','packageDesc'),$textDesc);
+		echo form_input(array('type'=>'hidden','name'=>'removePdf'));
+		echo form_input(array('type'=>'hidden','name'=>'removeThumbnail'));
 		echo form_button(array('type'=>'submit','class'=>'btn btn-primary','content'=>'Save'));
 		echo form_button(array('type'=>'reset','class'=>'btn btn-info','content'=>'Cancel'));
 		echo form_close();
 
-		
-
-
-
-		// echo create_dropzone(array('Thumbail','bhumbail'),array('action'=>site_url('admin/package/uploadToTemp'),'id'=>'thumbail'));
-		
     ?>
 </div>
 

@@ -24,18 +24,18 @@ abstract class Abstract_Model extends CI_Model{
     }
     
     public function getAllData(){
-        return $this->getDataByCriteria($this->getTableName(),array('delete_flag'=>'N'));
+        return $this->getDataByCriteria(array('delete_flag'=>'N'));
     }
     
-    public function getDataByCriteria($tableName,$criteria,$limit=""){
+    public function getDataByCriteria($criteria,$limit=""){
         $criteria['delete_flag'] = 'N';
-    	$query = $this->db->get_where($tableName,$criteria);
+    	$query = $this->db->get_where($this->getTableName(),$criteria);
     	return $query->result();
     }
 
     public function getDataSpecifyField($fieldName,$criteria=array(),$limit=''){
         $this->db->select($fieldName);
-        return $this->getDataByCriteria($this->getTableName(),$criteria,$limit);
+        return $this->getDataByCriteria($criteria,$limit);
 
     }
 

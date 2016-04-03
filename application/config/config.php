@@ -514,6 +514,7 @@ $config['proxy_ips'] = '';
 
 // Constants Variables
 define('OPEN_FORM_GROUP', '<div class="form-group">');
+define('OPEN_FORM_GROUP_HIDDEN','<div class="form-group" style="display:none;">');
 define('CLOSE_FORM_GROUP', '</div>');
 define('ADMIN_LAYOUT', 'admin/layout');
 define('MAIN_CONTAINER','admin/main_container');

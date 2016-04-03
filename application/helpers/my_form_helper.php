@@ -27,15 +27,57 @@
 		return $result;
 	}
 
-	function create_upload($labelValue,$attributes){
+	function create_upload($labelValue,$attributes,$hidden=false){
 		$result ='';
-		$result .= OPEN_FORM_GROUP;
+		if($hidden){
+		    $result .=OPEN_FORM_GROUP_HIDDEN;
+		}else{
+		    $result .= OPEN_FORM_GROUP;
+		}
+		
 		$result .= form_label($labelValue[0],$labelValue[1]);
 		$result .= form_upload($attributes);
 		$result .= CLOSE_FORM_GROUP;
 		return $result;
 	}
 
+	function create_link_icon($labelValue,$imgAttr,$path,$uploadAttrs){
+	    $result = '';
+	    $uploadId = $uploadAttrs['id'];
+	    $result .= OPEN_FORM_GROUP;
+	    $result .= form_label($labelValue[0],$labelValue[1]);
+	    $result .= "<div style='margin:10px;' id=$uploadId"."_display>";
+	    $result .= anchor($path,img($imgAttr),array('target'=>'_blank'));
+	    $result .= '<div style="margin:10px;">';
+	    $result .= anchor("#",'Edit',array('onClick'=>"javascript:removeUpload('$uploadId','$path');return false;"));
+	    $result .= '</div>';
+	    $result .= '</div>';
+	    $result .= "<div style='display:none;' id=$uploadId>";
+	    $result .= form_upload($uploadAttrs);
+	    $result .= '</div>';
+	    $result .= CLOSE_FORM_GROUP;
+	    return $result;
+	}
+	
+	function create_thumbnail($labelValue,$imgAttr,$path,$uploadAttrs){
+	    $imgAttr['width'] = '100px';
+	    $uploadId = $uploadAttrs['id'];
+	    $result = '';
+	    $result .= OPEN_FORM_GROUP;
+	    $result .= form_label($labelValue[0],$labelValue[1]);
+	    $result .= "<div style='margin:10px;' id=$uploadId"."_display>";
+	    $result .= img($imgAttr);
+	    $result .= '<div style="margin:10px;">';
+	    $result .= anchor("#",'Edit',array('onClick'=>"javascript:removeUpload('$uploadId','$path');return false;"));
+	    $result .= '</div>';
+	    $result .= '</div>';
+	    $result .= "<div style='display:none;' id=$uploadId>";
+	    $result .= form_upload($uploadAttrs);
+	    $result .= '</div>';
+	    $result .= CLOSE_FORM_GROUP;
+	    return $result;
+	}
+	
 	function create_dropzone($labelValue,$formAttr,$hiddenFieldArr=array()){
 		$result = "<form method='post' class='dropzone ' enctype='multipart/form-data' ";
 		foreach($formAttr as $key=>$value){

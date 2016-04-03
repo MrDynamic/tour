@@ -9,7 +9,7 @@ class PackageType extends Abstract_Controller{
 		
 	}
 
-    function loadPageManageType($formData=array(),$action=ACTION_ADD){
+    function loadPage($formData=array(),$action=ACTION_ADD){
         $this->setActiveMenu(MENU_MAIN_PACKAGE,MENU_PACKAGE_TYPE);
         $data['list'] = $this->mCat->getAllData();
         $formData['action'] = $action;
@@ -23,7 +23,7 @@ class PackageType extends Abstract_Controller{
         redirect('/admin/package/category', 'refresh');;
     }
     function index(){
-    	$this->loadPageManageType();
+    	$this->loadPage();
     }
 
     function saveCategory(){
@@ -37,7 +37,7 @@ class PackageType extends Abstract_Controller{
     }
     
 
-    function edit(){
+    function view(){
         try {
             $packageTypeId = $this->uri->segment(4);
             $this->log_debug('Package Type ID',$packageTypeId);
@@ -45,10 +45,9 @@ class PackageType extends Abstract_Controller{
             if($data ==null){
                 $this->refreshPage();
             }else{
-                $editData['editData'] = $data;
-                $this->loadPageManageType($editData,ACTION_EDIT);
+                $editData['editData'] = $data[0];
+                $this->loadPage($editData,ACTION_EDIT);
             }
-           
 
         } catch (Exception $e) {
             $this->log_error($e->getMessage());

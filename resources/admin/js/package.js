@@ -1,6 +1,15 @@
 $().ready(function() {
 });
 
+function removeUpload(id,path){ 
+	$("#"+id).show();
+	
+	$("#"+id).remove();
+	
+	alert(id+"," +path);
+	
+}
+
 $("#formPackage").validate({
 	rules: {
 		    expire_date: {
@@ -24,7 +33,11 @@ $("#formPackage").validate({
 
 
 function addPackageResponse(response){
-	alert("response callback=" +response);
+	if(reponse==1){
+		window.location.reload();
+	}else{
+		alert('Save data fail');
+	}
 }
 
 

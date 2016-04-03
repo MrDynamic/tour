@@ -58,5 +58,11 @@ $route['admin/package/category/save'] = 'admin/packageType/saveCategory';
 $route['admin/package/category/update'] = 'admin/packageType/update';
 $route['admin/package/category/delete/(:num)'] = 'admin/packageType/delete/$i';
 $route['admin/package/category'] = 'admin/packageType/index';
-$route['admin/package/category/(:num)'] = 'admin/packageType/edit/$i';
+$route['admin/package/category/(:num)'] = 'admin/packageType/view/$i';
+
+/* Package */
+$route['admin/package/(:num)'] = 'admin/package/view/$i';
+$route['admin/package/delete/(:num)'] = 'admin/package/delete/$i';
+
+
 
