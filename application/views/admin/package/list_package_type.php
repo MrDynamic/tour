@@ -20,8 +20,8 @@
                   echo "<tr class=''>";
                   echo "<td>$rows->package_type_name</td>";
                   echo "<td>$rows->package_type_desc</td>";
-                  echo '<td><a class="edit" href="javascript:;">Edit</a></td>';
-                  echo '<td><a class="delete" href="javascript:;">Delete</a></td>';
+                  echo '<td>'.anchor("admin/package/category/$rows->package_type_id",'Edit').'</td>';
+                  echo '<td>'.anchor("admin/package/category/delete/$rows->package_type_id",'Delete').'</td>';
                   echo "</tr>";
                 }
               }

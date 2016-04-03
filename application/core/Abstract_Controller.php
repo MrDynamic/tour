@@ -79,6 +79,26 @@ class Abstract_Controller extends CI_Controller {
 		delete_flag
 	
 	*/
+	
+	protected function getArrayValue($arr=array()){
+	    $result = "";
+	    foreach($arr as $key=>$val){
+	        $result .= $key . "=>" . $val .",";
+	    }
+	    return $result;
+	}
+	
+	protected function log_debug($message,$value=''){
+	    $className = $this->router->class;
+	    $methodName = $this->router->method;
+	    log_message('debug', "[$className > $methodName] $message  >> $value");
+	}
+	
+	protected  function log_error($message){
+	    $className = $this->router->class;
+	    $methodName = $this->router->method;
+	    log_message('error',"[$className > $methodName]  $message");
+	}
 
 }
 

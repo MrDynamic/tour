@@ -9,14 +9,26 @@ abstract class Abstract_Model extends CI_Model{
     }
 
     public function insert($data){
+        $data['u_date'] = date('Y-m-d');
         return $this->db->insert($this->getTableName(),$data);
     }
 
+    public function update($data,$criteria){
+        $data['u_date'] = date('Y-m-d');
+        return $this->db->update($this->getTableName(),$data,$criteria);
+    }
+    
+    public function delete($criteria){
+        $data['u_date'] = date('Y-m-d');
+        return $this->db->update($this->getTableName(),array('delete_flag'=>'Y'),$criteria);
+    }
+    
     public function getAllData(){
         return $this->getDataByCriteria($this->getTableName(),array('delete_flag'=>'N'));
     }
     
     public function getDataByCriteria($tableName,$criteria,$limit=""){
+        $criteria['delete_flag'] = 'N';
     	$query = $this->db->get_where($tableName,$criteria);
     	return $query->result();
     }

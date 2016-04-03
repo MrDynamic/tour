@@ -2,37 +2,80 @@
 
 class PackageType extends Abstract_Controller{
 
-	function __construct()
+    function __construct()
 	{
 		parent::__construct();
 		$this->load->model(array('M_PackageType'=>'mCat','M_Package'=>'package'));
 		
 	}
 
-    function loadPageManageType(){
+    function loadPageManageType($formData=array(),$action=ACTION_ADD){
         $this->setActiveMenu(MENU_MAIN_PACKAGE,MENU_PACKAGE_TYPE);
         $data['list'] = $this->mCat->getAllData();
-        $subView['form'] = $this->load->view('admin/package/form_add_package_type','',true);
+        $formData['action'] = $action;
+        $subView['form'] = $this->load->view('admin/package/form_add_package_type',$formData,true);
         $subView['detail'] = $this->load->view('admin/package/list_package_type',$data,true);
         $this->html['body'] = $this->load->view(MAIN_CONTAINER,$subView,true);
         $this->load->view(ADMIN_LAYOUT,$this->html);
     }
 
+    function refreshPage(){
+        redirect('/admin/package/category', 'refresh');;
+    }
     function index(){
     	$this->loadPageManageType();
     }
 
     function saveCategory(){
-    	$data = $this->input->post();
-        $data['u_date'] = date('Y-m-d');
-        $this->mCat->insert($data);
-        redirect('/admin/package/category', 'refresh');
+        try {
+            $data = $this->input->post();
+            $this->mCat->insert($data);
+            $this->refreshPage();
+        } catch (Exception $e) {
+            $this->log_error($e->getMessage());
+        }
     }
+    
 
     function edit(){
-        
+        try {
+            $packageTypeId = $this->uri->segment(4);
+            $this->log_debug('Package Type ID',$packageTypeId);
+            $data = $this->mCat->getDataSpecifyField('package_type_id,package_type_name,package_type_desc',array('package_type_id'=>$packageTypeId));
+            if($data ==null){
+                $this->refreshPage();
+            }else{
+                $editData['editData'] = $data;
+                $this->loadPageManageType($editData,ACTION_EDIT);
+            }
+           
+
+        } catch (Exception $e) {
+            $this->log_error($e->getMessage());
+        }
+    }
+    
+    function update(){
+        try {
+            $data = $this->input->post();
+            $this->mCat->update($data,array('package_type_id'=>$this->input->post('package_type_id')));
+            $this->refreshPage();
+        } catch (Exception $e) {
+            $this->log_error($e->getMessage());
+        }
     }
 
+    function delete(){
+        try {
+            $packageTypeId = $this->uri->segment(5);
+            $this->log_debug('Package Type Id',$packageTypeId);
+            $this->mCat->delete(array('package_type_id'=>$packageTypeId));
+            $this->refreshPage();
+        } catch (Exception $e) {
+            $this->log_error($e->getMessage());
+        }
+    }
+    
 
 }
 

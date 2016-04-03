@@ -12,8 +12,13 @@
 		$inputTravelDate = array('name'=>'travel_date','id'=>'travelDate','class'=>'form-control','type'=>'date','required'=>'');
 		$inputExpireDate = array('name'=>'expire_date','id'=>'expireDate','class'=>'form-control','type'=>'date','required'=>'');
     	
-
-		$action = 'admin/package/add';
+        if($action==ACTION_ADD){
+            $action = 'admin/package/add';
+        }
+		
+        $action = 'admin/package/add';
+        
+        
 		echo form_open_multipart('',array('id'=>'formPackage'));
 		echo form_input(array('type'=>'hidden','value'=>site_url($action),'id'=>'action'));
 		echo create_dropdown(array('ประเภทแพคเก็จ','packageTypeId'),'package_type_id',$packageType,$selectType);

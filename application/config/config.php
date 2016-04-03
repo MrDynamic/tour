@@ -517,6 +517,8 @@ define('OPEN_FORM_GROUP', '<div class="form-group">');
 define('CLOSE_FORM_GROUP', '</div>');
 define('ADMIN_LAYOUT', 'admin/layout');
 define('MAIN_CONTAINER','admin/main_container');
+define('ACTION_ADD','ADD');
+define('ACTION_EDIT','EDIT');
 
 // Package
 define('TBL_PACKAGE_TYPE', 'TBL_PACKAGE_TYPE');

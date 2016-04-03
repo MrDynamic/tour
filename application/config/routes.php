@@ -52,5 +52,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'admin';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+/* Package Category */
 $route['admin/package/category/save'] = 'admin/packageType/saveCategory';
+$route['admin/package/category/update'] = 'admin/packageType/update';
+$route['admin/package/category/delete/(:num)'] = 'admin/packageType/delete/$i';
 $route['admin/package/category'] = 'admin/packageType/index';
+$route['admin/package/category/(:num)'] = 'admin/packageType/edit/$i';
+

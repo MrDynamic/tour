@@ -70,7 +70,7 @@ $('#packageId').change(function(){
 	 		
  		});
  		// Refresh page when all images are uploaded
- 		myDropzone.on("complete", function (file) {
+ 		myDropzone.on("complete", function (file) { alert(file);
  			if (myDropzone.getUploadingFiles().length === 0 && myDropzone.getQueuedFiles().length === 0) {
  				window.location.reload();
  			}
