@@ -2,12 +2,11 @@ $().ready(function() {
 });
 
 function removeUpload(id,path){ 
+	var displayPostfix = '_display';
+	var hiddenPostfix = '_hide';
 	$("#"+id).show();
-	
-	$("#"+id).remove();
-	
-	alert(id+"," +path);
-	
+	$("#"+id + displayPostfix).remove();
+	$("#"+id+hiddenPostfix).val(path);
 }
 
 $("#formPackage").validate({

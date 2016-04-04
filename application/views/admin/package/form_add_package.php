@@ -11,7 +11,7 @@
 		$uploadPdf = array('name'=>'tourProgram','id'=>'tourProgram','class'=>'form-control','required'=>'');
 		$inputTravelDate = array('name'=>'travel_date','id'=>'travelDate','class'=>'form-control','type'=>'date','required'=>'');
 		$inputExpireDate = array('name'=>'expire_date','id'=>'expireDate','class'=>'form-control','type'=>'date','required'=>'');
-    	
+    	$inputPackageId = array('name'=>'packageId','id'=>'packageId','type'=>'hidden');
         if($action==ACTION_ADD){
             $action = 'admin/package/add';
             $selected = '';
@@ -25,12 +25,14 @@
             $textDesc['value'] = $editData->package_desc;
             $inputTravelDate['value'] = $editData->travel_date;
             $inputExpireDate['value'] = $editData->expire_date;
+            $inputPackageId['value'] = $editData->package_id;
             $pdfPath = $editData->pdf_path;
             $thumbnailPath = $editData->thumbnail;
             
         }
 		
         echo form_open_multipart('',array('id'=>'formPackage'));
+        echo form_input($inputPackageId);
 		echo form_input(array('type'=>'hidden','value'=>site_url($action),'id'=>'action'));
 		echo create_dropdown(array('ประเภทแพคเก็จ','packageTypeId'),'package_type_id',$packageType,$selectType,$selected);
 		echo create_input(array('ชื่อแพ็คเกจ','packageName'),$inputName);
@@ -52,8 +54,8 @@
 		echo create_input(array('วันที่เดินทาง','travelDate'),$inputTravelDate);
 		echo create_input(array('วันสิ้นสุด','expireDate'),$inputExpireDate);
 		echo create_textarea(array('คำอธิบาย','packageDesc'),$textDesc);
-		echo form_input(array('type'=>'hidden','name'=>'removePdf'));
-		echo form_input(array('type'=>'hidden','name'=>'removeThumbnail'));
+		echo form_input(array('type'=>'hidden','name'=>'tourProgram_hide','id'=>'tourProgram_hide'));
+		echo form_input(array('type'=>'hidden','name'=>'thumbnail_hide','id'=>'thumbnail_hide'));
 		echo form_button(array('type'=>'submit','class'=>'btn btn-primary','content'=>'Save'));
 		echo form_button(array('type'=>'reset','class'=>'btn btn-info','content'=>'Cancel'));
 		echo form_close();

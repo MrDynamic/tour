@@ -50,30 +50,68 @@
 		    }
 		}
 		
+		function update(){
+		    $response = true;
+		    try {
+		        $this->load->library('upload', $this->getConfigUpload());
+		        if (!$this->upload->do_upload('thumbnail')){
+		            $response = false;
+		        }else{
+		            $this->log_debug('upload data',print_r($this->upload->data(),true));
+		            $pathThumbnail = $path.$this->upload->data()['file_name'];
+		            if($this->upload->do_upload('tourProgram')){
+		                $pathPdf = $path.$this->upload->data()['file_name'];
+		            
+		                $packageData = $this->input->post();
+		                $packageData['thumbnail'] = $pathThumbnail;
+		                $packageData['pdf_path'] = $pathPdf;
+		                $response = $this->mPackage->update($packageData,array('package_id'=>$this->input->post("packageId")));
+		                
+		                //-- remove old file
+		                if(isset($this->input->post('tourProgram_hide')) && $this->input->post('tourProgram_hide') != ""){
+		                    unlink($this->input->post('tourProgram_hide'));
+		                }
+		                if(isset($this->input->post('thumbnail_hide')) && $this->input->post('thumbnail_hide') != ""){
+		                    unlink($this->input->post('thumbnail_hide'));
+		                }
+		            }
+		        }
+		    } catch (Exception $e) {
+		        $this->log_error($e->getMessage());
+		        $response = false;
+		    }
+		    return $response;
+		}
+		
+		private function getPathUpload(){
+		    $path="/resources/upload/package/";
+		    $folderName = dirname($_SERVER["SCRIPT_FILENAME"]).$path;
+		    if(!is_dir($folderName))
+		    {
+		        mkdir($folderName,0777,true);
+		    }
+		    return $folderName;
+		}
+		
+		private function getConfigUpload(){
+		    $config['upload_path'] = $this->getPathUpload();
+		    $config['allowed_types'] = 'gif|jpg|png|pdf';
+		    $config['encrypt_name'] =true;
+		    $config['max_size']	= '2048';
+		    $config['max_width']  = '1024';
+		    $config['max_height']  = '768';
+		    return $config;
+		}
+		
 		function add(){
 			$response = true;
 			$this->log_debug('add');
 			try
 	        {
-			    $path="/resources/upload/package/";
-	        	$folderName = dirname($_SERVER["SCRIPT_FILENAME"]).$path;
-	        	$this->log_debug('folder upload',$folderName);
-
-	        	if(!is_dir($folderName))
-				{
-				   mkdir($folderName,0777,true);
-				}
-
-	        	$config['upload_path'] = $folderName; 
-				$config['allowed_types'] = 'gif|jpg|png|pdf';
-				$config['encrypt_name'] =true;
-				$config['max_size']	= '2048';
-				$config['max_width']  = '1024';
-				$config['max_height']  = '768';
-				$pathThumbnail = '';
+			    $pathThumbnail = '';
 				$pathPdf = '';
 
-				$this->load->library('upload', $config);
+				$this->load->library('upload', $this->getConfigUpload());
 				
 				if (!$this->upload->do_upload('thumbnail')){
 					$response = false;
