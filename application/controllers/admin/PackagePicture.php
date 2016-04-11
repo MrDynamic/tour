@@ -13,8 +13,8 @@ class PackagePicture extends Abstract_Controller
        $this->setActiveMenu(MENU_MAIN_PACKAGE,MENU_PACKAGE_PICTURE);
        $formData['package'] = $this->generateSelectItems($this->mPackage->getDataSpecifyField('package_id as id,package_name as label'));
        $data['form'] = $this->load->view('admin/package/form_add_package_picture',$formData,true);
-       $this->html['body'] = $this->load->view(MAIN_CONTAINER,$data,true);
-       $this->load->view(ADMIN_LAYOUT,$this->html);
+       $this->template['body'] = $this->load->view(MAIN_CONTAINER,$data,true);
+       $this->load->view(ADMIN_LAYOUT,$this->template);
    }
    
    public function add(){

@@ -1,11 +1,13 @@
 <?php
 class Abstract_Controller extends CI_Controller {
-	protected $html;
+	protected $template;
 
 	function __construct()
 	{
 		parent::__construct();
-		$this->generateMenu();
+		//-- Check Role
+// 		$this->generateAdminMenu();
+        $this->generateMenu();
 	}
 
    function __destruct() {
@@ -13,7 +15,7 @@ class Abstract_Controller extends CI_Controller {
    }
 	
 	function setActiveMenu($mainName,$subName){
-        $this->html['active_menu'] = array($mainName,$subName);
+        $this->template['active_menu'] = array($mainName,$subName);
     }
 
     function generateSelectItems($data){
@@ -26,8 +28,15 @@ class Abstract_Controller extends CI_Controller {
     	return $result;
     }
 
- 	function generateMenu(){
-		$this->html['slide_menu'] = array(
+    function generateMenu(){
+        $this->template['title'] = "Ocharos 's tour";
+        $this->template['form_login'] = $this->load->view('form_login',null,true);
+        $this->template['form_cart'] = $this->load->view('form_cart',null,true);
+        $this->template['nav_menu'] = $this->load->view('nav_menu',null,true);
+    }
+    
+ 	function generateAdminMenu(){
+		$this->template['slide_menu'] = array(
 							array(
 									'MENU_NAME'=>'สถานที่แนะนำ',
 									'KEY'=>'MAIN_',
@@ -66,7 +75,7 @@ class Abstract_Controller extends CI_Controller {
 										)
 								)
 							);
-		$this->html['active_menu'] = array();
+		$this->template['active_menu'] = array();
 
 	}
 	/*

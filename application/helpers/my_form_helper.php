@@ -8,6 +8,16 @@
 		$result .= CLOSE_FORM_GROUP;
 		return $result;
 	}
+	
+	function create_password($labelValue,$attributes){
+	    $result ='';
+	    $result .= OPEN_FORM_GROUP;
+	    $result .= form_label($labelValue[0],$labelValue[1]);
+	    $result .= form_password($attributes);
+	    $result .= CLOSE_FORM_GROUP;
+	    return $result;
+	}
+	
 
 	function create_textarea($labelValue,$attributes){
 		$result ='';

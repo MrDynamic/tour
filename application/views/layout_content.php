@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><?=$title;?></title>
+    <meta name="description" content="Shop">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <base href="<?php echo base_url();?>" /> 
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory-->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700">
+    <link rel="stylesheet" href="resources/styles/font-awesome.css">
+    <link rel="stylesheet" href="resources/styles/owl.carousel.css">
+    <link rel="stylesheet" href="resources/styles/owl.theme.css">
+    <link rel="stylesheet" href="resources/styles/slit-slider-style.css">
+    <link rel="stylesheet" href="resources/styles/slit-slider-custom.css">
+    <link rel="stylesheet" href="resources/styles/idangerous.swiper.css">
+    <link rel="stylesheet" href="resources/styles/yamm.css">
+    <link rel="stylesheet" href="resources/styles/animate.css">
+    <link rel="stylesheet" href="resources/styles/prettyPhoto.css">
+    <link rel="stylesheet" href="resources/styles/bootstrap-slider.css">
+    <link rel="stylesheet" href="resources/styles/device-mockups2.css">
+    <link rel="stylesheet" href="resources/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/styles/main.css">
+    <link rel="stylesheet" href="resources/styles/main-responsive.css">
+    <link id="primary_color_scheme" rel="stylesheet" href="resources/styles/theme_meadow.css">
+    <script src="resources/scripts/vendor/modernizr.js"></script>
+    <noscript>
+      <link rel="stylesheet" href="resources/styles/styleNoJs.css">
+    </noscript>
+  </head>
+  <body>
+    <div id="load"></div><!--[if lt IE 9]>
+    <p class="browsehappy">You are using an strong outdated browser. <br>Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="page">
+      <!-- Start Nav Section-->
+      	<nav id="main-navigation" role="navigation" class="navbar navbar-fixed-top navbar-standard"><a href="javascript:void(0)" class="search_button"><i class="fa fa-search"></i></a>
+            <form action="search.html" method="get" role="search" class="h_search_form">
+              <div class="container">
+                <div class="h_search_form_wrapper">
+                  <div class="input-group"><span class="input-group-btn">
+                      <button type="submit" class="btn btn-sm"><i class="fa fa-search fa-lg"></i></button></span>
+                    <input type="text" placeholder="Search on site" class="form-control">
+                  </div>
+                  <div class="h_search_close"><a href="#"><i class="fa fa-times"></i></a></div>
+                </div>
+              </div>
+            </form>
+            <div class="container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle"><i class="fa fa-align-justify fa-lg"></i></button>
+                <a href="#" class="navbar-brand">
+                	<img src="resources/img/logo-white.png" alt="" class="logo-white">
+                	<img src="resources/img/logo-black-large.png" alt="" class="logo-dark">
+                </a>
+              </div>
+              <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right service-nav">
+                  <li><a id="dropdownMenuLogin" href="#" data-toggle="dropdown" class="upper dropdown-toggle">เข้าสู่ระบบ</a>
+                    <!-- Login Form -->
+                    <?=$form_login;?>
+                  </li>
+                  <li><a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;<span class="badge">2</span></a>
+                    <!-- Cart Form -->
+                    <?=$form_cart;?>
+                  </li>
+                </ul>
+                <button type="button" class="navbar-toggle"><i class="fa fa-close fa-lg"></i></button>
+                <?=$nav_menu;?>
+              </div>
+            </div>
+          </nav>
+      <!-- Start header Section-->
+      <section class="header-section fading-title parallax">
+        <div class="section-shade sep-top-1x">
+          <div class="container"></div>
+        </div>
+      </section>
+      <!-- End header Section-->
+      <!-- Start Content section-->
+      <section class="sep-bottom-2x">
+        <div class="container">
+          <div class="row">
+          	<?php (isset($content) && !empty($content))?print $content:'';?>
+          </div>
+        </div>
+      </section>
+      <!-- End Content section-->
+      <!-- Start Footer section-->
+      <footer id="footer">
+        <div class="copyright sep-top-xs sep-bottom-xs">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12"><small>Copyright 2014 © Kleis Communication Technologies srl. All rights reserved.</small></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- End Footer section-->
+      <div id="back_to_top"><a href="#" class="fa fa-arrow-up fa-lg"></a></div>
+    </div>
+    <script src="resources/scripts/vendor/jquery.js"></script>
+    <script src="resources/scripts/vendor/queryloader2.min.js"></script>
+    <script src="resources/scripts/vendor/owl.carousel.js"></script>
+    <script src="resources/scripts/vendor/jquery.ba-cond.min.js"></script>
+    <script src="resources/scripts/vendor/jquery.slitslider.js"></script>
+    <script src="resources/scripts/vendor/idangerous.swiper.js"></script>
+    <script src="resources/scripts/vendor/jquery.fitvids.js"></script>
+    <script src="resources/scripts/vendor/jquery.countTo.js"></script>
+    <script src="resources/scripts/vendor/TweenMax.min.js"></script>
+    <script src="resources/scripts/vendor/ScrollToPlugin.min.js"></script>
+    <script src="resources/scripts/vendor/jquery.scrollmagic.min.js"></script>
+    <script src="resources/scripts/vendor/jquery.easypiechart.js"></script>
+    <script src="resources/scripts/vendor/jquery.validate.js"></script>
+    <script src="resources/scripts/vendor/wow.min.js"></script>
+    <script src="resources/scripts/vendor/jquery.placeholder.js"></script>
+    <script src="resources/scripts/vendor/jquery.easing.1.3.min.js"></script>
+    <script src="resources/scripts/vendor/jquery.waitforimages.min.js"></script>
+    <script src="resources/scripts/vendor/jquery.prettyPhoto.js"></script>
+    <script src="resources/scripts/vendor/imagesloaded.pkgd.min.js"></script>
+    <script src="resources/scripts/vendor/isotope.pkgd.min.js"></script>
+    <script src="resources/scripts/vendor/jquery.fillparent.min.js"></script>
+    <script src="resources/scripts/vendor/raphael-min.js"></script>
+    <script src="resources/scripts/vendor/bootstrap.js"></script>
+    <script src="resources/scripts/vendor/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="resources/scripts/vendor/bootstrap-slider.js"></script>
+    <script src="resources/scripts/vendor/bootstrap-rating-input.js"></script>
+    <script src="resources/scripts/vendor/bootstrap-hover-dropdown.min.js"></script>
+    <script src="resources/scripts/jquery.gmap.min.js"></script>
+    <script src="resources/scripts/circle_diagram.js"></script>
+    <script src="resources/scripts/main.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'XX-XXXXXXXX-XX', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

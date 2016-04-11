@@ -7,7 +7,7 @@
 		}
 
 		public  function index(){
-			$this->load->view(ADMIN_LAYOUT,$this->html);
+			$this->load->view(ADMIN_LAYOUT,$this->template);
 			
 		}
 

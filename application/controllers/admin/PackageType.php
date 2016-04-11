@@ -15,8 +15,8 @@ class PackageType extends Abstract_Controller{
         $formData['action'] = $action;
         $subView['form'] = $this->load->view('admin/package/form_add_package_type',$formData,true);
         $subView['detail'] = $this->load->view('admin/package/list_package_type',$data,true);
-        $this->html['body'] = $this->load->view(MAIN_CONTAINER,$subView,true);
-        $this->load->view(ADMIN_LAYOUT,$this->html);
+        $this->template['body'] = $this->load->view(MAIN_CONTAINER,$subView,true);
+        $this->load->view(ADMIN_LAYOUT,$this->template);
     }
 
     function refreshPage(){

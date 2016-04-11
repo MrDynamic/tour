@@ -1,4 +1,7 @@
 $().ready(function() {
+	$("#btnCancel").click(function(){
+		window.location='admin/package';
+	});
 });
 
 function removeUpload(id,path){ 

@@ -156,3 +156,62 @@ DEBUG - 2016-03-26 08:50:50 --> UTF-8 Support Enabled
 DEBUG - 2016-03-26 08:50:50 --> Global POST, GET and COOKIE data sanitized
 ERROR - 2016-03-26 08:50:50 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /Users/MacBookPro/Documents/i-work/root/tour/application/models/M_PackageType.php:10) /Users/MacBookPro/Documents/i-work/root/tour/system/core/Common.php 573
 ERROR - 2016-03-26 08:50:50 --> Severity: Error --> Class M_PackageType contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (Abstract_Model::getTableName) /Users/MacBookPro/Documents/i-work/root/tour/application/models/M_PackageType.php 10
+DEBUG - 2016-03-26 09:18:37 --> UTF-8 Support Enabled
+DEBUG - 2016-03-26 09:18:37 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-03-26 09:18:37 --> Total execution time: 0.0215
+DEBUG - 2016-03-26 09:18:38 --> UTF-8 Support Enabled
+DEBUG - 2016-03-26 09:18:38 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-03-26 09:18:38 --> Total execution time: 0.0215
+DEBUG - 2016-03-26 09:18:39 --> UTF-8 Support Enabled
+DEBUG - 2016-03-26 09:18:39 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-03-26 09:18:39 --> Total execution time: 0.0224
+DEBUG - 2016-03-26 09:18:39 --> UTF-8 Support Enabled
+DEBUG - 2016-03-26 09:18:39 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-03-26 09:18:39 --> Total execution time: 0.0203
+DEBUG - 2016-03-26 09:18:40 --> UTF-8 Support Enabled
+DEBUG - 2016-03-26 09:18:40 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-03-26 09:18:40 --> Total execution time: 0.0208
+DEBUG - 2016-03-26 09:18:40 --> UTF-8 Support Enabled
+DEBUG - 2016-03-26 09:18:40 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-03-26 09:18:40 --> Total execution time: 0.0198
+DEBUG - 2016-03-26 09:18:40 --> UTF-8 Support Enabled
+DEBUG - 2016-03-26 09:18:40 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-03-26 09:18:40 --> Total execution time: 0.0243
+DEBUG - 2016-03-26 09:18:40 --> UTF-8 Support Enabled
+DEBUG - 2016-03-26 09:18:40 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-03-26 09:18:40 --> Total execution time: 0.0184
+DEBUG - 2016-03-26 09:18:41 --> UTF-8 Support Enabled
+DEBUG - 2016-03-26 09:18:41 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-03-26 09:18:41 --> Total execution time: 0.0193
+DEBUG - 2016-03-26 09:18:41 --> UTF-8 Support Enabled
+DEBUG - 2016-03-26 09:18:41 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-03-26 09:18:41 --> Total execution time: 0.0245
+DEBUG - 2016-03-26 09:18:44 --> UTF-8 Support Enabled
+DEBUG - 2016-03-26 09:18:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-03-26 09:18:44 --> Total execution time: 0.0225
+DEBUG - 2016-03-26 09:18:44 --> UTF-8 Support Enabled
+DEBUG - 2016-03-26 09:18:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-03-26 09:18:44 --> Total execution time: 0.0232
+DEBUG - 2016-03-26 09:18:49 --> UTF-8 Support Enabled
+DEBUG - 2016-03-26 09:18:49 --> No URI present. Default controller set.
+DEBUG - 2016-03-26 09:18:49 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-03-26 09:18:49 --> Total execution time: 0.0182
+DEBUG - 2016-03-26 09:18:49 --> UTF-8 Support Enabled
+DEBUG - 2016-03-26 09:18:49 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-03-26 09:18:49 --> Total execution time: 0.0195
+DEBUG - 2016-03-26 09:18:55 --> UTF-8 Support Enabled
+DEBUG - 2016-03-26 09:18:55 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-03-26 09:18:55 --> Total execution time: 0.0203
+DEBUG - 2016-03-26 09:25:32 --> UTF-8 Support Enabled
+DEBUG - 2016-03-26 09:25:32 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-03-26 09:25:32 --> Query error: Unknown column 'menu_id,menu_type,menu_name,menu_path,is_main' in 'field list' - Invalid query: SELECT `menu_id,menu_type,menu_name,menu_path,is_main`
+FROM `tbl_menus`
+WHERE `delete_flag` = 'N'
+DEBUG - 2016-03-26 09:29:41 --> UTF-8 Support Enabled
+DEBUG - 2016-03-26 09:29:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-03-26 09:29:41 --> Query error: Unknown column 'menu_path' in 'field list' - Invalid query: SELECT `menu_id`, `menu_type`, `menu_name`, `menu_path`, `is_main`
+FROM `tbl_menus`
+WHERE `delete_flag` = 'N'
+DEBUG - 2016-03-26 09:30:09 --> UTF-8 Support Enabled
+DEBUG - 2016-03-26 09:30:09 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-03-26 09:30:09 --> Total execution time: 0.0211

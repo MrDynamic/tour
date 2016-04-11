@@ -512,6 +512,10 @@ $config['rewrite_short_tags'] = FALSE;
 */
 $config['proxy_ips'] = '';
 
+define('ADMIN_ROLE','ADMIN');
+define('USER_ROLE','USER');
+define('CONTENT_TYPE','CONTENT');
+
 // Constants Variables
 define('OPEN_FORM_GROUP', '<div class="form-group">');
 define('OPEN_FORM_GROUP_HIDDEN','<div class="form-group" style="display:none;">');
