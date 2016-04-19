@@ -644,54 +644,54 @@ Ottavio.events.push(Ottavio.portfolio);
 
 
 // Contacts form module
-Ottavio.contactForm = function(){
-    var
-        $form = $('#contactForm'),
-        $msgSuccess = $('#successMessage'),
-        $msgFailure = $('#failureMessage'),
-        $msgIncomplete = $('#incompleteMessage'),
-        messageDelay = 2000;
-
-    $form.validate({
-        invalidHandler: function(event, validator) {
-            var errors = validator.numberOfInvalids();
-            if (errors) {
-                $msgIncomplete.show();
-            } else {
-                $msgIncomplete.fadeOut();
-            }
-        },
-        submitHandler: function(form) {
-            var
-                _form = $(form),
-                data = _form.serialize(),
-                action = _form.attr('action');
-
-            data += '&ajax=true';
-            $msgIncomplete.fadeOut();
-            _form.fadeOut();
-
-            $.post(action, data)
-                .done(function(response){
-                    if (response === 'success'){
-                        $msgSuccess.fadeIn().delay(messageDelay).fadeOut();
-                        _form.trigger('reset');
-                    } else {
-                        $msgFailure.fadeIn().delay(messageDelay).fadeOut();
-                    }
-                })
-                .fail(function() {
-                    $msgFailure.fadeIn().delay(messageDelay).fadeOut();
-
-                })
-                .always(function(){
-                    _form.delay(messageDelay+500).fadeIn();
-                });
-            return false;
-        }
-    });
-};
-Ottavio.events.push(Ottavio.contactForm);
+//Ottavio.contactForm = function(){
+//    var
+//        $form = $('#contactForm'),
+//        $msgSuccess = $('#successMessage'),
+//        $msgFailure = $('#failureMessage'),
+//        $msgIncomplete = $('#incompleteMessage'),
+//        messageDelay = 2000;
+//
+//    $form.validate({
+//        invalidHandler: function(event, validator) {
+//            var errors = validator.numberOfInvalids();
+//            if (errors) {
+//                $msgIncomplete.show();
+//            } else {
+//                $msgIncomplete.fadeOut();
+//            }
+//        },
+//        submitHandler: function(form) {
+//            var
+//                _form = $(form),
+//                data = _form.serialize(),
+//                action = _form.attr('action');
+//
+//            data += '&ajax=true';
+//            $msgIncomplete.fadeOut();
+//            _form.fadeOut();
+//
+//            $.post(action, data)
+//                .done(function(response){
+//                    if (response === 'success'){
+//                        $msgSuccess.fadeIn().delay(messageDelay).fadeOut();
+//                        _form.trigger('reset');
+//                    } else {
+//                        $msgFailure.fadeIn().delay(messageDelay).fadeOut();
+//                    }
+//                })
+//                .fail(function() {
+//                    $msgFailure.fadeIn().delay(messageDelay).fadeOut();
+//
+//                })
+//                .always(function(){
+//                    _form.delay(messageDelay+500).fadeIn();
+//                });
+//            return false;
+//        }
+//    });
+//};
+//Ottavio.events.push(Ottavio.contactForm);
 // end Contacts form module
 
 

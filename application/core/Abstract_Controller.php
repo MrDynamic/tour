@@ -31,8 +31,10 @@ class Abstract_Controller extends CI_Controller {
     function generateMenu(){
         $this->template['title'] = "Ocharos 's tour";
         $this->template['form_login'] = $this->load->view('form_login',null,true);
+        $this->template['header'] = $this->load->view('header',null,true);
         $this->template['form_cart'] = $this->load->view('form_cart',null,true);
         $this->template['nav_menu'] = $this->load->view('nav_menu',null,true);
+        $this->template['footer'] = $this->load->view('footer',null,true);
     }
     
  	function generateAdminMenu(){
@@ -89,12 +91,21 @@ class Abstract_Controller extends CI_Controller {
 	
 	*/
 	
-	protected function getArrayValue($arr=array()){
-	    $result = "";
-	    foreach($arr as $key=>$val){
-	        $result .= $key . "=>" . $val .",";
-	    }
-	    return $result;
+	protected function getAllProvince(){
+	    $this->load->model('M_Province','mProvince');
+	    return $this->mProvince->getDataSpecifyField('province_id id,province_name label');
+	}
+	
+	protected function getAmphurByProvinceId($provinceId){
+	    $this->log_debug('Province ID',$provinceId);
+	    $this->load->model('M_Amphur','mAmphur');
+	    return $this->mAmphur->getDataSpecifyField('amphur_id id,amphur_name label',array('province_id'=>$provinceId));
+	}
+	
+	protected function getDistrictByAmphurId($amphurId){
+	    $this->log_debug('Amphur ID',$amphurId);
+	    $this->load->model('M_District','mDistrict');
+	    return $this->mDistrict->getDataSpecifyField('district_id id,district_name label',array('amphur_id'=>$amphurId));
 	}
 	
 	protected function log_debug($message,$value=''){

@@ -518,6 +518,9 @@ define('CONTENT_TYPE','CONTENT');
 
 // Constants Variables
 define('OPEN_FORM_GROUP', '<div class="form-group">');
+define('OPEN_FORM_GROUP_6', '<div class="col-sm-6 form-group">');
+define('OPEN_FORM_GROUP_3', '<div class="col-sm-3 form-group">');
+define('OPEN_FORM_GROUP_12', '<div class="col-sm-12 form-group">');
 define('OPEN_FORM_GROUP_HIDDEN','<div class="form-group" style="display:none;">');
 define('CLOSE_FORM_GROUP', '</div>');
 define('ADMIN_LAYOUT', 'admin/layout');

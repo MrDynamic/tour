@@ -1,3 +1,4 @@
+<a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;<span class="badge">2</span></a>
 <div aria-labelledby="dropdownMenuCart" class="dropdown-menu widget-box">
   <div class="shopping_cart_dropdown">
     <ul class="cart_list product_list_widget">

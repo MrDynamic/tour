@@ -58,7 +58,7 @@
               </div>
               <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right service-nav">
-                  <li><a id="dropdownMenuLogin" href="#" data-toggle="dropdown" class="upper dropdown-toggle">เข้าสู่ระบบ</a>
+                  <li>
                     <!-- Login Form -->
                     <?=$form_login;?>
                   </li>
@@ -473,35 +473,26 @@
         <!--include _partial/gmap-->
       </section>
       <!-- Start Footer section-->
-      <footer id="footer">
-        <div class="copyright sep-top-xs sep-bottom-xs">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12"><small>Copyright 2016 © Ocharos tour. All rights reserved.</small></div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <?=$footer;?>
       <!-- End Footer section-->
       <div id="back_to_top"><a href="#" class="fa fa-arrow-up fa-lg"></a></div>
     </div>
-    <script src="resources/scripts/vendor/jquery.js"></script>
+    <script src="resources/js/jquery-1.8.3.min.js"></script>
     <script src="resources/scripts/vendor/queryloader2.min.js"></script>
     <script src="resources/scripts/vendor/owl.carousel.js"></script>
     <script src="resources/scripts/vendor/jquery.ba-cond.min.js"></script>
     <script src="resources/scripts/vendor/jquery.slitslider.js"></script>
     <script src="resources/scripts/vendor/idangerous.swiper.js"></script>
     <script src="resources/scripts/vendor/jquery.fitvids.js"></script>
-    <script src="resources/scripts/vendor/jquery.countTo.js"></script>
+<!--     <script src="resources/scripts/vendor/jquery.countTo.js"></script> -->
     <script src="resources/scripts/vendor/TweenMax.min.js"></script>
     <script src="resources/scripts/vendor/ScrollToPlugin.min.js"></script>
     <script src="resources/scripts/vendor/jquery.scrollmagic.min.js"></script>
     <script src="resources/scripts/vendor/jquery.easypiechart.js"></script>
-    <script src="resources/scripts/vendor/jquery.validate.js"></script>
     <script src="resources/scripts/vendor/wow.min.js"></script>
     <script src="resources/scripts/vendor/jquery.placeholder.js"></script>
-    <script src="resources/scripts/vendor/jquery.easing.1.3.min.js"></script>
-    <script src="resources/scripts/vendor/jquery.waitforimages.min.js"></script>
+<!--     <script src="resources/scripts/vendor/jquery.easing.1.3.min.js"></script> -->
+<!--     <script src="resources/scripts/vendor/jquery.waitforimages.min.js"></script> -->
     <script src="resources/scripts/vendor/jquery.prettyPhoto.js"></script>
     <script src="resources/scripts/vendor/imagesloaded.pkgd.min.js"></script>
     <script src="resources/scripts/vendor/isotope.pkgd.min.js"></script>
@@ -514,14 +505,9 @@
     <script src="resources/scripts/vendor/bootstrap-hover-dropdown.min.js"></script>
     <script src="resources/scripts/jquery.gmap.min.js"></script>
     <script src="resources/scripts/circle_diagram.js"></script>
+    <script src="resources/js/jquery.validate.min.js"></script>
     <script src="resources/scripts/main.js"></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'XX-XXXXXXXX-XX', 'auto');
-      ga('send', 'pageview');
-    </script>
+    <script src="resources/js/ocharos.js"></script>
+   
   </body>
 </html>

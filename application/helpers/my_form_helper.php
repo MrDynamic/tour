@@ -1,18 +1,18 @@
 <?php if (! defined('BASEPATH')) exit ('No direct script asscess allowed');
 
-    function create_input($labelValue,$attributes){
+    function create_input($labelValue,$attributes,$openform=OPEN_FORM_GROUP){
 		$result ='';
-		$result .= OPEN_FORM_GROUP;
+		$result .= $openform;
 		$result .= form_label($labelValue[0],$labelValue[1]);
 		$result .= form_input($attributes);
 		$result .= CLOSE_FORM_GROUP;
 		return $result;
 	}
 	
-	function create_password($labelValue,$attributes){
+	function create_password($labelValue,$attributes,$labelAttr=array(),$openform=OPEN_FORM_GROUP){
 	    $result ='';
-	    $result .= OPEN_FORM_GROUP;
-	    $result .= form_label($labelValue[0],$labelValue[1]);
+	    $result .= $openform;
+	    $result .= form_label($labelValue[0],$labelValue[1],$labelAttr);
 	    $result .= form_password($attributes);
 	    $result .= CLOSE_FORM_GROUP;
 	    return $result;
@@ -28,9 +28,9 @@
 		return $result;
 	}
 
-	function create_dropdown($labelValue,$name,$data,$attributes,$selected=''){
+	function create_dropdown($labelValue,$name,$data,$attributes,$selected='',$openform=OPEN_FORM_GROUP){
 		$result ='';
-		$result .= OPEN_FORM_GROUP;
+		$result .= $openform;
 		$result .= form_label($labelValue[0],$labelValue[1]);
 		$result .= form_dropdown($name,$data,$selected,$attributes);
 		$result .= CLOSE_FORM_GROUP;
@@ -111,4 +111,12 @@
 		$result .= "</div>";
 		$result .= "</form>";
 		return $result;
+	}
+	
+	function create_error_content($message){
+	    $result =  '<div role="alert" class="alert alert-danger alert-dismissible">';
+	    $result .= ' <button type="button" data-dismiss="alert" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>';
+	    $result .=  $message;
+	    $result .=  '</div>';
+	    return $result;
 	}

@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title><?=$title;?></title>
-    <meta name="description" content="Shop">
+    <title>Ottavio Html Template - FAQ</title>
+    <meta name="description" content="FAQ">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <base href="<?php echo base_url();?>" /> 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory-->
@@ -35,55 +35,54 @@
     <![endif]-->
     <div class="page">
       <!-- Start Nav Section-->
-      	<nav id="main-navigation" role="navigation" class="navbar navbar-fixed-top navbar-standard"><a href="javascript:void(0)" class="search_button"><i class="fa fa-search"></i></a>
-            <form action="search.html" method="get" role="search" class="h_search_form">
-              <div class="container">
-                <div class="h_search_form_wrapper">
-                  <div class="input-group"><span class="input-group-btn">
-                      <button type="submit" class="btn btn-sm"><i class="fa fa-search fa-lg"></i></button></span>
-                    <input type="text" placeholder="Search on site" class="form-control">
-                  </div>
-                  <div class="h_search_close"><a href="#"><i class="fa fa-times"></i></a></div>
-                </div>
+      <nav id="main-navigation" role="navigation" class="navbar navbar-fixed-top navbar-standard"><a href="javascript:void(0)" class="search_button"><i class="fa fa-search"></i></a>
+        <form action="search.html" method="get" role="search" class="h_search_form">
+          <div class="container">
+            <div class="h_search_form_wrapper">
+              <div class="input-group"><span class="input-group-btn">
+                  <button type="submit" class="btn btn-sm"><i class="fa fa-search fa-lg"></i></button></span>
+                <input type="text" placeholder="Search on site" class="form-control">
               </div>
-            </form>
-            <div class="container">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle"><i class="fa fa-align-justify fa-lg"></i></button>
-                <a href="#" class="navbar-brand">
-                	<img src="resources/img/logo-white.png" alt="" class="logo-white">
-                	<img src="resources/img/logo-black-large.png" alt="" class="logo-dark">
-                </a>
-              </div>
-              <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right service-nav">
-                  <li>
-                    <!-- Login Form -->
-                    <?=$form_login;?>
-                  </li>
-                  <li>
-                    <!-- Cart Form -->
-                    <?=$form_cart;?>
-                  </li>
-                </ul>
-                <button type="button" class="navbar-toggle"><i class="fa fa-close fa-lg"></i></button>
-                <?=$nav_menu;?>
-              </div>
+              <div class="h_search_close"><a href="#"><i class="fa fa-times"></i></a></div>
             </div>
-          </nav>
+          </div>
+        </form>
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle"><i class="fa fa-align-justify fa-lg"></i></button><a href="#" class="navbar-brand"><img src="resources/img/logo-white.png" alt="" class="logo-white"><img src="resources/img/logo-dark.png" alt="" class="logo-dark"></a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right service-nav">
+              <li>
+              	<?=$form_login;?>
+              </li>
+              <li>
+              	<?=$form_cart;?>
+              </li>
+            </ul>
+            <button type="button" class="navbar-toggle"><i class="fa fa-close fa-lg"></i></button>
+            <?=$nav_menu;?>
+          </div>
+        </div>
+      </nav>
       <!-- Start header Section-->
-      	<?=$header;?>
+     	<?=$header;?>
       <!-- End header Section-->
-      <!-- Start Content section-->
+      <!-- Start Portfolio Detail section-->
       <section class="sep-bottom-2x">
         <div class="container">
           <div class="row">
-          	<?php (isset($content) && !empty($content))?print $content:'';?>
+            <div class="col-md-9 col-md-push-3 sep-top-2x">
+              <div class="row">
+                <?php (isset($content) && !empty($content))? print $content:''; ?>
+              </div>
+            </div>
+            <!-- start sidebar-->
+            <?php (isset($sidebar) && !empty($sidebar))?print $sidebar:''; ?>
+            <!-- end sidebar-->
           </div>
-          <div class="push"></div>
         </div>
       </section>
-      <!-- End Content section-->
       <!-- Start Footer section-->
       <?=$footer;?>
       <!-- End Footer section-->
