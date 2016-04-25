@@ -1,17 +1,22 @@
 <?php
 	class Package extends Abstract_Controller{
-		
-	    private $path="/resources/upload/package/";
 	    
 		function __construct(){
 			parent::__construct();
-			$this->load->model(array("M_PackageType"=>'mCat','M_Package'=>'mPackage'));
+			$this->load->model(array("M_PackageType"=>'mCat','M_Package'=>'mPackage','M_PackagePicture'=>'picture'));
 		}
 
 		function index(){
             $this->loadPage();
 		}
 
+		function listPackagePicture(){
+		   $packageId = $this->input->post('packageId');
+		   $this->log_debug('package id',$packageId);
+		   $pictureList['list'] = $this->picture->getDataSpecifyField('package_img_id,package_id,image_title,image_path',array('package_id'=>$packageId));
+		   echo $this->load->view('admin/package/list_package_picture',$pictureList,true);
+		}
+		
 		function loadPage($action=ACTION_ADD,$formData=array()){
 		    $this->setActiveMenu(MENU_MAIN_PACKAGE,MENU_PACKAGE);
 		    $formData['packageType'] = $this->generateSelectItems($this->mCat->getDataSpecifyField('package_type_id as id,package_type_name as label'));
@@ -67,11 +72,12 @@
 		              $response = false;
 		            }else{
 		                $response = true;
-		                $packageData['thumbnail'] = $this->path.$this->upload->data()['file_name'];
-		                //-- remove old file
-		                if(null != $this->input->post('tourProgram_hide') && $this->input->post('tourProgram_hide') != ""){
-		                    unlink($this->input->post('tourProgram_hide'));
+		                $packageData['thumbnail'] = $this->upload->data()['file_name'];
+		                if(null != $this->input->post('thumbnail_hide') && $this->input->post('thumbnail_hide') != ""){
+		                    $this->log_debug('old thumbnail',$this->input->post('thumbnail_hide'));
+		                    $this->deleteFile($this->input->post('thumbnail_hide'));
 		                }
+		                
 		            }
 		        }
 		        
@@ -82,9 +88,11 @@
 		                      $response = false;
 		                  }else{
 		                      $response = true;
-		                      $packageData['pdf_path'] = $this->path.$this->upload->data()['file_name'];
-		                      if(null != $this->input->post('thumbnail_hide') && $this->input->post('thumbnail_hide') != ""){
-		                          unlink($this->input->post('thumbnail_hide'));
+		                      $packageData['pdf_path'] = $this->upload->data()['file_name'];
+		                      
+		                      //-- remove old file
+		                      if(null != $this->input->post('tourProgram_hide') && $this->input->post('tourProgram_hide') != ""){
+		                          unlink($this->input->post('tourProgram_hide'));
 		                      }
 		                  }
 		              }
@@ -107,18 +115,9 @@
 		    return $response;
 		}
 		
-		private function getRealFolder(){
-		    $folderName = dirname($_SERVER["SCRIPT_FILENAME"]).$this->path;
-		    if(!is_dir($folderName))
-		    {
-		        mkdir($folderName,0777,true);
-		    }
-		    return $folderName;
-		}
-		
 		private function getConfigUpload(){
-		    $config['upload_path'] = $this->getRealFolder();
-		    $config['allowed_types'] = 'gif|jpg|png|pdf';
+		    $config['upload_path'] = $this->getRealFolder(PATH);
+		    $config['allowed_types'] = 'gif|jpg|png|pdf|jpeg';
 		    $config['encrypt_name'] =true;
 		    $config['max_size']	= '2048';
 		    $config['max_width']  = '1024';
@@ -139,14 +138,20 @@
 				if (!$this->upload->do_upload('thumbnail')){
 					$response = false;
 				}else{
-				    $this->log_debug('upload data',print_r($this->upload->data(),true));
-					$pathThumbnail = $path.$this->upload->data()['file_name'];
+				    $this->log_debug('upload data thumbnail',print_r($this->upload->data(),true));
+					$pathThumbnail = $this->upload->data()['file_name'];
 					if($this->upload->do_upload('tourProgram')){
-						$pathPdf = $path.$this->upload->data()['file_name'];
+					    $this->log_debug('upload data pdf',print_r($this->upload->data(),true));
+						$pathPdf = $this->upload->data()['file_name'];
 
 						$packageData = $this->input->post();
+						unset($packageData['packageId']);
+						unset($packageData['tourProgram_hide']);
+						unset($packageData['thumbnail_hide']);
+						
 						$packageData['thumbnail'] = $pathThumbnail;
 						$packageData['pdf_path'] = $pathPdf;
+						$this->log_debug('insert data',print_r($packageData,true));
 						$response = $this->mPackage->insert($packageData);
 
 					}
@@ -157,7 +162,7 @@
 	        catch(Exception $err)
 	        {
 	            $this->log_error("error",$err->getMessage());
-	            
+	            $response = false;
 	        }
 			echo $response;
 		}

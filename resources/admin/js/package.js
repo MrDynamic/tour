@@ -2,7 +2,23 @@ $().ready(function() {
 	$("#btnCancel").click(function(){
 		window.location='admin/package';
 	});
+	
+	$("#packageType").change(function(){
+		refreshPictureList(this.value);
+	});
 });
+
+function refreshPictureList(packageId){
+	$('#hidePackageId').val(packageId);
+	callService('admin/package/listPackagePicture',{'packageId':packageId},renderPictureList);
+}
+
+
+function deletePackagePicture(pictureId,picturePath){
+	callService('admin/packagePicture/deletePackagePictureById',{'pictureId':pictureId,'picturePath':picturePath,'packageId':$("#hidePackageId").val()},refreshPictureList);
+	
+}
+
 
 function removeUpload(id,path){ 
 	var displayPostfix = '_display';
@@ -10,6 +26,10 @@ function removeUpload(id,path){
 	$("#"+id).show();
 	$("#"+id + displayPostfix).remove();
 	$("#"+id+hiddenPostfix).val(path);
+}
+
+function renderPictureList(response){
+	$("#detail").html(response);
 }
 
 $("#formPackage").validate({
@@ -28,14 +48,15 @@ $("#formPackage").validate({
 			overlay();
 			// var formData = $("#formPackage").serializeObject();  
 			var formData = new FormData($("#formPackage")[0]);
-			callService($('#action').val(),formData,addPackageResponse);
+			callServiceWithContent($('#action').val(),formData,addPackageResponse);
 		}
 
 });
 
 
-function addPackageResponse(response){
+function addPackageResponse(response){alert(response);
 	if(reponse==1){
+		alert('บันทึกข้อมูลเรียบร้อยแล้ว');
 		window.location.reload();
 	}else{
 		alert('Save data fail');
@@ -53,9 +74,6 @@ jQuery.validator.addMethod("greaterThan", function(value, element, params) {
     return true; 
 },'Must be greater than {1}.');
 
-$('#packageId').change(function(){
-	$('#hidePackageId').val(this.value);
-});
 
  Dropzone.options.packagePicture = { 
  	// set following configuration
@@ -72,10 +90,8 @@ $('#packageId').change(function(){
  	dictFileTooBig: "Image size is too big. Max size: 2mb.",
  	dictMaxFilesExceeded: "Only 10 images allowed per upload.",
  	acceptedFiles: ".jpeg,.jpg,.png,.gif,.JPEG,.JPG,.PNG,.GIF",
- 	// The setting up of the dropzone
  	init: function() {
  		var myDropzone = this;
- 		// Upload images when submit button is clicked.
  		$("#btnSubmitId").click(function (e) {
  			if(validateUpload(myDropzone)){
  				e.preventDefault();
@@ -84,10 +100,10 @@ $('#packageId').change(function(){
  			}
 	 		
  		});
- 		// Refresh page when all images are uploaded
- 		myDropzone.on("complete", function (file) { alert(file);
+ 		myDropzone.on("complete", function (file) {
  			if (myDropzone.getUploadingFiles().length === 0 && myDropzone.getQueuedFiles().length === 0) {
- 				window.location.reload();
+ 				$('div.dz-success').remove();
+ 				refreshPictureList($("#hidePackageId").val())
  			}
  		});
  	}
@@ -97,7 +113,7 @@ $('#packageId').change(function(){
 	 valid = true;
 	 if($("#hidePackageId").val() == ""){
 		 valid = false;	
-		 $("#packageId").focus();
+		 $("#packageType").focus();
 		 alert('Please Select Package');
 	 }else if(myDropzone.files.length <1){
 		 valid = false;

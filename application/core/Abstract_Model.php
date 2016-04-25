@@ -39,6 +39,13 @@ abstract class Abstract_Model extends CI_Model{
 
     }
 
+    public function getDataResultArray($fieldName,$criteria=array(),$limit=''){
+        $this->db->select($fieldName);
+        $criteria['delete_flag'] = 'N';
+        $query = $this->db->get_where($this->getTableName(),$criteria);
+        return $query->result_array();
+    }
+    
     public function getLastQuery(){
         return $this->db->last_query();
     }

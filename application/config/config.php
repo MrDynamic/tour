@@ -515,6 +515,7 @@ $config['proxy_ips'] = '';
 define('ADMIN_ROLE','ADMIN');
 define('USER_ROLE','USER');
 define('CONTENT_TYPE','CONTENT');
+define('PATH','/resources/upload/package/');
 
 // Constants Variables
 define('OPEN_FORM_GROUP', '<div class="form-group">');

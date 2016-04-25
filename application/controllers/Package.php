@@ -6,19 +6,25 @@ class Package extends Abstract_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('M_Package','package');
+        $this->load->model(array('M_Package'=>'package','M_PackagePicture'=>'picture'));
     }
 
     public function index(){
-        $this->template['menu_type'] = CONTENT_TYPE;
-        $this->package->getPackageList();
-        $this->template['content'] = $this->load->view('form_register',$formData,true);
+        $data['packageData'] = $this->package->getPackageList();
+        $this->setContentPage('package/package_page',$data);
         $this->load->view('layout_content',$this->template);
         
     }
     
+    public function detail(){
+        $packageId = $this->uri->segment('3');
+        $data['packagePicture'] = $this->picture->getDataSpecifyField('image_title,image_path',array('package_id'=>$packageId));
+        $data['packageData'] = $this->package->getPackageByPackageId($packageId)[0];
+        $this->setContentPage('package/package_detail',$data);
+        $this->load->view('layout_content',$this->template);
+    }
+    
+    
     function __destruct()
     {}
 }
-
-?>

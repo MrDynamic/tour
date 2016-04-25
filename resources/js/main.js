@@ -43,7 +43,8 @@ function overlay(){
         color: '#fff' 
     } }); 
 }
-function callService(url,data,callback){ 
+
+function callServiceWithContent(url,data,callback){ 
 	 $.ajax({
 		 	type:"POST",
 			url:url,
@@ -62,6 +63,23 @@ function callService(url,data,callback){
 		        }
 		});
 }
+
+function callService(url,data,callback){ 
+	 $.ajax({
+		 	type:"POST",
+			url:url,
+			data:data,
+			async: false,
+		    cache: false,
+			success: function(response) {
+			  	callback(response);
+			  }
+		  	,error: function (xhr, ajaxOptions, thrownError) {
+		          alert(thrownError);
+		        }
+		});
+}
+
 function loadPage(url){
 	$.blockUI({ css: { 
         border: 'none', 

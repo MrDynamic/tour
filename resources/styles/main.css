@@ -941,9 +941,9 @@ hr.slim {
   margin: 20px 0 15px 0;
 }
 .icon-box.icon-lg .icon-content {
-  width: 110px;
-  height: 110px;
-  font-size: 4.5em;
+  width: 150px;
+  height: 150px;
+  font-size: 6.5em;
 }
 .icon-box.icon-lg .icon-content .fa {
   line-height: 110px;

@@ -5,7 +5,7 @@
           (isset($form) && !empty($form))? print $form:'';
         ?>
     </section>
-    <section class="panel">
+    <section class="panel" id="detail">
         <?php 
           (isset($detail) && !empty($detail))? print $detail:'';
         ?>

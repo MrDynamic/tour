@@ -6,7 +6,7 @@ class PackagePicture extends Abstract_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model(array('M_Package'=>'mPackage','M_PackagePicture'=>'mPackagePicture'));
+        $this->load->model(array('M_Package'=>'mPackage','M_PackagePicture'=>'picture'));
     }
 
    public function index(){
@@ -20,25 +20,22 @@ class PackagePicture extends Abstract_Controller
    public function add(){
        try {
            $this->log_debug('Add Picture');
-           $this->log_debug('submit form >> '.$this->getArrayValue($this->input->post()));
+           $this->log_debug('submit form',print_r($this->input->post(),true));
            foreach($_FILES['file']['name'] as $index=>$name){
-               log_message('debug', $name);
-               $filename = $name;
-               $folderName = dirname($_SERVER["SCRIPT_FILENAME"])."/resources/upload/package/";
-               if(!file_exists($folderName.$filename)){
-                   $title = explode(",",$filename)[0];
-                   $path = $folderName.$filename;
-                   move_uploaded_file($_FILES["file"]["tmp_name"][$index],$path);
-                   $data = array(
-                       'image_title'=>$title,
-                       'package_id'=>$this->input->post("hidePackageId"),
-                       'image_path'=>$path
-                   );
-                   $this->log_debug('insert data',$this->getArrayValue($data));
-                   
-                   $this->mPackagePicture->insert($data);
+               $this->log_debug('file',print_r($_FILES,true));
+               $fileAttr = explode(".",$name);
+               $rename = md5($fileAttr[0]);
+               $path = $this->getRealFolder(PATH.$rename.'.'.$fileAttr[1]);
+               $this->log_debug('path',$path);
+               move_uploaded_file($_FILES["file"]["tmp_name"][$index],$path);
+               $data = array(
+                   'image_title'=>$fileAttr[0],
+                   'package_id'=>$this->input->post("hidePackageId"),
+                   'image_path'=>$rename.'.'.$fileAttr[1]
+               );
+               
+               $this->picture->insert($data);
            
-               }
            }
            
        } catch (Exception $e) {
@@ -46,6 +43,15 @@ class PackagePicture extends Abstract_Controller
        }
        
    }
+   
+   public function deletePackagePictureById(){
+       $this->log_debug('delete data',print_r($this->input->post(),true));
+       $picturePath = $this->input->post('picturePath');
+       $pictureId = $this->input->post('pictureId');
+       $packageId = $this->input->post('packageId');
+       $this->deleteFile(getFilePath($picturePath));
+       $this->picture->delete(array('package_img_id'=>$pictureId));
+       echo $packageId;
+       
+   }
 }
-
-?>

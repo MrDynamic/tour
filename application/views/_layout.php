@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title><?=$title;?></title>
+    <title>Ocharos 's tour</title>
     <meta name="description" content="One Page Layout">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <base href="<?php echo base_url();?>" /> 
@@ -62,7 +62,7 @@
                     <!-- Login Form -->
                     <?=$form_login;?>
                   </li>
-                  <li><a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;<span class="badge">2</span></a>
+                  <li>
                     <!-- Cart Form -->
                     <?=$form_cart;?>
                   </li>
@@ -368,9 +368,6 @@
         </section>
       </section>
       <!-- End Portfolio section-->
-      <!-- Start Package section-->
-      	<?php (isset($packageIntro) && !empty($packageIntro))?print $packageIntro:'' ?>
-      <!-- End Package section-->
       <!-- Start Contact section-->
       <section id="contacts" class="sep-top-3x sep-bottom-3x">
         <div class="container">

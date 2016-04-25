@@ -1,19 +1,31 @@
 $(document).ready(function() { 
 	$("#provinceId").change(function(){
 		$("#amphurId").html(generatePleaseSelect());
-		callService('authen/generateAmphur',{"provinceId":$('#provinceId').val()},generateAmphur);
+		callService('user/generateAmphur',{"provinceId":$('#provinceId').val()},generateAmphur);
 	});
 	
 	$("#amphurId").change(function(){
 		$("#districtId").html(generatePleaseSelect());
-		callService('authen/generateDistrict',{'amphurId':$('#amphurId').val()},generateDistrict);
+		callService('user/generateDistrict',{'amphurId':$('#amphurId').val()},generateDistrict);
 	});
 	
-//	$("#btnLogin").click(function(){
-//		alert('btnlogin');
-//	});
+	$("#btnCancel").click(function(){
+		window.location = $('#cancelPage').val();
+	});
 	
 	$("#form-register").validate();
+	
+	$("#btnReserve").click(function(){
+		var qty =$("#reserveQty").val();
+		var packageId = $("#packageId").val();
+		var price = $("#price").val();
+		var packageName = $("#packageName").val();
+		var data = {'id':packageId,'qty':qty,'price':price,'name':packageName};
+		alert(packageId + ',' + price + ',' + packageName);
+		callService('user/addToCart',data,function(response){
+			window.history.back();	
+		});
+	});
 	
 }); 
 

@@ -15,7 +15,7 @@ if(isset($message) && !empty($message)){
   	 echo '<div class="sep-top-xs">';
   	 echo anchor('#','ลืมรหัสผ่าน');
   	 echo '&nbsp;';
-  	 echo anchor('authen/register','สมัครสมาชิก');
+  	 echo anchor('user/register','สมัครสมาชิก');
   	 echo '</div>';
   	?>
   </div>

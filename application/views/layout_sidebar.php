@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ottavio Html Template - FAQ</title>
+    <title>Ocharos 's tour</title>
     <meta name="description" content="FAQ">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <base href="<?php echo base_url();?>" /> 

@@ -27,7 +27,7 @@
             $inputExpireDate['value'] = $editData->expire_date;
             $inputPackageId['value'] = $editData->package_id;
             $pdfPath = $editData->pdf_path;
-            $thumbnailPath = $editData->thumbnail;
+            $thumbnailPath = getFilePath($editData->thumbnail);
             
         }
 		
@@ -46,7 +46,7 @@
 		}
 		
 		if($pdfPath == ''){
-		    echo create_upload(array('โปรแกรมทัวร์ (PDF)','tourProgram'),$pdfPath);
+		    echo create_upload(array('โปรแกรมทัวร์ (PDF)','tourProgram'),$uploadPdf);
 		}else{
 		    echo create_link_icon(array('โปรแกรมทัวร์ (PDF)',''), array('src'=>'resources/img/pdf.png','atl'=>'View Package'), $pdfPath,$uploadPdf);
 		}

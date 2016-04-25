@@ -10,7 +10,7 @@
   	<?=anchor('#portfolio','ผลงาน');?>
   </li>
   <li>
-  	<?=anchor('#package','แพคเก็จ');?>
+  	<?=anchor('package','แพคเก็จ');?>
   </li>
    <li>
    <?=anchor('#contacts','ติดต่อ');?>
@@ -26,7 +26,7 @@
   	<a href="#portfolio" title="Portfolio" data-ref="portfolio">ผลงาน</a>
   </li>
   <li>
-  	<a href="#package" title="Package" data-ref="package">แพคเก็จ</a>
+  	<?=anchor('package','แพคเก็จ');?>
   </li>
    <li>
    	<a href="#contacts" title="Contacts" data-ref="contacts">ติดต่อ</a>

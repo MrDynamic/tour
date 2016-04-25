@@ -4,11 +4,13 @@
     <div class="shopping_cart_dropdown" style="text-align: left">
      <ul class="cart_list product_list_widget">
       <li>
-      	<a href="#"><span>ข้อมูลส่วนตัว</span></a>
+      	<a href="<?=site_url('user/userPage');?>"><span>ข้อมูลส่วนตัว</span></a>
       </li>
     </ul>
     <div class="form-inline form-group">
-      <button type="button" class="btn btn-primary btn-xs">ออกจากระบบ</button>
+      <form method="post" action="<?=site_url('authen/logout');?>">
+      	<button type="submit" class="btn btn-primary btn-xs">ออกจากระบบ</button>
+      </form>
     </div>   
     </div>
 </div>
@@ -28,7 +30,7 @@
       <button type="submit" class="btn btn-primary btn-xs" id="btnLogin">เข้าสู่ระบบ</button>
     </div>
     <a href="#"><small>ลืมรหัสผ่าน</small></a>
-    &nbsp;<a href="<?=site_url('authen/register')?>"><small>สมัครสมาชิก</small></a>
+    &nbsp;<a href="<?=site_url('user/register')?>"><small>สมัครสมาชิก</small></a>
   </form>
 </div>
 <?php } ?>

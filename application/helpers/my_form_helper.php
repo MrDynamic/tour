@@ -120,3 +120,11 @@
 	    $result .=  '</div>';
 	    return $result;
 	}
+	
+	function checkNotNullEmpty($var){
+	    return (isset($var) && !empty($var));
+	}
+	
+	function getFilePath($fileName,$isUrl=false){
+	    return ($isUrl)?site_url(PATH.$fileName):PATH.$fileName;
+	}

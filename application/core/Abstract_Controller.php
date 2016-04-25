@@ -6,19 +6,48 @@ class Abstract_Controller extends CI_Controller {
 	{
 		parent::__construct();
 		//-- Check Role
-// 		$this->generateAdminMenu();
+		$this->generateAdminMenu();
         $this->generateMenu();
 	}
 
    function __destruct() {
 		// $this->db->close();
    }
+   
+   protected function deleteFile($path){
+       $file = $this->getRealFolder($path);
+       if(file_exists($file)){
+        unlink($file);
+       }
+   }
+   
+   protected function getRealFolder($path){
+       $folderName = dirname($_SERVER["SCRIPT_FILENAME"]).$path;
+//        if(!is_dir($folderName))
+//        {
+//            mkdir($folderName,0777,true);
+//        }
+       return $folderName;
+   }
 	
-	function setActiveMenu($mainName,$subName){
+   protected function setContentWithSidePage($contentPage='',$data=array()){
+        $this->template['menu_type'] = CONTENT_TYPE;
+        $this->template['nav_menu'] = $this->load->view('nav_menu',$this->template,true);
+        $this->template['sidebar'] = $this->load->view('user/sidebar_user',null,true);
+        $this->template['content'] = $this->load->view($contentPage,$data,true);
+    }
+    
+    protected function setContentPage($contentPage,$data=array()){
+        $this->template['menu_type'] = CONTENT_TYPE;
+        $this->template['nav_menu'] = $this->load->view('nav_menu',$this->template,true);
+        $this->template['content'] = $this->load->view($contentPage,$data,true);
+    }
+   
+	protected function setActiveMenu($mainName,$subName){
         $this->template['active_menu'] = array($mainName,$subName);
     }
 
-    function generateSelectItems($data){
+    protected function generateSelectItems($data){
     	$result = array(''=>'กรุณาเลือก');
     	if(isset($data)){
     		foreach($data as $value){
@@ -28,7 +57,7 @@ class Abstract_Controller extends CI_Controller {
     	return $result;
     }
 
-    function generateMenu(){
+    protected function generateMenu(){
         $this->template['title'] = "Ocharos 's tour";
         $this->template['form_login'] = $this->load->view('form_login',null,true);
         $this->template['header'] = $this->load->view('header',null,true);
@@ -37,7 +66,7 @@ class Abstract_Controller extends CI_Controller {
         $this->template['footer'] = $this->load->view('footer',null,true);
     }
     
- 	function generateAdminMenu(){
+ 	protected function generateAdminMenu(){
 		$this->template['slide_menu'] = array(
 							array(
 									'MENU_NAME'=>'สถานที่แนะนำ',
@@ -118,6 +147,15 @@ class Abstract_Controller extends CI_Controller {
 	    $className = $this->router->class;
 	    $methodName = $this->router->method;
 	    log_message('error',"[$className > $methodName]  $message");
+	}
+	
+	protected  function checkSession(){
+	    if(empty($this->session->userdata('user_id')) 
+	        || empty($this->session->userdata('username'))
+	        || empty($this->session->userdata('role'))){
+	        $this->session->set_flashdata('message','คุณไม่มีสิทธิ์เข้าใช้งานกรุณา login เข้าสู่ระบบ');
+	        redirect('authen/login','refresh');
+	    }
 	}
 
 }
