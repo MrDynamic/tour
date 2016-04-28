@@ -38,12 +38,17 @@ $("#formPackage").validate({
 		        greaterThan: ["#travelDate","Travel Date"]
 		    },
 		    tourProgram:{
-		    	extension: "pdf"
+		    	extension: "pdf",
+		    	filesize:2097152
+		    },
+		    thumbnail:{
+		    	filesize:2097152
 		    },
 		    price:{
 		    	number:true
 		    }
 		},
+	messages: { thumbnail: "File must be JPG, GIF or PNG, less than 2MB" },
 	submitHandler: function() {
 			overlay();
 			// var formData = $("#formPackage").serializeObject();  
@@ -54,15 +59,22 @@ $("#formPackage").validate({
 });
 
 
-function addPackageResponse(response){alert(response);
+function addPackageResponse(response){
 	if(reponse==1){
 		alert('บันทึกข้อมูลเรียบร้อยแล้ว');
-		window.location.reload();
+//		window.location.reload();
 	}else{
 		alert('Save data fail');
 	}
 }
 
+
+$.validator.addMethod('filesize', function(value, element, param) {
+    // param = size (in bytes) 
+    // element = element to validate (<input>)
+    // value = value of the element (file name)
+    return this.optional(element) || (element.files[0].size <= param) 
+});
 
 jQuery.validator.addMethod("greaterThan", function(value, element, params) { 
     if ($(params[0]).val() != '') {  

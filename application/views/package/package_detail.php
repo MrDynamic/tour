@@ -61,6 +61,7 @@
                   	<?php echo form_input(array('type'=>'hidden','id'=>'packageId','value'=>$packageData->package_id)); 
                   	      echo form_input(array('type'=>'hidden','id'=>'price','value'=>$packageData->net_price));
                   	      echo form_input(array('type'=>'hidden','id'=>'packageName','value'=>$packageData->package_name));
+                  	      echo form_input(array('type'=>'hidden','id'=>'thumbnail','value'=>$packageData->thumbnail));
                   	?>
                     <input type="text" value="1" name="qty" id="reserveQty" class="qty">
                   </div>

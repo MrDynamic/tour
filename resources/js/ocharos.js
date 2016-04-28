@@ -20,7 +20,8 @@ $(document).ready(function() {
 		var packageId = $("#packageId").val();
 		var price = $("#price").val();
 		var packageName = $("#packageName").val();
-		var data = {'id':packageId,'qty':qty,'price':price,'name':packageName};
+		var thumbnail = $("#thumbnail").val();
+		var data = {'id':packageId,'qty':qty,'price':price,'name':packageName,'thumbnail':thumbnail};
 		alert(packageId + ',' + price + ',' + packageName);
 		callService('user/addToCart',data,function(response){
 			window.history.back();	

@@ -112,7 +112,8 @@ class User extends Abstract_Controller
         $data = array('id'=>$this->input->post('id'),
             'qty'=>$this->input->post('qty'),
             'name'=>$this->input->post('name'),
-            'price'=>$this->input->post('price')
+            'price'=>$this->input->post('price'),
+            'thumbnail'=>$this->input->post('thumbnail')
         );
         $this->log_debug('data insert',print_r($data,true));
         $this->my_cart->insert($data);

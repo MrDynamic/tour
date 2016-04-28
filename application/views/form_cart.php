@@ -1,27 +1,29 @@
 <a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;
 <?php if(sizeof($this->my_cart->contents()) > 0): ?>
-<span class="badge">2</span>
+<span class="badge"><?=sizeof($this->my_cart->contents());?></span>
 <?php endif; ?>
 </a>
 <div aria-labelledby="dropdownMenuCart" class="dropdown-menu widget-box">
   <div class="shopping_cart_dropdown">
     <ul class="cart_list product_list_widget">
-    <?php foreach ($this->my_cart->contents() as $items): ?>
-      <li><a href="#" class="delete"><i class="fa fa-close"></i></a><a href="#"><img alt="" src="resources/img/products/3.jpg"><span>New Peace Baja</span></a>
-        <h5 class="quantity">45.00</h5>
+    <?php 
+    $total = 0;
+    foreach ($this->my_cart->contents() as $item): 
+        $total += $item['price'];
+    ?>
+      <li><a href="#" class="delete"><i class="fa fa-close"></i></a><a href="#">
+      	<img alt="" src="resources/img/booking.png">
+      	<span><?=$item['name'];?></span></a>
+        <h5 class="quantity"><?=$item['price'];?></h5>
       </li>
-      <li><a href="#" class="delete"><i class="fa fa-close"></i></a><a href="#"><img alt="" src="resources/img/products/5.jpg"><span>Sunny Tank Selected</span></a>
-        <h5 class="quantity">25.00</h5>
-      </li>
-    </ul>
     <?php endforeach;?>
-    <?php if(sizeof($this->my_cart->contents()) > 0): ?>
+    </ul>
+    <?php if(sizeof($this->my_cart->contents()) > 0):?>
     <div class="total">
-      <h6>Subtotal</h6><span>$70.00</span>
+      <h6>รวม</h6><span><?=$total;?> THB</span>
     </div>
     <div class="action-button">
-        <a href="shop-cart.html" class="btn btn-dark btn-bordered btn-xs upper">View Cart</a>
-        <a href="shop-checkout.html" class="btn btn-primary btn-xs upper">Checkout</a>
+        <a href="shop-cart.html" class="btn btn-dark btn-bordered btn-xs upper">ยืนยันการสั่งซื้อ</a>
     </div>
     <?php endif; ?>
   </div>

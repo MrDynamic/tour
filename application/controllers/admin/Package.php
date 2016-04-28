@@ -1,23 +1,23 @@
 <?php
 	class Package extends Abstract_Controller{
 	    
-		function __construct(){
+		public function __construct(){
 			parent::__construct();
 			$this->load->model(array("M_PackageType"=>'mCat','M_Package'=>'mPackage','M_PackagePicture'=>'picture'));
 		}
 
-		function index(){
+		public function index(){
             $this->loadPage();
 		}
 
-		function listPackagePicture(){
+		public function listPackagePicture(){
 		   $packageId = $this->input->post('packageId');
 		   $this->log_debug('package id',$packageId);
 		   $pictureList['list'] = $this->picture->getDataSpecifyField('package_img_id,package_id,image_title,image_path',array('package_id'=>$packageId));
 		   echo $this->load->view('admin/package/list_package_picture',$pictureList,true);
 		}
 		
-		function loadPage($action=ACTION_ADD,$formData=array()){
+		public function loadPage($action=ACTION_ADD,$formData=array()){
 		    $this->setActiveMenu(MENU_MAIN_PACKAGE,MENU_PACKAGE);
 		    $formData['packageType'] = $this->generateSelectItems($this->mCat->getDataSpecifyField('package_type_id as id,package_type_name as label'));
 		    $formData['action'] = $action;
@@ -29,11 +29,8 @@
 		    $this->load->view(ADMIN_LAYOUT,$this->template);
 		}
 		
-		public function refreshPage(){
-		    
-		}
 		
-		function view(){
+		public function view(){
 		    try {
 		        $packageId = $this->uri->segment(3);
 		        $this->log_debug('Package Id',$packageId);
@@ -57,7 +54,7 @@
 		    }
 		}
 		
-		function update(){
+		public function update(){
 		    $response = true;
 		    $this->log_debug("package id",$this->input->post('packageId'));
 		    $this->log_debug("submit data",print_r($this->input->post(),true));
@@ -122,10 +119,11 @@
 		    $config['max_size']	= '2048';
 		    $config['max_width']  = '1024';
 		    $config['max_height']  = '768';
+		    $this->log_debug('upload config',print_r($config,true));
 		    return $config;
 		}
 		
-		function add(){
+		public function add(){
 			$response = true;
 			$this->log_debug('add');
 			try
@@ -134,6 +132,22 @@
 				$pathPdf = '';
 
 				$this->load->library('upload', $this->getConfigUpload());
+// 				$this->load->library('form_validation');
+				
+// 				$this->form_validation->set_rules('package_type_id', 'Package Type', 'trim|required');
+// 				$this->form_validation->set_rules('package_name','Package Name','trim|required');
+				
+// 				$this->log_debug('data thumbnail',print_r($_FILES['thumbnail'],true));
+// 				if (empty($_FILES['thumbnail']['name']))
+// 				{
+// 				    $this->form_validation->set_rules('thumbnail','Thumbnail','trim|required');
+// 				}
+				
+// 				if ($this->form_validation->run() == FALSE){
+// 				    $this->loadPage();
+// 				}else{
+				    
+// 				}
 				
 				if (!$this->upload->do_upload('thumbnail')){
 					$response = false;
@@ -167,7 +181,7 @@
 			echo $response;
 		}
 
-		function uploadThumbnail(){
+		public function uploadThumbnail(){
 			
 		}
 		
