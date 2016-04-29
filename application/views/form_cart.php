@@ -9,12 +9,12 @@
     <?php 
     $total = 0;
     foreach ($this->my_cart->contents() as $item): 
-        $total += $item['price'];
+        $total += $item['price']*$item['qty'];
     ?>
-      <li><a href="#" class="delete"><i class="fa fa-close"></i></a><a href="#">
+      <li><a href="<?=site_url('user/viewCart');?>">
       	<img alt="" src="resources/img/booking.png">
       	<span><?=$item['name'];?></span></a>
-        <h5 class="quantity"><?=$item['price'];?></h5>
+        <h5 class="quantity"><?=($item['price']*$item['qty']);?></h5>
       </li>
     <?php endforeach;?>
     </ul>
@@ -23,7 +23,10 @@
       <h6>รวม</h6><span><?=$total;?> THB</span>
     </div>
     <div class="action-button">
-        <a href="shop-cart.html" class="btn btn-dark btn-bordered btn-xs upper">ยืนยันการสั่งซื้อ</a>
+    	<?php 
+    	   echo anchor('user/viewCart','ตะกร้าสินค้า',array('class'=>'btn btn-dark btn-bordered btn-xs upper'));
+    	   echo anchor('','ชำระเงิน',array('class'=>'btn btn-primary btn-xs upper'));
+    	?>
     </div>
     <?php endif; ?>
   </div>

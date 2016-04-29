@@ -109,15 +109,48 @@ class User extends Abstract_Controller
     
     public function addToCart(){
         $this->log_debug('cart data',print_r($this->input->post(),true));
-        $data = array('id'=>$this->input->post('id'),
+        $data = array(
+            'id'=>$this->input->post('id'),
             'qty'=>$this->input->post('qty'),
             'name'=>$this->input->post('name'),
-            'price'=>$this->input->post('price'),
-            'thumbnail'=>$this->input->post('thumbnail')
+            'price'=>$this->input->post('price')
         );
         $this->log_debug('data insert',print_r($data,true));
         $this->my_cart->insert($data);
     }
+    
+    public function viewCart(){
+        $this->setContentPage('order/cart_page',null,true);
+        $this->load->view('layout_content',$this->template);
+    }
+    
+    public function updateCart(){
+        $arrId = $this->input->post('rowId');
+        $size = sizeof($arrId);
+        $data = array();
+        if($size > 0){
+            for($i=0;$i<$size;$i++){
+              $qty = $this->input->post('qty')[$i];
+              if(!empty($qty) && $qty > 0){
+                  $data[$i] = array(
+                      'rowid'=>$arrId[$i],
+                      'qty'=>$this->input->post('qty')[$i]
+                  );
+              }else{
+                  $this->my_cart->remove($arrId[$i]);
+              }
+            }
+        }
+        $this->log_debug('cart data',print_r($data,true));
+        $this->my_cart->update($data);
+        redirect('user/viewCart','refresh');
+    }
+    
+    public function removeCart(){
+        $rowId = $this->input->post('rowId');
+        $this->my_cart->remove($rowId);
+    }
+    
     
     function __destruct()
     {}

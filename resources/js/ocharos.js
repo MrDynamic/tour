@@ -31,6 +31,11 @@ $(document).ready(function() {
 }); 
 
 
+function removeCart(rowId){
+	callService('user/removeCart',{'rowId':rowId},function(){
+		window.location = 'user/viewCart';
+	});
+}
 
 function callService(url,data,callback){ 
 	 $.ajax({

@@ -100,12 +100,7 @@
                   <div class="accordion-heading upper"><a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="accordion-toggle">ข้อมูลเพิ่มเติม<i class="accordion-icon fa fa-plus"></i></a></div>
                   <div id="collapse2" class="accordion-body panel-collapse collapse">
                     <p>
-                      Curabitur pellentesque neque eget diam posuere porta. Quisque
-                      ut nulla at nunc vehicula lacinia. Proin adipiscing porta
-                      tellus, ut feugiat nibh. Lorem ipsum nulla amos eget purus
-                      vel mauris tincidunt tincidunt nibh tortor. Nunc faucibus
-                      pellentesque facilisis. Interdum et malesuada fames ac ante
-                      ipsum primis in faucibus.
+                    <!-- additional infomation -->
                     </p>
                   </div>
                 </div>
