@@ -83,3 +83,39 @@ defined('EXIT_USER_INPUT')     OR define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+
+define('ADMIN_ROLE','ADMIN');
+define('USER_ROLE','USER');
+define('CONTENT_TYPE','CONTENT');
+define('PATH','/resources/upload/package/');
+
+// Constants Variables
+define('OPEN_FORM_GROUP', '<div class="form-group">');
+define('OPEN_FORM_GROUP_6', '<div class="col-sm-6 form-group">');
+define('OPEN_FORM_GROUP_3', '<div class="col-sm-3 form-group">');
+define('OPEN_FORM_GROUP_12', '<div class="col-sm-12 form-group">');
+define('OPEN_FORM_GROUP_HIDDEN','<div class="form-group" style="display:none;">');
+define('CLOSE_FORM_GROUP', '</div>');
+define('ADMIN_LAYOUT', 'admin/layout');
+define('MAIN_CONTAINER','admin/main_container');
+define('ACTION_ADD','ADD');
+define('ACTION_EDIT','EDIT');
+
+// Package
+define('TBL_PACKAGE_TYPE', 'TBL_PACKAGE_TYPE');
+define('TBL_PACKAGE', 'TBL_PACKAGE');
+
+// MENU
+define('MENU_MAIN_PACKAGE','MAIN_PACKAGE');
+define('MENU_PACKAGE','PACKAGE');
+define('MENU_PACKAGE_TYPE','PACKAGE_TYPE');
+define('MENU_PACKAGE_PICTURE','PACKAGE_PICTURE');
+
+// Paypal
+define('PAYPAL_TEST_URL','https://www.sandbox.paypal.com/cgi-bin/webscr');
+define('PAYPAL_ID', 'ocharos.th@gmail.com');
+
+// Order status
+define('PENDING','P');
+define('SUCCESS','S');
+

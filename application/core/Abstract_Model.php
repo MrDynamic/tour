@@ -50,8 +50,27 @@ abstract class Abstract_Model extends CI_Model{
         return $this->db->last_query();
     }
 
+    protected function getLimit($db,$limit=array()){
+        if(sizeof($limit) == 2){
+            if($limit[0] == 0){
+               $db->limit($limit[1]);
+            }else{
+                $db->limit($limit[0],$limit[1]);
+            }
+        }
+        return $db;
+    }
+    
+    public function countAllWithCriteria($criteria=array()){
+        $this->db->from($this->getTableName());
+        $criteria['delete_flag'] = 'N';
+        $this->db->where($criteria);
+        return $this->db->count_all_results();
+    }
+    
     public function __deconstruct(){
         $this->db->close();
     }
+    
 
 }

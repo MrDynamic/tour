@@ -13,7 +13,14 @@ $(document).ready(function() {
 		window.location = $('#cancelPage').val();
 	});
 	
-	$("#form-register").validate();
+	$("#form-register").validate({
+		rules: {
+			password1: {minlength: 6 },
+            passwordConfirm: {minlength: 6,equalTo:"#password1"},
+            phone:{number:true,minlength:10},
+            postalcode:{number:true,minlength:5}
+          }
+	});
 	
 	$("#btnReserve").click(function(){
 		var qty =$("#reserveQty").val();
@@ -22,18 +29,19 @@ $(document).ready(function() {
 		var packageName = $("#packageName").val();
 		var thumbnail = $("#thumbnail").val();
 		var data = {'id':packageId,'qty':qty,'price':price,'name':packageName,'thumbnail':thumbnail};
-		alert(packageId + ',' + price + ',' + packageName);
-		callService('user/addToCart',data,function(response){
+		callService('order/addToCart',data,function(response){
 			window.history.back();	
 		});
 	});
+	
+	$("#formCheckout").validate();
 	
 }); 
 
 
 function removeCart(rowId){
-	callService('user/removeCart',{'rowId':rowId},function(){
-		window.location = 'user/viewCart';
+	callService('order/removeCart',{'rowId':rowId},function(){
+		window.location = 'order/viewCart';
 	});
 }
 

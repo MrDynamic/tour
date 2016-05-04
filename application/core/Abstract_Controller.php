@@ -5,6 +5,7 @@ class Abstract_Controller extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
+		$this->requiredLogin();		
 		//-- Check Role
 		$this->generateAdminMenu();
         $this->generateMenu();
@@ -149,12 +150,17 @@ class Abstract_Controller extends CI_Controller {
 	    log_message('error',"[$className > $methodName]  $message");
 	}
 	
-	protected  function checkSession(){
-	    if(empty($this->session->userdata('user_id')) 
-	        || empty($this->session->userdata('username'))
-	        || empty($this->session->userdata('role'))){
-	        $this->session->set_flashdata('message','คุณไม่มีสิทธิ์เข้าใช้งานกรุณา login เข้าสู่ระบบ');
-	        redirect('authen/login','refresh');
+	protected  function requiredLogin(){
+	    $this->log_debug('check session');
+	    static $methodAuthen = array('checkoutPage','checkout','submitToPaypal','userPage','orderListPage');
+	    if(isset($this->router) && in_array($this->router->method,$methodAuthen)){
+	        $this->log_debug('check session',$this->router->method);
+    	    if(empty($this->session->userdata('user_id')) 
+    	        || empty($this->session->userdata('username'))
+    	        || empty($this->session->userdata('role'))){
+    	        $this->session->set_flashdata(array('message'=>'คุณไม่มีสิทธิ์เข้าใช้งานกรุณา login เข้าสู่ระบบ','redirectUrl'=>$this->router->class.'/'.$this->router->method));
+    	        redirect('authen/login','refresh');
+    	    }
 	    }
 	}
 

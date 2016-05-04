@@ -24,6 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost:8080/tour';
+// $config['base_url'] = 'http://ocharos.esy.es/tour';
 
 /*
 |--------------------------------------------------------------------------
@@ -511,36 +512,4 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
-
-define('ADMIN_ROLE','ADMIN');
-define('USER_ROLE','USER');
-define('CONTENT_TYPE','CONTENT');
-define('PATH','/resources/upload/package/');
-
-// Constants Variables
-define('OPEN_FORM_GROUP', '<div class="form-group">');
-define('OPEN_FORM_GROUP_6', '<div class="col-sm-6 form-group">');
-define('OPEN_FORM_GROUP_3', '<div class="col-sm-3 form-group">');
-define('OPEN_FORM_GROUP_12', '<div class="col-sm-12 form-group">');
-define('OPEN_FORM_GROUP_HIDDEN','<div class="form-group" style="display:none;">');
-define('CLOSE_FORM_GROUP', '</div>');
-define('ADMIN_LAYOUT', 'admin/layout');
-define('MAIN_CONTAINER','admin/main_container');
-define('ACTION_ADD','ADD');
-define('ACTION_EDIT','EDIT');
-
-// Package
-define('TBL_PACKAGE_TYPE', 'TBL_PACKAGE_TYPE');
-define('TBL_PACKAGE', 'TBL_PACKAGE');
-
-// MENU
-define('MENU_MAIN_PACKAGE','MAIN_PACKAGE');
-define('MENU_PACKAGE','PACKAGE');
-define('MENU_PACKAGE_TYPE','PACKAGE_TYPE');
-define('MENU_PACKAGE_PICTURE','PACKAGE_PICTURE');
-
-
-
-
-
 

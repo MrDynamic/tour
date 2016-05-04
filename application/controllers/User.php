@@ -6,12 +6,11 @@ class User extends Abstract_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model(array('M_Authen'=>'authen'));
+        $this->load->model(array('M_Authen'=>'authen','M_Order'=>'order'));
     }
         
     public function userPage(){
-        $this->checkSession();
-        $this->setContentPage('user/user_page');
+        $this->setContentWithSidePage('user/user_page');
         $this->load->view('layout_sidebar',$this->template);
     }
     
@@ -20,8 +19,8 @@ class User extends Abstract_Controller
            ,array('user_id'=>$this->session->userdata('user_id')))[0];
        $formData = $this->setRegistData($userData->province_id,$userData->amphur_id);
        $formData['userData'] = $userData;
-       $formData['action'] = ACTION_EDIT;
-       $this->setContentPage('user/form_register',$formData);
+       $formData['actionType'] = ACTION_EDIT;
+       $this->setContentWithSidePage('user/form_register',$formData);
        $this->load->view('layout_sidebar',$this->template);
     }
     
@@ -41,8 +40,9 @@ class User extends Abstract_Controller
     public function createUser(){
         try {
             $data = $this->input->post();
-            $data['password'] = md5($this->input->post('password'));
+            $data['password'] = md5($this->input->post('password1'));
             $data['c_date'] = date('Y-m-d');
+            unset($data['password1'],$data['passwordConfirm']);
             $this->log_debug('user data',print_r($data,true));
             $this->authen->insert($data);
             $this->session->set_userdata($data);
@@ -74,7 +74,7 @@ class User extends Abstract_Controller
         try {
             $this->template['section_name'] = 'สมัครสมาชิก';
             $formData = $this->setRegistData();
-            $formData['action'] = ACTION_ADD;
+            $formData['actionType'] = ACTION_ADD;
             $this->setContentPage('user/form_register',$formData);
             $this->load->view('layout_content',$this->template);
     
@@ -107,50 +107,20 @@ class User extends Abstract_Controller
         echo $response;
     }
     
-    public function addToCart(){
-        $this->log_debug('cart data',print_r($this->input->post(),true));
-        $data = array(
-            'id'=>$this->input->post('id'),
-            'qty'=>$this->input->post('qty'),
-            'name'=>$this->input->post('name'),
-            'price'=>$this->input->post('price')
-        );
-        $this->log_debug('data insert',print_r($data,true));
-        $this->my_cart->insert($data);
+    public function orderListPage(){
+        $page = empty($this->uri->segment(3))?1:$this->uri->segment(3);
+        
+        $this->load->library(array('pagination','my_pagination'));
+        $userId = $this->session->userdata("user_id");
+        $pagingConfig = $this->my_pagination->init('user/orderListPage',$this->order->countAllWithCriteria());
+        $limit = array($pagingConfig['per_page'],(($page-1) * $pagingConfig['per_page']));
+        $this->log_debug('limit',print_r($limit,true));
+        $data['orderData'] = $this->order->getOrderByUser($userId,$limit);
+        $this->log_debug('order query',$this->order->getLastQuery());
+        $data["paginationData"]   = $this->pagination;
+        $this->setContentWithSidePage('order/user_order_page',$data);
+        $this->load->view('layout_sidebar',$this->template);
     }
-    
-    public function viewCart(){
-        $this->setContentPage('order/cart_page',null,true);
-        $this->load->view('layout_content',$this->template);
-    }
-    
-    public function updateCart(){
-        $arrId = $this->input->post('rowId');
-        $size = sizeof($arrId);
-        $data = array();
-        if($size > 0){
-            for($i=0;$i<$size;$i++){
-              $qty = $this->input->post('qty')[$i];
-              if(!empty($qty) && $qty > 0){
-                  $data[$i] = array(
-                      'rowid'=>$arrId[$i],
-                      'qty'=>$this->input->post('qty')[$i]
-                  );
-              }else{
-                  $this->my_cart->remove($arrId[$i]);
-              }
-            }
-        }
-        $this->log_debug('cart data',print_r($data,true));
-        $this->my_cart->update($data);
-        redirect('user/viewCart','refresh');
-    }
-    
-    public function removeCart(){
-        $rowId = $this->input->post('rowId');
-        $this->my_cart->remove($rowId);
-    }
-    
     
     function __destruct()
     {}

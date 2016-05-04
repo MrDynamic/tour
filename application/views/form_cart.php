@@ -1,5 +1,5 @@
 <a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;
-<?php if(sizeof($this->my_cart->contents()) > 0): ?>
+<?php if($this->my_cart->total_items() > 0): ?>
 <span class="badge"><?=sizeof($this->my_cart->contents());?></span>
 <?php endif; ?>
 </a>
@@ -18,14 +18,14 @@
       </li>
     <?php endforeach;?>
     </ul>
-    <?php if(sizeof($this->my_cart->contents()) > 0):?>
+    <?php if($this->my_cart->total_items() > 0):?>
     <div class="total">
       <h6>รวม</h6><span><?=$total;?> THB</span>
     </div>
     <div class="action-button">
     	<?php 
-    	   echo anchor('user/viewCart','ตะกร้าสินค้า',array('class'=>'btn btn-dark btn-bordered btn-xs upper'));
-    	   echo anchor('','ชำระเงิน',array('class'=>'btn btn-primary btn-xs upper'));
+    	   echo anchor('order/viewCart','ตะกร้าสินค้า',array('class'=>'btn btn-dark btn-bordered btn-xs upper'));
+    	   echo anchor('order/checkoutPage','ชำระเงิน',array('class'=>'btn btn-primary btn-xs upper'));
     	?>
     </div>
     <?php endif; ?>

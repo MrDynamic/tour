@@ -72,7 +72,7 @@
       <section class="sep-bottom-2x">
         <div class="container">
           <div class="row">
-            <div class="col-md-9 col-md-push-3 sep-top-2x">
+            <div class="col-md-9 col-md-push-3 sep-top-xs">
               <div class="row">
                 <?php (isset($content) && !empty($content))? print $content:''; ?>
               </div>

@@ -14,18 +14,24 @@ class Authen extends Abstract_Controller
             $this->log_debug('login data',print_r($this->input->post(),true));
             $username = $this->input->post('username');
             $password = $this->input->post('password');
+            $redirectUrl = $this->input->post("redirectUrl");
             
             if(empty($username) || empty($password)){
-                $this->session->set_flashdata('message', 'Username or Password is not null');
+                $this->session->set_flashdata(array('message'=>'Username or Password is not null','redirectUrl'=>$redirectUrl));
                 redirect('authen/login','refresh');
             }else{
                 $userData = $this->authen->getDataResultArray('user_id,username,role',array('username'=>$this->input->post('username'),'password'=>md5($this->input->post('password'))));
                 if(isset($userData) && !empty($userData)){
                     $this->log_debug('session data',print_r($userData[0],true));
                     $this->session->set_userdata($userData[0]);
-                    redirect('','refresh');
+                    if(!empty($redirectUrl)){
+                        redirect($redirectUrl,'refresh');
+                    }else{
+                        redirect('','refresh');
+                    }
+                    
                 }else{
-                    $this->session->set_flashdata('message','Authentication failed');
+                    $this->session->set_flashdata(array('message'=>'Authentication failed','redirectUrl'=>$redirectUrl));
                     redirect('authen/login','refresh');
                 }
             }
@@ -38,6 +44,7 @@ class Authen extends Abstract_Controller
     public function login(){
         $this->log_debug("Start");
         $message['message'] = $this->session->flashdata('message');
+        $message['redirectUrl'] = $this->session->flashdata('redirectUrl');
         $this->setContentPage('login',$message,true);
         $this->load->view('layout_content',$this->template);
     }

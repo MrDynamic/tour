@@ -1,19 +1,20 @@
 <div class="col-md-6 sep-top-xs">
-  <h4 class="upper">
+  <h5 class="upper">
   	<?php 
-  	print (isset($action) && $action==ACTION_EDIT)?'แก้ไขข้อมูลส่วนตัว':'สมัครสมาชิก';
+  	print (isset($actionType) && $actionType==ACTION_EDIT)?'แก้ไขข้อมูลส่วนตัว':'สมัครสมาชิก';
   	?>
-  </h4>
+  </h5>
   <div class="sep-top-xs">
     <?php 
        
         $usernameAttr = array('id'=>'username','name'=>'username','class'=>'form-control','required'=>'');
-        $passwordAttr = array('id'=>'password','name'=>'password','class'=>'form-control','required'=>'');
+        $passwordAttr = array('id'=>'password1','name'=>'password1','class'=>'form-control','required'=>'');
+        $passwordConfirmAttr = array('id'=>'passwordConfirm','name'=>'passwordConfirm','class'=>'form-control','required'=>'');
         $firstNameAttr = array('id'=>'firstName','name'=>'firstname','class'=>'form-control','required'=>'');
         $surnameAttr = array('id'=>'surname','name'=>'surname','class'=>'form-control','required'=>'');
         $emailAttr = array('id'=>'email','name'=>'email','class'=>'form-control','type'=>'email');
-        $phoneAttr = array('id'=>'phone','name'=>'phone','class'=>'form-control','type'=>'phone','required'=>'');
-        $postalcodeAttr = array('id'=>'postalCode','name'=>'postalcode','class'=>'form-control');
+        $phoneAttr = array('id'=>'phone','name'=>'phone','class'=>'form-control','type'=>'tel','maxlength'=>'10','required'=>'');
+        $postalcodeAttr = array('id'=>'postalcode','name'=>'postalcode','class'=>'form-control','maxlength'=>'5');
         $addressAttr = array('id'=>'address','name'=>'address','class'=>'form-control','required'=>'');
         $provinceAttr = array('id'=>'provinceId','class'=>'form-control','required'=>'');
         $amphurAttr = array('id'=>'amphurId','class'=>'form-control','required'=>'');
@@ -21,7 +22,7 @@
         
         
         
-        if($action==ACTION_ADD){
+        if($actionType==ACTION_ADD){
             $action = 'user/createUser';
             $cancelPage = 'user/register';
             $selectedProvince = '';
@@ -44,9 +45,11 @@
         }
         
         echo form_open($action,array('id'=>'form-register'));
-        if($action == ACTION_ADD){
-            echo create_input(array('ชื่อผู้ใช้','username'),$usernameAttr,OPEN_FORM_GROUP_6);
-            echo create_password(array('รหัสผ่าน',''), $passwordAttr,array(),OPEN_FORM_GROUP_6);
+        if($actionType == ACTION_ADD){
+            echo create_input(array('ชื่อผู้ใช้','username'),$usernameAttr,OPEN_FORM_GROUP_12);
+            echo create_password(array('รหัสผ่าน',''), $passwordAttr,array(),OPEN_FORM_GROUP_12);
+            echo create_password(array('ยืนยัน',''),$passwordConfirmAttr,array(),OPEN_FORM_GROUP_12);
+            echo '<div class="sep-bottom-xs">&nbsp;</div>';
         }
         echo create_input(array('ชื่อ','firstName'),$firstNameAttr,OPEN_FORM_GROUP_6);
         echo create_input(array('นามสกุล','surname'),$surnameAttr,OPEN_FORM_GROUP_6);
@@ -58,8 +61,9 @@
         echo create_dropdown(array('ตำบล','districtId'), 'district_id', $districtItem, $districtAttr,$selectedDistrict,OPEN_FORM_GROUP_6);
         echo create_input(array('รหัสไปรษณีย์','postalCode'),$postalcodeAttr,OPEN_FORM_GROUP_6);
         echo form_input(array('type'=>'hidden','id'=>'cancelPage','value'=>$cancelPage));
-        echo form_button(array('type'=>'submit','class'=>'btn btn-primary','content'=>'Save'));
-        echo form_button(array('type'=>'reset','class'=>'btn btn-info','id'=>'btnCancel','content'=>'Cancel'));
+        echo "<div class='sep-bottom-xs'>&nbsp;</div>";
+        echo form_button(array('type'=>'submit','class'=>'btn btn-primary','content'=>'บันทึก'));
+        echo form_button(array('type'=>'reset','class'=>'btn btn-info','id'=>'btnCancel','content'=>'ยกเลิก'));
         echo form_close();
         
     ?>     

@@ -1,7 +1,7 @@
 <!-- Start Shop Cart-->
 <section class="sep-top-2x">
 <div class="container">
- <?php  echo form_open('user/updateCart'); ?>
+ <?php  echo form_open('order/updateCart'); ?>
     <div class="row">
       <div class="col-md-12">
         <table class="table table-bordered table-condensed shop-table table-responsive">
@@ -61,10 +61,11 @@
     </div>
     <div class="row">
       <div class="col-md-6 sep-top-md">
-        <button type="submit" class="btn btn-dark btn-bordered">ปรับปรุง</button>
+        <button type="submit" class="btn btn-dark btn-bordered">ปรับปรุงข้อมูล</button>
       </div>
       <div class="col-md-6 sep-top-md text-right">
-        <button type="button" class="btn btn-primary">ชำระเงิน</button>
+     	
+        <a href="<?=site_url('order/checkoutPage');?>"><button type="button" class="btn btn-primary">ชำระเงิน</button></a>
       </div>
     </div>
 <?php echo form_close(); ?>
