@@ -11,7 +11,7 @@ class User extends Abstract_Controller
         
     public function userPage(){
         $this->setContentWithSidePage('user/user_page');
-        $this->load->view('layout_sidebar',$this->template);
+        $this->loadLayoutSidebar($this->template);
     }
     
     public function editUser(){
@@ -21,7 +21,7 @@ class User extends Abstract_Controller
        $formData['userData'] = $userData;
        $formData['actionType'] = ACTION_EDIT;
        $this->setContentWithSidePage('user/form_register',$formData);
-       $this->load->view('layout_sidebar',$this->template);
+       $this->loadLayoutSidebar($this->template);
     }
     
     public function submitEditUser(){
@@ -76,7 +76,7 @@ class User extends Abstract_Controller
             $formData = $this->setRegistData();
             $formData['actionType'] = ACTION_ADD;
             $this->setContentPage('user/form_register',$formData);
-            $this->load->view('layout_content',$this->template);
+            $this->loadLayoutContent($this->template);
     
         } catch (Exception $e) {
             $this->log_error($e->getMessage());
@@ -119,7 +119,23 @@ class User extends Abstract_Controller
         $this->log_debug('order query',$this->order->getLastQuery());
         $data["paginationData"]   = $this->pagination;
         $this->setContentWithSidePage('order/user_order_page',$data);
-        $this->load->view('layout_sidebar',$this->template);
+        $this->loadLayoutSidebar($this->template);
+    }
+    
+    public function changePasswordPage(){
+        $message['message'] = $this->session->flashdata('message');
+        $this->setContentWithSidePage('user/change_password_page',$message);
+        $this->loadLayoutSidebar($this->template);
+    }
+    
+    public function changePassword(){
+        if($this->authen->checkPassword($this->session->userdata('username'),$this->input->post('oldPassword'))){
+            
+        }else{
+            $this->session->set_flashdata('message','รหัสผ่านเดิมไม่ถูกต้อง');
+            redirect('user/changePasswordPage','refresh');
+        }
+        
     }
     
     function __destruct()

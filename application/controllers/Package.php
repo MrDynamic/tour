@@ -11,8 +11,9 @@ class Package extends Abstract_Controller
 
     public function index(){
         $data['packageData'] = $this->package->getPackageList();
+        $data['areaData'];
         $this->setContentPage('package/package_page',$data);
-        $this->load->view('layout_content',$this->template);
+        $this->loadLayoutContent($this->template);
         
     }
     
@@ -21,7 +22,7 @@ class Package extends Abstract_Controller
         $data['packagePicture'] = $this->picture->getDataSpecifyField('image_title,image_path',array('package_id'=>$packageId));
         $data['packageData'] = $this->package->getPackageByPackageId($packageId)[0];
         $this->setContentPage('package/package_detail',$data);
-        $this->load->view('layout_content',$this->template);
+        $this->loadLayoutContent($this->template);
     }
     
     

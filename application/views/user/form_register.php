@@ -7,18 +7,18 @@
   <div class="sep-top-xs">
     <?php 
        
-        $usernameAttr = array('id'=>'username','name'=>'username','class'=>'form-control','required'=>'');
-        $passwordAttr = array('id'=>'password1','name'=>'password1','class'=>'form-control','required'=>'');
-        $passwordConfirmAttr = array('id'=>'passwordConfirm','name'=>'passwordConfirm','class'=>'form-control','required'=>'');
-        $firstNameAttr = array('id'=>'firstName','name'=>'firstname','class'=>'form-control','required'=>'');
-        $surnameAttr = array('id'=>'surname','name'=>'surname','class'=>'form-control','required'=>'');
-        $emailAttr = array('id'=>'email','name'=>'email','class'=>'form-control','type'=>'email');
-        $phoneAttr = array('id'=>'phone','name'=>'phone','class'=>'form-control','type'=>'tel','maxlength'=>'10','required'=>'');
-        $postalcodeAttr = array('id'=>'postalcode','name'=>'postalcode','class'=>'form-control','maxlength'=>'5');
-        $addressAttr = array('id'=>'address','name'=>'address','class'=>'form-control','required'=>'');
-        $provinceAttr = array('id'=>'provinceId','class'=>'form-control','required'=>'');
-        $amphurAttr = array('id'=>'amphurId','class'=>'form-control','required'=>'');
-        $districtAttr = array('id'=>'districtId','class'=>'form-control');
+        $usernameAttr = array('id'=>'username','name'=>'username','required'=>'');
+        $passwordAttr = array('id'=>'password1','name'=>'password1','required'=>'');
+        $passwordConfirmAttr = array('id'=>'passwordConfirm','name'=>'passwordConfirm','required'=>'');
+        $firstNameAttr = array('id'=>'firstName','name'=>'firstname','required'=>'');
+        $surnameAttr = array('id'=>'surname','name'=>'surname','required'=>'');
+        $emailAttr = array('id'=>'email','name'=>'email','type'=>'email');
+        $phoneAttr = array('id'=>'phone','name'=>'phone','type'=>'tel','maxlength'=>'10','required'=>'');
+        $postalcodeAttr = array('id'=>'postalcode','name'=>'postalcode','maxlength'=>'5');
+        $addressAttr = array('id'=>'address','name'=>'address','required'=>'');
+        $provinceAttr = array('id'=>'provinceId','required'=>'');
+        $amphurAttr = array('id'=>'amphurId','required'=>'');
+        $districtAttr = array('id'=>'districtId',);
         
         
         

@@ -4,16 +4,21 @@
 		$result ='';
 		$result .= $openform;
 		$result .= form_label($labelValue[0],$labelValue[1]);
-		$result .= form_input($attributes);
+		$result .= form_input(setAttributeForm($attributes));
 		$result .= CLOSE_FORM_GROUP;
 		return $result;
+	}
+	
+	function setAttributeForm($attr){
+	    $attr['class'] = 'form-control';
+	    return $attr;
 	}
 	
 	function create_password($labelValue,$attributes,$labelAttr=array(),$openform=OPEN_FORM_GROUP){
 	    $result ='';
 	    $result .= $openform;
 	    $result .= form_label($labelValue[0],$labelValue[1],$labelAttr);
-	    $result .= form_password($attributes);
+	    $result .= form_password(setAttributeForm($attributes));
 	    $result .= CLOSE_FORM_GROUP;
 	    return $result;
 	}
@@ -23,7 +28,7 @@
 		$result ='';
 		$result .= OPEN_FORM_GROUP;
 		$result .= form_label($labelValue[0],$labelValue[1]);
-		$result .= form_textarea($attributes);
+		$result .= form_textarea(setAttributeForm($attributes));
 		$result .= CLOSE_FORM_GROUP;
 		return $result;
 	}
@@ -32,7 +37,7 @@
 		$result ='';
 		$result .= $openform;
 		$result .= form_label($labelValue[0],$labelValue[1]);
-		$result .= form_dropdown($name,$data,$selected,$attributes);
+		$result .= form_dropdown($name,$data,$selected,setAttributeForm($attributes));
 		$result .= CLOSE_FORM_GROUP;
 		return $result;
 	}
@@ -46,7 +51,7 @@
 		}
 		
 		$result .= form_label($labelValue[0],$labelValue[1]);
-		$result .= form_upload($attributes);
+		$result .= form_upload(setAttributeForm($attributes));
 		$result .= CLOSE_FORM_GROUP;
 		return $result;
 	}
@@ -113,11 +118,20 @@
 		return $result;
 	}
 	
-	function create_error_content($message){
-	    $result =  '<div role="alert" class="alert alert-danger alert-dismissible">';
+	function create_error_message($message){
+	    $result =  '<div role="alert" id="error-alert" class="alert alert-danger alert-dismissible">';
 	    $result .= ' <button type="button" data-dismiss="alert" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>';
 	    $result .=  $message;
 	    $result .=  '</div>';
+	    return $result;
+	}
+	
+	function create_success_message($message){
+	    $result =  '<div role="alert" id="success-alert" class="alert alert-danger alert-dismissible">';
+	    $result .= ' <button type="button" data-dismiss="alert" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>';
+	    $result .=  $message;
+	    $result .=  '</div>';
+	    $result .= '<script>$(".close").click();</script>';
 	    return $result;
 	}
 	

@@ -31,7 +31,8 @@ class Authen extends Abstract_Controller
                     }
                     
                 }else{
-                    $this->session->set_flashdata(array('message'=>'Authentication failed','redirectUrl'=>$redirectUrl));
+                    $this->session->set_flashdata(array('message'=>'ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง'));
+                    $this->session->set_flashdata('redirectUrl',$redirectUrl);
                     redirect('authen/login','refresh');
                 }
             }
@@ -46,13 +47,14 @@ class Authen extends Abstract_Controller
         $message['message'] = $this->session->flashdata('message');
         $message['redirectUrl'] = $this->session->flashdata('redirectUrl');
         $this->setContentPage('login',$message,true);
-        $this->load->view('layout_content',$this->template);
+        $this->loadLayoutContent($this->template);
     }
     
     public function logout(){
         $this->session->sess_destroy();
         redirect('','refresh');
     }
+    
     
     function __destruct()
     {

@@ -36,6 +36,21 @@ $(document).ready(function() {
 	
 	$("#formCheckout").validate();
 	
+	$("#form-changePassword").validate({
+		rules:{
+			newPassword:{minlength:6},
+			passwordConfirm:{minlength:6,equalTo:"#newPassword"}
+		}
+	});
+	
+	$("#success-alert").fadeTo(2000, 500).slideUp(500, function(){
+	    $("#success-alert").alert('close');
+	});
+	
+	$("#error-alert").fadeTo(2000, 500).slideUp(500, function(){
+	    $("#error-alert").alert('close');
+	});
+	
 }); 
 
 

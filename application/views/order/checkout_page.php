@@ -45,7 +45,7 @@
                         <tr>
                           <td><?=$item['name'].' (' .$item['qty'].')'; ?></td>
                           <td>
-                            <h5 class="upper"><?=$item['price'];?></h5>
+                            <h5 class="upper"><?=($item['price']*$item['qty']);?></h5>
                           </td>
                         </tr>
                         <?php endforeach; ?>

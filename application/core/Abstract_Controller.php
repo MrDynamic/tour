@@ -163,6 +163,15 @@ class Abstract_Controller extends CI_Controller {
     	    }
 	    }
 	}
+	
+	protected function loadLayoutSidebar($content=array()){
+	    $this->load->view('layout_sidebar',$content);
+	}
+	
+	protected function loadLayoutContent($content=array()){
+	    $this->load->view('layout_content',$content);
+	}
+	
 
 }
 

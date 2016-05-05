@@ -21,9 +21,18 @@ class Order extends Abstract_Controller
         $this->my_cart->insert($data);
     }
     
+    
+    private function checkItemCart(){
+        if($this->my_cart->total_items() <= 0){
+            redirect('','refresh');
+        }
+    }
+    
     public function viewCart(){
+        $this->checkItemCart();
         $this->setContentPage('order/cart_page',null,true);
-        $this->load->view('layout_content',$this->template);
+       $this->loadLayoutContent($this->template);
+        
     }
     
     public function updateCart(){
@@ -54,8 +63,9 @@ class Order extends Abstract_Controller
     }
     
     public function checkoutPage(){
+        $this->checkItemCart();
         $this->setContentPage('order/checkout_page',null,true);
-        $this->load->view('layout_content',$this->template);
+        $this->loadLayoutContent($this->template);
     }
     
     public function checkout(){
