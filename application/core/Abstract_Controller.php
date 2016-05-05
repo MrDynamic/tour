@@ -48,8 +48,8 @@ class Abstract_Controller extends CI_Controller {
         $this->template['active_menu'] = array($mainName,$subName);
     }
 
-    protected function generateSelectItems($data){
-    	$result = array(''=>'กรุณาเลือก');
+    protected function generateSelectItems($data,$unSelected="กรุณาเลือก"){
+    	$result = array(''=>$unSelected);
     	if(isset($data)){
     		foreach($data as $value){
     			$result[$value->id] = $value->label;

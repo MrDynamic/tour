@@ -4,19 +4,14 @@
           <div class="page-title-line sep-bottom-md">
             <div class="row">
               <div class="col-md-2">
-                <form method="get">
                   <div class="form-group">
-                    <select name="" class="form-control input-lg rounded primary">
-                      <option selected="selected" value="">Select a category…</option>
-                      <option value="Bags">Bags</option>
-                      <option value="Jeans">Jeans</option>
-                      <option value="Men">Men</option>
-                      <option value="Shoes">Shoes</option>
-                      <option value="Sweaters">Sweaters</option>
-                      <option value="Tops">Tops</option>
-                    </select>
+                    <?php
+                        $selectAreaAttr = array('class'=>'form-control input-lg rounded primary','id'=>'packageAreaId');
+                        echo form_open('package/filterByArea',array('id'=>'form-filterByArea'));
+                        echo form_dropdown("areaId",$areaData,isset($areaSelected)?$areaSelected:'',$selectAreaAttr);
+                        echo form_close();
+                    ?>
                   </div>
-                </form>
               </div>
               <div class="col-md-10 text-right">
                 <div class="order-content pull-right">
@@ -69,13 +64,9 @@
               </div>
               <div class="sep-top-sm">
                 <!-- start pagination-->
-                <ul class="pager circle">
-                  <li class="previous hidden-xs"><a href="#">←</a></li>
-                  <li><a href="#">1</a></li>
-                  <li><span class="current">2</span></li>
-                  <li><a href="#">3</a></li>
-                  <li class="next hidden-xs"><a href="#">→</a></li>
-                </ul>
+                  <ul class="pager circle">
+                      <?=$paginationData->create_links(); ?>
+                  </ul>
                 <!-- end pagination-->
               </div>
           <?php }else{?>    

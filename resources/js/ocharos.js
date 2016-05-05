@@ -9,6 +9,10 @@ $(document).ready(function() {
 		callService('user/generateDistrict',{'amphurId':$('#amphurId').val()},generateDistrict);
 	});
 	
+	$("#packageAreaId").change(function(){
+       $("#form-filterByArea").submit();
+    });
+	
 	$("#btnCancel").click(function(){
 		window.location = $('#cancelPage').val();
 	});

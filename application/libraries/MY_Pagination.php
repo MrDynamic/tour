@@ -6,7 +6,7 @@ class MY_Pagination {
     }
 
     public function init($base_url,$total_rows){
-        $config['per_page']          = 3;
+        $config['per_page']          = 1;
         $config['uri_segment']       = 3;
         $config['base_url']          = base_url().$base_url;
         $config['total_rows']        = $total_rows;

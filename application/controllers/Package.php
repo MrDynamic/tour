@@ -6,15 +6,35 @@ class Package extends Abstract_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model(array('M_Package'=>'package','M_PackagePicture'=>'picture'));
+        $this->load->model(array('M_Package'=>'package','M_PackagePicture'=>'picture','M_Area'=>'area'));
     }
 
     public function index(){
-        $data['packageData'] = $this->package->getPackageList();
-        $data['areaData'];
+        $page = empty($this->uri->segment(3))?1:$this->uri->segment(3);
+        $criteria = array();
+        $this->renderPackage($criteria,$page);
+        
+    }
+
+    public function renderPackage($criteria=array(), $page,$baseUrl='package/index',$data=array()){
+        // Paging
+        $this->load->library(array('pagination','my_pagination'));
+        $pagingConfig = $this->my_pagination->init($baseUrl,$this->package->countAllWithCriteria($criteria));
+        $limit = array($pagingConfig['per_page'],(($page-1) * $pagingConfig['per_page']));
+        $data["paginationData"]   = $this->pagination;
+        $data['packageData'] = $this->package->getPackageList($criteria,$limit);
+        $data['areaData'] = $this->generateSelectItems($this->area->getDataSpecifyField('area_id id,area_name label'),'เลือกภูมิภาค');
         $this->setContentPage('package/package_page',$data);
         $this->loadLayoutContent($this->template);
-        
+    }
+
+    public function filterByArea(){
+        $this->log_debug('filter area',print_r($this->input->post(),true));
+        $page = empty($this->uri->segment(3))?1:$this->uri->segment(3);
+        $areaId = ($this->uri->segment(4))?$this->uri->segment(4):$this->input->post('areaId');
+        $criteria = array('p.area_id'=>$areaId);
+        $this->renderPackage($criteria,$page,'package/filterByArea',array('areaSelected'=>$areaId));
+
     }
     
     public function detail(){
