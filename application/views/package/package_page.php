@@ -13,23 +13,7 @@
                     ?>
                   </div>
               </div>
-              <div class="col-md-10 text-right">
-                <div class="order-content pull-right">
-                  <form method="get" class="pull-right">
-                    <div class="form-group">
-                      <select name="orderby" class="form-control input-lg rounded">
-                        <option selected="selected" value="">Default sorting</option>
-                        <option value="popularity">Sort by popularity</option>
-                        <option value="rating">Sort by average rating</option>
-                        <option value="date">Sort by newness</option>
-                        <option value="price">Sort by price: low to high</option>
-                        <option value="price-desc">Sort by price: high to low</option>
-                      </select>
-                    </div>
-                    <input type="hidden" value="product" name="post_type">
-                  </form>
-                </div>
-              </div>
+              
             </div>
           </div>
             <?php 

@@ -17,7 +17,9 @@
             </tr>
           </thead>
           <tbody>
-          <?php foreach($orderData as $item) : ?>
+          <?php
+          if(sizeof($orderData) > 0):
+          foreach($orderData as $item) : ?>
             <tr>
               <td>
               	<?=str_pad($item->order_id,5,"0",STR_PAD_LEFT);?>
@@ -32,13 +34,18 @@
                 <?=$item->total;?>
               </td>
               <td>
-              	&nbsp;
+                  <a class="btn btn-info btn-xs" href="<?=site_url('order/orderDetailPage/'.$item->order_id);?>" role="button">รายละเอียด</a>
               </td>
               <td>
-              	&nbsp;
+                  <a class="btn btn-primary btn-xs" href="<?=site_url('order/generateReceipt/'.$item->order_id);?>" role="button">พิมพ์ใบเสร็จ</a>
               </td>
             </tr>
-           <?php endforeach;?>
+           <?php
+              endforeach;
+            else:
+                echo "<tr style='text-align:center;'><td colspan='6'>ไม่พบข้อมูลการทำรายการ</td></tr>";
+            endif;
+          ?>
           </tbody>
         </table>
       </div>

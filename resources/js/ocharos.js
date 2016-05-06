@@ -10,6 +10,11 @@ $(document).ready(function() {
 	});
 	
 	$("#packageAreaId").change(function(){
+       if(this.value == ''){
+           $("#form-filterByArea").attr('action','package');
+       }else{
+           $("#form-filterByArea").attr('action','package/filterByArea/' + this.value);
+       }
        $("#form-filterByArea").submit();
     });
 	

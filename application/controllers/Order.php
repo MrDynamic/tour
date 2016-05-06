@@ -31,7 +31,7 @@ class Order extends Abstract_Controller
     public function viewCart(){
         $this->checkItemCart();
         $this->setContentPage('order/cart_page',null,true);
-       $this->loadLayoutContent($this->template);
+        $this->loadLayoutContent($this->template);
         
     }
     
@@ -143,10 +143,40 @@ class Order extends Abstract_Controller
         $result	= $this->paypal_lib->curlPost($paypalURL,$paypalInfo);
         
         if(eregi("VERIFIED",$result)){
-           $this->message->insert($messageData);
+//           $this->message->insert($messageData);
         }
     }
 
+    private function getOrderData($orderId){
+        $orderData = array();
+        if(!empty($orderId)){
+            $orderData['contactData'] = $this->mOrder->getOrderByCriteria(array('r.order_id'=>$orderId,'r.user_id'=>$this->session->userdata("user_id")))[0];
+            $orderData['orderDetails'] = $this->mOrder->getOrderDetailsById($orderId,$this->session->userdata("user_id"));
+
+        }else{
+
+        }
+        return $orderData;
+    }
+
+    public function orderDetailPage(){
+        $orderId = $this->uri->segment(3);
+        $this->setContentWithSidePage('order/order_detail',$this->getOrderData($orderId));
+        $this->loadLayoutSidebar($this->template);
+
+    }
+
+    public function generateReceipt(){
+        $orderId = $this->uri->segment(3);
+        $html = $this->load->view('order/receipt',$this->getOrderData($orderId),true);
+        $pdfFilePath = "ocharos_".str_pad($orderId,5,"0",STR_PAD_LEFT).".pdf";
+        $this->load->library('my_pdf');
+        $this->my_pdf->pdf->WriteHTML($html);
+        $this->my_pdf->pdf->Output($pdfFilePath, "D");
+//        $this->load->view('order/receipt',$this->getOrderData($orderId));
+            
+    }
+    
     function __destruct()
     {}
 }

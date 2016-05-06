@@ -5,9 +5,9 @@ class MY_Pagination {
         $this->ci =& get_instance();
     }
 
-    public function init($base_url,$total_rows){
-        $config['per_page']          = 1;
-        $config['uri_segment']       = 3;
+    public function init($base_url,$total_rows,$uri_segment=3){
+        $config['per_page']          = 15;
+        $config['uri_segment']       = $uri_segment;
         $config['base_url']          = base_url().$base_url;
         $config['total_rows']        = $total_rows;
         $config['use_page_numbers']  = TRUE;

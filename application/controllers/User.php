@@ -112,11 +112,10 @@ class User extends Abstract_Controller
         
         $this->load->library(array('pagination','my_pagination'));
         $userId = $this->session->userdata("user_id");
-        $pagingConfig = $this->my_pagination->init('user/orderListPage',$this->order->countAllWithCriteria());
+        $pagingConfig = $this->my_pagination->init('user/orderListPage',$this->order->countAllWithCriteria(array('user_id'=>$userId)));
         $limit = array($pagingConfig['per_page'],(($page-1) * $pagingConfig['per_page']));
-        $this->log_debug('limit',print_r($limit,true));
-        $data['orderData'] = $this->order->getOrderByUser($userId,$limit);
-        $this->log_debug('order query',$this->order->getLastQuery());
+
+        $data['orderData'] = $this->order->getOrderByCriteria(array("r.user_id"=>$userId),$limit);
         $data["paginationData"]   = $this->pagination;
         $this->setContentWithSidePage('order/user_order_page',$data);
         $this->loadLayoutSidebar($this->template);
