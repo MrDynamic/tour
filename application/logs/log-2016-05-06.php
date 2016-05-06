@@ -2233,3 +2233,982 @@ DEBUG - 2016-05-06 08:50:18 --> Session class already loaded. Second attempt ign
 DEBUG - 2016-05-06 08:50:18 --> Session class already loaded. Second attempt ignored.
 DEBUG - 2016-05-06 08:50:18 --> [order > generateReceipt] check session  >> 
 DEBUG - 2016-05-06 08:50:20 --> Total execution time: 2.7713
+DEBUG - 2016-05-06 11:53:56 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 11:53:56 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 11:53:56 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 11:53:56 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 11:53:56 --> [order > generateReceipt] check session  >> 
+ERROR - 2016-05-06 11:53:56 --> Severity: Notice --> Undefined offset: 0 /Users/MacBookPro/Documents/i-work/root/tour/application/controllers/Order.php 153
+ERROR - 2016-05-06 11:53:56 --> Severity: Notice --> Trying to get property of non-object /Users/MacBookPro/Documents/i-work/root/tour/application/views/order/receipt.php 30
+ERROR - 2016-05-06 11:53:56 --> Severity: Notice --> Trying to get property of non-object /Users/MacBookPro/Documents/i-work/root/tour/application/views/order/receipt.php 34
+ERROR - 2016-05-06 11:53:56 --> Severity: Notice --> Trying to get property of non-object /Users/MacBookPro/Documents/i-work/root/tour/application/views/order/receipt.php 38
+ERROR - 2016-05-06 11:53:56 --> Severity: Notice --> Trying to get property of non-object /Users/MacBookPro/Documents/i-work/root/tour/application/views/order/receipt.php 42
+ERROR - 2016-05-06 11:53:59 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /Users/MacBookPro/Documents/i-work/root/tour/system/core/Exceptions.php:272) /Users/MacBookPro/Documents/i-work/root/tour/application/third_party/mpdf/mpdf.php 8314
+ERROR - 2016-05-06 11:53:59 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /Users/MacBookPro/Documents/i-work/root/tour/system/core/Exceptions.php:272) /Users/MacBookPro/Documents/i-work/root/tour/application/third_party/mpdf/mpdf.php 1706
+DEBUG - 2016-05-06 11:54:03 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 11:54:03 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 11:54:03 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 11:54:03 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 11:54:03 --> [user > orderListPage] check session  >> 
+DEBUG - 2016-05-06 11:54:03 --> [user > orderListPage] check session  >> orderListPage
+DEBUG - 2016-05-06 11:54:03 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 11:54:03 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 11:54:03 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 11:54:03 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 11:54:03 --> [authen > login] check session  >> 
+DEBUG - 2016-05-06 11:54:03 --> [authen > login] Start  >> 
+DEBUG - 2016-05-06 11:54:03 --> Total execution time: 0.0240
+DEBUG - 2016-05-06 11:54:09 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 11:54:09 --> No URI present. Default controller set.
+DEBUG - 2016-05-06 11:54:09 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 11:54:09 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 11:54:09 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 11:54:09 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 11:54:09 --> Total execution time: 0.0244
+DEBUG - 2016-05-06 11:54:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 11:54:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 11:54:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 11:54:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 11:54:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 11:54:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 11:54:44 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-06 11:54:44 --> 404 Page Not Found: Img/portfolio
+DEBUG - 2016-05-06 11:54:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 11:54:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 11:54:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 11:54:44 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-06 11:54:44 --> 404 Page Not Found: Img/portfolio
+ERROR - 2016-05-06 11:54:44 --> 404 Page Not Found: Img/portfolio
+ERROR - 2016-05-06 11:54:44 --> 404 Page Not Found: Img/portfolio
+ERROR - 2016-05-06 11:54:44 --> 404 Page Not Found: Img/portfolio
+DEBUG - 2016-05-06 11:54:44 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-06 11:54:44 --> 404 Page Not Found: Img/portfolio
+DEBUG - 2016-05-06 11:54:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 11:54:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 11:54:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 11:54:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 11:54:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 11:54:44 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-06 11:54:44 --> 404 Page Not Found: Img/portfolio
+DEBUG - 2016-05-06 11:54:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 11:54:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 11:54:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 11:54:44 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-06 11:54:44 --> 404 Page Not Found: Img/portfolio
+ERROR - 2016-05-06 11:54:44 --> 404 Page Not Found: Img/portfolio
+DEBUG - 2016-05-06 11:54:44 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-06 11:54:44 --> 404 Page Not Found: Img/portfolio
+ERROR - 2016-05-06 11:54:44 --> 404 Page Not Found: Img/portfolio
+DEBUG - 2016-05-06 11:54:44 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-06 11:54:44 --> 404 Page Not Found: Img/portfolio
+DEBUG - 2016-05-06 11:54:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 11:54:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 11:54:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 11:54:44 --> UTF-8 Support Enabled
+ERROR - 2016-05-06 11:54:44 --> 404 Page Not Found: Img/portfolio
+DEBUG - 2016-05-06 11:54:44 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-06 11:54:44 --> 404 Page Not Found: Img/portfolio
+DEBUG - 2016-05-06 11:54:44 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-06 11:54:44 --> 404 Page Not Found: Img/portfolio
+DEBUG - 2016-05-06 11:54:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 11:54:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 11:54:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 11:54:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 11:54:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 11:54:44 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-06 11:54:44 --> 404 Page Not Found: Img/portfolio
+ERROR - 2016-05-06 11:54:44 --> 404 Page Not Found: Img/portfolio
+ERROR - 2016-05-06 11:54:44 --> 404 Page Not Found: Img/portfolio
+DEBUG - 2016-05-06 15:27:30 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:27:30 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:27:30 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:27:30 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:27:30 --> [authen > submitLogin] check session  >> 
+DEBUG - 2016-05-06 15:27:30 --> [authen > submitLogin] login data  >> Array
+(
+    [username] => polawat
+    [password] => password
+)
+
+DEBUG - 2016-05-06 15:27:30 --> [authen > submitLogin] session data  >> Array
+(
+    [user_id] => 2
+    [username] => polawat
+    [role] => USER
+)
+
+DEBUG - 2016-05-06 15:27:30 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:27:30 --> No URI present. Default controller set.
+DEBUG - 2016-05-06 15:27:30 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:27:30 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:27:30 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:27:30 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 15:27:30 --> Total execution time: 0.0207
+DEBUG - 2016-05-06 15:27:35 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:27:35 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:27:35 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:27:35 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:27:35 --> [user > userPage] check session  >> 
+DEBUG - 2016-05-06 15:27:35 --> [user > userPage] check session  >> userPage
+DEBUG - 2016-05-06 15:27:35 --> Total execution time: 0.0270
+DEBUG - 2016-05-06 15:27:39 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:27:39 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:27:39 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:27:39 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:27:39 --> [user > orderListPage] check session  >> 
+DEBUG - 2016-05-06 15:27:39 --> [user > orderListPage] check session  >> orderListPage
+DEBUG - 2016-05-06 15:27:39 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:27:39 --> Total execution time: 0.0277
+DEBUG - 2016-05-06 15:27:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:27:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:27:44 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:27:44 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:27:44 --> [order > orderDetailPage] check session  >> 
+DEBUG - 2016-05-06 15:27:44 --> Total execution time: 0.0249
+DEBUG - 2016-05-06 15:27:48 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:27:48 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:27:48 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:27:48 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:27:48 --> [user > orderListPage] check session  >> 
+DEBUG - 2016-05-06 15:27:48 --> [user > orderListPage] check session  >> orderListPage
+DEBUG - 2016-05-06 15:27:48 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:27:48 --> Total execution time: 0.0271
+DEBUG - 2016-05-06 15:27:50 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:27:50 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:27:50 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:27:50 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:27:50 --> [order > generateReceipt] check session  >> 
+DEBUG - 2016-05-06 15:27:53 --> Total execution time: 2.9565
+DEBUG - 2016-05-06 15:31:27 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:31:27 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:31:27 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:31:27 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:31:27 --> [user > orderListPage] check session  >> 
+DEBUG - 2016-05-06 15:31:27 --> [user > orderListPage] check session  >> orderListPage
+DEBUG - 2016-05-06 15:31:27 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:31:27 --> Total execution time: 0.0265
+DEBUG - 2016-05-06 15:31:42 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:31:42 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:31:42 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:31:42 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:31:42 --> [user > orderListPage] check session  >> 
+DEBUG - 2016-05-06 15:31:42 --> [user > orderListPage] check session  >> orderListPage
+DEBUG - 2016-05-06 15:31:42 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:31:42 --> Total execution time: 0.0266
+DEBUG - 2016-05-06 15:31:56 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:31:56 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:31:56 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:31:56 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:31:56 --> [user > orderListPage] check session  >> 
+DEBUG - 2016-05-06 15:31:56 --> [user > orderListPage] check session  >> orderListPage
+DEBUG - 2016-05-06 15:31:56 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:31:56 --> Total execution time: 0.0244
+DEBUG - 2016-05-06 15:32:06 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:32:06 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:32:06 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:32:06 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:32:06 --> [user > orderListPage] check session  >> 
+DEBUG - 2016-05-06 15:32:06 --> [user > orderListPage] check session  >> orderListPage
+DEBUG - 2016-05-06 15:32:06 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:32:06 --> Total execution time: 0.0242
+DEBUG - 2016-05-06 15:32:24 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:32:24 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:32:24 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:32:24 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:32:24 --> [user > orderListPage] check session  >> 
+DEBUG - 2016-05-06 15:32:24 --> [user > orderListPage] check session  >> orderListPage
+DEBUG - 2016-05-06 15:32:24 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:32:24 --> Total execution time: 0.0296
+DEBUG - 2016-05-06 15:34:39 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:34:39 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:34:39 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:34:39 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:34:39 --> [user > orderListPage] check session  >> 
+DEBUG - 2016-05-06 15:34:39 --> [user > orderListPage] check session  >> orderListPage
+DEBUG - 2016-05-06 15:34:39 --> Pagination class already loaded. Second attempt ignored.
+ERROR - 2016-05-06 15:34:39 --> Query error: Unknown column 'r.status_code' in 'field list' - Invalid query: SELECT `r`.`order_id`, `s`.`status_name` `status`, `r`.`status_code`, `r`.`phone`, `r`.`transaction_id`, sum(d.price * d.qty) total, concat(r.firstname, ' ', r.lastname) contact
+FROM `tbl_order` `r`
+INNER JOIN `tbl_order_details` `d` ON `r`.`order_id` = `d`.`order_id`
+INNER JOIN `tbl_package` `p` ON `d`.`package_id` = `p`.`package_id`
+INNER JOIN `tbl_status` `s` ON `r`.`status`=`s`.`status_code`
+WHERE `r`.`user_id` = '2'
+AND `r`.`delete_flag` = 'N'
+GROUP BY `r`.`order_id`
+ORDER BY `r`.`order_id` DESC
+ LIMIT 15
+DEBUG - 2016-05-06 15:35:04 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:35:04 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:35:04 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:35:04 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:35:04 --> [user > orderListPage] check session  >> 
+DEBUG - 2016-05-06 15:35:04 --> [user > orderListPage] check session  >> orderListPage
+DEBUG - 2016-05-06 15:35:04 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:35:04 --> Total execution time: 0.0274
+DEBUG - 2016-05-06 15:35:19 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:35:19 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:35:19 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:35:19 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:35:19 --> [order > orderDetailPage] check session  >> 
+DEBUG - 2016-05-06 15:35:19 --> Total execution time: 0.0304
+DEBUG - 2016-05-06 15:36:43 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:36:43 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:36:43 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:36:43 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:36:43 --> [order > orderDetailPage] check session  >> 
+DEBUG - 2016-05-06 15:36:43 --> Total execution time: 0.0241
+DEBUG - 2016-05-06 15:37:13 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:37:13 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:37:13 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:37:13 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:37:13 --> [order > orderDetailPage] check session  >> 
+DEBUG - 2016-05-06 15:37:13 --> Total execution time: 0.0278
+DEBUG - 2016-05-06 15:37:20 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:37:20 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:37:20 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:37:20 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:37:20 --> [user > orderListPage] check session  >> 
+DEBUG - 2016-05-06 15:37:20 --> [user > orderListPage] check session  >> orderListPage
+DEBUG - 2016-05-06 15:37:20 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:37:20 --> Total execution time: 0.0273
+DEBUG - 2016-05-06 15:37:22 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:37:22 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:37:22 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:37:22 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:37:22 --> [order > orderDetailPage] check session  >> 
+DEBUG - 2016-05-06 15:37:22 --> Total execution time: 0.0267
+DEBUG - 2016-05-06 15:37:29 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:37:29 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:37:29 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:37:29 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:37:29 --> [user > orderListPage] check session  >> 
+DEBUG - 2016-05-06 15:37:29 --> [user > orderListPage] check session  >> orderListPage
+DEBUG - 2016-05-06 15:37:29 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:37:29 --> Total execution time: 0.0309
+DEBUG - 2016-05-06 15:40:07 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:40:07 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:40:07 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:40:07 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:40:07 --> [user > orderListPage] check session  >> 
+DEBUG - 2016-05-06 15:40:07 --> [user > orderListPage] check session  >> orderListPage
+DEBUG - 2016-05-06 15:40:07 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:40:07 --> Total execution time: 0.0314
+DEBUG - 2016-05-06 15:40:37 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:40:37 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:40:37 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:40:37 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:40:37 --> [user > changePasswordPage] check session  >> 
+DEBUG - 2016-05-06 15:40:37 --> Total execution time: 0.0237
+DEBUG - 2016-05-06 15:40:41 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:40:41 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:40:41 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:40:41 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:40:41 --> [user > userPage] check session  >> 
+DEBUG - 2016-05-06 15:40:41 --> [user > userPage] check session  >> userPage
+DEBUG - 2016-05-06 15:40:41 --> Total execution time: 0.0224
+DEBUG - 2016-05-06 15:41:21 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:41:21 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:41:21 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:41:21 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:41:21 --> [user > orderListPage] check session  >> 
+DEBUG - 2016-05-06 15:41:21 --> [user > orderListPage] check session  >> orderListPage
+DEBUG - 2016-05-06 15:41:21 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:41:21 --> Total execution time: 0.0269
+DEBUG - 2016-05-06 15:42:23 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:42:23 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:42:23 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:42:23 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:42:23 --> [user > orderListPage] check session  >> 
+DEBUG - 2016-05-06 15:42:23 --> [user > orderListPage] check session  >> orderListPage
+DEBUG - 2016-05-06 15:42:23 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:42:23 --> Total execution time: 0.0261
+DEBUG - 2016-05-06 15:43:08 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:43:08 --> No URI present. Default controller set.
+DEBUG - 2016-05-06 15:43:08 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:43:08 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:43:08 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:43:08 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 15:43:08 --> Total execution time: 0.0238
+DEBUG - 2016-05-06 15:43:10 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:43:10 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:43:10 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:43:10 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:43:10 --> [user > orderListPage] check session  >> 
+DEBUG - 2016-05-06 15:43:10 --> [user > orderListPage] check session  >> orderListPage
+DEBUG - 2016-05-06 15:43:10 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:43:10 --> Total execution time: 0.0320
+DEBUG - 2016-05-06 15:51:23 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:51:23 --> No URI present. Default controller set.
+DEBUG - 2016-05-06 15:51:23 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:51:23 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:51:23 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:51:23 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 15:51:23 --> Total execution time: 0.0276
+DEBUG - 2016-05-06 15:54:33 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:54:33 --> No URI present. Default controller set.
+DEBUG - 2016-05-06 15:54:33 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:54:33 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:54:33 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:54:33 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 15:54:33 --> Total execution time: 0.0242
+DEBUG - 2016-05-06 15:54:35 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:54:35 --> No URI present. Default controller set.
+DEBUG - 2016-05-06 15:54:35 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:54:35 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:54:35 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:54:35 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 15:54:35 --> Total execution time: 0.0236
+DEBUG - 2016-05-06 15:54:37 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:54:37 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:54:37 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:54:37 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:54:37 --> [admin > index] check session  >> 
+DEBUG - 2016-05-06 15:54:37 --> Total execution time: 0.0223
+DEBUG - 2016-05-06 15:54:37 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:54:37 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:54:37 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:54:37 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:54:37 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:54:37 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 15:54:37 --> Total execution time: 0.0313
+DEBUG - 2016-05-06 15:54:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-06 15:54:37 --> 404 Page Not Found: Img/favicon.png
+DEBUG - 2016-05-06 15:54:43 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:54:43 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:54:43 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:54:43 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:54:43 --> [packageType > index] check session  >> 
+DEBUG - 2016-05-06 15:54:43 --> Total execution time: 0.0240
+DEBUG - 2016-05-06 15:54:43 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:54:43 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:54:43 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:54:43 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:54:43 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 15:54:43 --> Total execution time: 0.0262
+DEBUG - 2016-05-06 15:55:56 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:55:56 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:55:56 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:55:56 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:55:56 --> [package > index] check session  >> 
+DEBUG - 2016-05-06 15:55:56 --> Total execution time: 0.0311
+DEBUG - 2016-05-06 15:55:56 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:55:56 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:55:56 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:55:56 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:55:56 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 15:55:56 --> Total execution time: 0.0278
+DEBUG - 2016-05-06 15:56:16 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:56:16 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:56:16 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:56:16 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:56:16 --> [packagePicture > index] check session  >> 
+DEBUG - 2016-05-06 15:56:16 --> Total execution time: 0.0250
+DEBUG - 2016-05-06 15:56:16 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:56:16 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:56:17 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:56:17 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:56:17 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 15:56:17 --> Total execution time: 0.0266
+DEBUG - 2016-05-06 15:56:20 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:56:20 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:56:20 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:56:20 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:56:20 --> [package > listPackagePicture] check session  >> 
+DEBUG - 2016-05-06 15:56:20 --> [package > listPackagePicture] package id  >> 1
+DEBUG - 2016-05-06 15:56:20 --> Total execution time: 0.0256
+DEBUG - 2016-05-06 15:56:33 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:56:33 --> No URI present. Default controller set.
+DEBUG - 2016-05-06 15:56:33 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:56:33 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:56:33 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:56:33 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 15:56:33 --> Total execution time: 0.0230
+DEBUG - 2016-05-06 15:56:33 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:56:33 --> No URI present. Default controller set.
+DEBUG - 2016-05-06 15:56:33 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:56:33 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:56:33 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:56:33 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 15:56:33 --> Total execution time: 0.0233
+DEBUG - 2016-05-06 15:56:36 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:56:36 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:56:36 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:56:36 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:56:36 --> [package > index] check session  >> 
+DEBUG - 2016-05-06 15:56:36 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:56:36 --> Total execution time: 0.0285
+DEBUG - 2016-05-06 15:56:40 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:56:40 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:56:40 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:56:40 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:56:40 --> [package > detail] check session  >> 
+DEBUG - 2016-05-06 15:56:40 --> Total execution time: 0.0280
+DEBUG - 2016-05-06 15:57:00 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:57:00 --> No URI present. Default controller set.
+DEBUG - 2016-05-06 15:57:00 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:57:00 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:57:00 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:57:00 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 15:57:00 --> Total execution time: 0.0215
+DEBUG - 2016-05-06 15:57:01 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:57:01 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:57:01 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:57:01 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:57:01 --> [admin > index] check session  >> 
+DEBUG - 2016-05-06 15:57:01 --> Total execution time: 0.0210
+DEBUG - 2016-05-06 15:57:01 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:57:01 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:57:01 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:57:01 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:57:01 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 15:57:01 --> Total execution time: 0.0212
+DEBUG - 2016-05-06 15:57:29 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:57:29 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:57:29 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:57:29 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:57:29 --> [packagePicture > index] check session  >> 
+DEBUG - 2016-05-06 15:57:29 --> Total execution time: 0.0250
+DEBUG - 2016-05-06 15:57:29 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:57:29 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:57:29 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:57:29 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:57:29 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 15:57:29 --> Total execution time: 0.0242
+DEBUG - 2016-05-06 15:57:31 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:57:31 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:57:31 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:57:31 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:57:31 --> [package > index] check session  >> 
+DEBUG - 2016-05-06 15:57:31 --> Total execution time: 0.0274
+DEBUG - 2016-05-06 15:57:31 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 15:57:31 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 15:57:31 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:57:31 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 15:57:31 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 15:57:31 --> Total execution time: 0.0245
+DEBUG - 2016-05-06 16:02:54 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 16:02:54 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 16:02:54 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 16:02:54 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 16:02:54 --> [package > index] check session  >> 
+DEBUG - 2016-05-06 16:02:54 --> Total execution time: 0.0260
+DEBUG - 2016-05-06 16:02:54 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 16:02:54 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 16:02:54 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 16:02:54 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 16:02:54 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 16:02:54 --> Total execution time: 0.0248
+DEBUG - 2016-05-06 16:08:13 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 16:08:13 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 16:08:13 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 16:08:13 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 16:08:13 --> [package > index] check session  >> 
+DEBUG - 2016-05-06 16:08:13 --> Total execution time: 0.0320
+DEBUG - 2016-05-06 16:08:13 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 16:08:13 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 16:08:13 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 16:08:13 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 16:08:13 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 16:08:13 --> Total execution time: 0.0231
+DEBUG - 2016-05-06 16:14:41 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 16:14:41 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 16:14:41 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 16:14:41 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 16:14:41 --> [package > index] check session  >> 
+DEBUG - 2016-05-06 16:14:41 --> Total execution time: 0.0287
+DEBUG - 2016-05-06 16:14:45 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 16:14:45 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 16:14:45 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 16:14:45 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 16:14:45 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 16:14:45 --> Total execution time: 0.0230
+DEBUG - 2016-05-06 16:16:24 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 16:16:24 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 16:16:24 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 16:16:24 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 16:16:24 --> [package > index] check session  >> 
+DEBUG - 2016-05-06 16:16:24 --> Total execution time: 0.0280
+DEBUG - 2016-05-06 16:16:27 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 16:16:27 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 16:16:27 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 16:16:27 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 16:16:27 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 16:16:27 --> Total execution time: 0.0273
+DEBUG - 2016-05-06 17:06:52 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 17:06:52 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 17:06:52 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:06:52 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:06:52 --> [package > index] check session  >> 
+DEBUG - 2016-05-06 17:06:52 --> Total execution time: 0.0331
+DEBUG - 2016-05-06 17:06:53 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 17:06:53 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 17:06:53 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:06:53 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:06:53 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 17:06:53 --> Total execution time: 0.0279
+DEBUG - 2016-05-06 17:08:12 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 17:08:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 17:08:12 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:08:12 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:08:12 --> [package > add] check session  >> 
+DEBUG - 2016-05-06 17:08:12 --> [package > add] add  >> 
+DEBUG - 2016-05-06 17:08:12 --> [package > add] upload config  >> Array
+(
+    [upload_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/
+    [allowed_types] => gif|jpg|png|pdf|jpeg
+    [encrypt_name] => 1
+    [max_size] => 2048
+    [max_width] => 1024
+    [max_height] => 768
+)
+
+DEBUG - 2016-05-06 17:08:12 --> [package > add] upload data thumbnail  >> Array
+(
+    [file_name] => ed09c993c2f92f1c787a34b816cafd7e.png
+    [file_type] => image/png
+    [file_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/
+    [full_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/ed09c993c2f92f1c787a34b816cafd7e.png
+    [raw_name] => ed09c993c2f92f1c787a34b816cafd7e
+    [orig_name] => เกาะหลีเป๊ะ.png
+    [client_name] => เกาะหลีเป๊ะ.png
+    [file_ext] => .png
+    [file_size] => 780.54
+    [is_image] => 1
+    [image_width] => 868
+    [image_height] => 684
+    [image_type] => png
+    [image_size_str] => width="868" height="684"
+)
+
+DEBUG - 2016-05-06 17:08:12 --> Image_lib class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:08:12 --> [package > add] upload data pdf  >> Array
+(
+    [file_name] => 629b78a28c0e0aa21dce45a9f60db9af.pdf
+    [file_type] => application/pdf
+    [file_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/
+    [full_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/629b78a28c0e0aa21dce45a9f60db9af.pdf
+    [raw_name] => 629b78a28c0e0aa21dce45a9f60db9af
+    [orig_name] => Multiple_File_Upload_DropzoneJS.pdf
+    [client_name] => Multiple File Upload DropzoneJS.pdf
+    [file_ext] => .pdf
+    [file_size] => 1767.46
+    [is_image] => 
+    [image_width] => 868
+    [image_height] => 684
+    [image_type] => png
+    [image_size_str] => width="868" height="684"
+)
+
+DEBUG - 2016-05-06 17:08:12 --> [package > add] insert data  >> Array
+(
+    [area_id] => 4
+    [package_type_id] => 1
+    [package_name] => Test Package
+    [price] => 3000
+    [discount] => 100
+    [travel_date] => 2016-05-06
+    [expire_date] => 2016-05-28
+    [package_desc] => xxxxxxx
+    [thumbnail] => ed09c993c2f92f1c787a34b816cafd7e.png
+    [pdf_path] => 629b78a28c0e0aa21dce45a9f60db9af.pdf
+)
+
+DEBUG - 2016-05-06 17:08:12 --> Total execution time: 0.0520
+DEBUG - 2016-05-06 17:08:19 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 17:08:19 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 17:08:19 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:08:19 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:08:19 --> [package > index] check session  >> 
+DEBUG - 2016-05-06 17:08:19 --> Total execution time: 0.0264
+DEBUG - 2016-05-06 17:08:19 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 17:08:19 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 17:08:19 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:08:19 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:08:19 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 17:08:19 --> Total execution time: 0.0290
+DEBUG - 2016-05-06 17:09:47 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 17:09:47 --> No URI present. Default controller set.
+DEBUG - 2016-05-06 17:09:47 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 17:09:47 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:09:47 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:09:47 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 17:09:47 --> Total execution time: 0.0225
+DEBUG - 2016-05-06 17:09:47 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 17:09:47 --> No URI present. Default controller set.
+DEBUG - 2016-05-06 17:09:47 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 17:09:47 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:09:47 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:09:47 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 17:09:47 --> Total execution time: 0.0225
+DEBUG - 2016-05-06 17:09:50 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 17:09:50 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 17:09:50 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:09:50 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:09:50 --> [package > index] check session  >> 
+DEBUG - 2016-05-06 17:09:50 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:09:50 --> Total execution time: 0.0309
+DEBUG - 2016-05-06 17:10:00 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 17:10:00 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 17:10:00 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:10:00 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:10:00 --> [package > filterByArea] check session  >> 
+DEBUG - 2016-05-06 17:10:00 --> [package > filterByArea] filter area  >> Array
+(
+    [areaId] => 4
+)
+
+DEBUG - 2016-05-06 17:10:00 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:10:00 --> Total execution time: 0.0286
+DEBUG - 2016-05-06 17:10:10 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 17:10:10 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 17:10:10 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:10:10 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:10:10 --> [package > detail] check session  >> 
+DEBUG - 2016-05-06 17:10:10 --> Total execution time: 0.0250
+DEBUG - 2016-05-06 17:25:56 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 17:25:56 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 17:25:56 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:25:56 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:25:56 --> [admin > index] check session  >> 
+DEBUG - 2016-05-06 17:25:56 --> Total execution time: 0.0236
+DEBUG - 2016-05-06 17:25:56 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 17:25:56 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 17:25:56 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:25:56 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:25:56 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 17:25:56 --> Total execution time: 0.0228
+DEBUG - 2016-05-06 17:25:59 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 17:25:59 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 17:25:59 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:25:59 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:25:59 --> [package > index] check session  >> 
+DEBUG - 2016-05-06 17:25:59 --> Total execution time: 0.0256
+DEBUG - 2016-05-06 17:25:59 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 17:25:59 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 17:25:59 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:25:59 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:25:59 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 17:25:59 --> Total execution time: 0.0249
+DEBUG - 2016-05-06 17:26:28 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 17:26:28 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 17:26:28 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:26:28 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:26:28 --> [package > add] check session  >> 
+DEBUG - 2016-05-06 17:26:28 --> [package > add] add  >> 
+DEBUG - 2016-05-06 17:26:28 --> [package > add] upload config  >> Array
+(
+    [upload_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/
+    [allowed_types] => gif|jpg|png|pdf|jpeg
+    [encrypt_name] => 1
+    [max_size] => 2048
+    [max_width] => 1024
+    [max_height] => 768
+)
+
+DEBUG - 2016-05-06 17:26:28 --> [package > add] upload data thumbnail  >> Array
+(
+    [file_name] => 60314f4c0d1153b0b0f4e20fc87439ef.png
+    [file_type] => image/png
+    [file_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/
+    [full_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/60314f4c0d1153b0b0f4e20fc87439ef.png
+    [raw_name] => 60314f4c0d1153b0b0f4e20fc87439ef
+    [orig_name] => เกาะหลีเป๊ะ.png
+    [client_name] => เกาะหลีเป๊ะ.png
+    [file_ext] => .png
+    [file_size] => 780.54
+    [is_image] => 1
+    [image_width] => 868
+    [image_height] => 684
+    [image_type] => png
+    [image_size_str] => width="868" height="684"
+)
+
+DEBUG - 2016-05-06 17:26:28 --> [package > add] resize image data  >> Array
+(
+    [file_name] => 60314f4c0d1153b0b0f4e20fc87439ef.png
+    [file_type] => image/png
+    [file_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/
+    [full_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/60314f4c0d1153b0b0f4e20fc87439ef.png
+    [raw_name] => 60314f4c0d1153b0b0f4e20fc87439ef
+    [orig_name] => เกาะหลีเป๊ะ.png
+    [client_name] => เกาะหลีเป๊ะ.png
+    [file_ext] => .png
+    [file_size] => 780.54
+    [is_image] => 1
+    [image_width] => 868
+    [image_height] => 684
+    [image_type] => png
+    [image_size_str] => width="868" height="684"
+)
+
+DEBUG - 2016-05-06 17:26:28 --> Image_lib class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:26:28 --> [package > add] upload data pdf  >> Array
+(
+    [file_name] => 0f2adf30cc53e70885b883eb0ae53d1f.pdf
+    [file_type] => application/pdf
+    [file_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/
+    [full_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/0f2adf30cc53e70885b883eb0ae53d1f.pdf
+    [raw_name] => 0f2adf30cc53e70885b883eb0ae53d1f
+    [orig_name] => Multiple_File_Upload_DropzoneJS.pdf
+    [client_name] => Multiple File Upload DropzoneJS.pdf
+    [file_ext] => .pdf
+    [file_size] => 1767.46
+    [is_image] => 
+    [image_width] => 868
+    [image_height] => 684
+    [image_type] => png
+    [image_size_str] => width="868" height="684"
+)
+
+DEBUG - 2016-05-06 17:26:28 --> [package > add] insert data  >> Array
+(
+    [area_id] => 3
+    [package_type_id] => 1
+    [package_name] => Test Package
+    [price] => 3000
+    [discount] => 100
+    [travel_date] => 2016-05-06
+    [expire_date] => 2016-05-26
+    [package_desc] => 
+    [thumbnail] => 60314f4c0d1153b0b0f4e20fc87439ef.png
+    [pdf_path] => 0f2adf30cc53e70885b883eb0ae53d1f.pdf
+)
+
+DEBUG - 2016-05-06 17:26:28 --> Total execution time: 0.0467
+DEBUG - 2016-05-06 17:31:45 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 17:31:45 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 17:31:45 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:31:45 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:31:45 --> [package > add] check session  >> 
+DEBUG - 2016-05-06 17:31:45 --> [package > add] add  >> 
+DEBUG - 2016-05-06 17:31:45 --> [package > add] upload config  >> Array
+(
+    [upload_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/
+    [allowed_types] => gif|jpg|png|pdf|jpeg
+    [encrypt_name] => 1
+    [max_size] => 2048
+    [max_width] => 1024
+    [max_height] => 768
+)
+
+DEBUG - 2016-05-06 17:31:45 --> [package > add] upload data thumbnail  >> Array
+(
+    [file_name] => 5fe955df6ce6245a10a254d46a9912d5.png
+    [file_type] => image/png
+    [file_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/
+    [full_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/5fe955df6ce6245a10a254d46a9912d5.png
+    [raw_name] => 5fe955df6ce6245a10a254d46a9912d5
+    [orig_name] => เกาะหลีเป๊ะ.png
+    [client_name] => เกาะหลีเป๊ะ.png
+    [file_ext] => .png
+    [file_size] => 780.54
+    [is_image] => 1
+    [image_width] => 868
+    [image_height] => 684
+    [image_type] => png
+    [image_size_str] => width="868" height="684"
+)
+
+DEBUG - 2016-05-06 17:31:45 --> [package > add] resize image data  >> Array
+(
+    [file_name] => 5fe955df6ce6245a10a254d46a9912d5.png
+    [file_type] => image/png
+    [file_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/
+    [full_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/5fe955df6ce6245a10a254d46a9912d5.png
+    [raw_name] => 5fe955df6ce6245a10a254d46a9912d5
+    [orig_name] => เกาะหลีเป๊ะ.png
+    [client_name] => เกาะหลีเป๊ะ.png
+    [file_ext] => .png
+    [file_size] => 780.54
+    [is_image] => 1
+    [image_width] => 868
+    [image_height] => 684
+    [image_type] => png
+    [image_size_str] => width="868" height="684"
+)
+
+DEBUG - 2016-05-06 17:31:45 --> [package > add] upload data pdf  >> Array
+(
+    [file_name] => 2f123a6605cb401ea409e8bf6b9c14b3.pdf
+    [file_type] => application/pdf
+    [file_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/
+    [full_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/2f123a6605cb401ea409e8bf6b9c14b3.pdf
+    [raw_name] => 2f123a6605cb401ea409e8bf6b9c14b3
+    [orig_name] => Multiple_File_Upload_DropzoneJS.pdf
+    [client_name] => Multiple File Upload DropzoneJS.pdf
+    [file_ext] => .pdf
+    [file_size] => 1767.46
+    [is_image] => 
+    [image_width] => 868
+    [image_height] => 684
+    [image_type] => png
+    [image_size_str] => width="868" height="684"
+)
+
+DEBUG - 2016-05-06 17:31:45 --> [package > add] insert data  >> Array
+(
+    [area_id] => 3
+    [package_type_id] => 1
+    [package_name] => Test Package
+    [price] => 3000
+    [discount] => 100
+    [travel_date] => 2016-05-06
+    [expire_date] => 2016-05-26
+    [package_desc] => 
+    [thumbnail] => 5fe955df6ce6245a10a254d46a9912d5.png
+    [pdf_path] => 2f123a6605cb401ea409e8bf6b9c14b3.pdf
+)
+
+DEBUG - 2016-05-06 17:31:45 --> Total execution time: 0.2920
+DEBUG - 2016-05-06 17:32:50 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 17:32:50 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 17:32:50 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:32:50 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:32:50 --> [package > add] check session  >> 
+DEBUG - 2016-05-06 17:32:50 --> [package > add] add  >> 
+DEBUG - 2016-05-06 17:32:50 --> [package > add] upload config  >> Array
+(
+    [upload_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/
+    [allowed_types] => gif|jpg|png|pdf|jpeg
+    [encrypt_name] => 1
+    [max_size] => 2048
+    [max_width] => 1024
+    [max_height] => 768
+)
+
+DEBUG - 2016-05-06 17:32:50 --> [package > add] upload data thumbnail  >> Array
+(
+    [file_name] => d53559734977eac7b0a7b77211aad3ee.png
+    [file_type] => image/png
+    [file_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/
+    [full_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/d53559734977eac7b0a7b77211aad3ee.png
+    [raw_name] => d53559734977eac7b0a7b77211aad3ee
+    [orig_name] => เกาะหลีเป๊ะ.png
+    [client_name] => เกาะหลีเป๊ะ.png
+    [file_ext] => .png
+    [file_size] => 780.54
+    [is_image] => 1
+    [image_width] => 868
+    [image_height] => 684
+    [image_type] => png
+    [image_size_str] => width="868" height="684"
+)
+
+DEBUG - 2016-05-06 17:32:50 --> [package > add] resize image data  >> Array
+(
+    [file_name] => d53559734977eac7b0a7b77211aad3ee.png
+    [file_type] => image/png
+    [file_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/
+    [full_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/d53559734977eac7b0a7b77211aad3ee.png
+    [raw_name] => d53559734977eac7b0a7b77211aad3ee
+    [orig_name] => เกาะหลีเป๊ะ.png
+    [client_name] => เกาะหลีเป๊ะ.png
+    [file_ext] => .png
+    [file_size] => 780.54
+    [is_image] => 1
+    [image_width] => 868
+    [image_height] => 684
+    [image_type] => png
+    [image_size_str] => width="868" height="684"
+)
+
+DEBUG - 2016-05-06 17:32:51 --> [package > add] upload data pdf  >> Array
+(
+    [file_name] => 93f32ed9d4d39da58d2865a7833bded7.pdf
+    [file_type] => application/pdf
+    [file_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/
+    [full_path] => /Users/MacBookPro/Documents/i-work/root/tour/resources/upload/package/93f32ed9d4d39da58d2865a7833bded7.pdf
+    [raw_name] => 93f32ed9d4d39da58d2865a7833bded7
+    [orig_name] => Multiple_File_Upload_DropzoneJS.pdf
+    [client_name] => Multiple File Upload DropzoneJS.pdf
+    [file_ext] => .pdf
+    [file_size] => 1767.46
+    [is_image] => 
+    [image_width] => 868
+    [image_height] => 684
+    [image_type] => png
+    [image_size_str] => width="868" height="684"
+)
+
+DEBUG - 2016-05-06 17:32:51 --> [package > add] insert data  >> Array
+(
+    [area_id] => 3
+    [package_type_id] => 1
+    [package_name] => Test Package
+    [price] => 3000
+    [discount] => 100
+    [travel_date] => 2016-05-06
+    [expire_date] => 2016-05-26
+    [package_desc] => 
+    [thumbnail] => d53559734977eac7b0a7b77211aad3ee.png
+    [pdf_path] => 93f32ed9d4d39da58d2865a7833bded7.pdf
+)
+
+DEBUG - 2016-05-06 17:32:51 --> Total execution time: 0.4178
+DEBUG - 2016-05-06 17:33:06 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 17:33:06 --> No URI present. Default controller set.
+DEBUG - 2016-05-06 17:33:06 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 17:33:06 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:33:06 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:33:06 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 17:33:06 --> Total execution time: 0.0269
+DEBUG - 2016-05-06 17:33:09 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 17:33:09 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 17:33:09 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:33:09 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:33:09 --> [package > index] check session  >> 
+DEBUG - 2016-05-06 17:33:09 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:33:09 --> Total execution time: 0.0302
+DEBUG - 2016-05-06 17:43:11 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 17:43:11 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 17:43:11 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:43:11 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:43:11 --> [package > index] check session  >> 
+DEBUG - 2016-05-06 17:43:11 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:43:11 --> Total execution time: 0.0285
+DEBUG - 2016-05-06 17:43:52 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 17:43:52 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 17:43:52 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:43:52 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:43:52 --> [package > detail] check session  >> 
+DEBUG - 2016-05-06 17:43:52 --> Total execution time: 0.0249
+DEBUG - 2016-05-06 17:44:02 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 17:44:02 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 17:44:02 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:44:02 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:44:02 --> [package > index] check session  >> 
+DEBUG - 2016-05-06 17:44:02 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:44:02 --> Total execution time: 0.0279
+DEBUG - 2016-05-06 17:46:56 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 17:46:56 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 17:46:56 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:46:56 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:46:56 --> [user > changePasswordPage] check session  >> 
+DEBUG - 2016-05-06 17:46:56 --> Total execution time: 0.0226
+DEBUG - 2016-05-06 17:47:02 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 17:47:02 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 17:47:02 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:47:02 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:47:02 --> [user > orderListPage] check session  >> 
+DEBUG - 2016-05-06 17:47:02 --> [user > orderListPage] check session  >> orderListPage
+DEBUG - 2016-05-06 17:47:02 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:47:02 --> Total execution time: 0.0279
+DEBUG - 2016-05-06 17:47:08 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 17:47:08 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 17:47:08 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:47:08 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 17:47:08 --> [order > generateReceipt] check session  >> 
+DEBUG - 2016-05-06 17:47:11 --> Total execution time: 2.9147
+DEBUG - 2016-05-06 22:12:22 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 22:12:22 --> No URI present. Default controller set.
+DEBUG - 2016-05-06 22:12:22 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 22:12:22 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 22:12:22 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 22:12:22 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 22:12:22 --> Total execution time: 0.0249
+DEBUG - 2016-05-06 22:25:18 --> UTF-8 Support Enabled
+DEBUG - 2016-05-06 22:25:18 --> No URI present. Default controller set.
+DEBUG - 2016-05-06 22:25:18 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-06 22:25:18 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 22:25:18 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-06 22:25:18 --> [home > index] check session  >> 
+DEBUG - 2016-05-06 22:25:18 --> Total execution time: 0.0260

@@ -3,22 +3,26 @@
 </header>
 <div class='panel-body'>
     <?php
-    	$selectType = array('class'=>'form-control','id'=>'packageTypeId','required'=>'');
-    	$inputName = array('name'=>'package_name','id'=>'packageName','class'=>'form-control','required'=>'');
-    	$inputPrice = array('name'=>'price','id'=>'price','class'=>'form-control','required'=>'');
+		$selectArea = array('id'=>"areaId",'required'=>'');
+    	$selectType = array('id'=>'packageTypeId','required'=>'');
+    	$inputName = array('name'=>'package_name','id'=>'packageName','required'=>'');
+    	$inputPrice = array('name'=>'price','id'=>'price','required'=>'');
 		$textDesc = array('name'=>'package_desc','id'=>'packageDesc','class'=>'form-control');
-		$uploadThumbnail = array('name'=>'thumbnail','id'=>'thumbnail','class'=>'form-control','required'=>'');
-		$uploadPdf = array('name'=>'tourProgram','id'=>'tourProgram','class'=>'form-control','required'=>'');
-		$inputTravelDate = array('name'=>'travel_date','id'=>'travelDate','class'=>'form-control','type'=>'date','required'=>'');
-		$inputExpireDate = array('name'=>'expire_date','id'=>'expireDate','class'=>'form-control','type'=>'date','required'=>'');
+		$uploadThumbnail = array('name'=>'thumbnail','id'=>'thumbnail','required'=>'');
+		$uploadPdf = array('name'=>'tourProgram','id'=>'tourProgram','required'=>'');
+		$inputTravelDate = array('name'=>'travel_date','id'=>'travelDate','type'=>'date','required'=>'');
+		$inputExpireDate = array('name'=>'expire_date','id'=>'expireDate','type'=>'date','required'=>'');
     	$inputPackageId = array('name'=>'packageId','id'=>'packageId','type'=>'hidden');
+		$inputDiscountAttr = array('name'=>'discount','id'=>'discount');
         if($action==ACTION_ADD){
             $action = 'admin/package/add';
             $selected = '';
+			$selectedArea = '';
             $pdfPath = '';
             $thumbnailPath = '';
         }else{
             $action = 'admin/package/update';
+			$selectedArea = $editData->area_id;
             $selected = $editData->package_type_id;
             $inputName['value'] = $editData->package_name;
             $inputPrice['value'] = $editData->price;
@@ -28,18 +32,21 @@
             $inputPackageId['value'] = $editData->package_id;
             $pdfPath = $editData->pdf_path;
             $thumbnailPath = getFilePath($editData->thumbnail);
+			$inputDiscountAttr['value'] = $editData->discount;
             
         }
 		
         echo form_open_multipart('',array('id'=>'formPackage'));
         echo form_input($inputPackageId);
 		echo form_input(array('type'=>'hidden','value'=>site_url($action),'id'=>'action'));
+		echo create_dropdown(array('ภูมิภาค','areaId'),'area_id',$areaType,$selectArea,$selectedArea);
 		echo create_dropdown(array('ประเภทแพคเก็จ','packageTypeId'),'package_type_id',$packageType,$selectType,$selected);
 		echo create_input(array('ชื่อแพ็คเกจ','packageName'),$inputName);
 		echo create_input(array('ราคา','packagePrice'),$inputPrice);
+		echo create_input(array('ส่วนลด','discount'),$inputDiscountAttr);
 		
 		if($thumbnailPath == ''){
-		  echo create_upload(array('ภาพย่อ','thumbnail'),$uploadThumbnail);
+		  echo create_upload(array('ภาพย่อ (800x600)','thumbnail'),$uploadThumbnail);
 		  
 		}else{
 		  echo create_thumbnail(array('ภาพย่อ',''), array('src'=>$thumbnailPath),$thumbnailPath,$uploadThumbnail);  

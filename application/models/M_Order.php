@@ -34,7 +34,7 @@ class M_Order extends Abstract_Model
 
     public function getOrderByCriteria($criteria=array(),$limit=array(),$resultIsArray=false){
         $criteria['r.delete_flag'] = 'N';
-        $this->db->select("r.order_id,s.status_name status,r.phone,r.transaction_id,sum(d.price * d.qty) total,concat(r.firstname,' ',r.lastname) contact");
+        $this->db->select("r.order_id,s.status_name status,r.status status_code,r.phone,r.transaction_id,sum(d.price * d.qty) total,concat(r.firstname,' ',r.lastname) contact");
         $this->db->from('tbl_order r');
         $this->db->join('tbl_order_details d','r.order_id = d.order_id','inner');
         $this->db->join('tbl_package p','d.package_id = p.package_id','inner');

@@ -2,7 +2,7 @@
     <div class="container">
         <h4 class="upper">ข้อมูลติดต่อ</h4>
         <div class="sep-top-sm">
-            <div class="row">
+            <div class="row sep-bottom-xs">
                 <div class="col-sm-2">
                     รหัสการสั่งซื้อ
                 </div>
@@ -80,9 +80,11 @@
             <div class="col-md-4 sep-top-md">
                 <a class="btn btn-dark btn-bordered" href="#" onclick="window.history.back();return;" role="button">กลับ</a>
             </div>
+            <?php if($contactData->status_code == SUCCESS): ?>
             <div class="col-md-4 sep-top-md text-right">
                 <a class="btn btn-primary" href="<?=site_url('order/generateReceipt/'.$contactData->order_id);?>" role="button">พิมพ์ใบเสร็จ</a>
             </div>
+            <?php endif; ?>
         </div>
     </div>
 </section>

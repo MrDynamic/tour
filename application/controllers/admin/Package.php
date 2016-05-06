@@ -3,7 +3,7 @@
 	    
 		public function __construct(){
 			parent::__construct();
-			$this->load->model(array("M_PackageType"=>'mCat','M_Package'=>'mPackage','M_PackagePicture'=>'picture'));
+			$this->load->model(array("M_PackageType"=>'mCat','M_Package'=>'mPackage','M_PackagePicture'=>'picture','M_Area'=>'area'));
 		}
 
 		public function index(){
@@ -19,6 +19,7 @@
 		
 		public function loadPage($action=ACTION_ADD,$formData=array()){
 		    $this->setActiveMenu(MENU_MAIN_PACKAGE,MENU_PACKAGE);
+			$formData['areaType'] = $this->generateSelectItems($this->area->getDataSpecifyField('area_id as id,area_name as label'));
 		    $formData['packageType'] = $this->generateSelectItems($this->mCat->getDataSpecifyField('package_type_id as id,package_type_name as label'));
 		    $formData['action'] = $action;
 		    $data['list'] = $this->mPackage->getPackageList();
@@ -128,31 +129,13 @@
 			$this->log_debug('add');
 			try
 	        {
-			    $pathThumbnail = '';
-				$pathPdf = '';
-
 				$this->load->library('upload', $this->getConfigUpload());
-// 				$this->load->library('form_validation');
-				
-// 				$this->form_validation->set_rules('package_type_id', 'Package Type', 'trim|required');
-// 				$this->form_validation->set_rules('package_name','Package Name','trim|required');
-				
-// 				$this->log_debug('data thumbnail',print_r($_FILES['thumbnail'],true));
-// 				if (empty($_FILES['thumbnail']['name']))
-// 				{
-// 				    $this->form_validation->set_rules('thumbnail','Thumbnail','trim|required');
-// 				}
-				
-// 				if ($this->form_validation->run() == FALSE){
-// 				    $this->loadPage();
-// 				}else{
-				    
-// 				}
-				
+
 				if (!$this->upload->do_upload('thumbnail')){
 					$response = false;
 				}else{
 				    $this->log_debug('upload data thumbnail',print_r($this->upload->data(),true));
+					$this->resize($this->upload->data());
 					$pathThumbnail = $this->upload->data()['file_name'];
 					if($this->upload->do_upload('tourProgram')){
 					    $this->log_debug('upload data pdf',print_r($this->upload->data(),true));
@@ -179,6 +162,20 @@
 	            $response = false;
 	        }
 			echo $response;
+		}
+
+		private function resize($image_data) {
+			$this->log_debug('resize image data',print_r($image_data,true));
+			$this->load->library('image_lib');
+
+			$config['image_library'] = 'gd2';
+			$config['source_image']	= $image_data['full_path'];
+			$config['maintain_ratio'] = false;
+			$config['height']	= "600";
+			$config['width'] = "800";
+			$config['new_image'] = $this->getRealFolder(PATH);
+			$this->image_lib->initialize($config);
+			$this->image_lib->resize();
 		}
 
 		public function uploadThumbnail(){

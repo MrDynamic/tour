@@ -46,7 +46,10 @@ $("#formPackage").validate({
 		    },
 		    price:{
 		    	number:true
-		    }
+		    },
+			discount:{
+				number:true
+			}
 		},
 	messages: { thumbnail: "File must be JPG, GIF or PNG, less than 2MB" },
 	submitHandler: function() {
@@ -60,9 +63,9 @@ $("#formPackage").validate({
 
 
 function addPackageResponse(response){
-	if(reponse==1){
+	if(response==1){
 		alert('บันทึกข้อมูลเรียบร้อยแล้ว');
-//		window.location.reload();
+		window.location.reload();
 	}else{
 		alert('Save data fail');
 	}

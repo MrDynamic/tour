@@ -31,7 +31,7 @@
                                 echo "<div class='pull-right price-shop text-right'>";
                                 if($val->discount > 0){
                                     echo "<del>$val->price</del>";
-                                    echo "<ins>($val->price - $val->discount) THB</ins>";
+                                    echo "<ins>".($val->price - $val->discount)."THB</ins>";
                                 }else{
                                     echo "<ins>$val->price</ins> THB";
                                 }

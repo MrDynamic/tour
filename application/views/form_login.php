@@ -3,9 +3,15 @@
 <div aria-labelledby="dropdownMenuLogin" class="dropdown-menu widget-box">
     <div class="shopping_cart_dropdown" style="text-align: left">
      <ul class="cart_list product_list_widget">
-      <li>
-      	<a href="<?=site_url('user/userPage');?>"><span>ข้อมูลส่วนตัว</span></a>
-      </li>
+        <li>
+            <a href="<?=site_url('user/userPage');?>"><span>ข้อมูลส่วนตัว</span></a>
+        </li>
+        <li>
+            <a href="<?=site_url('user/changePasswordPage');?>"><span>เปลี่ยนรหัสผ่าน</span></a>
+        </li>
+        <li>
+            <a href="<?=site_url('user/orderListPage');?>"><span>รายการสั่งซื้อ</span></a>
+        </li>
     </ul>
     <div class="form-inline form-group">
       <form method="post" action="<?=site_url('authen/logout');?>">

@@ -49,7 +49,7 @@
               	<?php 
                   	if($packageData->discount > 0){
                   	    echo "<del>$packageData->price</del>";
-                  	    echo "<ins><span itemprop='price'>($packageData->price - $packageData->discount) THB</span></ins>";
+                  	    echo "<ins><span itemprop='price'>".($packageData->price - $packageData->discount)." THB</span></ins>";
                   	}else{
                   	    echo "<ins><span itemprop='price'>$packageData->price THB</span></ins>";
                   	}
