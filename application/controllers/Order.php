@@ -1,6 +1,6 @@
 <?php
 
-class Order extends Abstract_Controller
+class Order extends Main_Controller
 {
 
     public function __construct()
@@ -18,12 +18,12 @@ class Order extends Abstract_Controller
             'price'=>$this->input->post('price')
         );
         $this->log_debug('data insert',print_r($data,true));
-        $this->my_cart->insert($data);
+        $this->mycart->insert($data);
     }
     
     
     private function checkItemCart(){
-        if($this->my_cart->total_items() <= 0){
+        if($this->mycart->total_items() <= 0){
             redirect('','refresh');
         }
     }
@@ -48,18 +48,18 @@ class Order extends Abstract_Controller
                         'qty'=>$this->input->post('qty')[$i]
                     );
                 }else{
-                    $this->my_cart->remove($arrId[$i]);
+                    $this->mycart->remove($arrId[$i]);
                 }
             }
         }
-        $this->my_cart->update($data);
+        $this->mycart->update($data);
         redirect('order/viewCart','refresh');
     }
     
     
     public function removeCart(){
         $rowId = $this->input->post('rowId');
-        $this->my_cart->remove($rowId);
+        $this->mycart->remove($rowId);
     }
     
     public function checkoutPage(){
@@ -71,7 +71,7 @@ class Order extends Abstract_Controller
     public function checkout(){
         $this->log_debug("check out data",print_r($this->input->post(),true));
         $orderDetails = array();
-        $size = $this->my_cart->total_items();
+        $size = $this->mycart->total_items();
         if($size > 0){
             $orderData = $this->input->post();
             $orderData['user_id']= $this->session->userdata("user_id");
@@ -79,7 +79,7 @@ class Order extends Abstract_Controller
             
             $i=0;
             $total=0;
-            foreach($this->my_cart->contents() as $item){
+            foreach($this->mycart->contents() as $item){
                 $orderDetails[$i++] = array(
                     'package_id'=>$item['id'],
                     'qty'=>$item['qty'],
@@ -93,7 +93,7 @@ class Order extends Abstract_Controller
                 $order['order_id'] = $orderId;
                 $order['total'] = $total;
                 $order['name'] = 'Ocharos tour orders';
-                $this->my_cart->destroy();
+                $this->mycart->destroy();
                 $this->submitToPaypal($order);
             }
     
@@ -170,9 +170,9 @@ class Order extends Abstract_Controller
         $orderId = $this->uri->segment(3);
         $html = $this->load->view('order/receipt',$this->getOrderData($orderId),true);
         $pdfFilePath = "ocharos_".str_pad($orderId,5,"0",STR_PAD_LEFT).".pdf";
-        $this->load->library('my_pdf');
-        $this->my_pdf->pdf->WriteHTML($html);
-        $this->my_pdf->pdf->Output($pdfFilePath, "D");
+        $this->load->library('mypdf');
+        $this->mypdf->pdf->WriteHTML($html);
+        $this->mypdf->pdf->Output($pdfFilePath, "D");
 //        $this->load->view('order/receipt',$this->getOrderData($orderId));
             
     }

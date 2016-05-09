@@ -1,6 +1,6 @@
 <?php
 
-class User extends Abstract_Controller
+class User extends Main_Controller
 {
 
     public function __construct()
@@ -110,9 +110,9 @@ class User extends Abstract_Controller
     public function orderListPage(){
         $page = empty($this->uri->segment(3))?1:$this->uri->segment(3);
         
-        $this->load->library(array('pagination','my_pagination'));
+        $this->load->library(array('pagination','mypagination'));
         $userId = $this->session->userdata("user_id");
-        $pagingConfig = $this->my_pagination->init('user/orderListPage',$this->order->countAllWithCriteria(array('user_id'=>$userId)));
+        $pagingConfig = $this->mypagination->init('user/orderListPage',$this->order->countAllWithCriteria(array('user_id'=>$userId)));
         $limit = array($pagingConfig['per_page'],(($page-1) * $pagingConfig['per_page']));
 
         $data['orderData'] = $this->order->getOrderByCriteria(array("r.user_id"=>$userId),$limit);

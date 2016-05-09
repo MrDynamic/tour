@@ -1,6 +1,6 @@
 <?php
 
-class PackagePicture extends Abstract_Controller
+class PackagePicture extends Admin_Controller
 {
 
     public function __construct()

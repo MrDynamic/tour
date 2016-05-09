@@ -1,5 +1,5 @@
 <?php
-class MY_Pagination {
+class MyPagination {
 
     function __construct() {
         $this->ci =& get_instance();

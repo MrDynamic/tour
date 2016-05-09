@@ -18,17 +18,25 @@ abstract class Abstract_Model extends CI_Model{
         return $this->db->update($this->getTableName(),$data,$criteria);
     }
     
-    public function delete($criteria){
+    public function deleteByFlag($criteria){
         $data['u_date'] = date('Y-m-d');
         return $this->db->update($this->getTableName(),array('delete_flag'=>'Y'),$criteria);
     }
-    
-    public function getAllData(){
-        return $this->getDataByCriteria(array('delete_flag'=>'N'));
+
+    public function delete($criteria=array()){
+        return $this->db->delete($this->getTableName(),$criteria);
+    }
+
+
+    public function getAllData($isDeleteFlag=true){
+        return $this->getDataByCriteria(array(),'',$isDeleteFlag);
     }
     
-    public function getDataByCriteria($criteria,$limit=""){
-        $criteria['delete_flag'] = 'N';
+    public function getDataByCriteria($criteria,$limit="",$isDeleteFlag=true){
+        if($isDeleteFlag){
+            $criteria['delete_flag'] = 'N';
+        }
+
     	$query = $this->db->get_where($this->getTableName(),$criteria);
     	return $query->result();
     }
@@ -39,9 +47,11 @@ abstract class Abstract_Model extends CI_Model{
 
     }
 
-    public function getDataResultArray($fieldName,$criteria=array(),$limit=''){
+    public function getDataResultArray($fieldName,$criteria=array(),$limit='',$isDeleteFlag=true){
         $this->db->select($fieldName);
-        $criteria['delete_flag'] = 'N';
+        if($isDeleteFlag){
+            $criteria['delete_flag'] = 'N';
+        }
         $query = $this->db->get_where($this->getTableName(),$criteria);
         return $query->result_array();
     }

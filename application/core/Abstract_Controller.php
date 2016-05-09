@@ -1,14 +1,14 @@
 <?php
-class Abstract_Controller extends CI_Controller {
-	protected $template;
+abstract class Abstract_Controller extends CI_Controller {
+
+	abstract function generateMenu();
+	abstract function requiredLogin();
 
 	function __construct()
 	{
 		parent::__construct();
 		$this->requiredLogin();		
-		//-- Check Role
-		$this->generateAdminMenu();
-        $this->generateMenu();
+		$this->generateMenu();
 	}
 
    function __destruct() {
@@ -16,10 +16,17 @@ class Abstract_Controller extends CI_Controller {
    }
    
    protected function deleteFile($path){
-       $file = $this->getRealFolder($path);
-       if(file_exists($file)){
-        unlink($file);
-       }
+	   try{
+
+		   $file = $this->getRealFolder($path);
+		   if(file_exists($file)){
+			   unlink($file);
+		   }
+		   
+	   } catch (Exception $e) {
+		   $this->log_error($e->getMessage());
+	   }
+
    }
    
    protected function getRealFolder($path){
@@ -30,23 +37,6 @@ class Abstract_Controller extends CI_Controller {
 //        }
        return $folderName;
    }
-	
-   protected function setContentWithSidePage($contentPage='',$data=array()){
-        $this->template['menu_type'] = CONTENT_TYPE;
-        $this->template['nav_menu'] = $this->load->view('nav_menu',$this->template,true);
-        $this->template['sidebar'] = $this->load->view('user/sidebar_user',null,true);
-        $this->template['content'] = $this->load->view($contentPage,$data,true);
-    }
-    
-    protected function setContentPage($contentPage,$data=array()){
-        $this->template['menu_type'] = CONTENT_TYPE;
-        $this->template['nav_menu'] = $this->load->view('nav_menu',$this->template,true);
-        $this->template['content'] = $this->load->view($contentPage,$data,true);
-    }
-   
-	protected function setActiveMenu($mainName,$subName){
-        $this->template['active_menu'] = array($mainName,$subName);
-    }
 
     protected function generateSelectItems($data,$unSelected="กรุณาเลือก"){
     	$result = array(''=>$unSelected);
@@ -58,69 +48,6 @@ class Abstract_Controller extends CI_Controller {
     	return $result;
     }
 
-    protected function generateMenu(){
-        $this->template['title'] = "Ocharos 's tour";
-        $this->template['form_login'] = $this->load->view('form_login',null,true);
-        $this->template['header'] = $this->load->view('header',null,true);
-        $this->template['form_cart'] = $this->load->view('form_cart',null,true);
-        $this->template['nav_menu'] = $this->load->view('nav_menu',null,true);
-        $this->template['footer'] = $this->load->view('footer',null,true);
-    }
-    
- 	protected function generateAdminMenu(){
-		$this->template['slide_menu'] = array(
-							array(
-									'MENU_NAME'=>'สถานที่แนะนำ',
-									'KEY'=>'MAIN_',
-									'SUB_MENU'=> array(
-											array(
-												'NAME'=>'ประเภทโปรแกรม',
-												'URL'=>'admin/package/category',
-												'KEY'=>'CAT_PACK'
-												)
-											,array(
-												'NAME'=>'จัดโปรแกรม',
-												'URL'=>'#',
-												'KEY'=>'MANAGE_PACK'
-												)
-										)
-								),
-							array(
-									'MENU_NAME'=>'จัดโปรแกรม',
-									'KEY'=>MENU_MAIN_PACKAGE,
-									'SUB_MENU'=> array(
-											array(
-												'NAME'=>'ประเภทโปรแกรม',
-												'URL'=>'admin/package/category',
-												'KEY'=>MENU_PACKAGE_TYPE
-												)
-											,array(
-												'NAME'=>'โปรแกรม',
-												'URL'=>'admin/package',
-												'KEY'=>MENU_PACKAGE
-												)
-    									    ,array(
-    									        'NAME'=>'ภาพโปรแกรม',
-    									        'URL'=>'admin/packagePicture',
-    									        'KEY'=>MENU_PACKAGE_PICTURE
-    									       )
-										)
-								)
-							);
-		$this->template['active_menu'] = array();
-
-	}
-	/*
-		menu_id
-		menu_type
-		menu_name
-		menu_key
-		menu_url
-		parent_id
-		delete_flag
-	
-	*/
-	
 	protected function getAllProvince(){
 	    $this->load->model('M_Province','mProvince');
 	    return $this->mProvince->getDataSpecifyField('province_id id,province_name label');
@@ -149,29 +76,161 @@ class Abstract_Controller extends CI_Controller {
 	    $methodName = $this->router->method;
 	    log_message('error',"[$className > $methodName]  $message");
 	}
-	
-	protected  function requiredLogin(){
-	    $this->log_debug('check session');
-	    static $methodAuthen = array('checkoutPage','checkout','submitToPaypal','userPage','orderListPage');
-	    if(isset($this->router) && in_array($this->router->method,$methodAuthen)){
-	        $this->log_debug('check session',$this->router->method);
-    	    if(empty($this->session->userdata('user_id')) 
-    	        || empty($this->session->userdata('username'))
-    	        || empty($this->session->userdata('role'))){
-    	        $this->session->set_flashdata(array('message'=>'คุณไม่มีสิทธิ์เข้าใช้งานกรุณา login เข้าสู่ระบบ','redirectUrl'=>$this->router->class.'/'.$this->router->method));
-    	        redirect('authen/login','refresh');
-    	    }
-	    }
+
+}
+
+
+class Main_Controller extends Abstract_Controller{
+
+	protected $template;
+
+	public function __construct()
+	{
+		parent::__construct();
 	}
-	
+
 	protected function loadLayoutSidebar($content=array()){
-	    $this->load->view('layout_sidebar',$content);
+		$this->load->view('layout_sidebar',$content);
 	}
-	
+
 	protected function loadLayoutContent($content=array()){
-	    $this->load->view('layout_content',$content);
+		$this->load->view('layout_content',$content);
 	}
-	
+
+	protected function setContentWithSidePage($contentPage='',$data=array()){
+		$this->template['menu_type'] = CONTENT_TYPE;
+		$this->template['nav_menu'] = $this->load->view('nav_menu',$this->template,true);
+		$this->template['sidebar'] = $this->load->view('user/sidebar_user',null,true);
+		$this->template['content'] = $this->load->view($contentPage,$data,true);
+	}
+
+	protected function setContentPage($contentPage,$data=array()){
+		$this->template['menu_type'] = CONTENT_TYPE;
+		$this->template['nav_menu'] = $this->load->view('nav_menu',$this->template,true);
+		$this->template['content'] = $this->load->view($contentPage,$data,true);
+	}
+
+	public function generateMenu(){
+		$this->template['title'] = "Ocharos 's tour";
+		$this->template['form_login'] = $this->load->view('form_login',null,true);
+		$this->template['header'] = $this->load->view('header',null,true);
+		$this->template['form_cart'] = $this->load->view('form_cart',null,true);
+		$this->template['nav_menu'] = $this->load->view('nav_menu',null,true);
+		$this->template['footer'] = $this->load->view('footer',null,true);
+	}
+
+	public  function requiredLogin(){
+		$this->log_debug('check session user');
+		static $methodAuthen = array('checkoutPage','checkout','submitToPaypal','userPage','orderListPage');
+		if(isset($this->router) && in_array($this->router->method,$methodAuthen)){
+			$this->log_debug('check session',$this->router->method);
+			if(empty($this->session->userdata('user_id'))
+				|| empty($this->session->userdata('username'))
+				|| empty($this->session->userdata('role'))){
+				$this->session->set_flashdata(array('message'=>'คุณไม่มีสิทธิ์เข้าใช้งานกรุณา login เข้าสู่ระบบ','redirectUrl'=>$this->router->class.'/'.$this->router->method));
+				redirect('authen/login','refresh');
+			}
+		}
+	}
+
+}
+
+/*
+ *	Abstract Admin Controller
+ *
+ */
+
+
+class Admin_Controller extends Abstract_Controller
+{
+	protected $template;
+
+	public function __construct()
+	{
+		parent::__construct();
+	}
+
+
+	protected function getConfigUpload(){
+		$config['upload_path'] = $this->getRealFolder(PATH);
+		$config['allowed_types'] = 'gif|jpg|png|pdf|jpeg';
+		$config['encrypt_name'] =true;
+		$config['max_size']	= '2048';
+		$config['max_width']  = '1024';
+		$config['max_height']  = '768';
+		$this->log_debug('upload config',print_r($config,true));
+		return $config;
+	}
+
+	protected function resize($image_data) {
+		$this->log_debug('resize image data',print_r($image_data,true));
+		$this->load->library('image_lib');
+
+		$config['image_library'] = 'gd2';
+		$config['source_image']	= $image_data['full_path'];
+		$config['maintain_ratio'] = false;
+		$config['height']	= "600";
+		$config['width'] = "800";
+		$config['new_image'] = $this->getRealFolder(PATH);
+		$this->image_lib->initialize($config);
+		$this->image_lib->resize();
+	}
+
+	public function generateMenu(){
+		$this->template['slide_menu'] = array(
+			array(
+				'MENU_NAME'=>'ผลงาน',
+				'KEY'=>MENU_MAIN_PORTFOLIO,
+				'SUB_MENU'=> array(
+					array(
+						'NAME'=>'เพิ่มภาพผลงาน',
+						'URL'=>'admin/portfolio',
+						'KEY'=>MENU_PORTFOLIO
+					)
+				)
+			),
+			array(
+				'MENU_NAME'=>'จัดโปรแกรม',
+				'KEY'=>MENU_MAIN_PACKAGE,
+				'SUB_MENU'=> array(
+					array(
+						'NAME'=>'ประเภทโปรแกรม',
+						'URL'=>'admin/package/category',
+						'KEY'=>MENU_PACKAGE_TYPE
+					)
+				,array(
+						'NAME'=>'โปรแกรม',
+						'URL'=>'admin/package',
+						'KEY'=>MENU_PACKAGE
+					)
+				,array(
+						'NAME'=>'ภาพโปรแกรม',
+						'URL'=>'admin/packagePicture',
+						'KEY'=>MENU_PACKAGE_PICTURE
+					)
+				)
+			)
+		);
+		$this->template['active_menu'] = array();
+
+	}
+
+	public function requiredLogin()
+	{
+		$this->log_debug('check role admin');
+
+		if(empty($this->session->userdata('user_id'))
+			|| empty($this->session->userdata('username'))
+			|| empty($this->session->userdata('role'))
+			|| $this->session->userdata('role') != ADMIN_ROLE){
+			$this->session->set_flashdata(array('message'=>'คุณไม่มีสิทธิ์เข้าใช้งานเนื่องจากไม่ใช่ admin กรุณา login เป็น admin','redirectUrl'=>$this->router->class.'/'.$this->router->method));
+			redirect('authen/login','refresh');
+		}
+	}
+
+	protected function setActiveMenu($mainName,$subName){
+		$this->template['active_menu'] = array($mainName,$subName);
+	}
 
 }
 

@@ -1,5 +1,5 @@
 <?php
-	class Package extends Abstract_Controller{
+	class Package extends Admin_Controller{
 	    
 		public function __construct(){
 			parent::__construct();
@@ -113,17 +113,6 @@
 		    return $response;
 		}
 		
-		private function getConfigUpload(){
-		    $config['upload_path'] = $this->getRealFolder(PATH);
-		    $config['allowed_types'] = 'gif|jpg|png|pdf|jpeg';
-		    $config['encrypt_name'] =true;
-		    $config['max_size']	= '2048';
-		    $config['max_width']  = '1024';
-		    $config['max_height']  = '768';
-		    $this->log_debug('upload config',print_r($config,true));
-		    return $config;
-		}
-		
 		public function add(){
 			$response = true;
 			$this->log_debug('add');
@@ -164,22 +153,4 @@
 			echo $response;
 		}
 
-		private function resize($image_data) {
-			$this->log_debug('resize image data',print_r($image_data,true));
-			$this->load->library('image_lib');
-
-			$config['image_library'] = 'gd2';
-			$config['source_image']	= $image_data['full_path'];
-			$config['maintain_ratio'] = false;
-			$config['height']	= "600";
-			$config['width'] = "800";
-			$config['new_image'] = $this->getRealFolder(PATH);
-			$this->image_lib->initialize($config);
-			$this->image_lib->resize();
-		}
-
-		public function uploadThumbnail(){
-			
-		}
-		
 	}

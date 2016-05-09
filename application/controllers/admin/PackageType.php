@@ -1,6 +1,6 @@
 <?php
 
-class PackageType extends Abstract_Controller{
+class PackageType extends Admin_Controller{
 
     function __construct()
 	{

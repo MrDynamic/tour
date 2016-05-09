@@ -1,6 +1,6 @@
 <a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;
-<?php if($this->my_cart->total_items() > 0): ?>
-<span class="badge"><?=sizeof($this->my_cart->contents());?></span>
+<?php if($this->mycart->total_items() > 0): ?>
+<span class="badge"><?=sizeof($this->mycart->contents());?></span>
 <?php endif; ?>
 </a>
 <div aria-labelledby="dropdownMenuCart" class="dropdown-menu widget-box">
@@ -8,7 +8,7 @@
     <ul class="cart_list product_list_widget">
     <?php 
     $total = 0;
-    foreach ($this->my_cart->contents() as $item): 
+    foreach ($this->mycart->contents() as $item): 
         $total += $item['price']*$item['qty'];
     ?>
       <li><a href="<?=site_url('user/viewCart');?>">
@@ -18,7 +18,7 @@
       </li>
     <?php endforeach;?>
     </ul>
-    <?php if($this->my_cart->total_items() > 0):?>
+    <?php if($this->mycart->total_items() > 0):?>
     <div class="total">
       <h6>รวม</h6><span><?=$total;?> THB</span>
     </div>

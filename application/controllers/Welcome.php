@@ -28,13 +28,13 @@ class Welcome extends CI_Controller {
 		$pdfFilePath = "output_pdf_name.pdf";
 
 		//load mPDF library
-		$this->load->library('my_pdf');
-//		$this->my_pdf->pdf->SetAutoFont();
+		$this->load->library('mypdf');
+//		$this->mypdf->pdf->SetAutoFont();
 		//generate the PDF from the given html
-		$this->my_pdf->pdf->WriteHTML($html);
+		$this->mypdf->pdf->WriteHTML($html);
 
 		//download it.
-		$this->my_pdf->pdf->Output($pdfFilePath, "D");
+		$this->mypdf->pdf->Output($pdfFilePath, "D");
 //		$this->load->view('welcome_message');
 	}
 }

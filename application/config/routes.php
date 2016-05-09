@@ -55,6 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 /*Admin */
 $route['admin'] = 'admin/admin/index';
+$route['admin/index'] = 'admin/admin/index';
 /* Package Category */
 $route['admin/package/category/save'] = 'admin/packageType/saveCategory';
 $route['admin/package/category/update'] = 'admin/packageType/update';

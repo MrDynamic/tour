@@ -2,7 +2,7 @@
 
 include_once APPPATH.'/third_party/mpdf/mpdf.php';
 
-class MY_Pdf {
+class MyPdf {
 
     public $param;
     public $pdf;

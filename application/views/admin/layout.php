@@ -49,22 +49,16 @@
           <div class="top-nav ">
               <ul class="nav pull-right top-menu">
                   <li>
-                      <input type="text" class="form-control search" placeholder="Search">
+                      &nbsp;
                   </li>
                   <!-- user login dropdown start-->
                   <li class="dropdown">
                       <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                           <img alt="" src="resources/admin/img/avatar1_small.jpg">
-                          <span class="username">Jhon Doue</span>
+                          <span class="username">Admin</span>
                           <b class="caret"></b>
                       </a>
-                      <ul class="dropdown-menu extended logout">
-                          <div class="log-arrow-up"></div>
-                          <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
-                          <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-                          <li><a href="#"><i class="fa fa-bell-o"></i> Notification</a></li>
-                          <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
-                      </ul>
+
                   </li>
                   <!-- user login dropdown end -->
               </ul>
@@ -150,21 +144,11 @@
     <script src="resources/admin/js/common-scripts.js"></script>
     <script src="resources/js/jquery.blockUI.js"></script>
     <script src="resources/js/main.js"></script>
-    
 
-    <!-- Scripit for page -->
-    <?php
-        
-        if(in_array(MENU_MAIN_PACKAGE,$active_menu)){
-          echo '<script src="resources/js/jquery.validate.min.js"></script>';
-          echo '<script src="resources/js/additional-methods.min.js"></script>';
-          echo '<script src="resources/admin/js/dropzone.js"></script>';
-          echo '<script src="resources/admin/js/package.js"></script>';
-          // echo '<script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>';
-          // echo '<script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>';
-        }
-       
-    ?>
-
+    <script src="resources/js/jquery.validate.min.js"></script>;
+    <script src="resources/js/additional-methods.min.js"></script>;
+    <script src="resources/admin/js/dropzone.js"></script>;
+    <script src="resources/admin/js/admin.js"></script>;
+  
   </body>
 </html>

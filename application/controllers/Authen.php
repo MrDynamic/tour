@@ -1,6 +1,6 @@
 <?php
 
-class Authen extends Abstract_Controller
+class Authen extends Main_Controller
 {
 
     public function __construct()
@@ -17,7 +17,7 @@ class Authen extends Abstract_Controller
             $redirectUrl = $this->input->post("redirectUrl");
             
             if(empty($username) || empty($password)){
-                $this->session->set_flashdata(array('message'=>'Username or Password is not null','redirectUrl'=>$redirectUrl));
+                $this->session->set_flashdata(array('message'=>'ชื่อผู้ใช้หรือรหัสผ่านห้ามเป็นค่าว่าง','redirectUrl'=>$redirectUrl));
                 redirect('authen/login','refresh');
             }else{
                 $userData = $this->authen->getDataResultArray('user_id,username,role',array('username'=>$this->input->post('username'),'password'=>md5($this->input->post('password'))));

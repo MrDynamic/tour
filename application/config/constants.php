@@ -111,6 +111,9 @@ define('MENU_PACKAGE','PACKAGE');
 define('MENU_PACKAGE_TYPE','PACKAGE_TYPE');
 define('MENU_PACKAGE_PICTURE','PACKAGE_PICTURE');
 
+define('MENU_MAIN_PORTFOLIO','MAIN_PORTFOLIO');
+define("MENU_PORTFOLIO","PORTFOLIO");
+
 // Paypal
 define('PAYPAL_TEST_URL','https://www.sandbox.paypal.com/cgi-bin/webscr');
 define('PAYPAL_ID', 'ocharos.th@gmail.com');

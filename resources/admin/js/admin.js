@@ -6,6 +6,21 @@ $().ready(function() {
 	$("#packageType").change(function(){
 		refreshPictureList(this.value);
 	});
+
+	$("#formUploadPortfolio").validate({
+		rules: {
+			image:{
+				filesize:2097152
+			}
+		},
+		messages: { image: "File must be JPG, GIF or PNG, less than 2MB" },
+		submitHandler: function() {
+			overlay();
+			var formData = new FormData($("#formUploadPortfolio")[0]);
+			var url = $("#formUploadPortfolio").attr('action');
+			callServiceWithContent(url,formData,saveResponse);
+		}
+	});
 });
 
 function refreshPictureList(packageId){
@@ -19,6 +34,12 @@ function deletePackagePicture(pictureId,picturePath){
 	
 }
 
+function deletePortfolio(portfolioId,imagePath){
+	callService('admin/portfolio/deletePortfolioById',{'portfolioId':portfolioId,'imagePath':imagePath}
+		,function(){
+			window.location.reload();
+		});
+}
 
 function removeUpload(id,path){ 
 	var displayPostfix = '_display';
@@ -56,30 +77,27 @@ $("#formPackage").validate({
 			overlay();
 			// var formData = $("#formPackage").serializeObject();  
 			var formData = new FormData($("#formPackage")[0]);
-			callServiceWithContent($('#action').val(),formData,addPackageResponse);
+			callServiceWithContent($('#action').val(),formData,saveResponse);
 		}
 
 });
 
 
-function addPackageResponse(response){
+function saveResponse(response){
 	if(response==1){
 		alert('บันทึกข้อมูลเรียบร้อยแล้ว');
 		window.location.reload();
 	}else{
-		alert('Save data fail');
+		alert('ไม่สามารถบันทึกข้อมูลได้');
 	}
 }
 
 
 $.validator.addMethod('filesize', function(value, element, param) {
-    // param = size (in bytes) 
-    // element = element to validate (<input>)
-    // value = value of the element (file name)
-    return this.optional(element) || (element.files[0].size <= param) 
+    return this.optional(element) || (element.files[0].size <= param)
 });
 
-jQuery.validator.addMethod("greaterThan", function(value, element, params) { 
+$.validator.addMethod("greaterThan", function(value, element, params) {
     if ($(params[0]).val() != '') {  
         if (!/Invalid|NaN/.test(new Date(value))) { 
             return new Date(value) > new Date($(params[0]).val());

@@ -52,11 +52,11 @@ $(document).ready(function() {
 		}
 	});
 	
-	$("#success-alert").fadeTo(2000, 500).slideUp(500, function(){
+	$("#success-alert").fadeTo(2000, 500).slideUp(1000, function(){
 	    $("#success-alert").alert('close');
 	});
 	
-	$("#error-alert").fadeTo(2000, 500).slideUp(500, function(){
+	$("#error-alert").fadeTo(2000, 500).slideUp(1000, function(){
 	    $("#error-alert").alert('close');
 	});
 	

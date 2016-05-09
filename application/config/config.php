@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost:8080/tour';
-// $config['base_url'] = 'http://ocharos.esy.es/tour';
+// $config['base_url'] = 'http://ocharostour.esy.es';
 
 /*
 |--------------------------------------------------------------------------

@@ -1,5 +1,5 @@
 <?php if (!defined('BASEPATH')) exit('No direct access allowed.');
-class MY_Cart extends CI_Cart {
+class mycart extends CI_Cart {
  
   public $CI;
 

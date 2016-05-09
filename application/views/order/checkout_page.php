@@ -39,7 +39,7 @@
                         </tr>
                         <?php 
                             $total = 0;
-                            foreach ($this->my_cart->contents() as $item):
+                            foreach ($this->mycart->contents() as $item):
                             $total += $item['qty'] * $item['price'];
                         ?>
                         <tr>

@@ -125,81 +125,48 @@
         <!--     /slider-wrapper-->
       </section>
       <!-- End Home Section-->
+
       <!-- Start About section-->
-      <section id="about" class="sep-top-2x sep-bottom-3x">
+      <section id="about" class="sep-top-4x">
         <div class="container">
           <div class="row">
-            <div class="col-md-5 text-right">
-              <div class="sep-top-md sep-bottom-sm">
-                <div class="bordered-right section-title">
-                  <h2 class="upper">Want to say Hey or find<span class="label-colored">out more?</span></h2>
-                </div>
-                <p class="lead">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type.</p>
-                <div class="sep-top-xs"><a href="http://themeforest.net/item/ottavio-multipurpose-html5-bootstrap-template/9562624?ref=kleis" target="_blank" data-wow-delay=".5s" class="btn btn-primary btn-lg wow bounceInLeft">Learn about us</a></div>
+            <div class="col-md-4">
+              <div class="section-title">
+                <h2 class="bordered-left upper wow flipInX">ocharos<br>tour</h2>
+                <p class="lead wow flipInX">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
               </div>
             </div>
-            <div class="col-md-7">
-              <div data-device="macbook" data-orientation="landscape" data-color="black" class="device-mockup">
-                <div class="device">
-                  <div class="screen"><img src="resources/img/portfolio/wr4c5.jpg" alt="" width="577" height="433" class="img-responsive"></div>
+            <div class="col-md-8">
+              <div class="device-content">
+                <div data-device="ipad" data-orientation="landscape" data-color="white" class="device-mockup">
+                  <div class="device">
+                    <div class="screen">
+                      <div data-navitagion="false" data-slide-speed="300" data-pagination-speed="400" data-single-item="true" data-auto-height="true" data-auto-play="true" class="owl-carousel owl-theme">
+                        <!-- Start Item Slide-->
+                        <div class="item"><img src="resources/img/ocharos-logo.png" width="100" alt="" class="img-responsive"></div>
+                        <!-- End Item Slide-->
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-3 sep-top-2x icon-gradient">
-              <div class="icon-box icon-horizontal icon-lg">
-                <div data-wow-delay=".5s" class="icon-content img-circle wow bounceInUp"><i class="fa fa-lightbulb-o"></i></div>
-                <div class="icon-box-content">
-                  <h5 class="upper">Strategy Solutions</h5>
-                  <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 sep-top-2x icon-gradient">
-              <div class="icon-box icon-horizontal icon-lg">
-                <div data-wow-delay=".5s" class="icon-content img-circle wow bounceInUp"><i class="fa fa-gamepad"></i></div>
-                <div class="icon-box-content">
-                  <h5 class="upper">Digital Design</h5>
-                  <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 sep-top-2x icon-gradient">
-              <div class="icon-box icon-horizontal icon-lg">
-                <div data-wow-delay=".5s" class="icon-content img-circle wow bounceInUp"><i class="fa fa-code-fork"></i></div>
-                <div class="icon-box-content">
-                  <h5 class="upper">Web Development</h5>
-                  <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 sep-top-2x icon-gradient">
-              <div class="icon-box icon-horizontal icon-lg">
-                <div data-wow-delay=".5s" class="icon-content img-circle wow bounceInUp"><i class="fa fa-android"></i></div>
-                <div class="icon-box-content">
-                  <h5 class="upper">App Development</h5>
-                  <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
-                </div>
+        </div>
+        <div class="bg-primary sep-top-md sep-bottom-md">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <p class="lead x2 light wow bounceInLeft">&nbsp;</p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- End About section-->
-      
-      <!-- Start Portfolio section-->
-      <section id="portfolio">
-        <div class="bg-primary sep-top-md sep-bottom-md">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4">
-                <p class="lead x2 light wow bounceInLeft">We have put together the best of our experience</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <section id="portfolio-gallery" data-folder="/portfolio">
+      <!-- End About section -->
+      <div class="bg-primary sep-top-xs sep-bottom-xs" id="portfolio">&nbsp;</div>
+      <!-- Start Profolio section -->
+        <section  data-folder="/portfolio">
           <!-- Start Ajax Section-->
           <div style="position:relative;" class="ajax-section section-gray">
             <div class="closeProject"><a href="#loader"><i class="fa fa-times"></i></a></div>
@@ -214,6 +181,7 @@
           </div>
           <!-- End Ajax Section-->
           <ul id="isotope" class="portfolio isotope">
+            
             <li class="item videography">
               <!-- images should be in 1:1 format or multiples (2:1. 1:2, ...)--><img src="resources/img/portfolio/05.jpg" alt="Extreme Freestyle" class="img-responsive">
               <div class="mask">
@@ -224,146 +192,7 @@
                 </div>
               </div>
             </li>
-            <li class="item photography width2x height2x">
-              <!-- images should be in 1:1 format or multiples (2:1. 1:2, ...)--><img src="resources/img/portfolio/11asw5.jpg" alt="Looking at The Horizon" class="img-responsive">
-              <div class="mask">
-                <div class="mask-content">
-                  <div class="mask-wrapper text-center"><a href="#!/portfolio/project.html?i=1" class="info ajax_load"><i class="fa fa-link fa-border"></i></a><a href="img/portfolio/11asw5.jpg" data-rel="prettyPhoto[pp_gal]" title="Looking at The Horizon" class="info"><i class="fa fa-expand fa-border"></i></a>
-                    <h4 class="upper">Looking at The Horizon</h4><span>Lorem Ipsum is simply dummy text of the printing</span>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="item photography design">
-              <!-- images should be in 1:1 format or multiples (2:1. 1:2, ...)--><img src="resources/img/portfolio/wr4c5.jpg" alt="Design Studio" class="img-responsive">
-              <div class="mask">
-                <div class="mask-content">
-                  <div class="mask-wrapper text-center"><a href="#!/portfolio/project.html?i=2" class="info ajax_load"><i class="fa fa-link fa-border"></i></a><a href="img/portfolio/wr4c5.jpg" data-rel="prettyPhoto[pp_gal]" title="Design Studio" class="info"><i class="fa fa-expand fa-border"></i></a>
-                    <h4 class="upper">Design Studio</h4><span>Lorem Ipsum is simply dummy text of the printing</span>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="item design">
-              <!-- images should be in 1:1 format or multiples (2:1. 1:2, ...)--><img src="resources/img/portfolio/mac.jpg" alt="Minimalist Design" class="img-responsive">
-              <div class="mask">
-                <div class="mask-content">
-                  <div class="mask-wrapper text-center"><a href="#!/portfolio/project.html?i=3" class="info ajax_load"><i class="fa fa-link fa-border"></i></a><a href="img/portfolio/mac.jpg" data-rel="prettyPhoto[pp_gal]" title="Minimalist Design" class="info"><i class="fa fa-expand fa-border"></i></a>
-                    <h4 class="upper">Minimalist Design</h4><span>Lorem Ipsum is simply dummy text of the printing</span>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="item branding width2x">
-              <!-- images should be in 1:1 format or multiples (2:1. 1:2, ...)--><img src="resources/img/portfolio/2048asxsax.jpg" alt="Business Card" class="img-responsive">
-              <div class="mask">
-                <div class="mask-content">
-                  <div class="mask-wrapper text-center"><a href="#!/portfolio/project.html?i=4" class="info ajax_load"><i class="fa fa-link fa-border"></i></a><a href="img/portfolio/2048asxsax.jpg" data-rel="prettyPhoto[pp_gal]" title="Business Card" class="info"><i class="fa fa-expand fa-border"></i></a>
-                    <h4 class="upper">Business Card</h4><span>Lorem Ipsum is simply dummy text of the printing</span>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="item branding">
-              <!-- images should be in 1:1 format or multiples (2:1. 1:2, ...)--><img src="resources/img/portfolio/20aaaaa48.jpg" alt="Horst brand identity" class="img-responsive">
-              <div class="mask">
-                <div class="mask-content">
-                  <div class="mask-wrapper text-center"><a href="#!/portfolio/project.html?i=5" class="info ajax_load"><i class="fa fa-link fa-border"></i></a><a href="img/portfolio/20aaaaa48.jpg" data-rel="prettyPhoto[pp_gal]" title="Horst brand identity" class="info"><i class="fa fa-expand fa-border"></i></a>
-                    <h4 class="upper">Horst brand identity</h4><span>Lorem Ipsum is simply dummy text of the printing</span>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="item design photography">
-              <!-- images should be in 1:1 format or multiples (2:1. 1:2, ...)--><img src="resources/img/portfolio/20sshsh48.jpg" alt="Infinity Mirror" class="img-responsive">
-              <div class="mask">
-                <div class="mask-content">
-                  <div class="mask-wrapper text-center"><a href="#!/portfolio/project.html?i=6" class="info ajax_load"><i class="fa fa-link fa-border"></i></a><a href="img/portfolio/20sshsh48.jpg" data-rel="prettyPhoto[pp_gal]" title="Infinity Mirror" class="info"><i class="fa fa-expand fa-border"></i></a>
-                    <h4 class="upper">Infinity Mirror</h4><span>Lorem Ipsum is simply dummy text of the printing</span>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="item design">
-              <!-- images should be in 1:1 format or multiples (2:1. 1:2, ...)--><img src="resources/img/portfolio/247610222_460fa350b6_o.jpg" alt="Simple Desk Design" class="img-responsive">
-              <div class="mask">
-                <div class="mask-content">
-                  <div class="mask-wrapper text-center"><a href="#!/portfolio/project.html?i=7" class="info ajax_load"><i class="fa fa-link fa-border"></i></a><a href="img/portfolio/247610222_460fa350b6_o.jpg" data-rel="prettyPhoto[pp_gal]" title="Simple Desk Design" class="info"><i class="fa fa-expand fa-border"></i></a>
-                    <h4 class="upper">Simple Desk Design</h4><span>Lorem Ipsum is simply dummy text of the printing</span>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="item videography">
-              <!-- images should be in 1:1 format or multiples (2:1. 1:2, ...)--><img src="resources/img/portfolio/351609423_0595d6fc0e_o.jpg" alt="Artist collection" class="img-responsive">
-              <div class="mask">
-                <div class="mask-content">
-                  <div class="mask-wrapper text-center"><a href="#!/portfolio/project.html?i=8" class="info ajax_load"><i class="fa fa-link fa-border"></i></a><a href="img/portfolio/351609423_0595d6fc0e_o.jpg" data-rel="prettyPhoto[pp_gal]" title="Artist collection" class="info"><i class="fa fa-expand fa-border"></i></a>
-                    <h4 class="upper">Artist collection</h4><span>Lorem Ipsum is simply dummy text of the printing</span>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="item photography height2x">
-              <!-- images should be in 1:1 format or multiples (2:1. 1:2, ...)--><img src="resources/img/portfolio/5.jpg" alt="Business airport" class="img-responsive">
-              <div class="mask">
-                <div class="mask-content">
-                  <div class="mask-wrapper text-center"><a href="#!/portfolio/project.html?i=9" class="info ajax_load"><i class="fa fa-link fa-border"></i></a><a href="img/portfolio/5.jpg" data-rel="prettyPhoto[pp_gal]" title="Business airport" class="info"><i class="fa fa-expand fa-border"></i></a>
-                    <h4 class="upper">Business airport</h4><span>Lorem Ipsum is simply dummy text of the printing</span>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="item photography">
-              <!-- images should be in 1:1 format or multiples (2:1. 1:2, ...)--><img src="resources/img/portfolio/5a.jpg" alt="Spring Up" class="img-responsive">
-              <div class="mask">
-                <div class="mask-content">
-                  <div class="mask-wrapper text-center"><a href="#!/portfolio/project.html?i=10" class="info ajax_load"><i class="fa fa-link fa-border"></i></a><a href="img/portfolio/5a.jpg" data-rel="prettyPhoto[pp_gal]" title="Spring Up" class="info"><i class="fa fa-expand fa-border"></i></a>
-                    <h4 class="upper">Spring Up</h4><span>Lorem Ipsum is simply dummy text of the printing</span>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="item branding">
-              <!-- images should be in 1:1 format or multiples (2:1. 1:2, ...)--><img src="resources/img/portfolio/erger20481.jpg" alt="System One" class="img-responsive">
-              <div class="mask">
-                <div class="mask-content">
-                  <div class="mask-wrapper text-center"><a href="#!/portfolio/project.html?i=11" class="info ajax_load"><i class="fa fa-link fa-border"></i></a><a href="img/portfolio/erger20481.jpg" data-rel="prettyPhoto[pp_gal]" title="System One" class="info"><i class="fa fa-expand fa-border"></i></a>
-                    <h4 class="upper">System One</h4><span>Lorem Ipsum is simply dummy text of the printing</span>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="item branding">
-              <!-- images should be in 1:1 format or multiples (2:1. 1:2, ...)--><img src="resources/img/portfolio/12233432048.jpg" alt="Authentisch Mann" class="img-responsive">
-              <div class="mask">
-                <div class="mask-content">
-                  <div class="mask-wrapper text-center"><a href="#!/portfolio/project.html?i=12" class="info ajax_load"><i class="fa fa-link fa-border"></i></a><a href="img/portfolio/12233432048.jpg" data-rel="prettyPhoto[pp_gal]" title="Authentisch Mann" class="info"><i class="fa fa-expand fa-border"></i></a>
-                    <h4 class="upper">Authentisch Mann</h4><span>Lorem Ipsum is simply dummy text of the printing</span>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="item photography">
-              <!-- images should be in 1:1 format or multiples (2:1. 1:2, ...)--><img src="resources/img/portfolio/erger2048.jpg" alt="Manhattan Street" class="img-responsive">
-              <div class="mask">
-                <div class="mask-content">
-                  <div class="mask-wrapper text-center"><a href="#!/portfolio/project.html?i=13" class="info ajax_load"><i class="fa fa-link fa-border"></i></a><a href="img/portfolio/erger2048.jpg" data-rel="prettyPhoto[pp_gal]" title="Manhattan Street" class="info"><i class="fa fa-expand fa-border"></i></a>
-                    <h4 class="upper">Manhattan Street</h4><span>Lorem Ipsum is simply dummy text of the printing</span>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="item branding">
-              <!-- images should be in 1:1 format or multiples (2:1. 1:2, ...)--><img src="resources/img/portfolio/wr4c51.jpg" alt="Simple Frame Mockup" class="img-responsive">
-              <div class="mask">
-                <div class="mask-content">
-                  <div class="mask-wrapper text-center"><a href="#!/portfolio/project.html?i=14" class="info ajax_load"><i class="fa fa-link fa-border"></i></a><a href="img/portfolio/wr4c51.jpg" data-rel="prettyPhoto[pp_gal]" title="Simple Frame Mockup" class="info"><i class="fa fa-expand fa-border"></i></a>
-                    <h4 class="upper">Simple Frame Mockup</h4><span>Lorem Ipsum is simply dummy text of the printing</span>
-                  </div>
-                </div>
-              </div>
-            </li>
+
           </ul>
         </section>
       </section>
