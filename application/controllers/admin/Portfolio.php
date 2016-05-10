@@ -52,7 +52,7 @@ class Portfolio extends Admin_Controller
         $imagePath = $this->input->post('imagePath');
         $portfolioId = $this->input->post('portfolioId');
         $this->deleteFile(getFilePath($imagePath));
-        $this->pofolio->delete(array('portfolioId'=>$portfolioId));
+        $this->portfolio->delete(array('portfolio_id'=>$portfolioId));
         echo $portfolioId;
 
     }

@@ -22,7 +22,7 @@ abstract class Abstract_Controller extends CI_Controller {
 		   if(file_exists($file)){
 			   unlink($file);
 		   }
-		   
+
 	   } catch (Exception $e) {
 		   $this->log_error($e->getMessage());
 	   }
@@ -223,7 +223,7 @@ class Admin_Controller extends Abstract_Controller
 			|| empty($this->session->userdata('username'))
 			|| empty($this->session->userdata('role'))
 			|| $this->session->userdata('role') != ADMIN_ROLE){
-			$this->session->set_flashdata(array('message'=>'คุณไม่มีสิทธิ์เข้าใช้งานเนื่องจากไม่ใช่ admin กรุณา login เป็น admin','redirectUrl'=>$this->router->class.'/'.$this->router->method));
+			$this->session->set_flashdata(array('message'=>'คุณไม่มีสิทธิ์เข้าใช้งานเนื่องจากไม่ใช่ admin กรุณา login เป็น admin','redirectUrl'=>'admin/'.$this->router->class.'/'.$this->router->method));
 			redirect('authen/login','refresh');
 		}
 	}

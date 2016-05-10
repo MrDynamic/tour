@@ -170,9 +170,9 @@ class Order extends Main_Controller
         $orderId = $this->uri->segment(3);
         $html = $this->load->view('order/receipt',$this->getOrderData($orderId),true);
         $pdfFilePath = "ocharos_".str_pad($orderId,5,"0",STR_PAD_LEFT).".pdf";
-        $this->load->library('mypdf');
-        $this->mypdf->pdf->WriteHTML($html);
-        $this->mypdf->pdf->Output($pdfFilePath, "D");
+        $this->load->library('myPdf');
+        $this->myPdf->pdf->WriteHTML($html);
+        $this->myPdf->pdf->Output($pdfFilePath, "D");
 //        $this->load->view('order/receipt',$this->getOrderData($orderId));
             
     }

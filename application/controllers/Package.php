@@ -18,8 +18,8 @@ class Package extends Main_Controller
 
     public function renderPackage($criteria=array(), $page,$baseUrl='package/index',$data=array(),$uri_segment=3){
         // Paging
-        $this->load->library(array('pagination','mypagination'));
-        $pagingConfig = $this->mypagination->init($baseUrl,$this->package->countPackage($criteria),$uri_segment);
+        $this->load->library(array('pagination','myPagination'));
+        $pagingConfig = $this->myPagination->init($baseUrl,$this->package->countPackage($criteria),$uri_segment);
         $limit = array($pagingConfig['per_page'],(($page-1) * $pagingConfig['per_page']));
         $data["paginationData"]   = $this->pagination;
         $data['packageData'] = $this->package->getPackageList($criteria,$limit);
