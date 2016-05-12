@@ -16,7 +16,7 @@
           <tbody>
           <?php
             $total = 0;
-            foreach($this->mycart->contents() as $item) :
+            foreach($this->my_cart->contents() as $item) :
                 $total += $item['qty'] * $item['price'];
           ?>
             <tr>

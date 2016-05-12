@@ -181,18 +181,23 @@
           </div>
           <!-- End Ajax Section-->
           <ul id="isotope" class="portfolio isotope">
-            
+            <?php if(isset($portfolioData) && !empty($portfolioData)) :
+                    foreach($portfolioData as $item):
+            ?>
             <li class="item videography">
-              <!-- images should be in 1:1 format or multiples (2:1. 1:2, ...)--><img src="resources/img/portfolio/05.jpg" alt="Extreme Freestyle" class="img-responsive">
+              <img src="<?=getFilePath($item->image_path,true);?>" alt="<?=$item->title;?>" class="img-responsive">
               <div class="mask">
                 <div class="mask-content">
-                  <div class="mask-wrapper text-center"><a href="#!/portfolio/project.html?i=0" class="info ajax_load"><i class="fa fa-link fa-border"></i></a><a href="img/portfolio/05.jpg" data-rel="prettyPhoto[pp_gal]" title="Extreme Freestyle" class="info"><i class="fa fa-expand fa-border"></i></a>
-                    <h4 class="upper">Extreme Freestyle</h4><span>Lorem Ipsum is simply dummy text of the printing</span>
+                  <div class="mask-wrapper text-center"><a href="#!/portfolio/project.html?i=0" class="info ajax_load"><i class="fa fa-link fa-border"></i></a><a href="<?=getFilePath($item->image_path,true);?>" data-rel="prettyPhoto[pp_gal]" title="Extreme Freestyle" class="info"><i class="fa fa-expand fa-border"></i></a>
+                    <h4 class="upper"><?=$item->title;?></h4><span><?=$item->short_desc;?></span>
                   </div>
                 </div>
               </div>
             </li>
-
+            <?php
+                  endforeach;
+                  endif;
+            ?>
           </ul>
         </section>
       </section>

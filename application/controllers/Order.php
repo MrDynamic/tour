@@ -18,12 +18,12 @@ class Order extends Main_Controller
             'price'=>$this->input->post('price')
         );
         $this->log_debug('data insert',print_r($data,true));
-        $this->mycart->insert($data);
+        $this->my_cart->insert($data);
     }
     
     
     private function checkItemCart(){
-        if($this->mycart->total_items() <= 0){
+        if($this->my_cart->total_items() <= 0){
             redirect('','refresh');
         }
     }
@@ -48,18 +48,18 @@ class Order extends Main_Controller
                         'qty'=>$this->input->post('qty')[$i]
                     );
                 }else{
-                    $this->mycart->remove($arrId[$i]);
+                    $this->my_cart->remove($arrId[$i]);
                 }
             }
         }
-        $this->mycart->update($data);
+        $this->my_cart->update($data);
         redirect('order/viewCart','refresh');
     }
     
     
     public function removeCart(){
         $rowId = $this->input->post('rowId');
-        $this->mycart->remove($rowId);
+        $this->my_cart->remove($rowId);
     }
     
     public function checkoutPage(){
@@ -71,7 +71,7 @@ class Order extends Main_Controller
     public function checkout(){
         $this->log_debug("check out data",print_r($this->input->post(),true));
         $orderDetails = array();
-        $size = $this->mycart->total_items();
+        $size = $this->my_cart->total_items();
         if($size > 0){
             $orderData = $this->input->post();
             $orderData['user_id']= $this->session->userdata("user_id");
@@ -79,7 +79,7 @@ class Order extends Main_Controller
             
             $i=0;
             $total=0;
-            foreach($this->mycart->contents() as $item){
+            foreach($this->my_cart->contents() as $item){
                 $orderDetails[$i++] = array(
                     'package_id'=>$item['id'],
                     'qty'=>$item['qty'],
@@ -93,7 +93,7 @@ class Order extends Main_Controller
                 $order['order_id'] = $orderId;
                 $order['total'] = $total;
                 $order['name'] = 'Ocharos tour orders';
-                $this->mycart->destroy();
+                $this->my_cart->destroy();
                 $this->submitToPaypal($order);
             }
     
