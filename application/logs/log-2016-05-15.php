@@ -8527,3 +8527,3752 @@ DEBUG - 2016-05-15 14:40:46 --> [order > generateReceipt] html  >> <!DOCTYPE htm
 </body>
 </html>
 DEBUG - 2016-05-15 14:40:49 --> Total execution time: 2.8581
+DEBUG - 2016-05-15 14:46:35 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:46:35 --> No URI present. Default controller set.
+DEBUG - 2016-05-15 14:46:35 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 14:46:35 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 14:46:35 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:46:35 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:46:35 --> [home > index] check session user  >> 
+DEBUG - 2016-05-15 14:46:35 --> [home > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 14:46:35 --> [home > index] portolioData  >> Array
+(
+    [title] => Ocharos 's tour
+    [form_login] => <a id="dropdownMenuLogin" href="#" data-toggle="dropdown" class="upper dropdown-toggle">polawat</a>
+<div aria-labelledby="dropdownMenuLogin" class="dropdown-menu widget-box">
+    <div class="shopping_cart_dropdown" style="text-align: left">
+     <ul class="cart_list product_list_widget">
+        <li>
+            <a href="http://localhost:8080/tour/user/userPage"><span>ข้อมูลส่วนตัว</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/user/changePasswordPage"><span>เปลี่ยนรหัสผ่าน</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/order/orderListPage"><span>รายการสั่งซื้อ</span></a>
+        </li>
+    </ul>
+    <div class="form-inline form-group">
+      <form method="post" action="http://localhost:8080/tour/authen/logout">
+      	<button type="submit" class="btn btn-primary btn-xs">ออกจากระบบ</button>
+      </form>
+    </div>   
+    </div>
+</div>
+
+    [header] => <section class="header-section fading-title parallax">
+        <div class="section-shade sep-top-5x sep-bottom-2x">
+          <div class="container">
+          	<div style="background-image: url(resources/img/intro.png);" class="sl-slide-inner"></div>
+          </div>
+        </div>
+      </section>
+    [form_cart] => <a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;
+</a>
+<div aria-labelledby="dropdownMenuCart" class="dropdown-menu widget-box">
+  <div class="shopping_cart_dropdown">
+    <ul class="cart_list product_list_widget">
+        </ul>
+      </div>
+</div>
+
+    [nav_menu] => <ul id="one-page-menu" role="menu" class="nav navbar-nav navbar-left">
+     <li>
+  	<a href="#home" title="Home" data-ref="home">หน้าหลัก</a>
+  </li>
+  <li>
+  	<a href="#about" title="About us" data-ref="about">เกี่ยวกับ</a>
+  </li>
+  <li>
+  	<a href="#portfolio" title="Portfolio" data-ref="portfolio">ผลงาน</a>
+  </li>
+  <li>
+  	<a href="http://localhost:8080/tour/package">แพคเก็จ</a>  </li>
+   <li>
+   	<a href="#contacts" title="Contacts" data-ref="contacts">ติดต่อ</a>
+  </li>
+  </ul>
+    [footer] => <footer id="footer">
+        <div class="copyright sep-top-xs sep-bottom-xs">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12"><small>Copyright 2016 © Ocharos tour. All rights reserved.</small></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    [portfolioData] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [portfolio_id] => 5
+                    [title] => เขื่อนรัชชประภา
+                    [short_desc] => เขื่อนรัชชประภา
+                    [image_path] => 6d5016a982a61925d83bebaf3afc3f32.jpg
+                    [c_date] => 2016-05-11 08:04:25
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [1] => stdClass Object
+                (
+                    [portfolio_id] => 6
+                    [title] => เกาะพยายาม
+                    [short_desc] => เกาะพยายม
+                    [image_path] => 5c6d2020046a1078d852a4e7c40d41e3.jpg
+                    [c_date] => 2016-05-11 08:04:42
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [2] => stdClass Object
+                (
+                    [portfolio_id] => 7
+                    [title] => เกาะหลีเป๊ะ
+                    [short_desc] => เกาะหลีเป๊ะ
+                    [image_path] => d8edd69fe4b339a17bbb100587b55fed.jpeg
+                    [c_date] => 2016-05-11 08:05:30
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+        )
+
+)
+
+DEBUG - 2016-05-15 14:46:35 --> Total execution time: 0.0507
+DEBUG - 2016-05-15 14:46:35 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:46:35 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:46:35 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 14:46:35 --> 404 Page Not Found: Resources/img
+DEBUG - 2016-05-15 14:46:35 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 14:46:35 --> 404 Page Not Found: Resources/img
+DEBUG - 2016-05-15 14:46:35 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:46:35 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:46:35 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 14:46:35 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 14:46:35 --> 404 Page Not Found: Resources/img
+ERROR - 2016-05-15 14:46:35 --> 404 Page Not Found: Resources/img
+DEBUG - 2016-05-15 14:46:37 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:46:37 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 14:46:37 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 14:46:37 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:46:37 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:46:37 --> [package > index] check session user  >> 
+DEBUG - 2016-05-15 14:46:37 --> [package > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 14:46:37 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:46:37 --> Total execution time: 0.0353
+DEBUG - 2016-05-15 14:46:41 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:46:41 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 14:46:41 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 14:46:41 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:46:41 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:46:41 --> [package > detail] check session user  >> 
+DEBUG - 2016-05-15 14:46:41 --> [package > detail] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 14:46:41 --> Total execution time: 0.0260
+DEBUG - 2016-05-15 14:46:43 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:46:43 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 14:46:43 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 14:46:43 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:46:43 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:46:43 --> [order > addToCart] check session user  >> 
+DEBUG - 2016-05-15 14:46:43 --> [order > addToCart] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 14:46:43 --> [order > addToCart] cart data  >> Array
+(
+    [id] => 1
+    [qty] => 1
+    [price] => 3000
+    [name] => เกาะหลีเป๊ะ
+    [thumbnail] => 4f107fa542949b8b27708cf21fd4eb35.jpg
+)
+
+DEBUG - 2016-05-15 14:46:43 --> [order > addToCart] data insert  >> Array
+(
+    [id] => 1
+    [qty] => 1
+    [name] => เกาะหลีเป๊ะ
+    [price] => 3000
+)
+
+DEBUG - 2016-05-15 14:46:43 --> Total execution time: 0.0256
+DEBUG - 2016-05-15 14:46:43 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:46:43 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 14:46:43 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 14:46:43 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:46:43 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:46:43 --> [package > index] check session user  >> 
+DEBUG - 2016-05-15 14:46:43 --> [package > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 14:46:43 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:46:43 --> Total execution time: 0.0261
+DEBUG - 2016-05-15 14:46:48 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:46:48 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 14:46:48 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 14:46:48 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:46:48 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:46:48 --> [order > viewCart] check session user  >> 
+DEBUG - 2016-05-15 14:46:48 --> [order > viewCart] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 14:46:48 --> Total execution time: 0.0304
+DEBUG - 2016-05-15 14:46:50 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:46:50 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 14:46:50 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 14:46:50 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:46:50 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:46:50 --> [order > checkoutPage] check session user  >> 
+DEBUG - 2016-05-15 14:46:50 --> [order > checkoutPage] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 14:46:50 --> [order > checkoutPage] check session  >> checkoutPage
+DEBUG - 2016-05-15 14:46:50 --> Total execution time: 0.0263
+DEBUG - 2016-05-15 14:47:12 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:47:12 --> No URI present. Default controller set.
+DEBUG - 2016-05-15 14:47:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 14:47:12 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 14:47:12 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:47:12 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:47:12 --> [home > index] check session user  >> 
+DEBUG - 2016-05-15 14:47:12 --> [home > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 14:47:12 --> [home > index] portolioData  >> Array
+(
+    [title] => Ocharos 's tour
+    [form_login] => <a id="dropdownMenuLogin" href="#" data-toggle="dropdown" class="upper dropdown-toggle">polawat</a>
+<div aria-labelledby="dropdownMenuLogin" class="dropdown-menu widget-box">
+    <div class="shopping_cart_dropdown" style="text-align: left">
+     <ul class="cart_list product_list_widget">
+        <li>
+            <a href="http://localhost:8080/tour/user/userPage"><span>ข้อมูลส่วนตัว</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/user/changePasswordPage"><span>เปลี่ยนรหัสผ่าน</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/order/orderListPage"><span>รายการสั่งซื้อ</span></a>
+        </li>
+    </ul>
+    <div class="form-inline form-group">
+      <form method="post" action="http://localhost:8080/tour/authen/logout">
+      	<button type="submit" class="btn btn-primary btn-xs">ออกจากระบบ</button>
+      </form>
+    </div>   
+    </div>
+</div>
+
+    [header] => <section class="header-section fading-title parallax">
+        <div class="section-shade sep-top-5x sep-bottom-2x">
+          <div class="container">
+          	<div style="background-image: url(resources/img/intro.png);" class="sl-slide-inner"></div>
+          </div>
+        </div>
+      </section>
+    [form_cart] => <a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;
+<span class="badge">1</span>
+</a>
+<div aria-labelledby="dropdownMenuCart" class="dropdown-menu widget-box">
+  <div class="shopping_cart_dropdown">
+    <ul class="cart_list product_list_widget">
+          <li><a href="http://localhost:8080/tour/user/viewCart">
+      	<img alt="" src="resources/img/booking.png">
+      	<span>เกาะหลีเป๊ะ</span></a>
+        <h5 class="quantity">3000</h5>
+      </li>
+        </ul>
+        <div class="total">
+      <h6>รวม</h6><span>3000 THB</span>
+    </div>
+    <div class="action-button">
+    	<a href="http://localhost:8080/tour/order/viewCart" class="btn btn-dark btn-bordered btn-xs upper">ตะกร้าสินค้า</a><a href="http://localhost:8080/tour/order/checkoutPage" class="btn btn-primary btn-xs upper">ชำระเงิน</a>    </div>
+      </div>
+</div>
+
+    [nav_menu] => <ul id="one-page-menu" role="menu" class="nav navbar-nav navbar-left">
+     <li>
+  	<a href="#home" title="Home" data-ref="home">หน้าหลัก</a>
+  </li>
+  <li>
+  	<a href="#about" title="About us" data-ref="about">เกี่ยวกับ</a>
+  </li>
+  <li>
+  	<a href="#portfolio" title="Portfolio" data-ref="portfolio">ผลงาน</a>
+  </li>
+  <li>
+  	<a href="http://localhost:8080/tour/package">แพคเก็จ</a>  </li>
+   <li>
+   	<a href="#contacts" title="Contacts" data-ref="contacts">ติดต่อ</a>
+  </li>
+  </ul>
+    [footer] => <footer id="footer">
+        <div class="copyright sep-top-xs sep-bottom-xs">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12"><small>Copyright 2016 © Ocharos tour. All rights reserved.</small></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    [portfolioData] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [portfolio_id] => 5
+                    [title] => เขื่อนรัชชประภา
+                    [short_desc] => เขื่อนรัชชประภา
+                    [image_path] => 6d5016a982a61925d83bebaf3afc3f32.jpg
+                    [c_date] => 2016-05-11 08:04:25
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [1] => stdClass Object
+                (
+                    [portfolio_id] => 6
+                    [title] => เกาะพยายาม
+                    [short_desc] => เกาะพยายม
+                    [image_path] => 5c6d2020046a1078d852a4e7c40d41e3.jpg
+                    [c_date] => 2016-05-11 08:04:42
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [2] => stdClass Object
+                (
+                    [portfolio_id] => 7
+                    [title] => เกาะหลีเป๊ะ
+                    [short_desc] => เกาะหลีเป๊ะ
+                    [image_path] => d8edd69fe4b339a17bbb100587b55fed.jpeg
+                    [c_date] => 2016-05-11 08:05:30
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+        )
+
+)
+
+DEBUG - 2016-05-15 14:47:12 --> Total execution time: 0.0263
+DEBUG - 2016-05-15 14:47:12 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:47:12 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:47:12 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 14:47:12 --> 404 Page Not Found: Resources/img
+DEBUG - 2016-05-15 14:47:12 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 14:47:12 --> 404 Page Not Found: Resources/img
+DEBUG - 2016-05-15 14:47:12 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:47:12 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:47:12 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 14:47:12 --> 404 Page Not Found: Resources/img
+DEBUG - 2016-05-15 14:47:12 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 14:47:12 --> 404 Page Not Found: Resources/img
+DEBUG - 2016-05-15 14:53:15 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:53:15 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 14:53:15 --> 404 Page Not Found: Resources/upload
+DEBUG - 2016-05-15 14:53:15 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:53:15 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:53:15 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 14:53:15 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 14:53:15 --> 404 Page Not Found: Resources/img
+ERROR - 2016-05-15 14:53:15 --> 404 Page Not Found: Resources/img
+DEBUG - 2016-05-15 14:53:16 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:53:16 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:53:16 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:53:16 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 14:53:16 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 14:53:16 --> 404 Page Not Found: Resources/img
+ERROR - 2016-05-15 14:53:16 --> 404 Page Not Found: Resources/upload
+DEBUG - 2016-05-15 14:53:16 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 14:53:16 --> 404 Page Not Found: Resources/img
+DEBUG - 2016-05-15 14:53:29 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:53:29 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 14:53:29 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 14:53:29 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:53:29 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:53:29 --> [package > index] check session user  >> 
+DEBUG - 2016-05-15 14:53:29 --> [package > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 14:53:29 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:53:30 --> Total execution time: 0.0383
+DEBUG - 2016-05-15 14:53:45 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:53:45 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 14:53:45 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 14:53:45 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:53:45 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:53:45 --> [package > index] check session user  >> 
+DEBUG - 2016-05-15 14:53:45 --> [package > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 14:53:45 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:53:45 --> Total execution time: 0.0329
+DEBUG - 2016-05-15 14:53:48 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:53:48 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 14:53:48 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 14:53:48 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:53:48 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:53:48 --> [package > index] check session user  >> 
+DEBUG - 2016-05-15 14:53:48 --> [package > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 14:53:48 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:53:48 --> Total execution time: 0.0288
+DEBUG - 2016-05-15 14:53:53 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:53:53 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 14:53:53 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 14:53:53 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:53:53 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:53:53 --> [package > index] check session user  >> 
+DEBUG - 2016-05-15 14:53:53 --> [package > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 14:53:53 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:53:53 --> Total execution time: 0.0271
+DEBUG - 2016-05-15 14:53:58 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:53:58 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 14:53:58 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 14:53:58 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:53:58 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:53:58 --> [package > index] check session user  >> 
+DEBUG - 2016-05-15 14:53:58 --> [package > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 14:53:58 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:53:58 --> Total execution time: 0.0265
+DEBUG - 2016-05-15 14:54:01 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:54:01 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 14:54:01 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 14:54:01 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:54:01 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:54:02 --> [package > index] check session user  >> 
+DEBUG - 2016-05-15 14:54:02 --> [package > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 14:54:02 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:54:02 --> Total execution time: 0.0288
+DEBUG - 2016-05-15 14:54:06 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 14:54:06 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 14:54:06 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 14:54:06 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:54:06 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:54:06 --> [package > index] check session user  >> 
+DEBUG - 2016-05-15 14:54:06 --> [package > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 14:54:06 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 14:54:06 --> Total execution time: 0.0292
+DEBUG - 2016-05-15 15:00:07 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:00:07 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 15:00:07 --> 404 Page Not Found: Order/orderListPage
+DEBUG - 2016-05-15 15:00:14 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:00:14 --> No URI present. Default controller set.
+DEBUG - 2016-05-15 15:00:14 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 15:00:14 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 15:00:14 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:00:14 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:00:14 --> [home > index] check session user  >> 
+DEBUG - 2016-05-15 15:00:14 --> [home > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 15:00:14 --> [home > index] portolioData  >> Array
+(
+    [title] => Ocharos 's tour
+    [form_login] => <a id="dropdownMenuLogin" href="#" data-toggle="dropdown" class="upper dropdown-toggle">polawat</a>
+<div aria-labelledby="dropdownMenuLogin" class="dropdown-menu widget-box">
+    <div class="shopping_cart_dropdown" style="text-align: left">
+     <ul class="cart_list product_list_widget">
+        <li>
+            <a href="http://localhost:8080/tour/user/userPage"><span>ข้อมูลส่วนตัว</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/user/changePasswordPage"><span>เปลี่ยนรหัสผ่าน</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/order/orderListPage"><span>รายการสั่งซื้อ</span></a>
+        </li>
+    </ul>
+    <div class="form-inline form-group">
+      <form method="post" action="http://localhost:8080/tour/authen/logout">
+      	<button type="submit" class="btn btn-primary btn-xs">ออกจากระบบ</button>
+      </form>
+    </div>   
+    </div>
+</div>
+
+    [header] => <section class="header-section fading-title parallax">
+        <div class="section-shade sep-top-5x sep-bottom-2x">
+          <div class="container">
+          	<div style="background-image: url(resources/img/intro.png);" class="sl-slide-inner"></div>
+          </div>
+        </div>
+      </section>
+    [form_cart] => <a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;
+<span class="badge">1</span>
+</a>
+<div aria-labelledby="dropdownMenuCart" class="dropdown-menu widget-box">
+  <div class="shopping_cart_dropdown">
+    <ul class="cart_list product_list_widget">
+          <li><a href="http://localhost:8080/tour/user/viewCart">
+      	<img alt="" src="resources/img/booking.png">
+      	<span>เกาะหลีเป๊ะ</span></a>
+        <h5 class="quantity">3000</h5>
+      </li>
+        </ul>
+        <div class="total">
+      <h6>รวม</h6><span>3000 THB</span>
+    </div>
+    <div class="action-button">
+    	<a href="http://localhost:8080/tour/order/viewCart" class="btn btn-dark btn-bordered btn-xs upper">ตะกร้าสินค้า</a><a href="http://localhost:8080/tour/order/checkoutPage" class="btn btn-primary btn-xs upper">ชำระเงิน</a>    </div>
+      </div>
+</div>
+
+    [nav_menu] => <ul id="one-page-menu" role="menu" class="nav navbar-nav navbar-left">
+     <li>
+  	<a href="#home" title="Home" data-ref="home">หน้าหลัก</a>
+  </li>
+  <li>
+  	<a href="#about" title="About us" data-ref="about">เกี่ยวกับ</a>
+  </li>
+  <li>
+  	<a href="#portfolio" title="Portfolio" data-ref="portfolio">ผลงาน</a>
+  </li>
+  <li>
+  	<a href="http://localhost:8080/tour/package">แพคเก็จ</a>  </li>
+   <li>
+   	<a href="#contacts" title="Contacts" data-ref="contacts">ติดต่อ</a>
+  </li>
+  </ul>
+    [footer] => <footer id="footer">
+        <div class="copyright sep-top-xs sep-bottom-xs">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12"><small>Copyright 2016 © Ocharos tour. All rights reserved.</small></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    [portfolioData] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [portfolio_id] => 5
+                    [title] => เขื่อนรัชชประภา
+                    [short_desc] => เขื่อนรัชชประภา
+                    [image_path] => 6d5016a982a61925d83bebaf3afc3f32.jpg
+                    [c_date] => 2016-05-11 08:04:25
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [1] => stdClass Object
+                (
+                    [portfolio_id] => 6
+                    [title] => เกาะพยายาม
+                    [short_desc] => เกาะพยายม
+                    [image_path] => 5c6d2020046a1078d852a4e7c40d41e3.jpg
+                    [c_date] => 2016-05-11 08:04:42
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [2] => stdClass Object
+                (
+                    [portfolio_id] => 7
+                    [title] => เกาะหลีเป๊ะ
+                    [short_desc] => เกาะหลีเป๊ะ
+                    [image_path] => d8edd69fe4b339a17bbb100587b55fed.jpeg
+                    [c_date] => 2016-05-11 08:05:30
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+        )
+
+)
+
+DEBUG - 2016-05-15 15:00:14 --> Total execution time: 0.0286
+DEBUG - 2016-05-15 15:00:21 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:00:21 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 15:00:21 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 15:00:21 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:00:21 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:00:21 --> [user > changePasswordPage] check session user  >> 
+DEBUG - 2016-05-15 15:00:21 --> [user > changePasswordPage] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 15:00:21 --> Total execution time: 0.0273
+DEBUG - 2016-05-15 15:02:16 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:02:16 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 15:02:16 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 15:02:16 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:02:16 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:02:16 --> [user > changePasswordPage] check session user  >> 
+DEBUG - 2016-05-15 15:02:16 --> [user > changePasswordPage] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 15:02:16 --> Total execution time: 0.0249
+DEBUG - 2016-05-15 15:02:27 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:02:27 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 15:02:27 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 15:02:27 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:02:27 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:02:27 --> [order > listOrder] check session user  >> 
+DEBUG - 2016-05-15 15:02:27 --> [order > listOrder] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 15:02:27 --> Total execution time: 0.0305
+DEBUG - 2016-05-15 15:02:42 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:02:42 --> No URI present. Default controller set.
+DEBUG - 2016-05-15 15:02:42 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 15:02:42 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 15:02:42 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:02:42 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:02:42 --> [home > index] check session user  >> 
+DEBUG - 2016-05-15 15:02:42 --> [home > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 15:02:42 --> [home > index] portolioData  >> Array
+(
+    [title] => Ocharos 's tour
+    [form_login] => <a id="dropdownMenuLogin" href="#" data-toggle="dropdown" class="upper dropdown-toggle">polawat</a>
+<div aria-labelledby="dropdownMenuLogin" class="dropdown-menu widget-box">
+    <div class="shopping_cart_dropdown" style="text-align: left">
+     <ul class="cart_list product_list_widget">
+        <li>
+            <a href="http://localhost:8080/tour/user/userPage"><span>ข้อมูลส่วนตัว</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/user/changePasswordPage"><span>เปลี่ยนรหัสผ่าน</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/order/listOrder"><span>รายการสั่งซื้อ</span></a>
+        </li>
+    </ul>
+    <div class="form-inline form-group">
+      <form method="post" action="http://localhost:8080/tour/authen/logout">
+      	<button type="submit" class="btn btn-primary btn-xs">ออกจากระบบ</button>
+      </form>
+    </div>   
+    </div>
+</div>
+
+    [header] => <section class="header-section fading-title parallax">
+        <div class="section-shade sep-top-5x sep-bottom-2x">
+          <div class="container">
+          	<div style="background-image: url(resources/img/intro.png);" class="sl-slide-inner"></div>
+          </div>
+        </div>
+      </section>
+    [form_cart] => <a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;
+<span class="badge">1</span>
+</a>
+<div aria-labelledby="dropdownMenuCart" class="dropdown-menu widget-box">
+  <div class="shopping_cart_dropdown">
+    <ul class="cart_list product_list_widget">
+          <li><a href="http://localhost:8080/tour/user/viewCart">
+      	<img alt="" src="resources/img/booking.png">
+      	<span>เกาะหลีเป๊ะ</span></a>
+        <h5 class="quantity">3000</h5>
+      </li>
+        </ul>
+        <div class="total">
+      <h6>รวม</h6><span>3000 THB</span>
+    </div>
+    <div class="action-button">
+    	<a href="http://localhost:8080/tour/order/viewCart" class="btn btn-dark btn-bordered btn-xs upper">ตะกร้าสินค้า</a><a href="http://localhost:8080/tour/order/checkoutPage" class="btn btn-primary btn-xs upper">ชำระเงิน</a>    </div>
+      </div>
+</div>
+
+    [nav_menu] => <ul id="one-page-menu" role="menu" class="nav navbar-nav navbar-left">
+     <li>
+  	<a href="#home" title="Home" data-ref="home">หน้าหลัก</a>
+  </li>
+  <li>
+  	<a href="#about" title="About us" data-ref="about">เกี่ยวกับ</a>
+  </li>
+  <li>
+  	<a href="#portfolio" title="Portfolio" data-ref="portfolio">ผลงาน</a>
+  </li>
+  <li>
+  	<a href="http://localhost:8080/tour/package">แพคเก็จ</a>  </li>
+   <li>
+   	<a href="#contacts" title="Contacts" data-ref="contacts">ติดต่อ</a>
+  </li>
+  </ul>
+    [footer] => <footer id="footer">
+        <div class="copyright sep-top-xs sep-bottom-xs">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12"><small>Copyright 2016 © Ocharos tour. All rights reserved.</small></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    [portfolioData] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [portfolio_id] => 5
+                    [title] => เขื่อนรัชชประภา
+                    [short_desc] => เขื่อนรัชชประภา
+                    [image_path] => 6d5016a982a61925d83bebaf3afc3f32.jpg
+                    [c_date] => 2016-05-11 08:04:25
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [1] => stdClass Object
+                (
+                    [portfolio_id] => 6
+                    [title] => เกาะพยายาม
+                    [short_desc] => เกาะพยายม
+                    [image_path] => 5c6d2020046a1078d852a4e7c40d41e3.jpg
+                    [c_date] => 2016-05-11 08:04:42
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [2] => stdClass Object
+                (
+                    [portfolio_id] => 7
+                    [title] => เกาะหลีเป๊ะ
+                    [short_desc] => เกาะหลีเป๊ะ
+                    [image_path] => d8edd69fe4b339a17bbb100587b55fed.jpeg
+                    [c_date] => 2016-05-11 08:05:30
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+        )
+
+)
+
+DEBUG - 2016-05-15 15:02:42 --> Total execution time: 0.0267
+DEBUG - 2016-05-15 15:02:42 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:02:42 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:02:42 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 15:02:42 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 15:02:42 --> 404 Page Not Found: Resources/img
+ERROR - 2016-05-15 15:02:42 --> 404 Page Not Found: Resources/img
+DEBUG - 2016-05-15 15:02:42 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:02:42 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:02:42 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 15:02:42 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 15:02:42 --> 404 Page Not Found: Resources/img
+ERROR - 2016-05-15 15:02:42 --> 404 Page Not Found: Resources/img
+DEBUG - 2016-05-15 15:30:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:30:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 15:30:44 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 15:30:44 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:30:44 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:30:44 --> [package > index] check session user  >> 
+DEBUG - 2016-05-15 15:30:44 --> [package > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 15:30:44 --> Pagination class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:30:44 --> Total execution time: 0.0544
+DEBUG - 2016-05-15 15:30:48 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:30:48 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 15:30:48 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 15:30:48 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:30:48 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:30:48 --> [order > listOrder] check session user  >> 
+DEBUG - 2016-05-15 15:30:48 --> [order > listOrder] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 15:30:48 --> Total execution time: 0.0514
+DEBUG - 2016-05-15 15:30:51 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:30:51 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 15:30:51 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 15:30:51 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:30:51 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:30:51 --> [order > listRequestTour] check session user  >> 
+DEBUG - 2016-05-15 15:30:51 --> [order > listRequestTour] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 15:30:51 --> Total execution time: 0.0481
+DEBUG - 2016-05-15 15:31:43 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:31:43 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 15:31:43 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 15:31:43 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:31:43 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:31:43 --> [authen > logout] check session user  >> 
+DEBUG - 2016-05-15 15:31:43 --> [authen > logout] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 15:31:43 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:31:43 --> No URI present. Default controller set.
+DEBUG - 2016-05-15 15:31:43 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 15:31:43 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 15:31:43 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:31:43 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:31:43 --> [home > index] check session user  >> 
+DEBUG - 2016-05-15 15:31:43 --> [home > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 15:31:43 --> [home > index] portolioData  >> Array
+(
+    [title] => Ocharos 's tour
+    [form_login] => <a id="dropdownMenuLogin" href="#" data-toggle="dropdown" class="upper dropdown-toggle">เข้าสู่ระบบ</a>
+<div aria-labelledby="dropdownMenuLogin" class="dropdown-menu widget-box">
+  <form id="form-login" action="http://localhost:8080/tour/authen/submitLogin" method="post">
+    <div class="form-group">
+      <label class="sr-only">ชื่อผู้ใช้</label>
+      <input type="text" name="username" id="username" placeholder="ชื่อผู้ใช้" class="form-control input-lg" />
+    </div>
+    <div class="form-group">
+      <label class="sr-only">รหัสผ่าน</label>
+      <input type="password" name="password" id="password" placeholder="รหัสผ่าน" class="form-control input-lg" />
+    </div>
+    <div class="form-inline form-group">
+      <button type="submit" class="btn btn-primary btn-xs" id="btnLogin">เข้าสู่ระบบ</button>
+    </div>
+    <a href="#"><small>ลืมรหัสผ่าน</small></a>
+    &nbsp;<a href="http://localhost:8080/tour/user/register"><small>สมัครสมาชิก</small></a>
+  </form>
+</div>
+
+    [header] => <section class="header-section fading-title parallax">
+        <div class="section-shade sep-top-5x sep-bottom-2x">
+          <div class="container">
+          	<div style="background-image: url(resources/img/intro.png);" class="sl-slide-inner"></div>
+          </div>
+        </div>
+      </section>
+    [form_cart] => <a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;
+</a>
+<div aria-labelledby="dropdownMenuCart" class="dropdown-menu widget-box">
+  <div class="shopping_cart_dropdown">
+    <ul class="cart_list product_list_widget">
+        </ul>
+      </div>
+</div>
+
+    [nav_menu] => <ul id="one-page-menu" role="menu" class="nav navbar-nav navbar-left">
+     <li>
+  	<a href="#home" title="Home" data-ref="home">หน้าหลัก</a>
+  </li>
+  <li>
+  	<a href="#about" title="About us" data-ref="about">เกี่ยวกับ</a>
+  </li>
+  <li>
+  	<a href="#portfolio" title="Portfolio" data-ref="portfolio">ผลงาน</a>
+  </li>
+  <li>
+  	<a href="http://localhost:8080/tour/package">แพคเก็จ</a>  </li>
+   <li>
+   	<a href="#contacts" title="Contacts" data-ref="contacts">ติดต่อ</a>
+  </li>
+  </ul>
+    [footer] => <footer id="footer">
+        <div class="copyright sep-top-xs sep-bottom-xs">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12"><small>Copyright 2016 © Ocharos tour. All rights reserved.</small></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    [portfolioData] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [portfolio_id] => 5
+                    [title] => เขื่อนรัชชประภา
+                    [short_desc] => เขื่อนรัชชประภา
+                    [image_path] => 6d5016a982a61925d83bebaf3afc3f32.jpg
+                    [c_date] => 2016-05-11 08:04:25
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [1] => stdClass Object
+                (
+                    [portfolio_id] => 6
+                    [title] => เกาะพยายาม
+                    [short_desc] => เกาะพยายม
+                    [image_path] => 5c6d2020046a1078d852a4e7c40d41e3.jpg
+                    [c_date] => 2016-05-11 08:04:42
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [2] => stdClass Object
+                (
+                    [portfolio_id] => 7
+                    [title] => เกาะหลีเป๊ะ
+                    [short_desc] => เกาะหลีเป๊ะ
+                    [image_path] => d8edd69fe4b339a17bbb100587b55fed.jpeg
+                    [c_date] => 2016-05-11 08:05:30
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+        )
+
+)
+
+DEBUG - 2016-05-15 15:31:43 --> Total execution time: 0.0482
+DEBUG - 2016-05-15 15:31:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:31:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:31:44 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 15:31:44 --> 404 Page Not Found: Resources/img
+DEBUG - 2016-05-15 15:31:44 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 15:31:44 --> 404 Page Not Found: Resources/img
+DEBUG - 2016-05-15 15:31:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:31:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:31:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 15:31:44 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 15:31:44 --> 404 Page Not Found: Resources/img
+ERROR - 2016-05-15 15:31:44 --> 404 Page Not Found: Resources/img
+DEBUG - 2016-05-15 15:31:54 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:31:54 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 15:31:54 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 15:31:54 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:31:54 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:31:54 --> [authen > submitLogin] check session user  >> 
+DEBUG - 2016-05-15 15:31:54 --> [authen > submitLogin] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 15:31:54 --> [authen > submitLogin] login data  >> Array
+(
+    [username] => ocharos
+    [password] => password
+)
+
+DEBUG - 2016-05-15 15:31:54 --> [authen > submitLogin] session data  >> Array
+(
+    [user_id] => 3
+    [username] => ocharos
+    [role] => USER
+)
+
+DEBUG - 2016-05-15 15:31:54 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:31:54 --> No URI present. Default controller set.
+DEBUG - 2016-05-15 15:31:54 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 15:31:54 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 15:31:54 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:31:54 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:31:54 --> [home > index] check session user  >> 
+DEBUG - 2016-05-15 15:31:54 --> [home > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 15:31:54 --> [home > index] portolioData  >> Array
+(
+    [title] => Ocharos 's tour
+    [form_login] => <a id="dropdownMenuLogin" href="#" data-toggle="dropdown" class="upper dropdown-toggle">ocharos</a>
+<div aria-labelledby="dropdownMenuLogin" class="dropdown-menu widget-box">
+    <div class="shopping_cart_dropdown" style="text-align: left">
+     <ul class="cart_list product_list_widget">
+        <li>
+            <a href="http://localhost:8080/tour/user/userPage"><span>ข้อมูลส่วนตัว</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/user/changePasswordPage"><span>เปลี่ยนรหัสผ่าน</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/order/listOrder"><span>รายการสั่งซื้อ</span></a>
+        </li>
+    </ul>
+    <div class="form-inline form-group">
+      <form method="post" action="http://localhost:8080/tour/authen/logout">
+      	<button type="submit" class="btn btn-primary btn-xs">ออกจากระบบ</button>
+      </form>
+    </div>   
+    </div>
+</div>
+
+    [header] => <section class="header-section fading-title parallax">
+        <div class="section-shade sep-top-5x sep-bottom-2x">
+          <div class="container">
+          	<div style="background-image: url(resources/img/intro.png);" class="sl-slide-inner"></div>
+          </div>
+        </div>
+      </section>
+    [form_cart] => <a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;
+</a>
+<div aria-labelledby="dropdownMenuCart" class="dropdown-menu widget-box">
+  <div class="shopping_cart_dropdown">
+    <ul class="cart_list product_list_widget">
+        </ul>
+      </div>
+</div>
+
+    [nav_menu] => <ul id="one-page-menu" role="menu" class="nav navbar-nav navbar-left">
+     <li>
+  	<a href="#home" title="Home" data-ref="home">หน้าหลัก</a>
+  </li>
+  <li>
+  	<a href="#about" title="About us" data-ref="about">เกี่ยวกับ</a>
+  </li>
+  <li>
+  	<a href="#portfolio" title="Portfolio" data-ref="portfolio">ผลงาน</a>
+  </li>
+  <li>
+  	<a href="http://localhost:8080/tour/package">แพคเก็จ</a>  </li>
+   <li>
+   	<a href="#contacts" title="Contacts" data-ref="contacts">ติดต่อ</a>
+  </li>
+  </ul>
+    [footer] => <footer id="footer">
+        <div class="copyright sep-top-xs sep-bottom-xs">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12"><small>Copyright 2016 © Ocharos tour. All rights reserved.</small></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    [portfolioData] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [portfolio_id] => 5
+                    [title] => เขื่อนรัชชประภา
+                    [short_desc] => เขื่อนรัชชประภา
+                    [image_path] => 6d5016a982a61925d83bebaf3afc3f32.jpg
+                    [c_date] => 2016-05-11 08:04:25
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [1] => stdClass Object
+                (
+                    [portfolio_id] => 6
+                    [title] => เกาะพยายาม
+                    [short_desc] => เกาะพยายม
+                    [image_path] => 5c6d2020046a1078d852a4e7c40d41e3.jpg
+                    [c_date] => 2016-05-11 08:04:42
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [2] => stdClass Object
+                (
+                    [portfolio_id] => 7
+                    [title] => เกาะหลีเป๊ะ
+                    [short_desc] => เกาะหลีเป๊ะ
+                    [image_path] => d8edd69fe4b339a17bbb100587b55fed.jpeg
+                    [c_date] => 2016-05-11 08:05:30
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+        )
+
+)
+
+DEBUG - 2016-05-15 15:31:54 --> Total execution time: 0.0480
+DEBUG - 2016-05-15 15:31:54 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:31:54 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:31:54 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 15:31:54 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 15:31:54 --> 404 Page Not Found: Resources/img
+ERROR - 2016-05-15 15:31:54 --> 404 Page Not Found: Resources/img
+DEBUG - 2016-05-15 15:31:54 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:31:54 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:31:55 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 15:31:55 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 15:31:55 --> 404 Page Not Found: Resources/img
+ERROR - 2016-05-15 15:31:55 --> 404 Page Not Found: Resources/img
+DEBUG - 2016-05-15 15:32:01 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:32:01 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 15:32:01 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 15:32:01 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:32:01 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:32:01 --> [order > listOrder] check session user  >> 
+DEBUG - 2016-05-15 15:32:01 --> [order > listOrder] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 15:32:01 --> Total execution time: 0.0536
+DEBUG - 2016-05-15 15:32:03 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 15:32:03 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 15:32:03 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 15:32:04 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:32:04 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 15:32:04 --> [order > listRequestTour] check session user  >> 
+DEBUG - 2016-05-15 15:32:04 --> [order > listRequestTour] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+ERROR - 2016-05-15 15:32:04 --> Severity: Notice --> Undefined property: stdClass::$status_code /Users/MacBookPro/Documents/i-work/root/tour/application/views/order/list_request_tour.php 37
+ERROR - 2016-05-15 15:32:04 --> Severity: Notice --> Undefined property: stdClass::$status_code /Users/MacBookPro/Documents/i-work/root/tour/application/views/order/list_request_tour.php 42
+DEBUG - 2016-05-15 15:32:04 --> Total execution time: 0.0493
+DEBUG - 2016-05-15 21:04:52 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:04:52 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:04:52 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/authen_config.php
+DEBUG - 2016-05-15 21:04:52 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:04:52 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:04:52 --> [order > listRequestTour] check session user  >> 
+DEBUG - 2016-05-15 21:04:52 --> [order > listRequestTour] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+)
+
+DEBUG - 2016-05-15 21:04:52 --> Total execution time: 0.0736
+DEBUG - 2016-05-15 21:07:54 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:07:54 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:07:54 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:07:54 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:07:54 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:07:54 --> [order > listRequestTour] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:07:54 --> [order > listRequestTour] check session  >> listRequestTour
+DEBUG - 2016-05-15 21:07:54 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:07:54 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:07:54 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:07:54 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:07:54 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:07:54 --> [authen > login] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:07:54 --> [authen > login] Start  >> 
+DEBUG - 2016-05-15 21:07:54 --> Total execution time: 0.0260
+DEBUG - 2016-05-15 21:08:30 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:08:30 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:08:30 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:08:30 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:08:30 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:08:30 --> [authen > submitLogin] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:08:30 --> [authen > submitLogin] login data  >> Array
+(
+    [username] => 
+    [password] => 
+    [redirectUrl] => order/listRequestTour
+)
+
+DEBUG - 2016-05-15 21:08:30 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:08:30 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:08:30 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:08:30 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:08:30 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:08:30 --> [authen > login] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:08:30 --> [authen > login] Start  >> 
+DEBUG - 2016-05-15 21:08:30 --> Total execution time: 0.0264
+DEBUG - 2016-05-15 21:08:46 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:08:47 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:08:47 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:08:47 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:08:47 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:08:47 --> [authen > submitLogin] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:08:47 --> [authen > submitLogin] login data  >> Array
+(
+    [username] => ocharos
+    [password] => password
+    [redirectUrl] => order/listRequestTour
+)
+
+DEBUG - 2016-05-15 21:08:47 --> [authen > submitLogin] session data  >> Array
+(
+    [user_id] => 3
+    [username] => ocharos
+    [role] => USER
+)
+
+DEBUG - 2016-05-15 21:08:47 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:08:47 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:08:47 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:08:47 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:08:47 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:08:47 --> [order > listRequestTour] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:08:47 --> [order > listRequestTour] check session  >> listRequestTour
+DEBUG - 2016-05-15 21:08:47 --> Total execution time: 0.0259
+DEBUG - 2016-05-15 21:08:52 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:08:52 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:08:52 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:08:52 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:08:52 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:08:52 --> [order > editRequestTour] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:08:52 --> [order > editRequestTour] check session  >> editRequestTour
+DEBUG - 2016-05-15 21:08:52 --> Total execution time: 0.0301
+DEBUG - 2016-05-15 21:09:00 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:09:00 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:09:00 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:09:00 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:09:00 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:09:00 --> [order > requestTour] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:09:00 --> [order > requestTour] check session  >> requestTour
+DEBUG - 2016-05-15 21:09:00 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:09:00 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:09:00 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:09:00 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:09:00 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:09:00 --> [user > userPage] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:09:00 --> [user > userPage] check session  >> userPage
+DEBUG - 2016-05-15 21:09:00 --> Total execution time: 0.0267
+DEBUG - 2016-05-15 21:09:03 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:09:03 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:09:03 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:09:03 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:09:03 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:09:03 --> [order > listRequestTour] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:09:03 --> [order > listRequestTour] check session  >> listRequestTour
+DEBUG - 2016-05-15 21:09:03 --> Total execution time: 0.0285
+DEBUG - 2016-05-15 21:09:05 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:09:05 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 21:09:05 --> 404 Page Not Found: Order/cancelRequestTour
+DEBUG - 2016-05-15 21:18:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:18:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:18:44 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:18:44 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:18:44 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:18:44 --> [order > listRequestTour] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:18:44 --> [order > listRequestTour] check session  >> listRequestTour
+DEBUG - 2016-05-15 21:18:44 --> Total execution time: 0.0340
+DEBUG - 2016-05-15 21:18:49 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:18:49 --> No URI present. Default controller set.
+DEBUG - 2016-05-15 21:18:49 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:18:49 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:18:49 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:18:49 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:18:49 --> [home > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:18:49 --> [home > index] portolioData  >> Array
+(
+    [title] => Ocharos 's tour
+    [form_login] => <a id="dropdownMenuLogin" href="#" data-toggle="dropdown" class="upper dropdown-toggle">ocharos</a>
+<div aria-labelledby="dropdownMenuLogin" class="dropdown-menu widget-box">
+    <div class="shopping_cart_dropdown" style="text-align: left">
+     <ul class="cart_list product_list_widget">
+        <li>
+            <a href="http://localhost:8080/tour/user/userPage"><span>ข้อมูลส่วนตัว</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/user/changePasswordPage"><span>เปลี่ยนรหัสผ่าน</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/order/listOrder"><span>รายการสั่งซื้อ</span></a>
+        </li>
+    </ul>
+    <div class="form-inline form-group">
+      <form method="post" action="http://localhost:8080/tour/authen/logout">
+      	<button type="submit" class="btn btn-primary btn-xs">ออกจากระบบ</button>
+      </form>
+    </div>   
+    </div>
+</div>
+
+    [header] => <section class="header-section fading-title parallax">
+        <div class="section-shade sep-top-5x sep-bottom-2x">
+          <div class="container">
+          	<div style="background-image: url(resources/img/intro.png);" class="sl-slide-inner"></div>
+          </div>
+        </div>
+      </section>
+    [form_cart] => <a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;
+</a>
+<div aria-labelledby="dropdownMenuCart" class="dropdown-menu widget-box">
+  <div class="shopping_cart_dropdown">
+    <ul class="cart_list product_list_widget">
+        </ul>
+      </div>
+</div>
+
+    [nav_menu] => <ul id="one-page-menu" role="menu" class="nav navbar-nav navbar-left">
+     <li>
+  	<a href="#home" title="Home" data-ref="home">หน้าหลัก</a>
+  </li>
+  <li>
+  	<a href="#about" title="About us" data-ref="about">เกี่ยวกับ</a>
+  </li>
+  <li>
+  	<a href="#portfolio" title="Portfolio" data-ref="portfolio">ผลงาน</a>
+  </li>
+  <li>
+  	<a href="http://localhost:8080/tour/package">แพคเก็จ</a>  </li>
+   <li>
+   	<a href="#contacts" title="Contacts" data-ref="contacts">ติดต่อ</a>
+  </li>
+  </ul>
+    [footer] => <footer id="footer">
+    <div class="copyright sep-top-xs sep-bottom-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"><small>Copyright 2016 © Ocharos tour. All rights reserved.</small></div>
+        </div>
+      </div>
+    </div>
+</footer>
+
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Confirm Delete</h4>
+            </div>
+
+            <div class="modal-body">
+                <p>You are about to delete one track, this procedure is irreversible.</p>
+                <p>Do you want to proceed?</p>
+                <p class="debug-url"></p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-danger btn-ok">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+    [portfolioData] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [portfolio_id] => 5
+                    [title] => เขื่อนรัชชประภา
+                    [short_desc] => เขื่อนรัชชประภา
+                    [image_path] => 6d5016a982a61925d83bebaf3afc3f32.jpg
+                    [c_date] => 2016-05-11 08:04:25
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [1] => stdClass Object
+                (
+                    [portfolio_id] => 6
+                    [title] => เกาะพยายาม
+                    [short_desc] => เกาะพยายม
+                    [image_path] => 5c6d2020046a1078d852a4e7c40d41e3.jpg
+                    [c_date] => 2016-05-11 08:04:42
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [2] => stdClass Object
+                (
+                    [portfolio_id] => 7
+                    [title] => เกาะหลีเป๊ะ
+                    [short_desc] => เกาะหลีเป๊ะ
+                    [image_path] => d8edd69fe4b339a17bbb100587b55fed.jpeg
+                    [c_date] => 2016-05-11 08:05:30
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+        )
+
+)
+
+DEBUG - 2016-05-15 21:18:49 --> Total execution time: 0.0287
+DEBUG - 2016-05-15 21:18:49 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:18:50 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:18:50 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 21:18:50 --> 404 Page Not Found: Resources/img
+DEBUG - 2016-05-15 21:18:50 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 21:18:50 --> 404 Page Not Found: Resources/img
+DEBUG - 2016-05-15 21:18:50 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:18:50 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 21:18:50 --> 404 Page Not Found: Resources/img
+DEBUG - 2016-05-15 21:18:50 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:18:50 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 21:18:50 --> 404 Page Not Found: Resources/img
+DEBUG - 2016-05-15 21:26:18 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:26:18 --> No URI present. Default controller set.
+DEBUG - 2016-05-15 21:26:18 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:26:18 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:26:18 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:26:18 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:26:18 --> [home > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:26:18 --> [home > index] portolioData  >> Array
+(
+    [title] => Ocharos 's tour
+    [form_login] => <a id="dropdownMenuLogin" href="#" data-toggle="dropdown" class="upper dropdown-toggle">ocharos</a>
+<div aria-labelledby="dropdownMenuLogin" class="dropdown-menu widget-box">
+    <div class="shopping_cart_dropdown" style="text-align: left">
+     <ul class="cart_list product_list_widget">
+        <li>
+            <a href="http://localhost:8080/tour/user/userPage"><span>ข้อมูลส่วนตัว</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/user/changePasswordPage"><span>เปลี่ยนรหัสผ่าน</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/order/listOrder"><span>รายการสั่งซื้อ</span></a>
+        </li>
+    </ul>
+    <div class="form-inline form-group">
+      <form method="post" action="http://localhost:8080/tour/authen/logout">
+      	<button type="submit" class="btn btn-primary btn-xs">ออกจากระบบ</button>
+      </form>
+    </div>   
+    </div>
+</div>
+
+    [header] => <section class="header-section fading-title parallax">
+        <div class="section-shade sep-top-5x sep-bottom-2x">
+          <div class="container">
+          	<div style="background-image: url(resources/img/intro.png);" class="sl-slide-inner"></div>
+          </div>
+        </div>
+      </section>
+    [form_cart] => <a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;
+</a>
+<div aria-labelledby="dropdownMenuCart" class="dropdown-menu widget-box">
+  <div class="shopping_cart_dropdown">
+    <ul class="cart_list product_list_widget">
+        </ul>
+      </div>
+</div>
+
+    [nav_menu] => <ul id="one-page-menu" role="menu" class="nav navbar-nav navbar-left">
+     <li>
+  	<a href="#home" title="Home" data-ref="home">หน้าหลัก</a>
+  </li>
+  <li>
+  	<a href="#about" title="About us" data-ref="about">เกี่ยวกับ</a>
+  </li>
+  <li>
+  	<a href="#portfolio" title="Portfolio" data-ref="portfolio">ผลงาน</a>
+  </li>
+  <li>
+  	<a href="http://localhost:8080/tour/package">แพคเก็จ</a>  </li>
+   <li>
+   	<a href="#contacts" title="Contacts" data-ref="contacts">ติดต่อ</a>
+  </li>
+  </ul>
+    [footer] => <footer id="footer">
+    <div class="copyright sep-top-xs sep-bottom-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"><small>Copyright 2016 © Ocharos tour. All rights reserved.</small></div>
+        </div>
+      </div>
+    </div>
+</footer>
+
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">ยืนยัน</h4>
+            </div>
+
+            <div class="modal-body">
+                <p>กรุณายืนยันการทำรายการ</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">ยกเลิก</button>
+                <a class="btn btn-danger btn-ok" id="confirm-delete-btn">ยืนยัน</a>
+            </div>
+        </div>
+    </div>
+</div>
+    [portfolioData] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [portfolio_id] => 5
+                    [title] => เขื่อนรัชชประภา
+                    [short_desc] => เขื่อนรัชชประภา
+                    [image_path] => 6d5016a982a61925d83bebaf3afc3f32.jpg
+                    [c_date] => 2016-05-11 08:04:25
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [1] => stdClass Object
+                (
+                    [portfolio_id] => 6
+                    [title] => เกาะพยายาม
+                    [short_desc] => เกาะพยายม
+                    [image_path] => 5c6d2020046a1078d852a4e7c40d41e3.jpg
+                    [c_date] => 2016-05-11 08:04:42
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [2] => stdClass Object
+                (
+                    [portfolio_id] => 7
+                    [title] => เกาะหลีเป๊ะ
+                    [short_desc] => เกาะหลีเป๊ะ
+                    [image_path] => d8edd69fe4b339a17bbb100587b55fed.jpeg
+                    [c_date] => 2016-05-11 08:05:30
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+        )
+
+)
+
+DEBUG - 2016-05-15 21:26:18 --> Total execution time: 0.0258
+DEBUG - 2016-05-15 21:26:20 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:26:20 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:26:20 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:26:20 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 21:26:20 --> 404 Page Not Found: Resources/img
+ERROR - 2016-05-15 21:26:20 --> 404 Page Not Found: Resources/img
+DEBUG - 2016-05-15 21:26:20 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:26:20 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:26:20 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 21:26:20 --> 404 Page Not Found: Resources/img
+DEBUG - 2016-05-15 21:26:20 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 21:26:20 --> 404 Page Not Found: Resources/img
+DEBUG - 2016-05-15 21:26:27 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:26:27 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:26:27 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:26:27 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:26:27 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:26:27 --> [user > userPage] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:26:27 --> [user > userPage] check session  >> userPage
+DEBUG - 2016-05-15 21:26:27 --> Total execution time: 0.0303
+DEBUG - 2016-05-15 21:26:30 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:26:30 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:26:30 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:26:30 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:26:30 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:26:30 --> [order > listRequestTour] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:26:30 --> [order > listRequestTour] check session  >> listRequestTour
+DEBUG - 2016-05-15 21:26:30 --> Total execution time: 0.0251
+DEBUG - 2016-05-15 21:27:08 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:27:08 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 21:27:08 --> 404 Page Not Found: Order/cancelRequestTour
+DEBUG - 2016-05-15 21:36:22 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:36:22 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:36:22 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:36:22 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:36:22 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:36:22 --> [order > listRequestTour] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:36:22 --> [order > listRequestTour] check session  >> listRequestTour
+DEBUG - 2016-05-15 21:36:22 --> Total execution time: 0.0265
+DEBUG - 2016-05-15 21:36:25 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:36:25 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:36:25 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:36:25 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:36:25 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:36:25 --> [order > listRequestTour] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:36:25 --> [order > listRequestTour] check session  >> listRequestTour
+DEBUG - 2016-05-15 21:36:25 --> Total execution time: 0.0237
+DEBUG - 2016-05-15 21:36:34 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:36:34 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:36:34 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:36:34 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:36:34 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:36:34 --> [order > cancelRequestTour] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:36:34 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:36:34 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:36:34 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:36:34 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:36:34 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:36:34 --> [order > listRequestTour] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:36:34 --> [order > listRequestTour] check session  >> listRequestTour
+DEBUG - 2016-05-15 21:36:34 --> Total execution time: 0.0255
+DEBUG - 2016-05-15 21:37:15 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:37:15 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:37:15 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:37:15 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:37:15 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:37:15 --> [order > requestTourPage] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:37:15 --> [order > requestTourPage] check session  >> requestTourPage
+DEBUG - 2016-05-15 21:37:15 --> Total execution time: 0.0270
+DEBUG - 2016-05-15 21:37:38 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:37:38 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:37:38 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:37:38 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:37:38 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:37:38 --> [order > requestTour] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:37:38 --> [order > requestTour] check session  >> requestTour
+DEBUG - 2016-05-15 21:37:38 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:37:38 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:37:38 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:37:38 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:37:38 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:37:38 --> [user > userPage] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:37:38 --> [user > userPage] check session  >> userPage
+DEBUG - 2016-05-15 21:37:38 --> Total execution time: 0.0222
+DEBUG - 2016-05-15 21:37:41 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:37:41 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:37:41 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:37:41 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:37:41 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:37:41 --> [order > listRequestTour] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:37:41 --> [order > listRequestTour] check session  >> listRequestTour
+DEBUG - 2016-05-15 21:37:41 --> Total execution time: 0.0247
+DEBUG - 2016-05-15 21:37:55 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:37:55 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:37:55 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:37:55 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:37:55 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:37:55 --> [user > userPage] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:37:55 --> [user > userPage] check session  >> userPage
+DEBUG - 2016-05-15 21:37:55 --> Total execution time: 0.0265
+DEBUG - 2016-05-15 21:38:23 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:38:23 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:38:23 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:38:23 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:38:23 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:38:23 --> [order > listRequestTour] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:38:23 --> [order > listRequestTour] check session  >> listRequestTour
+DEBUG - 2016-05-15 21:38:23 --> Total execution time: 0.0277
+DEBUG - 2016-05-15 21:38:26 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:38:26 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:38:26 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:38:26 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:38:26 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:38:26 --> [order > requestTourPage] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:38:26 --> [order > requestTourPage] check session  >> requestTourPage
+DEBUG - 2016-05-15 21:38:26 --> Total execution time: 0.0240
+DEBUG - 2016-05-15 21:38:29 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:38:29 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:38:29 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:38:29 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:38:29 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:38:29 --> [order > listRequestTour] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:38:29 --> [order > listRequestTour] check session  >> listRequestTour
+DEBUG - 2016-05-15 21:38:29 --> Total execution time: 0.0268
+DEBUG - 2016-05-15 21:38:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:38:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:38:44 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:38:44 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:38:44 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:38:44 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:38:44 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:38:44 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:38:44 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:38:44 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:38:44 --> [authen > login] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:38:44 --> [authen > login] Start  >> 
+DEBUG - 2016-05-15 21:38:44 --> Total execution time: 0.0260
+DEBUG - 2016-05-15 21:38:49 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:38:49 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:38:49 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:38:49 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:38:49 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:38:49 --> [authen > submitLogin] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:38:49 --> [authen > submitLogin] login data  >> Array
+(
+    [username] => admin
+    [password] => admin
+    [redirectUrl] => admin/admin/index
+)
+
+DEBUG - 2016-05-15 21:38:49 --> [authen > submitLogin] session data  >> Array
+(
+    [user_id] => 1
+    [username] => admin
+    [role] => ADMIN
+)
+
+DEBUG - 2016-05-15 21:38:49 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:38:49 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:38:49 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:38:49 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:38:49 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:38:49 --> Total execution time: 0.0218
+DEBUG - 2016-05-15 21:38:50 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:38:50 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 21:38:50 --> 404 Page Not Found: Resources/admin
+DEBUG - 2016-05-15 21:38:50 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:38:50 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:38:50 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:38:50 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:38:50 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:38:50 --> [home > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:38:50 --> [home > index] portolioData  >> Array
+(
+    [title] => Ocharos 's tour
+    [form_login] => <a id="dropdownMenuLogin" href="#" data-toggle="dropdown" class="upper dropdown-toggle">admin</a>
+<div aria-labelledby="dropdownMenuLogin" class="dropdown-menu widget-box">
+    <div class="shopping_cart_dropdown" style="text-align: left">
+     <ul class="cart_list product_list_widget">
+        <li>
+            <a href="http://localhost:8080/tour/user/userPage"><span>ข้อมูลส่วนตัว</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/user/changePasswordPage"><span>เปลี่ยนรหัสผ่าน</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/order/listOrder"><span>รายการสั่งซื้อ</span></a>
+        </li>
+    </ul>
+    <div class="form-inline form-group">
+      <form method="post" action="http://localhost:8080/tour/authen/logout">
+      	<button type="submit" class="btn btn-primary btn-xs">ออกจากระบบ</button>
+      </form>
+    </div>   
+    </div>
+</div>
+
+    [header] => <section class="header-section fading-title parallax">
+        <div class="section-shade sep-top-5x sep-bottom-2x">
+          <div class="container">
+          	<div style="background-image: url(resources/img/intro.png);" class="sl-slide-inner"></div>
+          </div>
+        </div>
+      </section>
+    [form_cart] => <a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;
+</a>
+<div aria-labelledby="dropdownMenuCart" class="dropdown-menu widget-box">
+  <div class="shopping_cart_dropdown">
+    <ul class="cart_list product_list_widget">
+        </ul>
+      </div>
+</div>
+
+    [nav_menu] => <ul id="one-page-menu" role="menu" class="nav navbar-nav navbar-left">
+     <li>
+  	<a href="#home" title="Home" data-ref="home">หน้าหลัก</a>
+  </li>
+  <li>
+  	<a href="#about" title="About us" data-ref="about">เกี่ยวกับ</a>
+  </li>
+  <li>
+  	<a href="#portfolio" title="Portfolio" data-ref="portfolio">ผลงาน</a>
+  </li>
+  <li>
+  	<a href="http://localhost:8080/tour/package">แพคเก็จ</a>  </li>
+   <li>
+   	<a href="#contacts" title="Contacts" data-ref="contacts">ติดต่อ</a>
+  </li>
+  </ul>
+    [footer] => <footer id="footer">
+    <div class="copyright sep-top-xs sep-bottom-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"><small>Copyright 2016 © Ocharos tour. All rights reserved.</small></div>
+        </div>
+      </div>
+    </div>
+</footer>
+
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">ยืนยัน</h4>
+            </div>
+
+            <div class="modal-body">
+                <p>กรุณายืนยันการทำรายการ</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">ยกเลิก</button>
+                <a class="btn btn-danger btn-ok" id="confirm-delete-btn">ยืนยัน</a>
+            </div>
+        </div>
+    </div>
+</div>
+    [portfolioData] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [portfolio_id] => 5
+                    [title] => เขื่อนรัชชประภา
+                    [short_desc] => เขื่อนรัชชประภา
+                    [image_path] => 6d5016a982a61925d83bebaf3afc3f32.jpg
+                    [c_date] => 2016-05-11 08:04:25
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [1] => stdClass Object
+                (
+                    [portfolio_id] => 6
+                    [title] => เกาะพยายาม
+                    [short_desc] => เกาะพยายม
+                    [image_path] => 5c6d2020046a1078d852a4e7c40d41e3.jpg
+                    [c_date] => 2016-05-11 08:04:42
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [2] => stdClass Object
+                (
+                    [portfolio_id] => 7
+                    [title] => เกาะหลีเป๊ะ
+                    [short_desc] => เกาะหลีเป๊ะ
+                    [image_path] => d8edd69fe4b339a17bbb100587b55fed.jpeg
+                    [c_date] => 2016-05-11 08:05:30
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+        )
+
+)
+
+DEBUG - 2016-05-15 21:38:50 --> Total execution time: 0.0243
+DEBUG - 2016-05-15 21:38:50 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:38:50 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 21:38:50 --> 404 Page Not Found: Img/favicon.png
+DEBUG - 2016-05-15 21:38:53 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:38:53 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 21:38:53 --> 404 Page Not Found: Resources/admin
+DEBUG - 2016-05-15 21:38:54 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:38:54 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:38:54 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:38:54 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:38:54 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:38:54 --> Total execution time: 0.0287
+DEBUG - 2016-05-15 21:38:54 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:38:54 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 21:38:54 --> 404 Page Not Found: Resources/admin
+DEBUG - 2016-05-15 21:38:54 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:38:54 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:38:54 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:38:54 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:38:54 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:38:54 --> [home > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:38:54 --> [home > index] portolioData  >> Array
+(
+    [title] => Ocharos 's tour
+    [form_login] => <a id="dropdownMenuLogin" href="#" data-toggle="dropdown" class="upper dropdown-toggle">admin</a>
+<div aria-labelledby="dropdownMenuLogin" class="dropdown-menu widget-box">
+    <div class="shopping_cart_dropdown" style="text-align: left">
+     <ul class="cart_list product_list_widget">
+        <li>
+            <a href="http://localhost:8080/tour/user/userPage"><span>ข้อมูลส่วนตัว</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/user/changePasswordPage"><span>เปลี่ยนรหัสผ่าน</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/order/listOrder"><span>รายการสั่งซื้อ</span></a>
+        </li>
+    </ul>
+    <div class="form-inline form-group">
+      <form method="post" action="http://localhost:8080/tour/authen/logout">
+      	<button type="submit" class="btn btn-primary btn-xs">ออกจากระบบ</button>
+      </form>
+    </div>   
+    </div>
+</div>
+
+    [header] => <section class="header-section fading-title parallax">
+        <div class="section-shade sep-top-5x sep-bottom-2x">
+          <div class="container">
+          	<div style="background-image: url(resources/img/intro.png);" class="sl-slide-inner"></div>
+          </div>
+        </div>
+      </section>
+    [form_cart] => <a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;
+</a>
+<div aria-labelledby="dropdownMenuCart" class="dropdown-menu widget-box">
+  <div class="shopping_cart_dropdown">
+    <ul class="cart_list product_list_widget">
+        </ul>
+      </div>
+</div>
+
+    [nav_menu] => <ul id="one-page-menu" role="menu" class="nav navbar-nav navbar-left">
+     <li>
+  	<a href="#home" title="Home" data-ref="home">หน้าหลัก</a>
+  </li>
+  <li>
+  	<a href="#about" title="About us" data-ref="about">เกี่ยวกับ</a>
+  </li>
+  <li>
+  	<a href="#portfolio" title="Portfolio" data-ref="portfolio">ผลงาน</a>
+  </li>
+  <li>
+  	<a href="http://localhost:8080/tour/package">แพคเก็จ</a>  </li>
+   <li>
+   	<a href="#contacts" title="Contacts" data-ref="contacts">ติดต่อ</a>
+  </li>
+  </ul>
+    [footer] => <footer id="footer">
+    <div class="copyright sep-top-xs sep-bottom-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"><small>Copyright 2016 © Ocharos tour. All rights reserved.</small></div>
+        </div>
+      </div>
+    </div>
+</footer>
+
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">ยืนยัน</h4>
+            </div>
+
+            <div class="modal-body">
+                <p>กรุณายืนยันการทำรายการ</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">ยกเลิก</button>
+                <a class="btn btn-danger btn-ok" id="confirm-delete-btn">ยืนยัน</a>
+            </div>
+        </div>
+    </div>
+</div>
+    [portfolioData] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [portfolio_id] => 5
+                    [title] => เขื่อนรัชชประภา
+                    [short_desc] => เขื่อนรัชชประภา
+                    [image_path] => 6d5016a982a61925d83bebaf3afc3f32.jpg
+                    [c_date] => 2016-05-11 08:04:25
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [1] => stdClass Object
+                (
+                    [portfolio_id] => 6
+                    [title] => เกาะพยายาม
+                    [short_desc] => เกาะพยายม
+                    [image_path] => 5c6d2020046a1078d852a4e7c40d41e3.jpg
+                    [c_date] => 2016-05-11 08:04:42
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [2] => stdClass Object
+                (
+                    [portfolio_id] => 7
+                    [title] => เกาะหลีเป๊ะ
+                    [short_desc] => เกาะหลีเป๊ะ
+                    [image_path] => d8edd69fe4b339a17bbb100587b55fed.jpeg
+                    [c_date] => 2016-05-11 08:05:30
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+        )
+
+)
+
+DEBUG - 2016-05-15 21:38:54 --> Total execution time: 0.0276
+DEBUG - 2016-05-15 21:38:58 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:38:58 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:38:58 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:38:59 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:38:59 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:38:59 --> Total execution time: 0.0249
+DEBUG - 2016-05-15 21:38:59 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:38:59 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:38:59 --> UTF-8 Support Enabled
+ERROR - 2016-05-15 21:38:59 --> 404 Page Not Found: Resources/admin
+DEBUG - 2016-05-15 21:38:59 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:38:59 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:38:59 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:38:59 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:38:59 --> [home > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:38:59 --> [home > index] portolioData  >> Array
+(
+    [title] => Ocharos 's tour
+    [form_login] => <a id="dropdownMenuLogin" href="#" data-toggle="dropdown" class="upper dropdown-toggle">admin</a>
+<div aria-labelledby="dropdownMenuLogin" class="dropdown-menu widget-box">
+    <div class="shopping_cart_dropdown" style="text-align: left">
+     <ul class="cart_list product_list_widget">
+        <li>
+            <a href="http://localhost:8080/tour/user/userPage"><span>ข้อมูลส่วนตัว</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/user/changePasswordPage"><span>เปลี่ยนรหัสผ่าน</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/order/listOrder"><span>รายการสั่งซื้อ</span></a>
+        </li>
+    </ul>
+    <div class="form-inline form-group">
+      <form method="post" action="http://localhost:8080/tour/authen/logout">
+      	<button type="submit" class="btn btn-primary btn-xs">ออกจากระบบ</button>
+      </form>
+    </div>   
+    </div>
+</div>
+
+    [header] => <section class="header-section fading-title parallax">
+        <div class="section-shade sep-top-5x sep-bottom-2x">
+          <div class="container">
+          	<div style="background-image: url(resources/img/intro.png);" class="sl-slide-inner"></div>
+          </div>
+        </div>
+      </section>
+    [form_cart] => <a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;
+</a>
+<div aria-labelledby="dropdownMenuCart" class="dropdown-menu widget-box">
+  <div class="shopping_cart_dropdown">
+    <ul class="cart_list product_list_widget">
+        </ul>
+      </div>
+</div>
+
+    [nav_menu] => <ul id="one-page-menu" role="menu" class="nav navbar-nav navbar-left">
+     <li>
+  	<a href="#home" title="Home" data-ref="home">หน้าหลัก</a>
+  </li>
+  <li>
+  	<a href="#about" title="About us" data-ref="about">เกี่ยวกับ</a>
+  </li>
+  <li>
+  	<a href="#portfolio" title="Portfolio" data-ref="portfolio">ผลงาน</a>
+  </li>
+  <li>
+  	<a href="http://localhost:8080/tour/package">แพคเก็จ</a>  </li>
+   <li>
+   	<a href="#contacts" title="Contacts" data-ref="contacts">ติดต่อ</a>
+  </li>
+  </ul>
+    [footer] => <footer id="footer">
+    <div class="copyright sep-top-xs sep-bottom-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"><small>Copyright 2016 © Ocharos tour. All rights reserved.</small></div>
+        </div>
+      </div>
+    </div>
+</footer>
+
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">ยืนยัน</h4>
+            </div>
+
+            <div class="modal-body">
+                <p>กรุณายืนยันการทำรายการ</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">ยกเลิก</button>
+                <a class="btn btn-danger btn-ok" id="confirm-delete-btn">ยืนยัน</a>
+            </div>
+        </div>
+    </div>
+</div>
+    [portfolioData] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [portfolio_id] => 5
+                    [title] => เขื่อนรัชชประภา
+                    [short_desc] => เขื่อนรัชชประภา
+                    [image_path] => 6d5016a982a61925d83bebaf3afc3f32.jpg
+                    [c_date] => 2016-05-11 08:04:25
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [1] => stdClass Object
+                (
+                    [portfolio_id] => 6
+                    [title] => เกาะพยายาม
+                    [short_desc] => เกาะพยายม
+                    [image_path] => 5c6d2020046a1078d852a4e7c40d41e3.jpg
+                    [c_date] => 2016-05-11 08:04:42
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [2] => stdClass Object
+                (
+                    [portfolio_id] => 7
+                    [title] => เกาะหลีเป๊ะ
+                    [short_desc] => เกาะหลีเป๊ะ
+                    [image_path] => d8edd69fe4b339a17bbb100587b55fed.jpeg
+                    [c_date] => 2016-05-11 08:05:30
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+        )
+
+)
+
+DEBUG - 2016-05-15 21:38:59 --> Total execution time: 0.0259
+DEBUG - 2016-05-15 21:39:01 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:39:01 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:39:01 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:39:01 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:39:01 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:39:01 --> Total execution time: 0.0282
+DEBUG - 2016-05-15 21:39:01 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:39:01 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 21:39:01 --> 404 Page Not Found: Resources/admin
+DEBUG - 2016-05-15 21:39:01 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:39:01 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:39:01 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:39:01 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:39:01 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:39:01 --> [home > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:39:01 --> [home > index] portolioData  >> Array
+(
+    [title] => Ocharos 's tour
+    [form_login] => <a id="dropdownMenuLogin" href="#" data-toggle="dropdown" class="upper dropdown-toggle">admin</a>
+<div aria-labelledby="dropdownMenuLogin" class="dropdown-menu widget-box">
+    <div class="shopping_cart_dropdown" style="text-align: left">
+     <ul class="cart_list product_list_widget">
+        <li>
+            <a href="http://localhost:8080/tour/user/userPage"><span>ข้อมูลส่วนตัว</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/user/changePasswordPage"><span>เปลี่ยนรหัสผ่าน</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/order/listOrder"><span>รายการสั่งซื้อ</span></a>
+        </li>
+    </ul>
+    <div class="form-inline form-group">
+      <form method="post" action="http://localhost:8080/tour/authen/logout">
+      	<button type="submit" class="btn btn-primary btn-xs">ออกจากระบบ</button>
+      </form>
+    </div>   
+    </div>
+</div>
+
+    [header] => <section class="header-section fading-title parallax">
+        <div class="section-shade sep-top-5x sep-bottom-2x">
+          <div class="container">
+          	<div style="background-image: url(resources/img/intro.png);" class="sl-slide-inner"></div>
+          </div>
+        </div>
+      </section>
+    [form_cart] => <a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;
+</a>
+<div aria-labelledby="dropdownMenuCart" class="dropdown-menu widget-box">
+  <div class="shopping_cart_dropdown">
+    <ul class="cart_list product_list_widget">
+        </ul>
+      </div>
+</div>
+
+    [nav_menu] => <ul id="one-page-menu" role="menu" class="nav navbar-nav navbar-left">
+     <li>
+  	<a href="#home" title="Home" data-ref="home">หน้าหลัก</a>
+  </li>
+  <li>
+  	<a href="#about" title="About us" data-ref="about">เกี่ยวกับ</a>
+  </li>
+  <li>
+  	<a href="#portfolio" title="Portfolio" data-ref="portfolio">ผลงาน</a>
+  </li>
+  <li>
+  	<a href="http://localhost:8080/tour/package">แพคเก็จ</a>  </li>
+   <li>
+   	<a href="#contacts" title="Contacts" data-ref="contacts">ติดต่อ</a>
+  </li>
+  </ul>
+    [footer] => <footer id="footer">
+    <div class="copyright sep-top-xs sep-bottom-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"><small>Copyright 2016 © Ocharos tour. All rights reserved.</small></div>
+        </div>
+      </div>
+    </div>
+</footer>
+
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">ยืนยัน</h4>
+            </div>
+
+            <div class="modal-body">
+                <p>กรุณายืนยันการทำรายการ</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">ยกเลิก</button>
+                <a class="btn btn-danger btn-ok" id="confirm-delete-btn">ยืนยัน</a>
+            </div>
+        </div>
+    </div>
+</div>
+    [portfolioData] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [portfolio_id] => 5
+                    [title] => เขื่อนรัชชประภา
+                    [short_desc] => เขื่อนรัชชประภา
+                    [image_path] => 6d5016a982a61925d83bebaf3afc3f32.jpg
+                    [c_date] => 2016-05-11 08:04:25
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [1] => stdClass Object
+                (
+                    [portfolio_id] => 6
+                    [title] => เกาะพยายาม
+                    [short_desc] => เกาะพยายม
+                    [image_path] => 5c6d2020046a1078d852a4e7c40d41e3.jpg
+                    [c_date] => 2016-05-11 08:04:42
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [2] => stdClass Object
+                (
+                    [portfolio_id] => 7
+                    [title] => เกาะหลีเป๊ะ
+                    [short_desc] => เกาะหลีเป๊ะ
+                    [image_path] => d8edd69fe4b339a17bbb100587b55fed.jpeg
+                    [c_date] => 2016-05-11 08:05:30
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+        )
+
+)
+
+DEBUG - 2016-05-15 21:39:01 --> Total execution time: 0.0274
+DEBUG - 2016-05-15 21:39:06 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:39:06 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:39:06 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:39:06 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:39:06 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:39:06 --> Total execution time: 0.0268
+DEBUG - 2016-05-15 21:39:06 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:39:06 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:39:06 --> UTF-8 Support Enabled
+ERROR - 2016-05-15 21:39:06 --> 404 Page Not Found: Resources/admin
+DEBUG - 2016-05-15 21:39:06 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:39:06 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:39:06 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:39:06 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:39:06 --> [home > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:39:06 --> [home > index] portolioData  >> Array
+(
+    [title] => Ocharos 's tour
+    [form_login] => <a id="dropdownMenuLogin" href="#" data-toggle="dropdown" class="upper dropdown-toggle">admin</a>
+<div aria-labelledby="dropdownMenuLogin" class="dropdown-menu widget-box">
+    <div class="shopping_cart_dropdown" style="text-align: left">
+     <ul class="cart_list product_list_widget">
+        <li>
+            <a href="http://localhost:8080/tour/user/userPage"><span>ข้อมูลส่วนตัว</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/user/changePasswordPage"><span>เปลี่ยนรหัสผ่าน</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/order/listOrder"><span>รายการสั่งซื้อ</span></a>
+        </li>
+    </ul>
+    <div class="form-inline form-group">
+      <form method="post" action="http://localhost:8080/tour/authen/logout">
+      	<button type="submit" class="btn btn-primary btn-xs">ออกจากระบบ</button>
+      </form>
+    </div>   
+    </div>
+</div>
+
+    [header] => <section class="header-section fading-title parallax">
+        <div class="section-shade sep-top-5x sep-bottom-2x">
+          <div class="container">
+          	<div style="background-image: url(resources/img/intro.png);" class="sl-slide-inner"></div>
+          </div>
+        </div>
+      </section>
+    [form_cart] => <a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;
+</a>
+<div aria-labelledby="dropdownMenuCart" class="dropdown-menu widget-box">
+  <div class="shopping_cart_dropdown">
+    <ul class="cart_list product_list_widget">
+        </ul>
+      </div>
+</div>
+
+    [nav_menu] => <ul id="one-page-menu" role="menu" class="nav navbar-nav navbar-left">
+     <li>
+  	<a href="#home" title="Home" data-ref="home">หน้าหลัก</a>
+  </li>
+  <li>
+  	<a href="#about" title="About us" data-ref="about">เกี่ยวกับ</a>
+  </li>
+  <li>
+  	<a href="#portfolio" title="Portfolio" data-ref="portfolio">ผลงาน</a>
+  </li>
+  <li>
+  	<a href="http://localhost:8080/tour/package">แพคเก็จ</a>  </li>
+   <li>
+   	<a href="#contacts" title="Contacts" data-ref="contacts">ติดต่อ</a>
+  </li>
+  </ul>
+    [footer] => <footer id="footer">
+    <div class="copyright sep-top-xs sep-bottom-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"><small>Copyright 2016 © Ocharos tour. All rights reserved.</small></div>
+        </div>
+      </div>
+    </div>
+</footer>
+
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">ยืนยัน</h4>
+            </div>
+
+            <div class="modal-body">
+                <p>กรุณายืนยันการทำรายการ</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">ยกเลิก</button>
+                <a class="btn btn-danger btn-ok" id="confirm-delete-btn">ยืนยัน</a>
+            </div>
+        </div>
+    </div>
+</div>
+    [portfolioData] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [portfolio_id] => 5
+                    [title] => เขื่อนรัชชประภา
+                    [short_desc] => เขื่อนรัชชประภา
+                    [image_path] => 6d5016a982a61925d83bebaf3afc3f32.jpg
+                    [c_date] => 2016-05-11 08:04:25
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [1] => stdClass Object
+                (
+                    [portfolio_id] => 6
+                    [title] => เกาะพยายาม
+                    [short_desc] => เกาะพยายม
+                    [image_path] => 5c6d2020046a1078d852a4e7c40d41e3.jpg
+                    [c_date] => 2016-05-11 08:04:42
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [2] => stdClass Object
+                (
+                    [portfolio_id] => 7
+                    [title] => เกาะหลีเป๊ะ
+                    [short_desc] => เกาะหลีเป๊ะ
+                    [image_path] => d8edd69fe4b339a17bbb100587b55fed.jpeg
+                    [c_date] => 2016-05-11 08:05:30
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+        )
+
+)
+
+DEBUG - 2016-05-15 21:39:06 --> Total execution time: 0.0236
+DEBUG - 2016-05-15 21:39:10 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:39:10 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:39:10 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:39:10 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:39:10 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:39:10 --> Total execution time: 0.0281
+DEBUG - 2016-05-15 21:39:10 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:39:10 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:39:10 --> UTF-8 Support Enabled
+ERROR - 2016-05-15 21:39:10 --> 404 Page Not Found: Resources/admin
+DEBUG - 2016-05-15 21:39:10 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:39:10 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:39:10 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:39:10 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:39:10 --> [home > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:39:10 --> [home > index] portolioData  >> Array
+(
+    [title] => Ocharos 's tour
+    [form_login] => <a id="dropdownMenuLogin" href="#" data-toggle="dropdown" class="upper dropdown-toggle">admin</a>
+<div aria-labelledby="dropdownMenuLogin" class="dropdown-menu widget-box">
+    <div class="shopping_cart_dropdown" style="text-align: left">
+     <ul class="cart_list product_list_widget">
+        <li>
+            <a href="http://localhost:8080/tour/user/userPage"><span>ข้อมูลส่วนตัว</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/user/changePasswordPage"><span>เปลี่ยนรหัสผ่าน</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/order/listOrder"><span>รายการสั่งซื้อ</span></a>
+        </li>
+    </ul>
+    <div class="form-inline form-group">
+      <form method="post" action="http://localhost:8080/tour/authen/logout">
+      	<button type="submit" class="btn btn-primary btn-xs">ออกจากระบบ</button>
+      </form>
+    </div>   
+    </div>
+</div>
+
+    [header] => <section class="header-section fading-title parallax">
+        <div class="section-shade sep-top-5x sep-bottom-2x">
+          <div class="container">
+          	<div style="background-image: url(resources/img/intro.png);" class="sl-slide-inner"></div>
+          </div>
+        </div>
+      </section>
+    [form_cart] => <a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;
+</a>
+<div aria-labelledby="dropdownMenuCart" class="dropdown-menu widget-box">
+  <div class="shopping_cart_dropdown">
+    <ul class="cart_list product_list_widget">
+        </ul>
+      </div>
+</div>
+
+    [nav_menu] => <ul id="one-page-menu" role="menu" class="nav navbar-nav navbar-left">
+     <li>
+  	<a href="#home" title="Home" data-ref="home">หน้าหลัก</a>
+  </li>
+  <li>
+  	<a href="#about" title="About us" data-ref="about">เกี่ยวกับ</a>
+  </li>
+  <li>
+  	<a href="#portfolio" title="Portfolio" data-ref="portfolio">ผลงาน</a>
+  </li>
+  <li>
+  	<a href="http://localhost:8080/tour/package">แพคเก็จ</a>  </li>
+   <li>
+   	<a href="#contacts" title="Contacts" data-ref="contacts">ติดต่อ</a>
+  </li>
+  </ul>
+    [footer] => <footer id="footer">
+    <div class="copyright sep-top-xs sep-bottom-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"><small>Copyright 2016 © Ocharos tour. All rights reserved.</small></div>
+        </div>
+      </div>
+    </div>
+</footer>
+
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">ยืนยัน</h4>
+            </div>
+
+            <div class="modal-body">
+                <p>กรุณายืนยันการทำรายการ</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">ยกเลิก</button>
+                <a class="btn btn-danger btn-ok" id="confirm-delete-btn">ยืนยัน</a>
+            </div>
+        </div>
+    </div>
+</div>
+    [portfolioData] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [portfolio_id] => 5
+                    [title] => เขื่อนรัชชประภา
+                    [short_desc] => เขื่อนรัชชประภา
+                    [image_path] => 6d5016a982a61925d83bebaf3afc3f32.jpg
+                    [c_date] => 2016-05-11 08:04:25
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [1] => stdClass Object
+                (
+                    [portfolio_id] => 6
+                    [title] => เกาะพยายาม
+                    [short_desc] => เกาะพยายม
+                    [image_path] => 5c6d2020046a1078d852a4e7c40d41e3.jpg
+                    [c_date] => 2016-05-11 08:04:42
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [2] => stdClass Object
+                (
+                    [portfolio_id] => 7
+                    [title] => เกาะหลีเป๊ะ
+                    [short_desc] => เกาะหลีเป๊ะ
+                    [image_path] => d8edd69fe4b339a17bbb100587b55fed.jpeg
+                    [c_date] => 2016-05-11 08:05:30
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+        )
+
+)
+
+DEBUG - 2016-05-15 21:39:10 --> Total execution time: 0.0295
+DEBUG - 2016-05-15 21:39:11 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:39:11 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:39:11 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:39:11 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:39:11 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:39:11 --> Total execution time: 0.0228
+DEBUG - 2016-05-15 21:39:11 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:39:11 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 21:39:11 --> 404 Page Not Found: Resources/admin
+DEBUG - 2016-05-15 21:39:11 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:39:11 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:39:11 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:39:11 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:39:11 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:39:11 --> [home > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:39:11 --> [home > index] portolioData  >> Array
+(
+    [title] => Ocharos 's tour
+    [form_login] => <a id="dropdownMenuLogin" href="#" data-toggle="dropdown" class="upper dropdown-toggle">admin</a>
+<div aria-labelledby="dropdownMenuLogin" class="dropdown-menu widget-box">
+    <div class="shopping_cart_dropdown" style="text-align: left">
+     <ul class="cart_list product_list_widget">
+        <li>
+            <a href="http://localhost:8080/tour/user/userPage"><span>ข้อมูลส่วนตัว</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/user/changePasswordPage"><span>เปลี่ยนรหัสผ่าน</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/order/listOrder"><span>รายการสั่งซื้อ</span></a>
+        </li>
+    </ul>
+    <div class="form-inline form-group">
+      <form method="post" action="http://localhost:8080/tour/authen/logout">
+      	<button type="submit" class="btn btn-primary btn-xs">ออกจากระบบ</button>
+      </form>
+    </div>   
+    </div>
+</div>
+
+    [header] => <section class="header-section fading-title parallax">
+        <div class="section-shade sep-top-5x sep-bottom-2x">
+          <div class="container">
+          	<div style="background-image: url(resources/img/intro.png);" class="sl-slide-inner"></div>
+          </div>
+        </div>
+      </section>
+    [form_cart] => <a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;
+</a>
+<div aria-labelledby="dropdownMenuCart" class="dropdown-menu widget-box">
+  <div class="shopping_cart_dropdown">
+    <ul class="cart_list product_list_widget">
+        </ul>
+      </div>
+</div>
+
+    [nav_menu] => <ul id="one-page-menu" role="menu" class="nav navbar-nav navbar-left">
+     <li>
+  	<a href="#home" title="Home" data-ref="home">หน้าหลัก</a>
+  </li>
+  <li>
+  	<a href="#about" title="About us" data-ref="about">เกี่ยวกับ</a>
+  </li>
+  <li>
+  	<a href="#portfolio" title="Portfolio" data-ref="portfolio">ผลงาน</a>
+  </li>
+  <li>
+  	<a href="http://localhost:8080/tour/package">แพคเก็จ</a>  </li>
+   <li>
+   	<a href="#contacts" title="Contacts" data-ref="contacts">ติดต่อ</a>
+  </li>
+  </ul>
+    [footer] => <footer id="footer">
+    <div class="copyright sep-top-xs sep-bottom-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"><small>Copyright 2016 © Ocharos tour. All rights reserved.</small></div>
+        </div>
+      </div>
+    </div>
+</footer>
+
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">ยืนยัน</h4>
+            </div>
+
+            <div class="modal-body">
+                <p>กรุณายืนยันการทำรายการ</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">ยกเลิก</button>
+                <a class="btn btn-danger btn-ok" id="confirm-delete-btn">ยืนยัน</a>
+            </div>
+        </div>
+    </div>
+</div>
+    [portfolioData] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [portfolio_id] => 5
+                    [title] => เขื่อนรัชชประภา
+                    [short_desc] => เขื่อนรัชชประภา
+                    [image_path] => 6d5016a982a61925d83bebaf3afc3f32.jpg
+                    [c_date] => 2016-05-11 08:04:25
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [1] => stdClass Object
+                (
+                    [portfolio_id] => 6
+                    [title] => เกาะพยายาม
+                    [short_desc] => เกาะพยายม
+                    [image_path] => 5c6d2020046a1078d852a4e7c40d41e3.jpg
+                    [c_date] => 2016-05-11 08:04:42
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [2] => stdClass Object
+                (
+                    [portfolio_id] => 7
+                    [title] => เกาะหลีเป๊ะ
+                    [short_desc] => เกาะหลีเป๊ะ
+                    [image_path] => d8edd69fe4b339a17bbb100587b55fed.jpeg
+                    [c_date] => 2016-05-11 08:05:30
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+        )
+
+)
+
+DEBUG - 2016-05-15 21:39:11 --> Total execution time: 0.0266
+DEBUG - 2016-05-15 21:39:12 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:39:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:39:12 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:39:12 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:39:12 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:39:12 --> Total execution time: 0.0280
+DEBUG - 2016-05-15 21:39:12 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:39:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:39:12 --> UTF-8 Support Enabled
+ERROR - 2016-05-15 21:39:12 --> 404 Page Not Found: Resources/admin
+DEBUG - 2016-05-15 21:39:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:39:12 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:39:12 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:39:12 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:39:12 --> [home > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:39:12 --> [home > index] portolioData  >> Array
+(
+    [title] => Ocharos 's tour
+    [form_login] => <a id="dropdownMenuLogin" href="#" data-toggle="dropdown" class="upper dropdown-toggle">admin</a>
+<div aria-labelledby="dropdownMenuLogin" class="dropdown-menu widget-box">
+    <div class="shopping_cart_dropdown" style="text-align: left">
+     <ul class="cart_list product_list_widget">
+        <li>
+            <a href="http://localhost:8080/tour/user/userPage"><span>ข้อมูลส่วนตัว</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/user/changePasswordPage"><span>เปลี่ยนรหัสผ่าน</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/order/listOrder"><span>รายการสั่งซื้อ</span></a>
+        </li>
+    </ul>
+    <div class="form-inline form-group">
+      <form method="post" action="http://localhost:8080/tour/authen/logout">
+      	<button type="submit" class="btn btn-primary btn-xs">ออกจากระบบ</button>
+      </form>
+    </div>   
+    </div>
+</div>
+
+    [header] => <section class="header-section fading-title parallax">
+        <div class="section-shade sep-top-5x sep-bottom-2x">
+          <div class="container">
+          	<div style="background-image: url(resources/img/intro.png);" class="sl-slide-inner"></div>
+          </div>
+        </div>
+      </section>
+    [form_cart] => <a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;
+</a>
+<div aria-labelledby="dropdownMenuCart" class="dropdown-menu widget-box">
+  <div class="shopping_cart_dropdown">
+    <ul class="cart_list product_list_widget">
+        </ul>
+      </div>
+</div>
+
+    [nav_menu] => <ul id="one-page-menu" role="menu" class="nav navbar-nav navbar-left">
+     <li>
+  	<a href="#home" title="Home" data-ref="home">หน้าหลัก</a>
+  </li>
+  <li>
+  	<a href="#about" title="About us" data-ref="about">เกี่ยวกับ</a>
+  </li>
+  <li>
+  	<a href="#portfolio" title="Portfolio" data-ref="portfolio">ผลงาน</a>
+  </li>
+  <li>
+  	<a href="http://localhost:8080/tour/package">แพคเก็จ</a>  </li>
+   <li>
+   	<a href="#contacts" title="Contacts" data-ref="contacts">ติดต่อ</a>
+  </li>
+  </ul>
+    [footer] => <footer id="footer">
+    <div class="copyright sep-top-xs sep-bottom-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"><small>Copyright 2016 © Ocharos tour. All rights reserved.</small></div>
+        </div>
+      </div>
+    </div>
+</footer>
+
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">ยืนยัน</h4>
+            </div>
+
+            <div class="modal-body">
+                <p>กรุณายืนยันการทำรายการ</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">ยกเลิก</button>
+                <a class="btn btn-danger btn-ok" id="confirm-delete-btn">ยืนยัน</a>
+            </div>
+        </div>
+    </div>
+</div>
+    [portfolioData] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [portfolio_id] => 5
+                    [title] => เขื่อนรัชชประภา
+                    [short_desc] => เขื่อนรัชชประภา
+                    [image_path] => 6d5016a982a61925d83bebaf3afc3f32.jpg
+                    [c_date] => 2016-05-11 08:04:25
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [1] => stdClass Object
+                (
+                    [portfolio_id] => 6
+                    [title] => เกาะพยายาม
+                    [short_desc] => เกาะพยายม
+                    [image_path] => 5c6d2020046a1078d852a4e7c40d41e3.jpg
+                    [c_date] => 2016-05-11 08:04:42
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [2] => stdClass Object
+                (
+                    [portfolio_id] => 7
+                    [title] => เกาะหลีเป๊ะ
+                    [short_desc] => เกาะหลีเป๊ะ
+                    [image_path] => d8edd69fe4b339a17bbb100587b55fed.jpeg
+                    [c_date] => 2016-05-11 08:05:30
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+        )
+
+)
+
+DEBUG - 2016-05-15 21:39:12 --> Total execution time: 0.0264
+DEBUG - 2016-05-15 21:49:59 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:49:59 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:49:59 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:49:59 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:49:59 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:50:00 --> Total execution time: 0.0235
+DEBUG - 2016-05-15 21:50:00 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:50:00 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:50:00 --> UTF-8 Support Enabled
+ERROR - 2016-05-15 21:50:00 --> 404 Page Not Found: Resources/admin
+DEBUG - 2016-05-15 21:50:00 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:50:00 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:50:00 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:50:00 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:50:00 --> [home > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:50:00 --> [home > index] portolioData  >> Array
+(
+    [title] => Ocharos 's tour
+    [form_login] => <a id="dropdownMenuLogin" href="#" data-toggle="dropdown" class="upper dropdown-toggle">admin</a>
+<div aria-labelledby="dropdownMenuLogin" class="dropdown-menu widget-box">
+    <div class="shopping_cart_dropdown" style="text-align: left">
+     <ul class="cart_list product_list_widget">
+        <li>
+            <a href="http://localhost:8080/tour/user/userPage"><span>ข้อมูลส่วนตัว</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/user/changePasswordPage"><span>เปลี่ยนรหัสผ่าน</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/order/listOrder"><span>รายการสั่งซื้อ</span></a>
+        </li>
+    </ul>
+    <div class="form-inline form-group">
+      <form method="post" action="http://localhost:8080/tour/authen/logout">
+      	<button type="submit" class="btn btn-primary btn-xs">ออกจากระบบ</button>
+      </form>
+    </div>   
+    </div>
+</div>
+
+    [header] => <section class="header-section fading-title parallax">
+        <div class="section-shade sep-top-5x sep-bottom-2x">
+          <div class="container">
+          	<div style="background-image: url(resources/img/intro.png);" class="sl-slide-inner"></div>
+          </div>
+        </div>
+      </section>
+    [form_cart] => <a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;
+</a>
+<div aria-labelledby="dropdownMenuCart" class="dropdown-menu widget-box">
+  <div class="shopping_cart_dropdown">
+    <ul class="cart_list product_list_widget">
+        </ul>
+      </div>
+</div>
+
+    [nav_menu] => <ul id="one-page-menu" role="menu" class="nav navbar-nav navbar-left">
+     <li>
+  	<a href="#home" title="Home" data-ref="home">หน้าหลัก</a>
+  </li>
+  <li>
+  	<a href="#about" title="About us" data-ref="about">เกี่ยวกับ</a>
+  </li>
+  <li>
+  	<a href="#portfolio" title="Portfolio" data-ref="portfolio">ผลงาน</a>
+  </li>
+  <li>
+  	<a href="http://localhost:8080/tour/package">แพคเก็จ</a>  </li>
+   <li>
+   	<a href="#contacts" title="Contacts" data-ref="contacts">ติดต่อ</a>
+  </li>
+  </ul>
+    [footer] => <footer id="footer">
+    <div class="copyright sep-top-xs sep-bottom-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"><small>Copyright 2016 © Ocharos tour. All rights reserved.</small></div>
+        </div>
+      </div>
+    </div>
+</footer>
+
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">ยืนยัน</h4>
+            </div>
+
+            <div class="modal-body">
+                <p>กรุณายืนยันการทำรายการ</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">ยกเลิก</button>
+                <a class="btn btn-danger btn-ok" id="confirm-delete-btn">ยืนยัน</a>
+            </div>
+        </div>
+    </div>
+</div>
+    [portfolioData] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [portfolio_id] => 5
+                    [title] => เขื่อนรัชชประภา
+                    [short_desc] => เขื่อนรัชชประภา
+                    [image_path] => 6d5016a982a61925d83bebaf3afc3f32.jpg
+                    [c_date] => 2016-05-11 08:04:25
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [1] => stdClass Object
+                (
+                    [portfolio_id] => 6
+                    [title] => เกาะพยายาม
+                    [short_desc] => เกาะพยายม
+                    [image_path] => 5c6d2020046a1078d852a4e7c40d41e3.jpg
+                    [c_date] => 2016-05-11 08:04:42
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [2] => stdClass Object
+                (
+                    [portfolio_id] => 7
+                    [title] => เกาะหลีเป๊ะ
+                    [short_desc] => เกาะหลีเป๊ะ
+                    [image_path] => d8edd69fe4b339a17bbb100587b55fed.jpeg
+                    [c_date] => 2016-05-11 08:05:30
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+        )
+
+)
+
+DEBUG - 2016-05-15 21:50:00 --> Total execution time: 0.0261
+DEBUG - 2016-05-15 21:50:02 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:50:02 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 21:50:02 --> 404 Page Not Found: Resources/admin
+DEBUG - 2016-05-15 21:50:06 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:50:06 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 21:50:06 --> 404 Page Not Found: admin/ManageOrder/requestTour
+DEBUG - 2016-05-15 21:50:07 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:50:07 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:50:07 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:50:07 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:50:07 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:50:07 --> Total execution time: 0.0211
+DEBUG - 2016-05-15 21:50:08 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:50:08 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-05-15 21:50:08 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+DEBUG - 2016-05-15 21:50:08 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:50:08 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-05-15 21:50:08 --> [home > index] config  >> Array
+(
+    [0] => checkoutPage
+    [1] => checkout
+    [2] => submitToPaypal
+    [3] => userPage
+    [4] => orderListPage
+    [5] => requestTour
+    [6] => requestTourPage
+    [7] => editRequestTour
+    [8] => listRequestTour
+)
+
+DEBUG - 2016-05-15 21:50:08 --> [home > index] portolioData  >> Array
+(
+    [title] => Ocharos 's tour
+    [form_login] => <a id="dropdownMenuLogin" href="#" data-toggle="dropdown" class="upper dropdown-toggle">admin</a>
+<div aria-labelledby="dropdownMenuLogin" class="dropdown-menu widget-box">
+    <div class="shopping_cart_dropdown" style="text-align: left">
+     <ul class="cart_list product_list_widget">
+        <li>
+            <a href="http://localhost:8080/tour/user/userPage"><span>ข้อมูลส่วนตัว</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/user/changePasswordPage"><span>เปลี่ยนรหัสผ่าน</span></a>
+        </li>
+        <li>
+            <a href="http://localhost:8080/tour/order/listOrder"><span>รายการสั่งซื้อ</span></a>
+        </li>
+    </ul>
+    <div class="form-inline form-group">
+      <form method="post" action="http://localhost:8080/tour/authen/logout">
+      	<button type="submit" class="btn btn-primary btn-xs">ออกจากระบบ</button>
+      </form>
+    </div>   
+    </div>
+</div>
+
+    [header] => <section class="header-section fading-title parallax">
+        <div class="section-shade sep-top-5x sep-bottom-2x">
+          <div class="container">
+          	<div style="background-image: url(resources/img/intro.png);" class="sl-slide-inner"></div>
+          </div>
+        </div>
+      </section>
+    [form_cart] => <a id="dropdownMenuCart" href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;
+</a>
+<div aria-labelledby="dropdownMenuCart" class="dropdown-menu widget-box">
+  <div class="shopping_cart_dropdown">
+    <ul class="cart_list product_list_widget">
+        </ul>
+      </div>
+</div>
+
+    [nav_menu] => <ul id="one-page-menu" role="menu" class="nav navbar-nav navbar-left">
+     <li>
+  	<a href="#home" title="Home" data-ref="home">หน้าหลัก</a>
+  </li>
+  <li>
+  	<a href="#about" title="About us" data-ref="about">เกี่ยวกับ</a>
+  </li>
+  <li>
+  	<a href="#portfolio" title="Portfolio" data-ref="portfolio">ผลงาน</a>
+  </li>
+  <li>
+  	<a href="http://localhost:8080/tour/package">แพคเก็จ</a>  </li>
+   <li>
+   	<a href="#contacts" title="Contacts" data-ref="contacts">ติดต่อ</a>
+  </li>
+  </ul>
+    [footer] => <footer id="footer">
+    <div class="copyright sep-top-xs sep-bottom-xs">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"><small>Copyright 2016 © Ocharos tour. All rights reserved.</small></div>
+        </div>
+      </div>
+    </div>
+</footer>
+
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">ยืนยัน</h4>
+            </div>
+
+            <div class="modal-body">
+                <p>กรุณายืนยันการทำรายการ</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">ยกเลิก</button>
+                <a class="btn btn-danger btn-ok" id="confirm-delete-btn">ยืนยัน</a>
+            </div>
+        </div>
+    </div>
+</div>
+    [portfolioData] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [portfolio_id] => 5
+                    [title] => เขื่อนรัชชประภา
+                    [short_desc] => เขื่อนรัชชประภา
+                    [image_path] => 6d5016a982a61925d83bebaf3afc3f32.jpg
+                    [c_date] => 2016-05-11 08:04:25
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [1] => stdClass Object
+                (
+                    [portfolio_id] => 6
+                    [title] => เกาะพยายาม
+                    [short_desc] => เกาะพยายม
+                    [image_path] => 5c6d2020046a1078d852a4e7c40d41e3.jpg
+                    [c_date] => 2016-05-11 08:04:42
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+            [2] => stdClass Object
+                (
+                    [portfolio_id] => 7
+                    [title] => เกาะหลีเป๊ะ
+                    [short_desc] => เกาะหลีเป๊ะ
+                    [image_path] => d8edd69fe4b339a17bbb100587b55fed.jpeg
+                    [c_date] => 2016-05-11 08:05:30
+                    [u_date] => 2016-05-11 00:00:00
+                )
+
+        )
+
+)
+
+DEBUG - 2016-05-15 21:50:08 --> Total execution time: 0.0301
+DEBUG - 2016-05-15 21:57:40 --> UTF-8 Support Enabled
+DEBUG - 2016-05-15 21:57:40 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-05-15 21:57:40 --> 404 Page Not Found: Resources/admin

@@ -227,7 +227,7 @@ class Order extends Main_Controller
             }else{
                 $this->requestTour->update($data,array('request_id'=>$this->input->post('requestId')));
             }
-            redirect('user/userPage','refresh');
+            redirect('order/listRequestTour','refresh');
             
         }
     }
@@ -242,6 +242,13 @@ class Order extends Main_Controller
         $data["paginationData"]   = $this->pagination;
         $this->setContentWithSidePage('order/list_request_tour',$data);
         $this->loadLayoutSidebar($this->template);
+    }
+
+    public function cancelRequestTour(){
+        $requestId = $this->uri->segment(3);
+        $userId = $this->session->userdata('user_id');
+        $this->requestTour->deleteByFlag(array('user_id'=>$userId,'request_id'=>$requestId));
+        redirect('order/listRequestTour','refresh');
     }
 
     /*

@@ -8,4 +8,4 @@
 
 
 $config['required_user_data'] = array('checkoutPage','checkout','submitToPaypal','userPage','orderListPage'
-,'requestTour','requestTourPage','editRequestTour');
+,'requestTour','requestTourPage','editRequestTour','listRequestTour');

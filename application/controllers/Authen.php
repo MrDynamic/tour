@@ -17,7 +17,7 @@ class Authen extends Main_Controller
             $redirectUrl = $this->input->post("redirectUrl");
             
             if(empty($username) || empty($password)){
-                $this->session->set_flashdata(array('message'=>'ชื่อผู้ใช้หรือรหัสผ่านห้ามเป็นค่าว่าง'));
+                $this->session->set_flashdata(array('message'=>'กรุณากรอกชื่อผู้ใช้และรหัสผ่าน'));
                 $this->session->set_flashdata('redirectUrl',$redirectUrl);
                 redirect('authen/login','refresh');
             }else{

@@ -10,7 +10,7 @@
             <a href="<?=site_url('user/changePasswordPage');?>"><span>เปลี่ยนรหัสผ่าน</span></a>
         </li>
         <li>
-            <a href="<?=site_url('order/orderListPage');?>"><span>รายการสั่งซื้อ</span></a>
+            <a href="<?=site_url('order/listOrder');?>"><span>รายการสั่งซื้อ</span></a>
         </li>
     </ul>
     <div class="form-inline form-group">

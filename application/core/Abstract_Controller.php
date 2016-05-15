@@ -120,7 +120,6 @@ class Main_Controller extends Abstract_Controller{
 	}
 
 	public  function requiredLogin(){
-		$this->log_debug('check session user');
 		$methodAuthen = $this->config->item('required_user_data');
 		$this->log_debug('config',print_r($methodAuthen,true));
 		if(isset($this->router) && in_array($this->router->method,$methodAuthen)){
@@ -210,7 +209,24 @@ class Admin_Controller extends Abstract_Controller
 						'KEY'=>MENU_PACKAGE_PICTURE
 					)
 				)
+			),
+			array(
+				'MENU_NAME'=>'รายการ',
+				'KEY'=>MENU_MAIN_ORDER,
+				'SUB_MENU'=>array(
+					array(
+						'NAME'=>'รายการสั่งซื้อ',
+						'URL'=>'admin/manageOrder',
+						'KEY'=>MENU_ORDER
+					),
+					array(
+						'NAME'=>'รายการทัวร์',
+						'URL'=>'admin/manageOrder/requestTour',
+						'KEY'=>MENU_RQUEST_TOUR
+					)
+				)
 			)
+			
 		);
 		$this->template['active_menu'] = array();
 
@@ -218,8 +234,6 @@ class Admin_Controller extends Abstract_Controller
 
 	public function requiredLogin()
 	{
-		$this->log_debug('check role admin');
-
 		if(empty($this->session->userdata('user_id'))
 			|| empty($this->session->userdata('username'))
 			|| empty($this->session->userdata('role'))

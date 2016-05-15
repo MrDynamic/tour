@@ -40,7 +40,7 @@
                                 </td>
                                 <td>
                                     <?php if($item->status_code == STATUS_WAITING): ?>
-                                        <a class="btn btn-primary btn-xs" href="<?=site_url('order/cancelRequestTour/'.$item->request_id);?>" role="button">ยกเลิก</a>
+                                        <a class="btn btn-primary btn-xs" data-href="<?=site_url('order/cancelRequestTour/'.$item->request_id);?>" data-toggle="modal" data-target="#confirm-delete" id="cancelRequestBtn" role="button">ยกเลิก</a>
                                     <?php endif; ?>
                                 </td>
                             </tr>

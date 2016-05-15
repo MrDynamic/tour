@@ -97,7 +97,7 @@ $autoload['helper'] = array('url','form','my_form_helper','html','common_helper'
 | config files.  Otherwise, leave it blank.
 |
 */
-$autoload['config'] = array('authen_config');
+$autoload['config'] = array('config_authen');
 
 /*
 | -------------------------------------------------------------------
