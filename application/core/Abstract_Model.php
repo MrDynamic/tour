@@ -9,17 +9,17 @@ abstract class Abstract_Model extends CI_Model{
     }
 
     public function insert($data){
-        $data['u_date'] = date('Y-m-d');
+        $data['u_date'] = getCurrentDate();
         return $this->db->insert($this->getTableName(),$data);
     }
 
     public function update($data,$criteria){
-        $data['u_date'] = date('Y-m-d');
+        $data['u_date'] = getCurrentDate();
         return $this->db->update($this->getTableName(),$data,$criteria);
     }
     
     public function deleteByFlag($criteria){
-        $data['u_date'] = date('Y-m-d');
+        $data['u_date'] = getCurrentDate();
         return $this->db->update($this->getTableName(),array('delete_flag'=>'Y'),$criteria);
     }
 

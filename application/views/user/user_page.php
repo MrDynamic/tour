@@ -13,7 +13,7 @@
     <div class="icon-content img-circle"><i class="fa fa-shopping-cart"></i></div>
     <div class="icon-box-content">
       <h5 class="upper">
-      	<a href="<?=site_url('user/orderListPage');?>">รายการสั่งซื้อ</a>
+      	<a href="<?=site_url('order/listOrder');?>">รายการสั่งซื้อ</a>
       </h5>
     </div>
   </div>

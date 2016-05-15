@@ -107,19 +107,6 @@ class User extends Main_Controller
         echo $response;
     }
     
-    public function orderListPage(){
-        $this->load->library('my_pagination');
-        $page = empty($this->uri->segment(3))?1:$this->uri->segment(3);
-        $userId = $this->session->userdata("user_id");
-        $pagingConfig = $this->my_pagination->init('user/orderListPage',$this->order->countAllWithCriteria(array('user_id'=>$userId)));
-        $limit = array($pagingConfig['per_page'],(($page-1) * $pagingConfig['per_page']));
-
-        $data['orderData'] = $this->order->getOrderByCriteria(array("r.user_id"=>$userId),$limit);
-        $data["paginationData"]   = $this->pagination;
-        $this->setContentWithSidePage('order/user_order_page',$data);
-        $this->loadLayoutSidebar($this->template);
-    }
-    
     public function changePasswordPage(){
         $message['message'] = $this->session->flashdata('message');
         $this->setContentWithSidePage('user/change_password_page',$message);

@@ -119,6 +119,8 @@ define('PAYPAL_TEST_URL','https://www.sandbox.paypal.com/cgi-bin/webscr');
 define('PAYPAL_ID', 'ocharos.th@gmail.com');
 
 // Order status
-define('PENDING','P');
-define('SUCCESS','S');
+define('STATUS_PENDING','P');
+define('STATUS_SUCCESS','S');
+define('STATUS_WAITING','W');
+define('STATUS_CANCEL','C');
 

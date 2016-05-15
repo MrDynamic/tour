@@ -80,7 +80,7 @@
             <div class="col-md-4 sep-top-md">
                 <a class="btn btn-dark btn-bordered" href="#" onclick="window.history.back();return;" role="button">กลับ</a>
             </div>
-            <?php if($contactData->status_code == SUCCESS): ?>
+            <?php if($contactData->status_code == STATUS_SUCCESS): ?>
             <div class="col-md-4 sep-top-md text-right">
                 <a class="btn btn-primary" href="<?=site_url('order/generateReceipt/'.$contactData->order_id);?>" role="button">พิมพ์ใบเสร็จ</a>
             </div>

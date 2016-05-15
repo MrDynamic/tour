@@ -8,7 +8,7 @@
         <table class="table table-bordered table-condensed shop-table table-responsive">
           <thead>
             <tr>
-                <th scope="col" class="dark upper">รหัสการสั่งซื้อ</th>
+                <th scope="col" class="dark upper">หมายเลขการสั่งซื้อ</th>
                 <th scope="col" class="dark upper">รหัสการทำรายการ</th>
                 <th scope="col" class="dark upper">สถานะ</th>
                 <th scope="col" class="dark upper">ติดต่อ</th>
@@ -41,7 +41,7 @@
                   <a class="btn btn-info btn-xs" href="<?=site_url('order/orderDetailPage/'.$item->order_id);?>" role="button">รายละเอียด</a>
                 </td>
                 <td>
-                    <?php if($item->status_code == SUCCESS): ?>
+                    <?php if($item->status_code == STATUS_SUCCESS): ?>
                         <a class="btn btn-primary btn-xs" href="<?=site_url('order/generateReceipt/'.$item->order_id);?>" role="button">พิมพ์ใบเสร็จ</a>
                     <?php endif; ?>
                 </td>

@@ -8,7 +8,11 @@ class Order extends Main_Controller
         parent::__construct();
         $this->load->model(array('M_Order'=>'mOrder','M_RequestTour'=>'requestTour'));
     }
-    
+
+    /*
+     * Start cart
+     */
+
     public function addToCart(){
         $this->log_debug('cart data',print_r($this->input->post(),true));
         $data = array(
@@ -61,7 +65,11 @@ class Order extends Main_Controller
         $rowId = $this->input->post('rowId');
         $this->my_cart->remove($rowId);
     }
-    
+
+    /*
+     * End cart
+     */
+
     public function checkoutPage(){
         $this->checkItemCart();
         $this->setContentPage('order/checkout_page',null,true);
@@ -75,7 +83,7 @@ class Order extends Main_Controller
         if($size > 0){
             $orderData = $this->input->post();
             $orderData['user_id']= $this->session->userdata("user_id");
-            $orderData['status'] = PENDING;
+            $orderData['status'] = STATUS_PENDING;
             
             $i=0;
             $total=0;
@@ -153,8 +161,6 @@ class Order extends Main_Controller
             $orderData['contactData'] = $this->mOrder->getOrderByCriteria(array('r.order_id'=>$orderId,'r.user_id'=>$this->session->userdata("user_id")))[0];
             $orderData['orderDetails'] = $this->mOrder->getOrderDetailsById($orderId,$this->session->userdata("user_id"));
 
-        }else{
-
         }
         return $orderData;
     }
@@ -168,15 +174,18 @@ class Order extends Main_Controller
 
     public function generateReceipt(){
         $orderId = $this->uri->segment(3);
-        $html = $this->load->view('order/receipt',$this->getOrderData($orderId),true);
+        $html = $this->load->view('order/receipt',$this->getOrderData($orderId),true); $this->log_debug('html',print_r($html,true));
         $pdfFilePath = "ocharos_".str_pad($orderId,5,"0",STR_PAD_LEFT).".pdf";
-        $this->load->library('myPdf');
-        $this->myPdf->pdf->WriteHTML($html);
-        $this->myPdf->pdf->Output($pdfFilePath, "D");
+        $this->load->library('my_pdf');
+        $this->my_pdf->pdf->WriteHTML($html);
+        $this->my_pdf->pdf->Output($pdfFilePath, "D");
 //        $this->load->view('order/receipt',$this->getOrderData($orderId));
             
     }
 
+    /*
+     * Start request tour
+     */
     public function requestTourPage($data=array('action'=>ACTION_ADD)){
         $this->setContentWithSidePage('order/form_request_tour',$data);
         $this->loadLayoutSidebar($this->template);
@@ -184,8 +193,9 @@ class Order extends Main_Controller
 
     public function editRequestTour(){
         $requestId = $this->uri->segment(3);
+        $userId = $this->session->userdata('user_id');
         $result = $this->requestTour->getDataSpecifyField('request_id,contact_name,phone,date_format(travel_date,"%Y-%m-%d") travel_date,request_desc'
-            ,array('request_id'=>$requestId,'user_id'=>$this->session->userdata('user_id')));
+            ,array('request_id'=>$requestId,'user_id'=>$userId));
         if(null != $result && sizeof($result) > 0){
             $data['editData'] = $result[0];
             $data['action'] = ACTION_EDIT;
@@ -208,9 +218,9 @@ class Order extends Main_Controller
                 'contact_name' => $this->input->post("contactName"),
                 'phone' => $this->input->post('phone'),
                 'travel_date' => $this->input->post('travelDate'),
-                'u_date' => $this->getCurrentDate(),
                 'request_desc' => $this->input->post('requestDesc'),
-                'user_id'=>$this->session->userdata('user_id')
+                'user_id'=>$this->session->userdata('user_id'),
+                'status_code'=>STATUS_WAITING
             );
             if ($this->input->post('actionType') == ACTION_ADD) {
                 $this->requestTour->insert($data);
@@ -220,11 +230,45 @@ class Order extends Main_Controller
             redirect('user/userPage','refresh');
             
         }
-
-
-
     }
-    
+
+    public function listRequestTour(){
+        $this->load->library('my_pagination');
+        $page = empty($this->uri->segment(3))?1:$this->uri->segment(3);
+        $userId = $this->session->userdata("user_id");
+        $pagingConfig = $this->my_pagination->init('order/listRequestTour',$this->requestTour->countAllWithCriteria(array('user_id'=>$userId)));
+        $limit = array($pagingConfig['per_page'],(($page-1) * $pagingConfig['per_page']));
+        $data['requestData'] = $this->requestTour->getRequestTour(array("r.user_id"=>$userId),$limit);
+        $data["paginationData"]   = $this->pagination;
+        $this->setContentWithSidePage('order/list_request_tour',$data);
+        $this->loadLayoutSidebar($this->template);
+    }
+
+    /*
+     * End request tour
+     */
+
+    /*
+     * Start order
+     */
+
+    public function listOrder(){
+        $this->load->library('my_pagination');
+        $page = empty($this->uri->segment(3))?1:$this->uri->segment(3);
+        $userId = $this->session->userdata("user_id");
+        $pagingConfig = $this->my_pagination->init('order/listOrder',$this->mOrder->countAllWithCriteria(array('user_id'=>$userId)));
+        $limit = array($pagingConfig['per_page'],(($page-1) * $pagingConfig['per_page']));
+
+        $data['orderData'] = $this->mOrder->getOrderByCriteria(array("r.user_id"=>$userId),$limit);
+        $data["paginationData"]   = $this->pagination;
+        $this->setContentWithSidePage('order/user_order_page',$data);
+        $this->loadLayoutSidebar($this->template);
+    }
+
+    /*
+     * End order
+     */
+
     function __destruct()
     {}
 }

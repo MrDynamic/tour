@@ -137,7 +137,7 @@
                     โอชารสทัวร์ได้ให้บริการเช่ารถปรับอากาศ 2 ชั้น มากว่า 18 ปี
                     คลุกคลีอยู่ในวงการการท่องเที่ยวมานานและด้วยใจรักในงานบริการ จึงให้บริการประดุจดังคุณเป็นคนในครอบครัวโอชารสทัวร์ ให้ความสำคัญในงานด้านการท่องเที่ยว และบริการลูกค้าให้มีความสุขสนุกสนานไปกับการท่องเที่ยวในแบบฉบับโอชารสทัวร์
                 </p>
-                <p class="lead wow flipInX">เที่ยวสนุกสุขใจไปกับโอชารสทัวร์</p>
+                <p class="lead wow flipInX">"เที่ยวสนุกสุขใจไปกับโอชารสทัวร์"</p>
               </div>
             </div>
             <div class="col-md-8">
@@ -147,9 +147,9 @@
                     <div class="screen">
                       <div data-navitagion="false" data-slide-speed="300" data-pagination-speed="400" data-single-item="true" data-auto-height="true" data-auto-play="true" class="owl-carousel owl-theme">
                         <!-- Start Item Slide-->
-                          <div class="item"><img src="resoures/img/ipad_slide_1.jpg" alt="" class="img-responsive"></div>
-                          <div class="item"><img src="resoures/img/ipad_slide_2.jpg" alt="" class="img-responsive"></div>
-                          <div class="item"><img src="resoures/img/ipad_slide.jpg" alt="" class="img-responsive"></div>
+                          <div class="item"><img src="http://f.ptcdn.info/882/016/000/1395219376-ARM0311res-o.jpg" alt="" class="img-responsive"></div>
+                          <div class="item"><img src="resources/img/about1.jpg" alt="" class="img-responsive"></div>
+                          <div class="item"><img src="http://travel.mthai.com/wp-content/uploads/2012/10/8Surat_Thani_.jpg" alt="" class="img-responsive"></div>
                         <!-- End Item Slide-->
                       </div>
                     </div>

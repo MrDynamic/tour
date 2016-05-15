@@ -14,10 +14,6 @@ abstract class Abstract_Controller extends CI_Controller {
    function __destruct() {
 		// $this->db->close();
    }
-
-	protected  function getCurrentDate(){
-		return date('Y-m-d');
-	}
    
    protected function deleteFile($path){
 	   try{
@@ -68,13 +64,13 @@ abstract class Abstract_Controller extends CI_Controller {
 	    $this->load->model('M_District','mDistrict');
 	    return $this->mDistrict->getDataSpecifyField('district_id id,district_name label',array('amphur_id'=>$amphurId));
 	}
-	
+
 	protected function log_debug($message,$value=''){
 	    $className = $this->router->class;
 	    $methodName = $this->router->method;
 	    log_message('debug', "[$className > $methodName] $message  >> $value");
 	}
-	
+
 	protected  function log_error($message){
 	    $className = $this->router->class;
 	    $methodName = $this->router->method;
@@ -125,7 +121,8 @@ class Main_Controller extends Abstract_Controller{
 
 	public  function requiredLogin(){
 		$this->log_debug('check session user');
-		static $methodAuthen = array('checkoutPage','checkout','submitToPaypal','userPage','orderListPage');
+		$methodAuthen = $this->config->item('required_user_data');
+		$this->log_debug('config',print_r($methodAuthen,true));
 		if(isset($this->router) && in_array($this->router->method,$methodAuthen)){
 			$this->log_debug('check session',$this->router->method);
 			if(empty($this->session->userdata('user_id'))

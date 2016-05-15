@@ -54,7 +54,7 @@
                   <!-- user login dropdown start-->
                   <li class="dropdown">
                       <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                          <img alt="" src="resources/admin/img/avatar1_small.jpg">
+                          <img alt="" src="resources/admin/img/avatar-mini4.jpg">
                           <span class="username">Admin</span>
                           <b class="caret"></b>
                       </a>
