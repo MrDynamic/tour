@@ -14,6 +14,10 @@ abstract class Abstract_Controller extends CI_Controller {
    function __destruct() {
 		// $this->db->close();
    }
+
+	protected  function getCurrentDate(){
+		return date('Y-m-d');
+	}
    
    protected function deleteFile($path){
 	   try{

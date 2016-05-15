@@ -133,7 +133,11 @@
             <div class="col-md-4">
               <div class="section-title">
                 <h2 class="bordered-left upper wow flipInX">ocharos<br>tour</h2>
-                <p class="lead wow flipInX">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
+                <p class="lead wow flipInX" style="text-align:justify">
+                    โอชารสทัวร์ได้ให้บริการเช่ารถปรับอากาศ 2 ชั้น มากว่า 18 ปี
+                    คลุกคลีอยู่ในวงการการท่องเที่ยวมานานและด้วยใจรักในงานบริการ จึงให้บริการประดุจดังคุณเป็นคนในครอบครัวโอชารสทัวร์ ให้ความสำคัญในงานด้านการท่องเที่ยว และบริการลูกค้าให้มีความสุขสนุกสนานไปกับการท่องเที่ยวในแบบฉบับโอชารสทัวร์
+                </p>
+                <p class="lead wow flipInX">เที่ยวสนุกสุขใจไปกับโอชารสทัวร์</p>
               </div>
             </div>
             <div class="col-md-8">
@@ -143,7 +147,9 @@
                     <div class="screen">
                       <div data-navitagion="false" data-slide-speed="300" data-pagination-speed="400" data-single-item="true" data-auto-height="true" data-auto-play="true" class="owl-carousel owl-theme">
                         <!-- Start Item Slide-->
-                        <div class="item"><img src="resources/img/ocharos-logo.png" width="100" alt="" class="img-responsive"></div>
+                          <div class="item"><img src="resoures/img/ipad_slide_1.jpg" alt="" class="img-responsive"></div>
+                          <div class="item"><img src="resoures/img/ipad_slide_2.jpg" alt="" class="img-responsive"></div>
+                          <div class="item"><img src="resoures/img/ipad_slide.jpg" alt="" class="img-responsive"></div>
                         <!-- End Item Slide-->
                       </div>
                     </div>
@@ -223,7 +229,7 @@
                 <div data-wow-delay=".5s" class="icon-content img-circle wow flipInX"><i class="fa fa-map-marker"></i></div>
                 <div class="icon-box-content">
                   <h6 class="upper info-title">ที่อยู่</h6>
-                  <p>Elizabeth St, Melbourne, Victoria 3000, Australia</p>
+                  <p>183/3 หมู่ 9 ตำบล ด่านช้าง อำเภอ ด่านช้าง จังหวัด สุพรรณบุรี 72180</p>
                 </div>
               </div>
               <!--End icon box-->
@@ -231,8 +237,8 @@
               <div class="icon-box icon-xs sep-bottom-xs icon-gradient">
                 <div data-wow-delay=".7s" class="icon-content img-circle wow flipInX"><i class="fa fa-phone"></i></div>
                 <div class="icon-box-content">
-                  <h6 class="upper info-title">โทรศัพท์ / Fax</h6>
-                  <p>(+39) 123-456-789 / (+39) 123-456-789</p>
+                  <h6 class="upper info-title">โทรศัพท์</h6>
+                  <p>สุดาทิพย์ โอชารส (ก้อย) 090-9943646 ,087-1613120<br>อนันต์ โอชารส (หนุ่ม) 081-8512101</p>
                 </div>
               </div>
               <!--End icon box-->
@@ -241,7 +247,7 @@
                 <div data-wow-delay=".9s" class="icon-content img-circle wow flipInX"><i class="fa fa-envelope"></i></div>
                 <div class="icon-box-content">
                   <h6 class="upper info-title">Email</h6>
-                  <p>info@ottaviostudios.com / support@ottaviostudios.com</p>
+                  <p>koyobiii@hotmail.com</p>
                 </div>
               </div>
               <!--End icon box-->

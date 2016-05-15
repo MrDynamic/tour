@@ -6,7 +6,7 @@ class Order extends Main_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model(array('M_Order'=>'mOrder'));
+        $this->load->model(array('M_Order'=>'mOrder','M_RequestTour'=>'requestTour'));
     }
     
     public function addToCart(){
@@ -175,6 +175,54 @@ class Order extends Main_Controller
         $this->myPdf->pdf->Output($pdfFilePath, "D");
 //        $this->load->view('order/receipt',$this->getOrderData($orderId));
             
+    }
+
+    public function requestTourPage($data=array('action'=>ACTION_ADD)){
+        $this->setContentWithSidePage('order/form_request_tour',$data);
+        $this->loadLayoutSidebar($this->template);
+    }
+
+    public function editRequestTour(){
+        $requestId = $this->uri->segment(3);
+        $result = $this->requestTour->getDataSpecifyField('request_id,contact_name,phone,date_format(travel_date,"%Y-%m-%d") travel_date,request_desc'
+            ,array('request_id'=>$requestId,'user_id'=>$this->session->userdata('user_id')));
+        if(null != $result && sizeof($result) > 0){
+            $data['editData'] = $result[0];
+            $data['action'] = ACTION_EDIT;
+            $this->requestTourPage($data);
+        }else{
+
+        }
+    }
+
+    public function requestTour(){
+        $this->load->library('form_validation');
+        $this->form_validation->set_message('required', 'กรุณาระบุ %s');
+        if ($this->form_validation->run() == FALSE)
+        {
+            $this->requestTourPage();
+        }
+        else {
+
+            $data = array(
+                'contact_name' => $this->input->post("contactName"),
+                'phone' => $this->input->post('phone'),
+                'travel_date' => $this->input->post('travelDate'),
+                'u_date' => $this->getCurrentDate(),
+                'request_desc' => $this->input->post('requestDesc'),
+                'user_id'=>$this->session->userdata('user_id')
+            );
+            if ($this->input->post('actionType') == ACTION_ADD) {
+                $this->requestTour->insert($data);
+            }else{
+                $this->requestTour->update($data,array('request_id'=>$this->input->post('requestId')));
+            }
+            redirect('user/userPage','refresh');
+            
+        }
+
+
+
     }
     
     function __destruct()

@@ -4,6 +4,6 @@
     <li class="cat-item"><a href="<?=site_url('user/editUser');?>" class="upper">ข้อมูลส่วนตัว</a></li>
     <li class="cat-item"><a href="<?=site_url('user/changePasswordPage')?>" class="upper">เปลี่ยนรหัสผ่าน</a></li>
     <li class="cat-item"><a href="<?=site_url('user/orderListPage');?>" class="upper">รายการสั่งซื้อ</li>
-    <li class="cat-item"><a href="#" class="upper">จัดแพคเก็จ</a></li>
+    <li class="cat-item"><a href="<?=site_url('order/requestTourPage');?>" class="upper">จัดทัวร์</a></li>
   </ul>
 </div>

@@ -108,11 +108,10 @@ class User extends Main_Controller
     }
     
     public function orderListPage(){
+        $this->load->library('my_pagination');
         $page = empty($this->uri->segment(3))?1:$this->uri->segment(3);
-        
-        $this->load->library(array('pagination','myPagination'));
         $userId = $this->session->userdata("user_id");
-        $pagingConfig = $this->myPagination->init('user/orderListPage',$this->order->countAllWithCriteria(array('user_id'=>$userId)));
+        $pagingConfig = $this->my_pagination->init('user/orderListPage',$this->order->countAllWithCriteria(array('user_id'=>$userId)));
         $limit = array($pagingConfig['per_page'],(($page-1) * $pagingConfig['per_page']));
 
         $data['orderData'] = $this->order->getOrderByCriteria(array("r.user_id"=>$userId),$limit);

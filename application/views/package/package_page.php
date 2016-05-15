@@ -7,13 +7,21 @@
                   <div class="form-group">
                     <?php
                         $selectAreaAttr = array('class'=>'form-control input-lg rounded primary','id'=>'packageAreaId');
-                        echo form_open('package/filterByArea',array('id'=>'form-filterByArea'));
                         echo form_dropdown("areaId",$areaData,isset($areaSelected)?$areaSelected:'',$selectAreaAttr);
-                        echo form_close();
+
                     ?>
                   </div>
               </div>
-              
+                <div class="col-md-10 text-right">
+                    <div class="order-content pull-right">
+                        <div class="form-group">
+                            <?php
+                                $selectPackageTypeAttr = array('class'=>'form-control input-lg rounded','id'=>'packageTypeId');
+                                echo form_dropdown('typeId',$packageTypeData,isset($packageTypeSelected)?$packageTypeSelected:'',$selectPackageTypeAttr);
+                            ?>
+                        </div>
+                    </div>
+                </div>
             </div>
           </div>
             <?php 

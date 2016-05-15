@@ -23,7 +23,7 @@
     <div class="icon-content img-circle"><i class="fa fa-table"></i></div>
     <div class="icon-box-content">
       <h5 class="upper">
-      	<a href="#">จัดแพคเก็จ</a>
+      	<a href="<?=site_url('order/requestTourPage');?>">จัดทัวร์</a>
       </h5>
     </div>
   </div>
