@@ -53,4 +53,20 @@ class My_pagination {
         return $config;
     }
 
+    public function initAdmin($base_url,$total_rows,$linkId){
+        $config['per_page']          = 1;
+        $config['uri_segment']       = 4;
+        $config['base_url']          = base_url().$base_url;
+        $config['total_rows']        = $total_rows;
+        $config['use_page_numbers']  = TRUE;
+        $config['first_tag_open'] = $config['last_tag_open']= $config['num_tag_open'] = "<li id='$linkId'>";
+        $config['next_tag_open']="<li class='next hidden-xs' id='$linkId'>";
+        $config['prev_tag_open'] = "<li class='previous hidden-xs' id='$linkId'>";
+        $config['first_tag_close'] = $config['last_tag_close']= $config['next_tag_close']= $config['prev_tag_close'] = $config['num_tag_close'] ="</li>";
+        $config['cur_tag_open'] = '<li><span class="current">';
+        $config['cur_tag_close'] = "</span></li>";
+        $this->ci->pagination->initialize($config);
+        return $config;
+    }
+
 }

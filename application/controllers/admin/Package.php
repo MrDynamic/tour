@@ -37,7 +37,7 @@
 		        $this->log_debug('Package Id',$packageId);
 		        if(!empty($packageId)){
     		        
-    		        $data = $this->mPackage->getDataSpecifyField("package_type_id,package_id,package_name,package_desc,price,date_format(travel_date,'%Y-%m-%d') travel_date
+    		        $data = $this->mPackage->getDataSpecifyField("area_id,discount,package_type_id,package_id,package_name,package_desc,price,date_format(travel_date,'%Y-%m-%d') travel_date
     		            ,date_format(expire_date,'%Y-%m-%d') expire_date,pdf_path,thumbnail",array('package_id'=>$packageId));
     		        if($data != null){
     		            $editData['editData'] = $data[0];
@@ -90,15 +90,13 @@
 		                      
 		                      //-- remove old file
 		                      if(null != $this->input->post('tourProgram_hide') && $this->input->post('tourProgram_hide') != ""){
-		                          unlink($this->input->post('tourProgram_hide'));
+								  $this->deleteFile($this->input->post('tourProgram_hide'));
 		                      }
 		                  }
 		              }
 		        }
 		        
 		        if($response){
-// 		            $idx = array_search('packageId',array_keys($packageData));
-// 		            $this->log_debug("packageId index",$idx);
 		            unset($packageData['packageId'],$packageData['tourProgram_hide'],$packageData['thumbnail_hide']);
 		            $this->log_debug('update package data',print_r($packageData,true));
 		            $response = $this->mPackage->update($packageData,array('package_id'=>$packageId));
@@ -116,40 +114,38 @@
 		public function add(){
 			$response = true;
 			$this->log_debug('add');
-			try
-	        {
-				$this->load->library('upload', $this->getConfigUpload());
 
-				if (!$this->upload->do_upload('thumbnail')){
-					$response = false;
-				}else{
-				    $this->log_debug('upload data thumbnail',print_r($this->upload->data(),true));
-					$this->resize($this->upload->data());
-					$pathThumbnail = $this->upload->data()['file_name'];
-					if($this->upload->do_upload('tourProgram')){
-					    $this->log_debug('upload data pdf',print_r($this->upload->data(),true));
-						$pathPdf = $this->upload->data()['file_name'];
+			$this->load->library('upload', $this->getConfigUpload());
 
-						$packageData = $this->input->post();
-						unset($packageData['packageId']);
-						unset($packageData['tourProgram_hide']);
-						unset($packageData['thumbnail_hide']);
-						
-						$packageData['thumbnail'] = $pathThumbnail;
-						$packageData['pdf_path'] = $pathPdf;
-						$this->log_debug('insert data',print_r($packageData,true));
-						$response = $this->mPackage->insert($packageData);
+			if (!$this->upload->do_upload('thumbnail')){
+				$response = false;
+			}else{
+				$this->log_debug('upload data thumbnail',print_r($this->upload->data(),true));
+				$this->resize($this->upload->data());
+				$pathThumbnail = $this->upload->data()['file_name'];
+				if($this->upload->do_upload('tourProgram')){
+					$this->log_debug('upload data pdf',print_r($this->upload->data(),true));
+					$pathPdf = $this->upload->data()['file_name'];
 
-					}
+					$packageData = $this->input->post();
+					unset($packageData['packageId']);
+					unset($packageData['tourProgram_hide']);
+					unset($packageData['thumbnail_hide']);
 
+					$packageData['thumbnail'] = $pathThumbnail;
+					$packageData['pdf_path'] = $pathPdf;
+					$packageData['expire_date'] = increaseDate(7,$this->input->post('travel_date'));
+					$response = $this->mPackage->insert($packageData)==1;
+					
 				}
-	             
-	        }
-	        catch(Exception $err)
-	        {
-	            $this->log_error("error",$err->getMessage());
-	            $response = false;
-	        }
+
+			}
+
+			if(!$response){
+
+				$this->deleteFile(getFilePath($pathPdf));
+				$this->deleteFile(getFilePath($pathThumbnail));
+			}
 			echo $response;
 		}
 

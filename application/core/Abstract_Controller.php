@@ -220,7 +220,7 @@ class Admin_Controller extends Abstract_Controller
 						'KEY'=>MENU_ORDER
 					),
 					array(
-						'NAME'=>'รายการทัวร์',
+						'NAME'=>'รายการจัดทัวร์',
 						'URL'=>'admin/manageOrder/requestTour',
 						'KEY'=>MENU_RQUEST_TOUR
 					)

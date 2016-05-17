@@ -21,4 +21,9 @@ class M_Menu extends Abstract_Model{
 		*/
 
 	}
+	
+	protected function generateQuery($criteria = array(), $limit = array())
+	{
+		// TODO: Implement generateQuery() method.
+	}
 }

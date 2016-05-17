@@ -33,16 +33,7 @@ class M_Order extends Abstract_Model
     
 
     public function getOrderByCriteria($criteria=array(),$limit=array(),$resultIsArray=false){
-        $criteria['r.delete_flag'] = 'N';
-        $this->db->select("r.order_id,s.status_name status,r.status status_code,r.phone,r.transaction_id,sum(d.price * d.qty) total,concat(r.firstname,' ',r.lastname) contact");
-        $this->db->from('tbl_order r');
-        $this->db->join('tbl_order_details d','r.order_id = d.order_id','inner');
-        $this->db->join('tbl_package p','d.package_id = p.package_id','inner');
-        $this->db->join('tbl_status s','r.status=s.status_code','inner');
-        $this->db->where($criteria);
-        $this->db->group_by("r.order_id");
-        $this->db->order_by("r.order_id","desc");
-        $this->db = $this->getLimit($this->db,$limit);
+        $this->db = $this->generateQuery($criteria,$limit);
         if($resultIsArray){
             $result = $this->db->get()->result_array();
         }else{
@@ -50,6 +41,20 @@ class M_Order extends Abstract_Model
         }
 
         return $result;
+    }
+
+    protected function generateQuery($criteria=array(), $limit=array()){
+        $criteria['r.delete_flag'] = 'N';
+        $this->db->select("r.order_id,s.status_name status,r.payment_status,r.status status_code,r.phone,r.transaction_id,sum(d.price * d.qty) total,concat(r.firstname,' ',r.lastname) contact");
+        $this->db->from('tbl_order r');
+        $this->db->join('tbl_order_details d','r.order_id = d.order_id','inner');
+        $this->db->join('tbl_package p','d.package_id = p.package_id','inner');
+        $this->db->join('tbl_status s','r.status=s.status_code','inner');
+        $this->db->like($criteria);
+        $this->db->group_by("r.order_id");
+        $this->db->order_by("r.order_id","desc");
+        $this->db = $this->getLimit($this->db,$limit);
+        return $this->db;
     }
 
     public function getOrderDetailsById($orderId,$userId){
@@ -60,12 +65,13 @@ class M_Order extends Abstract_Model
         $this->db->where(array("d.order_id"=>$orderId,"r.user_id"=>$userId));
         return $this->db->get()->result_array();
     }
-    
+
     protected function getTableName()
     { return "tbl_order"; }
 
     function __destruct()
     {}
+
 }
 
 ?>

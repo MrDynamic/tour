@@ -11,8 +11,7 @@
 		$uploadThumbnail = array('name'=>'thumbnail','id'=>'thumbnail','required'=>'');
 		$uploadPdf = array('name'=>'tourProgram','id'=>'tourProgram','required'=>'');
 		$inputTravelDate = array('name'=>'travel_date','id'=>'travelDate','type'=>'date','required'=>'');
-		$inputExpireDate = array('name'=>'expire_date','id'=>'expireDate','type'=>'date','required'=>'');
-    	$inputPackageId = array('name'=>'packageId','id'=>'packageId','type'=>'hidden');
+		$inputPackageId = array('name'=>'packageId','id'=>'packageId','type'=>'hidden');
 		$inputDiscountAttr = array('name'=>'discount','id'=>'discount');
         if($action==ACTION_ADD){
             $action = 'admin/package/add';
@@ -28,7 +27,6 @@
             $inputPrice['value'] = $editData->price;
             $textDesc['value'] = $editData->package_desc;
             $inputTravelDate['value'] = $editData->travel_date;
-            $inputExpireDate['value'] = $editData->expire_date;
             $inputPackageId['value'] = $editData->package_id;
             $pdfPath = $editData->pdf_path;
             $thumbnailPath = getFilePath($editData->thumbnail);
@@ -59,7 +57,6 @@
 		}
 		
 		echo create_input(array('วันที่เดินทาง','travelDate'),$inputTravelDate);
-		echo create_input(array('วันสิ้นสุด','expireDate'),$inputExpireDate);
 		echo create_textarea(array('คำอธิบาย','packageDesc'),$textDesc);
 		echo form_input(array('type'=>'hidden','name'=>'tourProgram_hide','id'=>'tourProgram_hide'));
 		echo form_input(array('type'=>'hidden','name'=>'thumbnail_hide','id'=>'thumbnail_hide'));

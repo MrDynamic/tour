@@ -14,4 +14,8 @@ class M_Portfolio extends Abstract_Model
         return "tbl_portfolio";
     }
     
+    protected function generateQuery($criteria = array(), $limit = array())
+    {
+        // TODO: Implement generateQuery() method.
+    }
 }

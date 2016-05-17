@@ -13,6 +13,11 @@ class M_District extends Abstract_Model
 
     function __destruct()
     {}
+
+    protected function generateQuery($criteria = array(), $limit = array())
+    {
+        // TODO: Implement generateQuery() method.
+    }
 }
 
 ?>

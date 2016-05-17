@@ -2,7 +2,8 @@
 abstract class Abstract_Model extends CI_Model{
 
     protected abstract function getTableName();
-    
+    protected abstract function generateQuery($criteria=array(),$limit=array());
+
 	public function __construct()
     {
         parent::__construct();
@@ -75,6 +76,11 @@ abstract class Abstract_Model extends CI_Model{
         $this->db->from($this->getTableName());
         $criteria['delete_flag'] = 'N';
         $this->db->where($criteria);
+        return $this->db->count_all_results();
+    }
+
+    public function countByCriteria($criteria=array()){
+        $this->db = $this->generateQuery($criteria);
         return $this->db->count_all_results();
     }
     

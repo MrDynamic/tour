@@ -5,10 +5,12 @@
           (isset($form) && !empty($form))? print $form:'';
         ?>
     </section>
-    <section class="panel" id="detail">
-        <?php 
-          (isset($detail) && !empty($detail))? print $detail:'';
-        ?>
-    </section>
   </div>
+    <div class="col-lg-12">
+        <section class="panel" id="detail">
+            <?php
+            (isset($detail) && !empty($detail))? print $detail:'';
+            ?>
+        </section>
+    </div>
 </div>

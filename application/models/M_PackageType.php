@@ -11,4 +11,8 @@ class M_PackageType extends Abstract_Model{
         parent::__construct();
     }
 
+    protected function generateQuery($criteria = array(), $limit = array())
+    {
+        // TODO: Implement generateQuery() method.
+    }
 }

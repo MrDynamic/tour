@@ -14,7 +14,7 @@ class Test extends Main_Controller
     }
 
     public function index(){
-        echo $this->getCurrentDate();
+        echo date('d/m/y',increaseDate(5,'2016-02-28'));
     }
 
 }

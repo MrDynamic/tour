@@ -13,4 +13,9 @@ class M_Area extends Abstract_Model
     {
         return "tbl_area";
     }
+
+    protected function generateQuery($criteria = array(), $limit = array())
+    {
+        // TODO: Implement generateQuery() method.
+    }
 }

@@ -7,11 +7,11 @@
 		
 		public function getPackageList($criteria=array(),$limit=array()){
 
-			$this->db = $this->generatePackageQuery($criteria,$limit);
+			$this->db = $this->generateQuery($criteria,$limit);
 			return $this->db->get()->result();
 		}
 
-		public function generatePackageQuery($criteria=array(),$limit=array()){
+		protected function generateQuery($criteria=array(), $limit=array()){
 			$criteria['p.delete_flag'] = 'N';
 			$this->db->select("package_type_name,package_id,package_name,package_desc,price,discount,p.thumbnail,date_format(travel_date,'%d/%m/%Y') travel_date");
 			$this->db->from("tbl_package p");
@@ -31,9 +31,4 @@
 		    return $this->db->get()->result();
 		}
 
-		public function countPackage($criteria=array()){
-			$this->db = $this->generatePackageQuery($criteria);
-			return $this->db->count_all_results();
-
-		}
 	}

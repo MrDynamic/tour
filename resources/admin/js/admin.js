@@ -21,6 +21,13 @@ $().ready(function() {
 			callServiceWithContent(url,formData,saveResponse);
 		}
 	});
+
+	$("#admin-paging > a").click(function(){
+		var url = $(this).attr('href');
+		$("#form-criteria").attr('action',url);
+		$("#form-criteria").submit();
+		return false;
+	});
 });
 
 function refreshPictureList(packageId){

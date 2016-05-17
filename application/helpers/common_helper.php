@@ -9,3 +9,8 @@
 function getCurrentDate(){
     return date('Y-m-d H:i:s');
 }
+
+
+function increaseDate($num,$date){
+    return strtotime("+".$num." day", strtotime($date));
+}

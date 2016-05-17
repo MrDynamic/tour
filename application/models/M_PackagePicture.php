@@ -13,6 +13,10 @@ class M_PackagePicture extends \Abstract_Model
         return "tbl_package_picture";
     }
 
+    protected function generateQuery($criteria = array(), $limit = array())
+    {
+        // TODO: Implement generateQuery() method.
+    }
 }
 
 ?>

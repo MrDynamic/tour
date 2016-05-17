@@ -34,7 +34,7 @@ class Package extends Main_Controller
             $data['packageTypeSelected'] = $packageTypeId;
         }
 
-        $pagingConfig = $this->my_pagination->initPackage("package/index",$this->package->countPackage($criteria));
+        $pagingConfig = $this->my_pagination->initPackage("package/index",$this->package->countByCriteria($criteria));
         $limit = array($pagingConfig['per_page'],(($page-1) * $pagingConfig['per_page']));
         $data["paginationData"]   = $this->pagination;
         $data['packageData'] = $this->package->getPackageList($criteria,$limit);
