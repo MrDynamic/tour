@@ -80,4 +80,21 @@ class ManageOrder extends Admin_Controller
         $this->template['body'] = $this->load->view(MAIN_CONTAINER,$data,true);
         $this->load->view(ADMIN_LAYOUT,$this->template);
     }
+
+    public function requestDetail($requestId){
+        $formData = array();
+        if(!empty($requestId)){
+            $this->load->model(array('M_RequestTour'=>'requestTour'));
+            $requestData = $this->requestTour->getDataSpecifyField('request_id,contact_name,phone,date_format(travel_date,"%Y-%m-%d") travel_date,request_desc'
+                ,array('request_id'=>$requestId));
+            if(sizeof($requestData) > 0){
+                $formData['requestData']=$requestData[0];
+            }
+            $this->log_debug('formData',print_r($formData,true));
+
+        }
+        $data['form'] = $this->load->view('admin/order/request_order_detail',$formData,true);
+        $this->template['body'] = $this->load->view(MAIN_CONTAINER,$data,true);
+        $this->load->view(ADMIN_LAYOUT,$this->template);
+    }
 }

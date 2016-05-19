@@ -30,25 +30,25 @@ abstract class Abstract_Model extends CI_Model{
 
 
     public function getAllData($isDeleteFlag=true){
-        return $this->getDataByCriteria(array(),'',$isDeleteFlag);
+        return $this->getDataByCriteria(array(),array(),$isDeleteFlag);
     }
     
-    public function getDataByCriteria($criteria,$limit="",$isDeleteFlag=true){
+    public function getDataByCriteria($criteria,$limit=array(),$isDeleteFlag=true){
         if($isDeleteFlag){
             $criteria['delete_flag'] = 'N';
         }
-
+        $this->db = $this->getLimit($this->db,$limit);
     	$query = $this->db->get_where($this->getTableName(),$criteria);
     	return $query->result();
     }
 
-    public function getDataSpecifyField($fieldName,$criteria=array(),$limit=''){
+    public function getDataSpecifyField($fieldName,$criteria=array(),$limit=array()){
         $this->db->select($fieldName);
         return $this->getDataByCriteria($criteria,$limit);
 
     }
 
-    public function getDataResultArray($fieldName,$criteria=array(),$limit='',$isDeleteFlag=true){
+    public function getDataResultArray($fieldName,$criteria=array(),$limit=array(),$isDeleteFlag=true){
         $this->db->select($fieldName);
         if($isDeleteFlag){
             $criteria['delete_flag'] = 'N';
@@ -72,9 +72,12 @@ abstract class Abstract_Model extends CI_Model{
         return $db;
     }
     
-    public function countAllWithCriteria($criteria=array()){
+    public function countAllWithCriteria($criteria=array(),$isDeleteFlag=true){
         $this->db->from($this->getTableName());
-        $criteria['delete_flag'] = 'N';
+
+        if($isDeleteFlag){
+            $criteria['delete_flag'] = 'N';
+        }
         $this->db->where($criteria);
         return $this->db->count_all_results();
     }

@@ -24,7 +24,9 @@
                 echo "<td>$row->contact_name</td>";
                 echo "<td>$row->phone</td>";
                 echo "<td>$row->status</td>";
-                echo "<td><a class=\"btn btn-info btn-xs\" href=\"<?=site_url('admin/manageOrder/requestDetail/'.$row->request_id);?>\" role=\"button\">รายละเอียด</a></td>";
+                echo '<td>';
+                echo "<a class='btn btn-info btn-xs' href=".site_url('admin/manageOrder/requestDetail/'.$row->request_id)." role='button'>รายละเอียด</a>";
+                echo "</td>";
                 echo "<td>&nbsp;</td>";
                 echo "</tr>";
             }

@@ -9,11 +9,23 @@ class PackageType extends Admin_Controller{
 		
 	}
 
-    function loadPage($formData=array(),$action=ACTION_ADD){
+    function index(){
+        $page = empty($this->uri->segment(4))?1:$this->uri->segment(4);
+        $this->loadPage(array(),ACTION_ADD,$page);
+    }
+
+    function loadPage($formData=array(),$action=ACTION_ADD,$page=1){
         $this->setActiveMenu(MENU_MAIN_PACKAGE,MENU_PACKAGE_TYPE);
-        $data['list'] = $this->mCat->getAllData();
+
         $formData['action'] = $action;
         $subView['form'] = $this->load->view('admin/package/form_add_package_type',$formData,true);
+
+        $this->load->library('my_pagination');
+        $pagingConfig = $this->my_pagination->initAdmin('admin/packageType/index',$this->mCat->countAllWithCriteria());
+        $limit = array($pagingConfig['per_page'],(($page-1) * $pagingConfig['per_page']));
+        $data["paginationData"]   = $this->pagination;
+        $data['list'] = $this->mCat->getDataByCriteria(array(),$limit);
+
         $subView['detail'] = $this->load->view('admin/package/list_package_type',$data,true);
         $this->template['body'] = $this->load->view(MAIN_CONTAINER,$subView,true);
         $this->load->view(ADMIN_LAYOUT,$this->template);
@@ -22,9 +34,7 @@ class PackageType extends Admin_Controller{
     function refreshPage(){
         redirect('/admin/package/category', 'refresh');;
     }
-    function index(){
-    	$this->loadPage();
-    }
+
 
     function saveCategory(){
         try {

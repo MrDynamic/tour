@@ -15,7 +15,8 @@ class Portfolio extends Admin_Controller
     }
 
     public function index(){
-        $this->loadPage();
+        $page = empty($this->uri->segment(4))?1:$this->uri->segment(4);
+        $this->loadPage(ACTION_ADD,array(),$page);
     }
 
     public function save(){
@@ -36,10 +37,16 @@ class Portfolio extends Admin_Controller
         echo $response;
     }
 
-    public function loadPage($action=ACTION_ADD,$formData=array()){
+    public function loadPage($action=ACTION_ADD,$formData=array(),$page=1){
         $this->setActiveMenu(MENU_MAIN_PORTFOLIO,MENU_PORTFOLIO);
         $formData['action'] = $action;
-        $data['list'] = $this->portfolio->getAllData(false);
+
+        $this->load->library('my_pagination');
+        $pagingConfig = $this->my_pagination->initAdmin('admin/portfolio/index',$this->portfolio->countAllWithCriteria(array(),false));
+        $limit = array($pagingConfig['per_page'],(($page-1) * $pagingConfig['per_page']));
+        $data["paginationData"]   = $this->pagination;
+        $data['list'] = $this->portfolio->getDataByCriteria(array(),$limit,false);
+
         $view['detail'] = $this->load->view('admin/portfolio/list_portfolio',$data,true);
         $view['form'] = $this->load->view('admin/portfolio/form_portfolio',$formData,true);
 

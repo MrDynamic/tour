@@ -1,3 +1,5 @@
+<div class="col-lg-11">
+<section class="panel" >
 <header class='panel-heading'>
   เพิ่มประเภทแพคเก็จ
 </header>
@@ -35,6 +37,7 @@
         }
 		
         echo form_open_multipart('',array('id'=>'formPackage'));
+		echo '<div class="col-lg-5">';
         echo form_input($inputPackageId);
 		echo form_input(array('type'=>'hidden','value'=>site_url($action),'id'=>'action'));
 		echo create_dropdown(array('ภูมิภาค','areaId'),'area_id',$areaType,$selectArea,$selectedArea);
@@ -42,7 +45,7 @@
 		echo create_input(array('ชื่อแพ็คเกจ','packageName'),$inputName);
 		echo create_input(array('ราคา','packagePrice'),$inputPrice);
 		echo create_input(array('ส่วนลด','discount'),$inputDiscountAttr);
-		
+		echo '</div><div class="col-lg-6">';
 		if($thumbnailPath == ''){
 		  echo create_upload(array('ภาพย่อ (800x600)','thumbnail'),$uploadThumbnail);
 		  
@@ -62,8 +65,11 @@
 		echo form_input(array('type'=>'hidden','name'=>'thumbnail_hide','id'=>'thumbnail_hide'));
 		echo form_button(array('type'=>'submit','class'=>'btn btn-primary','content'=>'Save'));
 		echo form_button(array('type'=>'reset','class'=>'btn btn-info','id'=>'btnCancel','content'=>'Cancel'));
+		echo '</div>';
 		echo form_close();
 
     ?>
+</div>
+</section>
 </div>
 

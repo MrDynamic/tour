@@ -2,3 +2,66 @@ label.error{
     padding-top:10px;
     color:#ef3038;
 }
+
+.header-label {
+    font-weight: bold;
+}
+/* 03. Padding modifiers
+   ---------------------------------------------------------------------------*/
+.sep-top-xs {
+    padding-top: 1.5em;
+}
+.sep-top-sm {
+    padding-top: 2.2em;
+}
+.sep-top-md {
+    padding-top: 3em;
+}
+.sep-top-lg {
+    padding-top: 4.3em;
+}
+.sep-top-1x{
+    padding-top: 5.5em;
+}
+.sep-top-2x {
+    padding-top: 6.5em;
+}
+.sep-top-3x {
+    padding-top: 9.4em;
+}
+.sep-top-4x {
+    padding-top: 11.5em;
+}
+.sep-top-5x {
+    padding-top: 16em;
+}
+.sep-bottom-xs {
+    padding-bottom: 1.5em;
+}
+.sep-bottom-sm {
+    padding-bottom: 2.2em;
+}
+.sep-bottom-md {
+    padding-bottom: 3em;
+}
+.sep-bottom-lg {
+    padding-bottom: 4.3em;
+}
+.sep-bottom-2x {
+    padding-bottom: 6.5em;
+}
+.sep-bottom-3x {
+    padding-bottom: 9.4em;
+}
+.sep-bottom-4x {
+    padding-bottom: 11.5em;
+}
+.sep-bottom-5x {
+    padding-bottom: 16em;
+}
+.no-padding {
+    padding: 0;
+}
+.no-margin {
+    margin: 0;
+}

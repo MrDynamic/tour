@@ -53,8 +53,8 @@ class My_pagination {
         return $config;
     }
 
-    public function initAdmin($base_url,$total_rows,$linkId){
-        $config['per_page']          = 1;
+    public function initAdmin($base_url,$total_rows,$linkId=''){
+        $config['per_page']          = 10;
         $config['uri_segment']       = 4;
         $config['base_url']          = base_url().$base_url;
         $config['total_rows']        = $total_rows;

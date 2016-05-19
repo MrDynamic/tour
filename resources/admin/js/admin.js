@@ -84,7 +84,14 @@ $("#formPackage").validate({
 			overlay();
 			// var formData = $("#formPackage").serializeObject();  
 			var formData = new FormData($("#formPackage")[0]);
-			callServiceWithContent($('#action').val(),formData,saveResponse);
+			callServiceWithContent($('#action').val(),formData,function(response){
+				if(response==1){
+					alert('บันทึกข้อมูลเรียบร้อยแล้ว');
+					window.location = 'admin/package/index';
+				}else{
+					alert('ไม่สามารถบันทึกข้อมูลได้');
+				}
+			});
 		}
 
 });

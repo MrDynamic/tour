@@ -32,4 +32,9 @@
           ?>
           </tbody>
       </table>
+    <div class="col-lg-11">
+        <ul class="pager">
+            <?=$paginationData->create_links(); ?>
+        </ul>
+    </div>
 </div>

@@ -8,6 +8,15 @@
 		$result .= CLOSE_FORM_GROUP;
 		return $result;
 	}
+
+	function create_output($label,$value){
+		$result ='<div class="row sep-bottom-xs">';
+		$result .= '<div class="col-lg-2 header-label">'.$label.'</div>';
+		$result .= '<div class="col-lg-10">'.$value.'</div>';
+		//$result .= '<div class="col-lg-10">&nbsp;</div>';
+		$result .='</div>';
+		return $result;
+	}
 	
 	function setAttributeForm($attr){
 	    $attr['class'] = 'form-control';

@@ -7,7 +7,8 @@
 		}
 
 		public function index(){
-            $this->loadPage();
+			$page = empty($this->uri->segment(4))?1:$this->uri->segment(4);
+            $this->loadPage(ACTION_ADD,array(),$page);
 		}
 
 		public function listPackagePicture(){
@@ -17,12 +18,19 @@
 		   echo $this->load->view('admin/package/list_package_picture',$pictureList,true);
 		}
 		
-		public function loadPage($action=ACTION_ADD,$formData=array()){
+		public function loadPage($action=ACTION_ADD,$formData=array(),$page=1){
 		    $this->setActiveMenu(MENU_MAIN_PACKAGE,MENU_PACKAGE);
 			$formData['areaType'] = $this->generateSelectItems($this->area->getDataSpecifyField('area_id as id,area_name as label'));
 		    $formData['packageType'] = $this->generateSelectItems($this->mCat->getDataSpecifyField('package_type_id as id,package_type_name as label'));
 		    $formData['action'] = $action;
-		    $data['list'] = $this->mPackage->getPackageList();
+			$this->log_debug('formdata',print_r($formData,true));
+
+
+			$this->load->library('my_pagination');
+			$pagingConfig = $this->my_pagination->initAdmin('admin/package/index',$this->mPackage->countByCriteria());
+			$limit = array($pagingConfig['per_page'],(($page-1) * $pagingConfig['per_page']));
+			$data["paginationData"]   = $this->pagination;
+			$data['list'] = $this->mPackage->getPackageList(array(),$limit);
 		    $view['detail'] = $this->load->view('admin/package/list_package',$data,true);
 		    $view['form'] = $this->load->view('admin/package/form_add_package',$formData,true);
 		    
@@ -108,7 +116,7 @@
 		        $response = false;
 		    }
 		    $this->log_debug("Update response",$response);
-		    return $response;
+		    echo $response;
 		}
 		
 		public function add(){
