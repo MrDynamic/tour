@@ -127,3 +127,8 @@ define('STATUS_SUCCESS','S');
 define('STATUS_WAITING','W');
 define('STATUS_CANCEL','C');
 
+// Request Status
+define('REQUEST_STATUS_SUCCESS','RS');
+define('REQUEST_STATUS_WAITING','RW');
+define('REQUEST_STATUS_CANCEL','RC');
+

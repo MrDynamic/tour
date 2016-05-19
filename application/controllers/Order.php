@@ -220,7 +220,7 @@ class Order extends Main_Controller
                 'travel_date' => $this->input->post('travelDate'),
                 'request_desc' => $this->input->post('requestDesc'),
                 'user_id'=>$this->session->userdata('user_id'),
-                'status_code'=>STATUS_WAITING
+                'status_code'=>REQUEST_STATUS_WAITING
             );
             if ($this->input->post('actionType') == ACTION_ADD) {
                 $this->requestTour->insert($data);

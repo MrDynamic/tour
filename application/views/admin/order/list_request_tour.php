@@ -9,6 +9,7 @@
             <th>ชื่อผู้ติดต่อ</th>
             <th>เบอร์โทร</th>
             <th>สถานะ</th>
+            <td>หมายเหตุ</td>
             <td>รายละเอียด</td>
             <th>ยกเลิก</th>
         </tr>
@@ -24,6 +25,7 @@
                 echo "<td>$row->contact_name</td>";
                 echo "<td>$row->phone</td>";
                 echo "<td>$row->status</td>";
+                echo "<td>$row->remark</td>";
                 echo '<td>';
                 echo "<a class='btn btn-info btn-xs' href=".site_url('admin/manageOrder/requestDetail/'.$row->request_id)." role='button'>รายละเอียด</a>";
                 echo "</td>";
