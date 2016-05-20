@@ -33,9 +33,7 @@
 			$data['list'] = $this->mPackage->getPackageList(array(),$limit);
 		    $view['detail'] = $this->load->view('admin/package/list_package',$data,true);
 		    $view['form'] = $this->load->view('admin/package/form_add_package',$formData,true);
-		    
-		    $this->template['body'] = $this->load->view(MAIN_CONTAINER,$view,true);
-		    $this->load->view(ADMIN_LAYOUT,$this->template);
+			$this->loadTemplate($data);
 		}
 		
 		

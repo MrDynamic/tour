@@ -14,6 +14,12 @@ abstract class Abstract_Controller extends CI_Controller {
    function __destruct() {
 		// $this->db->close();
    }
+
+	protected function generatePDF($html,$fileName){
+		$this->load->library('my_pdf');
+		$this->my_pdf->pdf->WriteHTML($html);
+		$this->my_pdf->pdf->Output($fileName, "D");
+	}
    
    protected function deleteFile($path){
 	   try{
@@ -47,6 +53,12 @@ abstract class Abstract_Controller extends CI_Controller {
     	}
     	return $result;
     }
+
+	protected function generatePackageItems(){
+		$this->load->model(array('M_Package'=>'package'));
+		return $this->generateSelectItems($this->package->getDataSpecifyField('package_id as id,package_name as label'));
+
+	}
 
 	protected function getAllProvince(){
 	    $this->load->model('M_Province','mProvince');
@@ -225,6 +237,17 @@ class Admin_Controller extends Abstract_Controller
 						'KEY'=>MENU_RQUEST_TOUR
 					)
 				)
+			),
+			array(
+				'MENU_NAME'=>'รายงาน',
+				'KEY'=>MENU_MAIN_REPORT,
+				'SUB_MENU'=>array(
+					array(
+						'NAME'=>'รายงานการสั่งซื้อ',
+						'URL'=>'admin/report',
+						'KEY'=>MENU_REPORT_ORDER
+					)
+				)
 			)
 			
 		);
@@ -245,6 +268,11 @@ class Admin_Controller extends Abstract_Controller
 
 	protected function setActiveMenu($mainName,$subName){
 		$this->template['active_menu'] = array($mainName,$subName);
+	}
+
+	protected function loadTemplate($data=array()){
+		$this->template['body'] = $this->load->view(MAIN_CONTAINER,$data,true);
+		$this->load->view(ADMIN_LAYOUT,$this->template);
 	}
 
 }

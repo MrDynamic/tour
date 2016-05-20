@@ -22,7 +22,7 @@ class ManageOrder extends Admin_Controller
         /*
          * Form Criteria
          */
-        $formData['packageData'] = $this->generateSelectItems($this->package->getDataSpecifyField('package_id as id,package_name as label'));
+        $formData['packageData'] = $this->generatePackageItems();
         $formData['packageSelected'] = $packageId;
         $formData['customerName'] =$customerName;
         $data['form'] = $this->load->view('admin/order/form_order_criteria',$formData,true);
@@ -44,9 +44,7 @@ class ManageOrder extends Admin_Controller
         $detailData['orderData'] = $this->order->getOrderByCriteria($criteria,$limit);
         $detailData["paginationData"]   = $this->pagination;
         $data['detail'] = $this->load->view('admin/order/list_order',$detailData,true);
-
-        $this->template['body'] = $this->load->view(MAIN_CONTAINER,$data,true);
-        $this->load->view(ADMIN_LAYOUT,$this->template);
+        $this->loadTemplate($data);
     }
 
 
@@ -76,9 +74,7 @@ class ManageOrder extends Admin_Controller
         $detailData['requestData'] = $this->requestTour->getRequestTour($criteria,$limit);
         $detailData["paginationData"]   = $this->pagination;
         $data['detail'] = $this->load->view('admin/order/list_request_tour',$detailData,true);
-
-        $this->template['body'] = $this->load->view(MAIN_CONTAINER,$data,true);
-        $this->load->view(ADMIN_LAYOUT,$this->template);
+        $this->loadTemplate($data);
     }
 
     public function requestDetail($requestId=''){
@@ -96,8 +92,7 @@ class ManageOrder extends Admin_Controller
         $data['form'] = $this->load->view('admin/order/request_order_detail',$formData,true);
         $detailData['statusData'] = $this->generateSelectItems($this->status->getDataSpecifyField('status_code id,status_name label',array('status_type'=>2)));
         $data['detail'] = $this->load->view('admin/order/form_save_status',$detailData,true);
-        $this->template['body'] = $this->load->view(MAIN_CONTAINER,$data,true);
-        $this->load->view(ADMIN_LAYOUT,$this->template);
+        $this->loadTemplate($data);
     }
 
     public function saveStatus(){
@@ -115,4 +110,5 @@ class ManageOrder extends Admin_Controller
         redirect('admin/manageOrder/requestTour','refresh');
 
     }
+
 }

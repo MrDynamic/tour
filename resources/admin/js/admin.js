@@ -28,6 +28,10 @@ $().ready(function() {
 		$("#form-criteria").submit();
 		return false;
 	});
+
+	//-- set validate form
+	$("#form-report-criteria").validate();
+	$("#form-save-status").validate();
 });
 
 function refreshPictureList(packageId){

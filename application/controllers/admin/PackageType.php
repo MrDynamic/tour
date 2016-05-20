@@ -27,8 +27,7 @@ class PackageType extends Admin_Controller{
         $data['list'] = $this->mCat->getDataByCriteria(array(),$limit);
 
         $subView['detail'] = $this->load->view('admin/package/list_package_type',$data,true);
-        $this->template['body'] = $this->load->view(MAIN_CONTAINER,$subView,true);
-        $this->load->view(ADMIN_LAYOUT,$this->template);
+        $this->loadTemplate($data);
     }
 
     function refreshPage(){

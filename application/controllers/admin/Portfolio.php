@@ -50,8 +50,7 @@ class Portfolio extends Admin_Controller
         $view['detail'] = $this->load->view('admin/portfolio/list_portfolio',$data,true);
         $view['form'] = $this->load->view('admin/portfolio/form_portfolio',$formData,true);
 
-        $this->template['body'] = $this->load->view(MAIN_CONTAINER,$view,true);
-        $this->load->view(ADMIN_LAYOUT,$this->template);
+        $this->loadTemplate($view);
     }
 
     public function deletePortfolioById(){

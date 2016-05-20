@@ -176,10 +176,7 @@ class Order extends Main_Controller
         $orderId = $this->uri->segment(3);
         $html = $this->load->view('order/receipt',$this->getOrderData($orderId),true); $this->log_debug('html',print_r($html,true));
         $pdfFilePath = "ocharos_".str_pad($orderId,5,"0",STR_PAD_LEFT).".pdf";
-        $this->load->library('my_pdf');
-        $this->my_pdf->pdf->WriteHTML($html);
-        $this->my_pdf->pdf->Output($pdfFilePath, "D");
-//        $this->load->view('order/receipt',$this->getOrderData($orderId));
+        $this->generatePDF($html,$pdfFilePath);
             
     }
 

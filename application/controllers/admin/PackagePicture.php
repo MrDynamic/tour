@@ -11,10 +11,9 @@ class PackagePicture extends Admin_Controller
 
    public function index(){
        $this->setActiveMenu(MENU_MAIN_PACKAGE,MENU_PACKAGE_PICTURE);
-       $formData['package'] = $this->generateSelectItems($this->mPackage->getDataSpecifyField('package_id as id,package_name as label'));
+       $formData['package'] = $this->generatePackageItems();
        $data['form'] = $this->load->view('admin/package/form_add_package_picture',$formData,true);
-       $this->template['body'] = $this->load->view(MAIN_CONTAINER,$data,true);
-       $this->load->view(ADMIN_LAYOUT,$this->template);
+       $this->loadTemplate($data);
    }
    
    public function add(){
