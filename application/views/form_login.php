@@ -1,4 +1,4 @@
-<?php if(isset($_SESSION['username'])) { ?>
+<?php if(isset($_SESSION['role']) && $_SESSION['role'] == USER_ROLE) { ?>
 <a id="dropdownMenuLogin" href="#" data-toggle="dropdown" class="upper dropdown-toggle"><?=$_SESSION['username'];?></a>
 <div aria-labelledby="dropdownMenuLogin" class="dropdown-menu widget-box">
     <div class="shopping_cart_dropdown" style="text-align: left">
@@ -20,6 +20,8 @@
     </div>   
     </div>
 </div>
+<?php }else if(isset($_SESSION['role']) && $_SESSION['role'] == ADMIN_ROLE){ ?>
+    <a id="dropdownMenuLogin" href="<?=site_url('admin');?>" class="upper dropdown-toggle"><?=$_SESSION['username'];?></a>
 <?php }else{?>
 <a id="dropdownMenuLogin" href="#" data-toggle="dropdown" class="upper dropdown-toggle">เข้าสู่ระบบ</a>
 <div aria-labelledby="dropdownMenuLogin" class="dropdown-menu widget-box">

@@ -33,7 +33,7 @@
 			$data['list'] = $this->mPackage->getPackageList(array(),$limit);
 		    $view['detail'] = $this->load->view('admin/package/list_package',$data,true);
 		    $view['form'] = $this->load->view('admin/package/form_add_package',$formData,true);
-			$this->loadTemplate($data);
+			$this->loadTemplate($view);
 		}
 		
 		

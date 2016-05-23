@@ -72,7 +72,10 @@
               </form>
               <ul class="sep-top-lg product-category">
                 <li>
-                  <h6 class="upper">ประเภท</h6><a href="#"><?=$packageData->package_type_name;?></a>
+                    <h6 class="upper">วันที่เดินทาง</h6><a href="#"><?=$packageData->travel_date;?></a>
+                </li>
+                <li>
+                    <h6 class="upper">ประเภท</h6><a href="#"><?=$packageData->package_type_name;?></a>
                 </li>
               </ul>
             </div>
@@ -92,16 +95,6 @@
                         	<a href="<?=getFilePath($packageData->pdf_path,true); ?>" style="color:red !important;" target="_blank"><i class="fa fa-file-pdf-o"></i></a>
                         </div>
                       </div>
-                  </div>
-                </div>
-                <!-- end accordion item-->
-                <!-- start accordion item-->
-                <div class="accordion-item panel">
-                  <div class="accordion-heading upper"><a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="accordion-toggle">ข้อมูลเพิ่มเติม<i class="accordion-icon fa fa-plus"></i></a></div>
-                  <div id="collapse2" class="accordion-body panel-collapse collapse">
-                    <p>
-                    <!-- additional infomation -->
-                    </p>
                   </div>
                 </div>
                 <!-- end accordion item-->

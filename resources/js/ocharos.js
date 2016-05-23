@@ -12,7 +12,9 @@ $(document).ready(function() {
 	$("#btnCancel").click(function(){
 		window.location = $('#cancelPage').val();
 	});
-	
+
+	/* start validate form */
+
 	$("#form-register").validate({
 		rules: {
 			password1: {minlength: 6 },
@@ -21,7 +23,31 @@ $(document).ready(function() {
             postalcode:{number:true,minlength:5}
           }
 	});
-	
+
+	$("#formCheckout").validate();
+
+	$("#form-changePassword").validate({
+		rules:{
+			newPassword:{minlength:6},
+			passwordConfirm:{minlength:6,equalTo:"#newPassword"}
+		}
+	});
+
+	$("#form-requestTour").validate({
+		rules:{
+			phone:{number:true,minlength:10}
+		}
+	});
+
+	$("#form-contact").validate({
+		rules:{
+			phone:{number:true,minlength:10},
+			email:{email:true}
+		}
+	});
+
+	/* End validate form */
+
 	$("#btnReserve").click(function(){
 		var qty =$("#reserveQty").val();
 		var packageId = $("#packageId").val();
@@ -32,15 +58,6 @@ $(document).ready(function() {
 		callService('order/addToCart',data,function(response){
 			window.history.back();	
 		});
-	});
-	
-	$("#formCheckout").validate();
-	
-	$("#form-changePassword").validate({
-		rules:{
-			newPassword:{minlength:6},
-			passwordConfirm:{minlength:6,equalTo:"#newPassword"}
-		}
 	});
 	
 	$("#success-alert").fadeTo(3000, 500).slideUp(1000, function(){
@@ -80,12 +97,6 @@ $(document).ready(function() {
         url = url + "?areaId=" + areaId + "&packageTypeId=" +  packageTypeId;
         window.location = url;
         return false;
-    });
-
-    $("#form-requestTour").validate({
-        rules:{
-            phone:{number:true,minlength:10}
-        }
     });
 
 	$('#confirm-delete').on('show.bs.modal', function(e) {

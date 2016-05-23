@@ -256,51 +256,14 @@
                 <div data-wow-delay="1.1s" class="icon-content img-circle wow flipInX"><i class="fa fa-clock-o"></i></div>
                 <div class="icon-box-content">
                   <h6 class="upper info-title">Facebook</h6>
-                  <p>xxx/xxxxx</p>
+                  <p>https://www.facebook.com/ocharos</p>
                 </div>
               </div>
               <!--End icon box-->
             </div>
-            <div class="col-md-6 sep-top-lg">
-              <div class="contact-form">
-                <div id="successMessage" style="display:none" class="alert alert-success text-center">
-                  <p><i class="fa fa-check-circle fa-2x"></i></p>
-                  <p>Thanks for sending your message! We'll get back to you shortly.</p>
-                </div>
-                <div id="failureMessage" style="display:none" class="alert alert-danger text-center">
-                  <p><i class="fa fa-times-circle fa-2x"></i></p>
-                  <p>There was a problem sending your message. Please, try again.</p>
-                </div>
-                <div id="incompleteMessage" style="display:none" class="alert alert-warning text-center">
-                  <p><i class="fa fa-exclamation-triangle fa-2x"></i></p>
-                  <p>Please complete all the fields in the form before sending.</p>
-                </div>
-                <form id="contactForm" action="php/contact.php" method="post" class="validate">
-                  <div class="form-group sep-top-xs">
-                    <label for="contactFormName" class="upper">ชื่อผู้ติดต่อ</label>
-                    <input id="contactFormName" type="text" placeholder="Enter name" name="name" class="form-control input-lg required">
-                  </div>
-                  <div class="form-group sep-top-xs">
-                    <label for="contactFormPhone" class="upper">โทรศัพท์</label>
-                    <input id="contactFormPhone" type="text" placeholder="Enter phone" name="phone" class="form-control input-lg required">
-                  </div>
-                  <div class="form-group sep-top-xs">
-                    <label for="contactFormEmail" class="upper">Email</label>
-                    <input id="contactFormEmail" type="email" placeholder="Enter email" name="email" class="form-control input-lg required email">
-                  </div>
-                  <div class="form-group sep-top-xs">
-                    <label for="contactFormComment" class="upper">รายละเอียด</label>
-                    <textarea id="contactFormComment" placeholder="Enter comment" rows="9" name="comment" class="form-control input-lg required"></textarea>
-                  </div>
-                  <div class="form-group sep-top-xs">
-                    <button type="submit" data-wow-delay=".5s" class="btn btn-primary btn-lg wow bounceInRight"><i class="fa fa-paper-plane"></i> ส่งข้อความ</button>
-                  </div>
-                  <!--input#subject.form-control.input-lg.required(type='text', placeholder='Subject of your message', name='subject')
-                  -->
-                </form>
-                <div class="hidden"></div>
-              </div>
-            </div>
+              <!-- Start Contact Form -->
+              <?=$form_contact;  ?>
+              <!-- End Contact Form -->
           </div>
         </div>
       </section>

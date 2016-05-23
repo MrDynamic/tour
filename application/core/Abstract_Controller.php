@@ -129,6 +129,7 @@ class Main_Controller extends Abstract_Controller{
 		$this->template['form_cart'] = $this->load->view('form_cart',null,true);
 		$this->template['nav_menu'] = $this->load->view('nav_menu',null,true);
 		$this->template['footer'] = $this->load->view('footer',null,true);
+		$this->template['form_contact'] = $this->load->view('form_contact',null,true);
 	}
 
 	public  function requiredLogin(){

@@ -10,7 +10,6 @@ class Home extends Main_Controller{
 
     function index(){
         $this->template['portfolioData'] = $this->portfolio->getAllData(false);
-        $this->log_debug('portolioData',print_r($this->template,true));
         $this->load->view("_layout",$this->template);
     }
 
