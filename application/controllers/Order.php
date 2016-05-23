@@ -139,8 +139,8 @@ class Order extends Main_Controller
         $paypalInfo = $this->input->post();
         $this->log_debug('transaction data post',print_r($paypalInfo,true));
         
-        $userId  = $paypalInfo['custom'];
-        $orderId = $paypalInfo["item_number"];
+        $userId  = $paypalInfo['custom'] + 0;
+        $orderId = $paypalInfo["item_number"] + 0;
         $data['transaction_id']	= $paypalInfo["txn_id"];
 //        $data['payment_gross'] = $paypalInfo["payment_gross"];
 //        $data['currency_code'] = $paypalInfo["mc_currency"];
