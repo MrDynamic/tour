@@ -139,19 +139,19 @@ class Order extends Main_Controller
         $paypalInfo = $this->input->post();
         $this->log_debug('transaction data post',print_r($paypalInfo,true));
         
-        $data['user_id'] = $paypalInfo['custom'];
-        $data['product_id']	= $paypalInfo["item_number"];
-        $data['txn_id']	= $paypalInfo["txn_id"];
-        $data['payment_gross'] = $paypalInfo["payment_gross"];
-        $data['currency_code'] = $paypalInfo["mc_currency"];
-        $data['payer_email'] = $paypalInfo["payer_email"];
+        $userId  = $paypalInfo['custom'];
+        $orderId = $paypalInfo["item_number"];
+        $data['transaction_id']	= $paypalInfo["txn_id"];
+//        $data['payment_gross'] = $paypalInfo["payment_gross"];
+//        $data['currency_code'] = $paypalInfo["mc_currency"];
+//        $data['payer_email'] = $paypalInfo["payer_email"];
         $data['payment_status']	= $paypalInfo["payment_status"];
         
         $paypalURL = $this->paypal_lib->paypal_url;
         $result	= $this->paypal_lib->curlPost($paypalURL,$paypalInfo);
         
         if(eregi("VERIFIED",$result)){
-//           $this->message->insert($messageData);
+                $this->mOrder->update($data,array('user_id'=>$userId,'order_id'=>$orderId));
         }
     }
 

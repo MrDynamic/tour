@@ -41,7 +41,8 @@ class User extends Main_Controller
         try {
             $data = $this->input->post();
             $data['password'] = md5($this->input->post('password1'));
-            $data['c_date'] = date('Y-m-d');
+            $data['c_date'] = getCurrentDate();
+            $data['role'] = USER_ROLE;
             unset($data['password1'],$data['passwordConfirm']);
             $this->log_debug('user data',print_r($data,true));
             $this->authen->insert($data);

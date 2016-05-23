@@ -14,6 +14,12 @@ abstract class Abstract_Model extends CI_Model{
         return $this->db->insert($this->getTableName(),$data);
     }
 
+    public function insertAndGetId($data){
+        $data['u_date'] = getCurrentDate();
+        $this->db->insert($this->getTableName(),$data);
+        return $this->db->insert_id();
+    }
+
     public function update($data,$criteria){
         $data['u_date'] = getCurrentDate();
         return $this->db->update($this->getTableName(),$data,$criteria);

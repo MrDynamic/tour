@@ -136,6 +136,7 @@ class Main_Controller extends Abstract_Controller{
 		$this->log_debug('config',print_r($methodAuthen,true));
 		if(isset($this->router) && in_array($this->router->method,$methodAuthen)){
 			$this->log_debug('check session',$this->router->method);
+			$this->log_debug('session',print_r($this->session->userdata(),true));
 			if(empty($this->session->userdata('user_id'))
 				|| empty($this->session->userdata('username'))
 				|| empty($this->session->userdata('role'))){
