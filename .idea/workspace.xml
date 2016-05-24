@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="adad861c-bf3d-4dca-90d4-76b23daa0464" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/Contact.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/M_Contact.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/form_contact.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Home.php" afterPath="$PROJECT_DIR$/application/controllers/Home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/Package.php" afterPath="$PROJECT_DIR$/application/controllers/admin/Package.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/PackageType.php" afterPath="$PROJECT_DIR$/application/controllers/admin/PackageType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/core/Abstract_Controller.php" afterPath="$PROJECT_DIR$/application/core/Abstract_Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/_layout.php" afterPath="$PROJECT_DIR$/application/views/_layout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/form_login.php" afterPath="$PROJECT_DIR$/application/views/form_login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/layout_sidebar.php" afterPath="$PROJECT_DIR$/application/views/layout_sidebar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/package/package_detail.php" afterPath="$PROJECT_DIR$/application/views/package/package_detail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/js/ocharos.js" afterPath="$PROJECT_DIR$/resources/js/ocharos.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2016-05-23.php" afterPath="" />
     </list>
     <ignored path="tour.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -363,12 +351,12 @@
       <option name="presentableId" value="Default" />
       <updated>1462438865732</updated>
       <workItem from="1462438867100" duration="64148000" />
-      <workItem from="1463298369779" duration="38251000" />
+      <workItem from="1463298369779" duration="38364000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102399000" />
+    <option name="totallyTimeSpent" value="102512000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
