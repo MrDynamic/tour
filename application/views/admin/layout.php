@@ -11,7 +11,7 @@
     <title>:: ADMIN ::</title>
     <base href="<?php echo base_url();?>" /> 
     <!-- Bootstrap core CSS -->
-    <link href="resources/admin/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="resources/admin/css/bootstrap-reset.css" rel="stylesheet">
     <!--external css-->
     <link href="resources/admin/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
@@ -133,8 +133,8 @@
   </section>
 
     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="resources/js/jquery-1.8.3.min.js"></script>
-    <script src="resources/admin/js/bootstrap.min.js"></script>
+    <script   src="https://code.jquery.com/jquery-1.8.3.min.js"   integrity="sha256-YcbK69I5IXQftf/mYD8WY0/KmEDCv1asggHpJk1trM8="   crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script class="include" type="text/javascript" src="resources/admin/js/jquery.dcjqaccordion.2.7.js"></script>
     <script src="resources/admin/js/jquery.scrollTo.min.js"></script>
     <script src="resources/admin/js/jquery.nicescroll.js" type="text/javascript"></script>

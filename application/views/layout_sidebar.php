@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="resources/styles/prettyPhoto.css">
     <link rel="stylesheet" href="resources/styles/bootstrap-slider.css">
     <link rel="stylesheet" href="resources/styles/device-mockups2.css">
-    <link rel="stylesheet" href="resources/styles/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="resources/styles/main.css">
     <link rel="stylesheet" href="resources/styles/main-responsive.css">
     <link id="primary_color_scheme" rel="stylesheet" href="resources/styles/theme_meadow.css">
@@ -110,7 +110,7 @@
     <script src="resources/scripts/vendor/isotope.pkgd.min.js"></script>
     <script src="resources/scripts/vendor/jquery.fillparent.min.js"></script>
     <script src="resources/scripts/vendor/raphael-min.js"></script>
-    <script src="resources/scripts/vendor/bootstrap.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="resources/scripts/vendor/jquery.bootstrap-touchspin.min.js"></script>
     <script src="resources/scripts/vendor/bootstrap-slider.js"></script>
     <script src="resources/scripts/vendor/bootstrap-rating-input.js"></script>
