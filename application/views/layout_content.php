@@ -111,7 +111,7 @@
     <script src="resources/scripts/vendor/isotope.pkgd.min.js"></script>
     <script src="resources/scripts/vendor/jquery.fillparent.min.js"></script>
     <script src="resources/scripts/vendor/raphael-min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="resources/scripts/vendor/bootstrap.js"></script>
     <script src="resources/scripts/vendor/jquery.bootstrap-touchspin.min.js"></script>
     <script src="resources/scripts/vendor/bootstrap-slider.js"></script>
     <script src="resources/scripts/vendor/bootstrap-rating-input.js"></script>
