@@ -88,7 +88,7 @@
       <!-- End Footer section-->
       <div id="back_to_top"><a href="#" class="fa fa-arrow-up fa-lg"></a></div>
     </div>
-    <script src="resources/js/jquery-1.8.3.min.js"></script>
+    <script   src="https://code.jquery.com/jquery-1.8.3.min.js"   integrity="sha256-YcbK69I5IXQftf/mYD8WY0/KmEDCv1asggHpJk1trM8="   crossorigin="anonymous"></script>
     <script src="resources/scripts/vendor/queryloader2.min.js"></script>
     <script src="resources/scripts/vendor/owl.carousel.js"></script>
     <script src="resources/scripts/vendor/jquery.ba-cond.min.js"></script>

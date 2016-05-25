@@ -91,13 +91,10 @@
             <!-- end slide-->
             <!-- start slide-->
             <div data-orientation="horizontal" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5" class="sl-slide">
-              <div style="background-image: url(resources/img/intro-home1.jpg);" class="sl-slide-inner">
+              <div style="background-image: url(resources/img/intro2.jpg);" class="sl-slide-inner">
                 <div class="slide-container">
                   <div class="slide-content text-center">
-                    <h2 class="main-title">Multi-purpose html&nbsp;<span class="text-primary">Template</span></h2>
-                    <blockquote>
-                      <p>Unique and modern design</p><a class="btn btn-light btn-bordered btn-lg">Our Works</a><a href="http://themeforest.net/item/ottavio-multipurpose-html5-bootstrap-template/9562624?ref=kleis" target="_blank" class="btn btn-primary btn-lg">Buy the theme</a>
-                    </blockquote>
+                    
                   </div>
                 </div>
               </div>
@@ -105,13 +102,9 @@
             <!-- end slide-->
             <!-- start slide-->
             <div data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1" class="sl-slide">
-              <div style="background-image: url(resources/img/intro-home7.jpg);" class="sl-slide-inner">
+              <div style="background-image: url(resources/img/intro3.jpg);" class="sl-slide-inner">
                 <div class="slide-container">
-                  <div class="slide-content text-center"><img src="resources/img/themes/meadow/logo-intro.png" alt="Ottavio" class="deco">
-                    <h2 class="main-title">Fully responsive &&nbsp;<span class="text-primary">Retina ready</span></h2>
-                    <blockquote>
-                      <p>Based on twitter bootstrap</p><a class="btn btn-light btn-bordered btn-lg">Our Works</a><a href="http://themeforest.net/item/ottavio-multipurpose-html5-bootstrap-template/9562624?ref=kleis" target="_blank" class="btn btn-primary btn-lg">Buy the theme</a>
-                    </blockquote>
+                  <div class="slide-content text-center">
                   </div>
                 </div>
               </div>
@@ -147,9 +140,9 @@
                     <div class="screen">
                       <div data-navitagion="false" data-slide-speed="300" data-pagination-speed="400" data-single-item="true" data-auto-height="true" data-auto-play="true" class="owl-carousel owl-theme">
                         <!-- Start Item Slide-->
-                          <div class="item"><img src="http://f.ptcdn.info/882/016/000/1395219376-ARM0311res-o.jpg" alt="" class="img-responsive"></div>
                           <div class="item"><img src="resources/img/about1.jpg" alt="" class="img-responsive"></div>
-                          <div class="item"><img src="http://travel.mthai.com/wp-content/uploads/2012/10/8Surat_Thani_.jpg" alt="" class="img-responsive"></div>
+                          <div class="item"><img src="resources/img/about2.jpg" alt="" class="img-responsive"></div>
+                          <div class="item"><img src="resources/img/about3.jpg" alt="" class="img-responsive"></div>
                         <!-- End Item Slide-->
                       </div>
                     </div>
@@ -277,7 +270,7 @@
       <!-- End Footer section-->
       <div id="back_to_top"><a href="#" class="fa fa-arrow-up fa-lg"></a></div>
     </div>
-    <script src="resources/js/jquery-1.8.3.min.js"></script>
+    <script   src="https://code.jquery.com/jquery-1.8.3.min.js"   integrity="sha256-YcbK69I5IXQftf/mYD8WY0/KmEDCv1asggHpJk1trM8="   crossorigin="anonymous"></script>
     <script src="resources/scripts/vendor/queryloader2.min.js"></script>
     <script src="resources/scripts/vendor/owl.carousel.js"></script>
     <script src="resources/scripts/vendor/jquery.ba-cond.min.js"></script>
