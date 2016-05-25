@@ -1,7 +1,7 @@
 <div class="col-lg-11">
 <section class="panel" >
 <header class='panel-heading'>
-  เพิ่มประเภทแพคเก็จ
+  เพิ่มแพคเก็จ
 </header>
 <div class='panel-body'>
     <?php

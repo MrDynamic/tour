@@ -21,7 +21,21 @@
     </div>
 </div>
 <?php }else if(isset($_SESSION['role']) && $_SESSION['role'] == ADMIN_ROLE){ ?>
-    <a id="dropdownMenuLogin" href="<?=site_url('admin');?>" class="upper dropdown-toggle"><?=$_SESSION['username'];?></a>
+    <a id="dropdownMenuLogin" href="<?=site_url('admin');?>" data-toggle="dropdown" class="upper dropdown-toggle"><?=$_SESSION['username'];?></a>
+    <div aria-labelledby="dropdownMenuLogin" class="dropdown-menu widget-box">
+        <div class="shopping_cart_dropdown" style="text-align: left">
+            <ul class="cart_list product_list_widget">
+                <li>
+                    <a href="<?=site_url('admin');?>"><span>ผู้ดูแลระบบ</span></a>
+                </li>
+            </ul>
+            <div class="form-inline form-group">
+                <form method="post" action="<?=site_url('authen/logout');?>">
+                    <button type="submit" class="btn btn-primary btn-xs">ออกจากระบบ</button>
+                </form>
+            </div>
+        </div>
+    </div>
 <?php }else{?>
 <a id="dropdownMenuLogin" href="#" data-toggle="dropdown" class="upper dropdown-toggle">เข้าสู่ระบบ</a>
 <div aria-labelledby="dropdownMenuLogin" class="dropdown-menu widget-box">

@@ -17,7 +17,7 @@
         <tbody>
         <?php
         if(!isset($requestData)|| empty($requestData)) {
-            echo "<tr><td colspan=6>ไม่พบข้อมูล</td></tr>";
+            echo "<tr><td colspan=7>ไม่พบข้อมูล</td></tr>";
         } else{
             foreach ($requestData as $row){
                 echo "<tr class=''>";
