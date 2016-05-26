@@ -46,7 +46,8 @@ class User extends Main_Controller
             unset($data['password1'],$data['passwordConfirm']);
             $this->log_debug('user data',print_r($data,true));
             $this->authen->insert($data);
-            $this->session->set_userdata($data);
+            $userData = $this->authen->getDataResultArray('user_id,username,role',array('username'=>$data['username'],'password'=>$data['password']));
+            $this->session->set_userdata($userData[0]);
             redirect('','refresh');
     
         } catch (Exception $e) {
