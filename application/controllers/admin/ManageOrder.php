@@ -79,6 +79,7 @@ class ManageOrder extends Admin_Controller
 
     public function requestDetail($requestId=''){
         $formData = array();
+        $this->setActiveMenu(MENU_MAIN_ORDER,MENU_RQUEST_TOUR);
         $this->load->model(array('M_RequestTour'=>'requestTour','M_Status'=>'status'));
         if(!empty($requestId)){
             $requestData = $this->requestTour->getRequestTour(array('request_id'=>$requestId));

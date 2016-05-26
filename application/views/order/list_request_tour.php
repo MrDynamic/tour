@@ -34,12 +34,12 @@
                                     <?=$item->status;?>
                                 </td>
                                 <td>
-                                    <?php if($item->status_code == STATUS_WAITING): ?>
+                                    <?php if($item->status_code == REQUEST_STATUS_WAITING): ?>
                                     <a class="btn btn-info btn-xs" href="<?=site_url('order/editRequestTour/'.$item->request_id);?>" role="button">แก้ไข</a>
                                     <?php endif; ?>
                                 </td>
                                 <td>
-                                    <?php if($item->status_code == STATUS_WAITING): ?>
+                                    <?php if($item->status_code == REQUEST_STATUS_WAITING): ?>
                                         <a class="btn btn-primary btn-xs" data-href="<?=site_url('order/cancelRequestTour/'.$item->request_id);?>" data-toggle="modal" data-target="#confirm-delete" id="cancelRequestBtn" role="button">ยกเลิก</a>
                                     <?php endif; ?>
                                 </td>
