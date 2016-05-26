@@ -44,8 +44,18 @@ abstract class Abstract_Model extends CI_Model{
             $criteria['delete_flag'] = 'N';
         }
         $this->db = $this->getLimit($this->db,$limit);
-    	$query = $this->db->get_where($this->getTableName(),$criteria);
+        $query = $this->db->get_where($this->getTableName(),$criteria);
     	return $query->result();
+    }
+
+    public function getDataByCriteriaWithOrderBy($criteria,$limit=array(),$isDeleteFlag=true,$orderBy=array()){
+        if($isDeleteFlag){
+            $criteria['delete_flag'] = 'N';
+        }
+        $this->db = $this->getLimit($this->db,$limit);
+        $this->db->order_by($orderBy[0],$orderBy[1]);
+        $query = $this->db->get_where($this->getTableName(),$criteria);
+        return $query->result();
     }
 
     public function getDataSpecifyField($fieldName,$criteria=array(),$limit=array()){
@@ -92,7 +102,7 @@ abstract class Abstract_Model extends CI_Model{
         $this->db = $this->generateQuery($criteria);
         return $this->db->count_all_results();
     }
-    
+
     public function __deconstruct(){
         $this->db->close();
     }

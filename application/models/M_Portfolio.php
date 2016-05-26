@@ -18,4 +18,12 @@ class M_Portfolio extends Abstract_Model
     {
         // TODO: Implement generateQuery() method.
     }
+
+    public function getRandomData(){
+        $this->db->order_by('portfolio_id', 'RANDOM');
+        $this->db->limit(12);
+        $query = $this->db->get($this->getTableName());
+        return $query->result();
+    }
+
 }

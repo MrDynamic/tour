@@ -76,6 +76,7 @@
 		              $response = false;
 		            }else{
 		                $response = true;
+						$this->resize($this->upload->data());
 		                $packageData['thumbnail'] = $this->upload->data()['file_name'];
 		                if(null != $this->input->post('thumbnail_hide') && $this->input->post('thumbnail_hide') != ""){
 		                    $this->log_debug('old thumbnail',$this->input->post('thumbnail_hide'));

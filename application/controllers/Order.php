@@ -14,14 +14,12 @@ class Order extends Main_Controller
      */
 
     public function addToCart(){
-        $this->log_debug('cart data',print_r($this->input->post(),true));
         $data = array(
             'id'=>$this->input->post('id'),
             'qty'=>$this->input->post('qty'),
             'name'=>$this->input->post('name'),
             'price'=>$this->input->post('price')
         );
-        $this->log_debug('data insert',print_r($data,true));
         $this->my_cart->insert($data);
     }
     
@@ -77,7 +75,6 @@ class Order extends Main_Controller
     }
     
     public function checkout(){
-        $this->log_debug("check out data",print_r($this->input->post(),true));
         $orderDetails = array();
         $size = $this->my_cart->total_items();
         if($size > 0){
@@ -95,7 +92,6 @@ class Order extends Main_Controller
                 $total += $item['qty'] * $item['price'];
             }
             
-            $this->log_debug('order detail data',print_r($orderDetails,true));
             $orderId = $this->mOrder->createOrder($orderData,$orderDetails);
             if(!empty($orderId)){
                 $order['order_id'] = $orderId;
@@ -131,27 +127,25 @@ class Order extends Main_Controller
     
     
     public function payPalRedirectPage(){
-        print_r($this->input->get());
-        //echo $this->uri->segment(3);
+        redirect('order/listOrder','refresh');
     }
     
     public function paypalNotify(){
+        $this->load->library('paypal');
         $paypalInfo = $this->input->post();
         $this->log_debug('transaction data post',print_r($paypalInfo,true));
         
         $userId  = $paypalInfo['custom'] + 0;
         $orderId = $paypalInfo["item_number"] + 0;
         $data['transaction_id']	= $paypalInfo["txn_id"];
-//        $data['payment_gross'] = $paypalInfo["payment_gross"];
-//        $data['currency_code'] = $paypalInfo["mc_currency"];
-//        $data['payer_email'] = $paypalInfo["payer_email"];
         $data['payment_status']	= $paypalInfo["payment_status"];
-        
-        $paypalURL = $this->paypal_lib->paypal_url;
-        $result	= $this->paypal_lib->curlPost($paypalURL,$paypalInfo);
+        $data['status'] = STATUS_SUCCESS;
+        $paypalURL = $this->paypal->paypal_url;
+        $result	= $this->paypal->curlPost($paypalURL,$paypalInfo);
         
         if(eregi("VERIFIED",$result)){
                 $this->mOrder->update($data,array('user_id'=>$userId,'order_id'=>$orderId));
+                $this->log_debug('update notify',$this->mOrder->getLastQuery());
         }
     }
 

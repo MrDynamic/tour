@@ -20,11 +20,10 @@ class Portfolio extends Admin_Controller
     }
 
     public function save(){
-        $response = true;
         $this->log_debug('submit data',print_r($this->input->post(),true));
         $this->load->library('upload', $this->getConfigUpload());
         if (!$this->upload->do_upload('image')){
-            $response = false;
+            $this->session->set_flashdata(EXEC_MSG,STATUS_ERROR);
         }else{
             $this->log_debug('upload data',print_r($this->upload->data(),true));
             $data = array();
@@ -32,9 +31,10 @@ class Portfolio extends Admin_Controller
             $data['short_desc'] = $this->input->post('short_desc');
             $this->resize($this->upload->data());
             $data['image_path'] = $this->upload->data()['file_name'];
-            $response = $this->portfolio->insert($data);
+            $this->portfolio->insert($data);
+            $this->session->set_flashdata(EXEC_MSG,STATUS_SUCCESS);
         }
-        echo $response;
+        redirect('admin/portfolio','refresh');
     }
 
     public function loadPage($action=ACTION_ADD,$formData=array(),$page=1){
@@ -45,7 +45,7 @@ class Portfolio extends Admin_Controller
         $pagingConfig = $this->my_pagination->initAdmin('admin/portfolio/index',$this->portfolio->countAllWithCriteria(array(),false));
         $limit = array($pagingConfig['per_page'],(($page-1) * $pagingConfig['per_page']));
         $data["paginationData"]   = $this->pagination;
-        $data['list'] = $this->portfolio->getDataByCriteria(array(),$limit,false);
+        $data['list'] = $this->portfolio->getDataByCriteriaWithOrderBy(array(),$limit,false,array('portfolio_id','desc'));
 
         $view['detail'] = $this->load->view('admin/portfolio/list_portfolio',$data,true);
         $view['form'] = $this->load->view('admin/portfolio/form_portfolio',$formData,true);

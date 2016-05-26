@@ -1,6 +1,6 @@
 <div class="col-md-6 sep-top-lg">
     <div class="contact-form">
-        <?php if($this->session->flashdata('success') == true) : ?>
+        <?php if($this->session->flashdata() == true) : ?>
             <div id="success-alert" class="alert alert-success text-center">
                 <p><i class="fa fa-check-circle fa-2x"></i></p>
                 <p>ทำการบันทึกข้อมูลเรียบร้อยแล้วครับ</p>

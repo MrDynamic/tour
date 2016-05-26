@@ -136,3 +136,7 @@ define('REQUEST_STATUS_SUCCESS','RS');
 define('REQUEST_STATUS_WAITING','RW');
 define('REQUEST_STATUS_CANCEL','RC');
 
+// Execute message
+define('EXEC_MSG','EXEC_MESSAGE');
+define('STATUS_ERROR','STATUS_ERROR');
+

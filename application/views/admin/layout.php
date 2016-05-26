@@ -44,7 +44,61 @@
           <a href="index.html" class="logo" >Ocharos <span>Admin</span></a>
           <!--logo end-->
           <div class="nav notify-row" id="top_menu">
-            
+              <ul class="nav top-menu">
+                <!-- notification dropdown start-->
+                <li id="header_notification_bar" class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+
+                        <i class="fa fa-bell-o"></i>
+                        <span class="badge bg-warning">7</span>
+                    </a>
+                    <ul class="dropdown-menu extended notification">
+                        <div class="notify-arrow notify-arrow-yellow"></div>
+                        <li>
+                            <p class="yellow">You have 7 new notifications</p>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                Server #3 overloaded.
+                                <span class="small italic">34 mins</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="label label-warning"><i class="fa fa-bell"></i></span>
+                                Server #10 not respoding.
+                                <span class="small italic">1 Hours</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                                Database overloaded 24%.
+                                <span class="small italic">4 hrs</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="label label-success"><i class="fa fa-plus"></i></span>
+                                New user registered.
+                                <span class="small italic">Just now</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="label label-info"><i class="fa fa-bullhorn"></i></span>
+                                Application error.
+                                <span class="small italic">10 mins</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">See all notifications</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- notification dropdown end -->
+            </ul>
           </div>
           <div class="top-nav ">
               <ul class="nav pull-right top-menu">
@@ -58,6 +112,10 @@
                           <span class="username">Admin</span>
                           <b class="caret"></b>
                       </a>
+                      <ul class="dropdown-menu extended logout">
+                          <div class="log-arrow-up"></div>
+                          <li><a href="<?=site_url("authen/logout");?>"><i class="fa fa-key"></i> ออกจากระบบ</a></li>
+                      </ul>
 
                   </li>
                   <!-- user login dropdown end -->
@@ -134,7 +192,7 @@
 
     <!-- js placed at the end of the document so the pages load faster -->
     <script   src="https://code.jquery.com/jquery-1.8.3.min.js"   integrity="sha256-YcbK69I5IXQftf/mYD8WY0/KmEDCv1asggHpJk1trM8="   crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="resources/admin/js/bootstrap.min.js"></script>
     <script class="include" type="text/javascript" src="resources/admin/js/jquery.dcjqaccordion.2.7.js"></script>
     <script src="resources/admin/js/jquery.scrollTo.min.js"></script>
     <script src="resources/admin/js/jquery.nicescroll.js" type="text/javascript"></script>

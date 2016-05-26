@@ -9,7 +9,7 @@ class Home extends Main_Controller{
     }
 
     function index(){
-        $this->template['portfolioData'] = $this->portfolio->getAllData(false);
+        $this->template['portfolioData'] = $this->portfolio->getRandomData();
         $this->load->view("_layout",$this->template);
     }
 
