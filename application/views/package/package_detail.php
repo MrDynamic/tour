@@ -55,7 +55,7 @@
                   	}
               	?>
               </div>
-              <form method="get">
+              <form id="form-reserve" method="get">
                 <div class="row">
                   <div class="col-md-3 col-sm-6 sep-top-md">
                   	<?php echo form_input(array('type'=>'hidden','id'=>'packageId','value'=>$packageData->package_id)); 
@@ -63,7 +63,7 @@
                   	      echo form_input(array('type'=>'hidden','id'=>'packageName','value'=>$packageData->package_name));
                   	      echo form_input(array('type'=>'hidden','id'=>'thumbnail','value'=>$packageData->thumbnail));
                   	?>
-                    <input type="text" value="1" name="qty" id="reserveQty" class="qty">
+                    <input type="number" value="1" min="1" name="qty" id="reserveQty" class="qty">
                   </div>
                   <div class="col-md-9 col-sm-6 sep-top-md">
                     <button type="button" id="btnReserve" class="btn btn-primary btn-lg"><i class="fa fa-shopping-cart"></i> จองแพคเก็จ</button>
