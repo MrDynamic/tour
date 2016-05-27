@@ -11,10 +11,14 @@ class Test extends Main_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->model(array('M_Report'=>'report'));
     }
 
     public function index(){
-        echo date('d/m/y',increaseDate(5,'2016-02-28'));
+        
+        print_r($this->report->reportSumaryArea());
+        echo $this->report->getLastQuery();
+        
     }
 
 }
