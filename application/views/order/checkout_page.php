@@ -1,7 +1,7 @@
 <!-- Start Shop Cart-->
       <section class="sep-top-2x">
         <div class="container">
-          <?php echo form_open('order/checkout'); ?>
+          <?php echo form_open('order/checkout',array('id'=>'form-checkout')); ?>
             <h4 class="upper">ข้อมูลติดต่อ</h4>
             <div class="sep-top-sm">
               <div class="row">
@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-sm-6 form-group">
                   <label class="sr-only">Phone</label>
-                  <input type="text" value="" placeholder="เบอร์ติดต่อ" name="phone" id="phone" class="form-control input-lg" required>
+                  <input type="text" value="" placeholder="เบอร์ติดต่อ" name="phone" id="phone" class="form-control input-lg" maxlength="10" required>
                 </div>
               </div>
             </div>

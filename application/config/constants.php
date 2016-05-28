@@ -125,6 +125,8 @@ define('MENU_MAIN_PORTFOLIO','MAIN_PORTFOLIO');
 define("MENU_PORTFOLIO","PORTFOLIO");
 
 
+define("MENU_MAIN_CONTACT","MAIN_CONTACT");
+define("MENU_CONTACT","MENU_CONTACT");
 
 // Paypal
 define('PAYPAL_TEST_URL','https://www.sandbox.paypal.com/cgi-bin/webscr');

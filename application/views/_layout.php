@@ -127,10 +127,10 @@
               <div class="section-title">
                 <h2 class="bordered-left upper wow flipInX">ocharos<br>tour</h2>
                 <p class="lead wow flipInX" style="text-align:justify">
-                    โอชารสทัวร์ได้ให้บริการเช่ารถปรับอากาศ 2 ชั้น มากว่า 18 ปี
+                    &nbsp;&nbsp;&nbsp;โอชารสทัวร์ได้ให้บริการเช่ารถปรับอากาศ 2 ชั้น มากว่า 18 ปี
                     คลุกคลีอยู่ในวงการการท่องเที่ยวมานานและด้วยใจรักในงานบริการ จึงให้บริการประดุจดังคุณเป็นคนในครอบครัวโอชารสทัวร์ ให้ความสำคัญในงานด้านการท่องเที่ยว และบริการลูกค้าให้มีความสุขสนุกสนานไปกับการท่องเที่ยวในแบบฉบับโอชารสทัวร์
                 </p>
-                <p class="lead wow flipInX">"เที่ยวสนุกสุขใจไปกับโอชารสทัวร์"</p>
+                <p class="lead wow flipInX text-center">"เที่ยวสนุกสุขใจไปกับโอชารสทัวร์"</p>
               </div>
             </div>
             <div class="col-md-8">
@@ -249,7 +249,7 @@
                 <div data-wow-delay="1.1s" class="icon-content img-circle wow flipInX"><i class="fa fa-clock-o"></i></div>
                 <div class="icon-box-content">
                   <h6 class="upper info-title">Facebook</h6>
-                  <p>https://www.facebook.com/ocharos</p>
+                  <p><?php echo anchor("https://www.facebook.com/Ocharostour-488278814517876","Ocharos' s Tour",array("target"=>"_blank")); ?></p>
                 </div>
               </div>
               <!--End icon box-->

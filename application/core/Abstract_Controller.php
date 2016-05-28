@@ -237,7 +237,13 @@ class Admin_Controller extends Abstract_Controller
 						'NAME'=>'รายการจัดทัวร์',
 						'URL'=>'admin/manageOrder/requestTour',
 						'KEY'=>MENU_RQUEST_TOUR
+					),
+					array(
+						'NAME'=>'รายการติดต่อ',
+						'URL'=>'admin/contact',
+						'KEY'=>MENU_CONTACT
 					)
+
 				)
 			),
 			array(

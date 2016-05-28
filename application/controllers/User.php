@@ -47,8 +47,9 @@ class User extends Main_Controller
             $this->log_debug('user data',print_r($data,true));
             $this->authen->insert($data);
             $userData = $this->authen->getDataResultArray('user_id,username,role',array('username'=>$data['username'],'password'=>$data['password']));
-            $this->session->set_userdata($userData[0]);
-            redirect('','refresh');
+            //$this->session->set_userdata($userData[0]);
+            $this->session->set_flashdata(EXEC_MSG,STATUS_SUCCESS);
+            redirect('user/register','refresh');
     
         } catch (Exception $e) {
             $this->log_error($e->getMessage());
@@ -119,7 +120,7 @@ class User extends Main_Controller
         if($this->authen->checkPassword($this->session->userdata('username'),$this->input->post('oldPassword'))){
             $this->authen->update(array('password'=>md5($newPassword)),array('user_id'=>$this->session->userdata('user_id')));
             $this->session->set_flashdata(array(EXEC_MSG=>STATUS_SUCCESS));
-            
+
         }else{
             $this->session->set_flashdata(array(EXEC_MSG=>STATUS_ERROR,ERROR_MSG,"รหัสผ่านเดิมไม่ถูกต้อง"));
         }

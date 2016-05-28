@@ -49,7 +49,7 @@
            <?php
               endforeach;
             else:
-                echo "<tr style='text-align:center;'><td colspan='6'>ไม่พบข้อมูลการทำรายการ</td></tr>";
+                echo "<tr style='text-align:center;'><td colspan='7'>ไม่พบข้อมูลการทำรายการ</td></tr>";
             endif;
           ?>
           </tbody>
