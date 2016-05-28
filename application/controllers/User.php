@@ -110,18 +110,20 @@ class User extends Main_Controller
     }
     
     public function changePasswordPage(){
-        $message['message'] = $this->session->flashdata('message');
-        $this->setContentWithSidePage('user/change_password_page',$message);
+        $this->setContentWithSidePage('user/change_password_page');
         $this->loadLayoutSidebar($this->template);
     }
     
     public function changePassword(){
+        $newPassword = $this->input->post("newPassword");
         if($this->authen->checkPassword($this->session->userdata('username'),$this->input->post('oldPassword'))){
+            $this->authen->update(array('password'=>md5($newPassword)),array('user_id'=>$this->session->userdata('user_id')));
+            $this->session->set_flashdata(array(EXEC_MSG=>STATUS_SUCCESS));
             
         }else{
-            $this->session->set_flashdata('message','รหัสผ่านเดิมไม่ถูกต้อง');
-            redirect('user/changePasswordPage','refresh');
+            $this->session->set_flashdata(array(EXEC_MSG=>STATUS_ERROR,ERROR_MSG,"รหัสผ่านเดิมไม่ถูกต้อง"));
         }
+        redirect('user/changePasswordPage','refresh');
         
     }
 
@@ -137,22 +139,19 @@ class User extends Main_Controller
         $userData = $this->authen->getDataSpecifyField("user_id,username,password,firstname,surname",array('email'=>$to_email));
         if(isset($userData) && !empty($userData)){
             $user = $userData[0];
-            //Load email library
             $this->load->library('email');
-
+            $newPassword = $this->generateRandomString(8);
             $message = "เรียนคุณ ".$user->firstname." ". $user->surname."\n";
             $message .="ทาง Ocharos tour ได้ทำการกำหนดรหัสใหม่ตามรายละเอียดด้านล่างค่ะ"."\n";
             $message .="Username: ".$user->username ."\n";
-            $message .="Password: "."";
-
-
+            $message .="Password: ".$newPassword;
             $this->email->from($from_email, 'Your Name');
             $this->email->to($to_email);
             $this->email->subject("Ocharos' s Tour Reset Password");
             $this->email->message($message);
 
-            //Send mail
             if($this->email->send()){
+                $this->authen->update(array('password'=>md5($newPassword)),array('user_id'=>$user->user_id));
                 $this->session->set_flashdata(EXEC_MSG,STATUS_SUCCESS);
             }else{
                 $this->session->set_flashdata(EXEC_MSG,STATUS_ERROR);
@@ -164,6 +163,16 @@ class User extends Main_Controller
         }
        
         redirect('user/resetPassword','refresh');
+    }
+
+    private function generateRandomString($length = 10) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
     }
 
     function __destruct()

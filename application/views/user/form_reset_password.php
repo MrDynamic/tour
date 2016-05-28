@@ -7,7 +7,7 @@
     <?php }else if($this->session->flashdata(EXEC_MSG) == STATUS_ERROR) { ?>
         <div id="error-alert" class="alert alert-danger text-center">
             <p><i class="fa fa-times-circle fa-2x"></i></p>
-            <p><?=$this->session->flashdata(EXEC_MSG);?></p>
+            <p><?=$this->session->flashdata(ERROR_MSG);?></p>
         </div>
     <?php } ?>
     <h5 class="upper">

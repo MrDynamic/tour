@@ -55,6 +55,32 @@ class Authen extends Main_Controller
         $this->session->sess_destroy();
         redirect('','refresh');
     }
+
+    public function checkDupEmail(){
+        $result = 'false';
+        $email = $this->input->post("email");
+        $userData = $this->authen->getDataSpecifyField("user_id",array('email'=>$email));
+        if(isset($userData) && !empty($userData) && sizeof($userData) > 0){
+            $result = 'false';
+        }else{
+            $result = 'true';
+        }
+        echo $result;
+    }
+
+    public function checkDupUser(){
+        $result = 'false';
+        $username = $this->input->post("username");
+        $userData = $this->authen->getDataSpecifyField("user_id",array('username'=>$username));
+        if(isset($userData) && !empty($userData) && sizeof($userData) > 0){
+            $result = 'false';
+        }else{
+            $result = 'true';
+        }
+        echo $result;
+    }
+
+
     
     
     function __destruct()
