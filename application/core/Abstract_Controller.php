@@ -250,7 +250,18 @@ class Admin_Controller extends Abstract_Controller
 						'KEY'=>MENU_REPORT_ORDER
 					)
 				)
-			)
+			),
+			array(
+				'MENU_NAME'=>'สรุป',
+				'KEY'=>MENU_MAIN_SUMARY,
+				'SUB_MENU'=>array(
+					array(
+						'NAME'=>'สรุปยอดตามภูมิภาค',
+						'URL'=>'admin/report/sumaryArea',
+						'KEY'=>MENU_SUM_AREA
+					)
+				)
+			),
 			
 		);
 		$this->template['active_menu'] = array();

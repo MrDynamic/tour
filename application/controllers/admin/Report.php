@@ -32,4 +32,34 @@ class Report extends Admin_Controller
        }
     }
 
+//    public function sumaryArea(){
+//        $this->setActiveMenu(MENU_MAIN_SUMARY,MENU_SUM_AREA);
+//        $formData['yearData'] = $this->generateSelectItems($this->report->getOrderYear());
+//        $data['form'] = $this->load->view('admin/report/form_sumary_area_criteria',$formData,true);
+//        $data['detail'] = $this->load->view('admin/report/graph_sum_area',null,true);
+//        $this->loadTemplate($data);
+//    }
+    
+    public function sumaryArea(){
+        $this->setActiveMenu(MENU_MAIN_SUMARY,MENU_SUM_AREA);
+
+        $yearSelected = $this->input->post("year");
+        if(empty($yearSelected)){
+            $yearSelected = date('Y');
+        }
+        $sumaryData = $this->report->getSumaryArea($yearSelected);
+        $graphData['label'] = array();
+        $graphData['data'] = array();
+        foreach($sumaryData as $val){
+            $graphData['label'][] = $val->area_name;
+            $graphData['data'][] =$val->sumary;
+        }
+
+        $formData['yearData'] = $this->generateSelectItems($this->report->getOrderYear());
+        $formData['yearSelected'] = $yearSelected;
+        $data['form'] = $this->load->view('admin/report/form_sumary_area_criteria',$formData,true);
+        $data['detail'] = $this->load->view('admin/report/graph_sum_area',$graphData,true);
+        $this->loadTemplate($data);
+    }
+
 }

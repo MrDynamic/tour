@@ -16,7 +16,7 @@ if(isset($message) && !empty($message)){
   	 echo form_button(array('type'=>'submit','class'=>'btn btn-primary','content'=>'Login'));
   	 echo form_close();
   	 echo '<div class="sep-top-xs">';
-  	 echo anchor('#','ลืมรหัสผ่าน');
+  	 echo anchor('user/resetPassword','ลืมรหัสผ่าน');
   	 echo '&nbsp;';
   	 echo anchor('user/register','สมัครสมาชิก');
   	 echo '</div>';

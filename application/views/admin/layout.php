@@ -20,8 +20,10 @@
     <link href="resources/admin/css/style-responsive.css" rel="stylesheet" />
     <link href="resources/css/my-style.css" rel="stylesheet">
     <link href="resources/admin/css/dropzone.css" rel="stylesheet" />
+     <script   src="https://code.jquery.com/jquery-1.8.3.min.js"   integrity="sha256-YcbK69I5IXQftf/mYD8WY0/KmEDCv1asggHpJk1trM8="   crossorigin="anonymous"></script>
 
-    <script type="text/javascript">
+
+      <script type="text/javascript">
       var base_url = "<?php print base_url(); ?>";
     </script>
 
@@ -137,7 +139,6 @@
   </section>
 
     <!-- js placed at the end of the document so the pages load faster -->
-    <script   src="https://code.jquery.com/jquery-1.8.3.min.js"   integrity="sha256-YcbK69I5IXQftf/mYD8WY0/KmEDCv1asggHpJk1trM8="   crossorigin="anonymous"></script>
     <script src="resources/admin/js/bootstrap.min.js"></script>
     <script class="include" type="text/javascript" src="resources/admin/js/jquery.dcjqaccordion.2.7.js"></script>
     <script src="resources/admin/js/jquery.scrollTo.min.js"></script>
@@ -153,6 +154,6 @@
     <script src="resources/js/additional-methods.min.js"></script>;
     <script src="resources/admin/js/dropzone.js"></script>;
     <script src="resources/admin/js/admin.js"></script>;
-  
+
   </body>
 </html>

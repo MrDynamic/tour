@@ -12,7 +12,7 @@
         $passwordConfirmAttr = array('id'=>'passwordConfirm','name'=>'passwordConfirm','required'=>'');
         $firstNameAttr = array('id'=>'firstName','name'=>'firstname','required'=>'');
         $surnameAttr = array('id'=>'surname','name'=>'surname','required'=>'');
-        $emailAttr = array('id'=>'email','name'=>'email','type'=>'email');
+        $emailAttr = array('id'=>'email','name'=>'email','type'=>'email','required'=>'');
         $phoneAttr = array('id'=>'phone','name'=>'phone','type'=>'tel','maxlength'=>'10','required'=>'');
         $postalcodeAttr = array('id'=>'postalcode','name'=>'postalcode','maxlength'=>'5');
         $addressAttr = array('id'=>'address','name'=>'address','required'=>'');

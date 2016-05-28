@@ -124,7 +124,48 @@ class User extends Main_Controller
         }
         
     }
-    
+
+    public function resetPassword(){
+        $this->setContentPage('user/form_reset_password',null);
+        $this->loadLayoutContent($this->template);
+    }
+
+    public function submitResetPassword() {
+        $from_email = "polawat.th@gmail.com";
+        $to_email = $this->input->post('email');
+
+        $userData = $this->authen->getDataSpecifyField("user_id,username,password,firstname,surname",array('email'=>$to_email));
+        if(isset($userData) && !empty($userData)){
+            $user = $userData[0];
+            //Load email library
+            $this->load->library('email');
+
+            $message = "เรียนคุณ ".$user->firstname." ". $user->surname."\n";
+            $message .="ทาง Ocharos tour ได้ทำการกำหนดรหัสใหม่ตามรายละเอียดด้านล่างค่ะ"."\n";
+            $message .="Username: ".$user->username ."\n";
+            $message .="Password: "."";
+
+
+            $this->email->from($from_email, 'Your Name');
+            $this->email->to($to_email);
+            $this->email->subject("Ocharos' s Tour Reset Password");
+            $this->email->message($message);
+
+            //Send mail
+            if($this->email->send()){
+                $this->session->set_flashdata(EXEC_MSG,STATUS_SUCCESS);
+            }else{
+                $this->session->set_flashdata(EXEC_MSG,STATUS_ERROR);
+                $this->session->set_flashdata(array(EXEC_MSG=>STATUS_ERROR,ERROR_MSG=>'ระบบเกิดข้อผิดพลาด'));
+            }
+        }else{
+            $this->session->set_flashdata(array(EXEC_MSG=>STATUS_ERROR,ERROR_MSG=>'email ไม่ถูกต้อง'));
+            
+        }
+       
+        redirect('user/resetPassword','refresh');
+    }
+
     function __destruct()
     {}
 }

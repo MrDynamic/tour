@@ -51,7 +51,7 @@
     <div class="form-inline form-group">
       <button type="submit" class="btn btn-primary btn-xs" id="btnLogin">เข้าสู่ระบบ</button>
     </div>
-    <a href="#"><small>ลืมรหัสผ่าน</small></a>
+    <a href="<?=site_url("user/resetPassword"); ?>"><small>ลืมรหัสผ่าน</small></a>
     &nbsp;<a href="<?=site_url('user/register')?>"><small>สมัครสมาชิก</small></a>
   </form>
 </div>

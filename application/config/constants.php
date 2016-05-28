@@ -118,8 +118,13 @@ define('MENU_RQUEST_TOUR','REQUEST_TOUR');
 define('MENU_MAIN_REPORT','MAIN_REPORT');
 define('MENU_REPORT_ORDER','REPORT_ORDER');
 
+define('MENU_MAIN_SUMARY','MAIN_SUMARY');
+define('MENU_SUM_AREA','SUMARY_AREA');
+
 define('MENU_MAIN_PORTFOLIO','MAIN_PORTFOLIO');
 define("MENU_PORTFOLIO","PORTFOLIO");
+
+
 
 // Paypal
 define('PAYPAL_TEST_URL','https://www.sandbox.paypal.com/cgi-bin/webscr');
@@ -138,5 +143,6 @@ define('REQUEST_STATUS_CANCEL','RC');
 
 // Execute message
 define('EXEC_MSG','EXEC_MESSAGE');
+define('ERROR_MSG','ERROR_MESSAGE');
 define('STATUS_ERROR','STATUS_ERROR');
 
