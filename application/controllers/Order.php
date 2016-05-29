@@ -84,19 +84,22 @@ class Order extends Main_Controller
             
             $i=0;
             $total=0;
+            $order=array();
             foreach($this->my_cart->contents() as $item){
                 $orderDetails[$i++] = array(
                     'package_id'=>$item['id'],
                     'qty'=>$item['qty'],
                     'price'=>$item['price']);
                 $total += $item['qty'] * $item['price'];
+
+
             }
             
             $orderId = $this->mOrder->createOrder($orderData,$orderDetails);
             if(!empty($orderId)){
                 $order['order_id'] = $orderId;
-                $order['total'] = $total;
-                $order['name'] = 'Ocharos tour orders';
+                $orderp['total'] = $total;
+                $order[]['name'] = 'Ocharos tour orders';
                 $this->my_cart->destroy();
                 $this->submitToPaypal($order);
             }
