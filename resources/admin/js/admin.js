@@ -1,4 +1,13 @@
 $().ready(function() {
+
+	$("#success-alert").fadeTo(2000, 500).slideUp(1000, function(){
+		$("#success-alert").alert('close');
+	});
+
+	$("#error-alert").fadeTo(2000, 500).slideUp(1000, function(){
+		$("#error-alert").alert('close');
+	});
+	
 	$("#btnCancel").click(function(){
 		window.location='admin/package';
 	});
@@ -13,13 +22,7 @@ $().ready(function() {
 				filesize:2097152
 			}
 		},
-		messages: { image: "File must be JPG, GIF or PNG, less than 2MB" },
-		submitHandler: function() {
-			overlay();
-			var formData = new FormData($("#formUploadPortfolio")[0]);
-			var url = $("#formUploadPortfolio").attr('action');
-			callServiceWithContent(url,formData,saveResponse);
-		}
+		messages: { image: "File must be JPG, GIF or PNG, less than 2MB" }
 	});
 
 	$("#admin-paging > a").click(function(){
@@ -32,6 +35,7 @@ $().ready(function() {
 	//-- set validate form
 	$("#form-report-criteria").validate();
 	$("#form-save-status").validate();
+	$("#form-sumary-area").validate();
 });
 
 function refreshPictureList(packageId){
@@ -90,10 +94,10 @@ $("#formPackage").validate({
 			var formData = new FormData($("#formPackage")[0]);
 			callServiceWithContent($('#action').val(),formData,function(response){
 				if(response==1){
-					alert('บันทึกข้อมูลเรียบร้อยแล้ว');
+					alert('Success');
 					window.location = 'admin/package/index';
 				}else{
-					alert('ไม่สามารถบันทึกข้อมูลได้');
+					alert('Fail');
 				}
 			});
 		}
@@ -103,10 +107,10 @@ $("#formPackage").validate({
 
 function saveResponse(response){
 	if(response==1){
-		alert('บันทึกข้อมูลเรียบร้อยแล้ว');
+		alert('Success');
 		window.location.reload();
 	}else{
-		alert('ไม่สามารถบันทึกข้อมูลได้');
+		alert('Fail');
 	}
 }
 

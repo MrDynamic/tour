@@ -20,11 +20,36 @@ $(document).ready(function() {
 			password1: {minlength: 6 },
             passwordConfirm: {minlength: 6,equalTo:"#password1"},
             phone:{number:true,minlength:10},
-            postalcode:{number:true,minlength:5}
-          }
+            postalcode:{number:true,minlength:5},
+			username:{
+				remote:{
+					url:"authen/checkDupUser",
+					type:"post"
+				}
+			},
+			email:{
+				remote: {
+						url: "authen/checkDupEmail",
+						type: "post"
+				}
+			}
+          },
+		messages: {
+			email: {
+				remote: "Email already in use!"
+			}
+			,username:{
+				remote:"Username already in use!"
+			}
+		}
+
 	});
 
-	$("#formCheckout").validate();
+	$("#form-checkout").validate({
+		rules:{
+			phone:{number:true,minlength:10}
+		}
+	});
 
 	$("#form-changePassword").validate({
 		rules:{
@@ -45,6 +70,8 @@ $(document).ready(function() {
 			email:{email:true}
 		}
 	});
+
+	$("#form-reset-password").validate();
 
 	/* End validate form */
 
