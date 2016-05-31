@@ -91,6 +91,8 @@ class Order extends Main_Controller
                     'qty'=>$item['qty'],
                     'price'=>$item['price']);
                 $total += $item['qty'] * $item['price'];
+                $order['name'][] = $item['name'];
+                $order['amount'][] = $item['price'];
 
 
             }
@@ -98,8 +100,8 @@ class Order extends Main_Controller
             $orderId = $this->mOrder->createOrder($orderData,$orderDetails);
             if(!empty($orderId)){
                 $order['order_id'] = $orderId;
-                $orderp['total'] = $total;
-                $order[]['name'] = 'Ocharos tour orders';
+                $order['total'] = $total;
+                
                 $this->my_cart->destroy();
                 $this->submitToPaypal($order);
             }
@@ -120,17 +122,56 @@ class Order extends Main_Controller
         $this->paypal->add_field('return', $returnURL);
         $this->paypal->add_field('cancel_return', $cancelURL);
         $this->paypal->add_field('notify_url', $notifyURL);
-        $this->paypal->add_field('item_name', $order['name']);
         $this->paypal->add_field('custom', $userID);
         $this->paypal->add_field('item_number',  $order['order_id']);
-        $this->paypal->add_field('amount',  $order['total']);
+        
+        if(sizeof($order['name']) > 1){
+            $size = sizeof($order['name']);
+            for($i=0;i<$size;$i++){
+                $this->paypal->add_field('item_name_'.($i+1), $order['name'][$i]);
+                $this->paypal->add_field('amount_'.($i+1),  $order['total'][$i]);
+            }
+            
+        }else{
+             $this->paypal->add_field('item_name', $order['name']);
+            $this->paypal->add_field('amount',  $order['total']);
+        }
+        
         $this->paypal->image($logo);
-        $this->paypal->paypal_auto_form();
+        //$this->paypal->paypal_auto_form();
+        $this->log_debug("paypal form",$this->paypal->paypal_form("test"));
     }
     
     
     public function payPalRedirectPage(){
         redirect('order/listOrder','refresh');
+    }
+    
+    public function testPalPay(){
+        $this->load->library('paypal');
+        //Set variables for paypal form
+        $returnURL = base_url().'order/payPalRedirectPage/success'; 
+        $cancelURL = base_url().'order/payPalRedirectPage/error'; 
+        $notifyURL = base_url().'order/paypalNotify';
+        
+        $userID = $this->session->userdata('user_id'); 
+        $logo = base_url().'resources/img/ocharos-logo.png';
+        $this->paypal->add_field('business', PAYPAL_ID);
+        $this->paypal->add_field('return', $returnURL);
+        $this->paypal->add_field('cancel_return', $cancelURL);
+        $this->paypal->add_field('notify_url', $notifyURL);
+        $this->paypal->add_field('custom', $userID);
+        $this->paypal->add_field('item_number',  '999');
+        
+        $this->paypal->add_field('item_name_1','ทดสอบ 1');
+        $this->paypal->add_field('amount_1','1000.00');
+        $this->paypal->add_field('item_name_2','test 2');
+        $this->paypal->add_field('amount_2','2000.00');
+        $this->paypal->add_field('item_name_3','test 3');
+        $this->paypal->add_field('amount_3','3000.00');
+        
+        $this->paypal->image($logo);
+        $this->paypal->paypal_auto_form();
     }
     
     public function paypalNotify(){
