@@ -100,28 +100,14 @@ $(document).ready(function() {
 	    $("#error-alert").alert('close');
 	});
 
-    //
-    // $("#packageAreaId").change(function(){
-    //     var areaId = 0;
-    //     if(this.value != ''){
-    //         areaId = this.value;
-    //     }
-    //     var packageTypeId = $("#packageTypeId").val()!=''?$("#packageTypeId").val():0;
-    //     var url = 'package/index?areaId='+areaId + "&packageTypeId=" + packageTypeId;
-    //
-    //     //window.location = url;
-    // });
-
-
 	$("#packageAreaId").change(function(){
 		var areaId = 0;
 		if(this.value != ''){
 			areaId = this.value;
 		}
 		var packageTypeId = $("#packageTypeId").val()!=''?$("#packageTypeId").val():0;
-		var criteria = '{areaId:'+areaId + ",packageTypeId:" + packageTypeId +'}';
-		callService(url,criteria,function(response){
-			$("#render-package").html(response);
+		callService("package/renderPackageByAjax",{"areaId":areaId,"packageTypeId":packageTypeId},function(response){
+			$("#render-package").hide().html(response).fadeIn(1000);
 		});
 	});
 
@@ -131,17 +117,9 @@ $(document).ready(function() {
             packageTypeId = this.value;
         }
         var areaId = $("#packageAreaId").val()!=''?$("#packageAreaId").val():0;
-        var url = 'package/index?areaId=' + areaId + "&packageTypeId=" + packageTypeId;
-        window.location = url;
-    });
-
-    $("#package-paging > a").click(function(){
-        var url = $(this).attr('href');
-        var areaId = $("#packageAreaId").val() == ""?0:$("#packageAreaId").val();
-        var packageTypeId = $("#packageTypeId").val() == ""?0:$("#packageTypeId").val();
-        url = url + "?areaId=" + areaId + "&packageTypeId=" +  packageTypeId;
-        window.location = url;
-        return false;
+		callService("package/renderPackageByAjax",{"areaId":areaId,"packageTypeId":packageTypeId},function(response){
+			$("#render-package").hide().html(response).fadeIn(1000);
+		});
     });
 
 	$('#confirm-delete').on('show.bs.modal', function(e) {
@@ -150,6 +128,14 @@ $(document).ready(function() {
 
 }); 
 
+function pacakgeChangePage(count,page){
+	var areaId = $("#packageAreaId").val() == ""?0:$("#packageAreaId").val();
+	var packageTypeId = $("#packageTypeId").val() == ""?0:$("#packageTypeId").val();
+	count=count==0?"":count;
+	callService("package/renderPackageByAjax/"+count,{"areaId":areaId,"packageTypeId":packageTypeId,"page":page},function(response){
+		$("#render-package").hide().html(response).fadeIn(1000);
+	});
+}
 
 function removeCart(rowId){
 	callService('order/removeCart',{'rowId':rowId},function(){

@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-$active_group = 'DEV';
+$active_group = 'PROD';
 $query_builder = TRUE;
 
 $db['DEV'] = array(
@@ -28,9 +28,9 @@ $db['DEV'] = array(
 $db['PROD'] = array(
 	'dsn'	=> '',
 	'hostname' => 'mysql.hostinger.in.th',
-	'username' => 'u783825707_tour',
-	'password' => 'tour1234',
-	'database' => 'u783825707_tour',
+	'username' => 'u680823747_tour',
+	'password' => 'ocharos1234',
+	'database' => 'u680823747_tour',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

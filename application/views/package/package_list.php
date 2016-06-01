@@ -31,7 +31,7 @@ if(isset($packageData) && !empty($packageData)){
     <div class="sep-top-sm">
         <!-- start pagination-->
         <ul class="pager circle">
-            <?=$paginationData->create_links(); ?>
+            <?php echo $this->ajax_pagination->create_links(); ?>
         </ul>
         <!-- end pagination-->
     </div>
