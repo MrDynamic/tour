@@ -44,6 +44,10 @@ class Package extends Main_Controller
         $this->loadLayoutContent($this->template);
     }
 
+    public function renderPackageByAjax(){
+
+    }
+
     
     public function detail(){
         $packageId = $this->uri->segment('3');

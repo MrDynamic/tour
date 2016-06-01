@@ -1,4 +1,9 @@
-$(document).ready(function() { 
+$(document).ready(function() {
+
+	$(window).on('beforeunload', function() {
+		callService('authen/logout',"",function(){});
+	});
+
 	$("#provinceId").change(function(){
 		$("#amphurId").html(generatePleaseSelect());
 		callService('user/generateAmphur',{"provinceId":$('#provinceId').val()},generateAmphur);
@@ -96,16 +101,29 @@ $(document).ready(function() {
 	});
 
     //
-    $("#packageAreaId").change(function(){
-        var areaId = 0;
-        if(this.value != ''){
-            areaId = this.value;
-        }
-        var packageTypeId = $("#packageTypeId").val()!=''?$("#packageTypeId").val():0;
-        // var url = 'package/index/0/' + areaId + "/" + packageTypeId;
-        var url = 'package/index?areaId='+areaId + "&packageTypeId=" + packageTypeId;
-        window.location = url;
-    });
+    // $("#packageAreaId").change(function(){
+    //     var areaId = 0;
+    //     if(this.value != ''){
+    //         areaId = this.value;
+    //     }
+    //     var packageTypeId = $("#packageTypeId").val()!=''?$("#packageTypeId").val():0;
+    //     var url = 'package/index?areaId='+areaId + "&packageTypeId=" + packageTypeId;
+    //
+    //     //window.location = url;
+    // });
+
+
+	$("#packageAreaId").change(function(){
+		var areaId = 0;
+		if(this.value != ''){
+			areaId = this.value;
+		}
+		var packageTypeId = $("#packageTypeId").val()!=''?$("#packageTypeId").val():0;
+		var criteria = '{areaId:'+areaId + ",packageTypeId:" + packageTypeId +'}';
+		callService(url,criteria,function(response){
+			$("#render-package").html(response);
+		});
+	});
 
     $("#packageTypeId").change(function(){
         var packageTypeId = 0;
