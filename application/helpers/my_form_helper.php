@@ -1,9 +1,10 @@
 <?php if (! defined('BASEPATH')) exit ('No direct script asscess allowed');
 
     function create_input($labelValue,$attributes,$openform=OPEN_FORM_GROUP){
+		$required = isset($attributes['required'])?" *":"";
 		$result ='';
 		$result .= $openform;
-		$result .= form_label($labelValue[0],$labelValue[1]);
+		$result .= form_label($labelValue[0].$required,$labelValue[1]);
 		$result .= form_input(setAttributeForm($attributes));
 		$result .= CLOSE_FORM_GROUP;
 		return $result;
