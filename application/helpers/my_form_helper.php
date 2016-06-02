@@ -25,9 +25,10 @@
 	}
 	
 	function create_password($labelValue,$attributes,$labelAttr=array(),$openform=OPEN_FORM_GROUP){
+		$required = isset($attributes['required'])?" *":"";
 	    $result ='';
 	    $result .= $openform;
-	    $result .= form_label($labelValue[0],$labelValue[1],$labelAttr);
+	    $result .= form_label($labelValue[0].$required,$labelValue[1],$labelAttr);
 	    $result .= form_password(setAttributeForm($attributes));
 	    $result .= CLOSE_FORM_GROUP;
 	    return $result;
@@ -35,18 +36,20 @@
 	
 
 	function create_textarea($labelValue,$attributes){
+		$required = isset($attributes['required'])?" *":"";
 		$result ='';
 		$result .= OPEN_FORM_GROUP;
-		$result .= form_label($labelValue[0],$labelValue[1]);
+		$result .= form_label($labelValue[0].$required,$labelValue[1]);
 		$result .= form_textarea(setAttributeForm($attributes));
 		$result .= CLOSE_FORM_GROUP;
 		return $result;
 	}
 
 	function create_dropdown($labelValue,$name,$data,$attributes,$selected='',$openform=OPEN_FORM_GROUP){
+		$required = isset($attributes['required'])?" *":"";
 		$result ='';
 		$result .= $openform;
-		$result .= form_label($labelValue[0],$labelValue[1]);
+		$result .= form_label($labelValue[0].$required,$labelValue[1]);
 		$result .= form_dropdown($name,$data,$selected,setAttributeForm($attributes));
 		$result .= CLOSE_FORM_GROUP;
 		return $result;
