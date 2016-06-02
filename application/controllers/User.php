@@ -149,7 +149,7 @@ class User extends Main_Controller
 
                 $messageData = $messageData[0];
 
-                $this->load->library('email');
+                $this->load->library('email',getConfigMail());
                 $token = generateRandomString(8);
 
 

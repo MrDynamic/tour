@@ -24,3 +24,12 @@ function generateRandomString($length = 10) {
     }
     return $randomString;
 }
+
+
+function getConfigMail(){
+    $config = Array(
+        'mailtype'  => 'html',
+        'charset'   => 'iso-8859-1'
+    );
+    return $config;
+}
