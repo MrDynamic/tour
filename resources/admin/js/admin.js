@@ -36,6 +36,7 @@ $().ready(function() {
 	$("#form-report-criteria").validate();
 	$("#form-save-status").validate();
 	$("#form-sumary-area").validate();
+	$("#formPackageType").validate();
 });
 
 function refreshPictureList(packageId){
