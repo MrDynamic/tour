@@ -133,6 +133,40 @@ class User extends Main_Controller
         $this->loadLayoutContent($this->template);
     }
 
+    public function forget(){
+        $token = $this->uri->segment(3);
+        $this->log_debug("token",$token);
+        try{
+            if(empty($token)){
+                throw new Exception("token not found");
+            }
+
+            $userData = $this->authen->getDataSpecifyField("user_id",array('token_cpw'=>$token));
+            if(!isset($userData) || empty($userData)){
+                throw  new Exception("user invalid");
+            }
+
+            $user = $userData[0];
+            $formData['userId'] = $user->user_id;
+            $this->setContentPage('user/form_forget',$formData);
+            $this->loadLayoutContent($this->template);
+
+        }catch (Exception $e) {
+            $this->log_error($e->getMessage());
+            $this->session->set_flashdata(array(EXEC_MSG=>STATUS_ERROR,ERROR_MSG=>$e->getMessage()));
+            redirect("home/showMessage","refresh");
+        }
+
+    }
+    
+    public function submitForget(){
+        $newPassword = $this->input->post("newPassword");
+        $userId = $this->input->post("userId");
+        $this->authen->update(array('password'=>md5($newPassword),'token_cpw'=>''),array('user_id'=>$userId));
+        $this->session->set_flashdata(array(EXEC_MSG=>STATUS_SUCCESS));
+        redirect('home/showMessage','refresh');
+    }
+
     public function submitResetPassword() {
         $this->load->model(array("M_Message"=>"message"));
         try{

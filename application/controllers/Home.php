@@ -13,4 +13,8 @@ class Home extends Main_Controller{
         $this->load->view("_layout",$this->template);
     }
 
+    function showMessage(){
+        $this->setContentPage('message_page',null);
+        $this->loadLayoutContent($this->template);
+    }
 }

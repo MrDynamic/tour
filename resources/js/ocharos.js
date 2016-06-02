@@ -63,6 +63,13 @@ $(document).ready(function() {
 		}
 	});
 
+	$("#form-forget").validate({
+		rules:{
+			newPassword:{minlength:6},
+			passwordConfirm:{minlength:6,equalTo:"#newPassword"}
+		}
+	});
+
 	$("#form-requestTour").validate({
 		rules:{
 			phone:{number:true,minlength:10}
