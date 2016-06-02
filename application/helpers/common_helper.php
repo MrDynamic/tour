@@ -29,7 +29,7 @@ function generateRandomString($length = 10) {
 function getConfigMail(){
     $config = Array(
         'mailtype'  => 'html',
-        'charset'   => 'iso-8859-1'
+        'charset'   => 'utf-8'
     );
     return $config;
 }
