@@ -9,7 +9,7 @@ $().ready(function() {
 	});
 	
 	$("#btnCancel").click(function(){
-		window.location='admin/package';
+		window.location='admin';
 	});
 	
 	$("#packageType").change(function(){
