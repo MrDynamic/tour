@@ -152,5 +152,5 @@ define('STATUS_ERROR','STATUS_ERROR');
 define("MAIL_CHANGE_PASSWORD","CPW");
 define("MAIL_CUST_NAME","#{name}");
 define("MAIL_TOKEN","#{token}");
-define("MAIL_FROM","polawat.job@gmail.com");
+define("MAIL_FROM","tassanee.oc@gmail.com");
 
