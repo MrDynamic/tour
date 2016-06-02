@@ -15,7 +15,7 @@ $(document).ready(function() {
 	});
 
 	$("#btnCancel").click(function(){
-		window.location = $('#cancelPage').val();
+		window.location = "";
 	});
 
 	/* start validate form */

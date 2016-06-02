@@ -35,13 +35,11 @@
         
         if($actionType==ACTION_ADD){
             $action = 'user/createUser';
-            $cancelPage = 'user/register';
             $selectedProvince = '';
             $selectedAmphur='';
             $selectedDistrict='';
         }else{
             $action = 'user/submitEditUser';
-            $cancelPage='user/userPage';
             $selectedProvince = $userData->province_id;
             $selectedAmphur=$userData->amphur_id;
             $selectedDistrict=$userData->district_id;
@@ -71,7 +69,6 @@
         echo create_dropdown(array('อำเภอ','amphurId'), 'amphur_id', $amphurItem, $amphurAttr,$selectedAmphur,OPEN_FORM_GROUP_6);
         echo create_dropdown(array('ตำบล','districtId'), 'district_id', $districtItem, $districtAttr,$selectedDistrict,OPEN_FORM_GROUP_6);
         echo create_input(array('รหัสไปรษณีย์','postalCode'),$postalcodeAttr,OPEN_FORM_GROUP_6);
-        echo form_input(array('type'=>'hidden','id'=>'cancelPage','value'=>$cancelPage));
         echo "<div class='sep-bottom-xs'>&nbsp;</div>";
         echo form_button(array('type'=>'submit','class'=>'btn btn-primary','content'=>'บันทึก'));
         echo form_button(array('type'=>'reset','class'=>'btn btn-info','id'=>'btnCancel','content'=>'ยกเลิก'));

@@ -134,47 +134,57 @@ class User extends Main_Controller
     }
 
     public function submitResetPassword() {
-        $from_email = "polawat.th@gmail.com";
-        $to_email = $this->input->post('email');
+        $this->load->model(array("M_Message"=>"message"));
+        try{
+            $to_email = $this->input->post('email');
+            $userData = $this->authen->getDataSpecifyField("user_id,username,password,firstname,surname",array('email'=>$to_email));
 
-        $userData = $this->authen->getDataSpecifyField("user_id,username,password,firstname,surname",array('email'=>$to_email));
-        if(isset($userData) && !empty($userData)){
-            $user = $userData[0];
-            $this->load->library('email');
-            $newPassword = $this->generateRandomString(8);
-            $message = "เรียนคุณ ".$user->firstname." ". $user->surname."\n";
-            $message .="ทาง Ocharos tour ได้ทำการกำหนดรหัสใหม่ตามรายละเอียดด้านล่างค่ะ"."\n";
-            $message .="Username: ".$user->username ."\n";
-            $message .="Password: ".$newPassword;
-            $this->email->from($from_email, 'Your Name');
-            $this->email->to($to_email);
-            $this->email->subject("Ocharos' s Tour Reset Password");
-            $this->email->message($message);
+            if(isset($userData) && !empty($userData)){
+                $user = $userData[0];
+                $messageData = $this->message->getDataByCriteria(array("message_type"=>MAIL_CHANGE_PASSWORD),null,false);
 
-            if($this->email->send()){
-                $this->authen->update(array('password'=>md5($newPassword)),array('user_id'=>$user->user_id));
+                if(empty($messageData)){
+                    throw new Exception("message not found");
+                }
+
+                $messageData = $messageData[0];
+
+                $this->load->library('email');
+                $token = generateRandomString(8);
+
+
+                $mailMessage = $messageData->message;
+                $mailMessage = str_replace(MAIL_CUST_NAME,$user->firstname." ".$user->surname,$mailMessage);
+                $mailMessage = str_replace(MAIL_TOKEN,$token,$mailMessage);
+
+                $this->email->from(MAIL_FROM);
+                $this->email->to($to_email);
+                $this->email->subject($messageData->subject);
+                $this->email->message($mailMessage);
+
+                if(!$this->email->send()){
+                    throw new Exception("user not found");
+
+                }
+
+                $this->authen->update(array('token_cpw'=>$token),array('user_id'=>$user->user_id));
                 $this->session->set_flashdata(EXEC_MSG,STATUS_SUCCESS);
+
             }else{
-                $this->session->set_flashdata(EXEC_MSG,STATUS_ERROR);
-                $this->session->set_flashdata(array(EXEC_MSG=>STATUS_ERROR,ERROR_MSG=>'ระบบเกิดข้อผิดพลาด'));
+                $this->session->set_flashdata(array(EXEC_MSG=>STATUS_ERROR,ERROR_MSG=>'email ไม่ถูกต้อง'));
+
             }
-        }else{
-            $this->session->set_flashdata(array(EXEC_MSG=>STATUS_ERROR,ERROR_MSG=>'email ไม่ถูกต้อง'));
-            
+
+        } catch (Exception $e) {
+            $this->log_error($e->getMessage());
+            $this->session->set_flashdata(EXEC_MSG,STATUS_ERROR);
+            $this->session->set_flashdata(array(EXEC_MSG=>STATUS_ERROR,ERROR_MSG=>'ระบบเกิดข้อผิดพลาด'));
         }
-       
+
         redirect('user/resetPassword','refresh');
     }
 
-    private function generateRandomString($length = 10) {
-        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        $charactersLength = strlen($characters);
-        $randomString = '';
-        for ($i = 0; $i < $length; $i++) {
-            $randomString .= $characters[rand(0, $charactersLength - 1)];
-        }
-        return $randomString;
-    }
+    
 
     function __destruct()
     {}

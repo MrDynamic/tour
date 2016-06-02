@@ -148,3 +148,9 @@ define('EXEC_MSG','EXEC_MESSAGE');
 define('ERROR_MSG','ERROR_MESSAGE');
 define('STATUS_ERROR','STATUS_ERROR');
 
+// Mail
+define("MAIL_CHANGE_PASSWORD","CPW");
+define("MAIL_CUST_NAME","#{name}");
+define("MAIL_TOKEN","#{token}");
+define("MAIL_FROM","tassanee@ocharostour.info");
+
