@@ -190,13 +190,13 @@ class Order extends Main_Controller
         $data['status'] = STATUS_SUCCESS;
         $paypalURL = $this->paypal->paypal_url;
         $result	= $this->paypal->curlPost($paypalURL,$paypalInfo);
-        
         $this->log_debug('paypal verify result',print_r($result,true));
+        $this->mOrder->update($data,array('user_id'=>$userId,'order_id'=>$orderId));
          
-        if(eregi("VERIFIED",$result)){
-                $this->mOrder->update($data,array('user_id'=>$userId,'order_id'=>$orderId));
-                $this->log_debug('update notify',$this->mOrder->getLastQuery());
-        }
+        // if(eregi("VERIFIED",$result)){
+        //         $this->mOrder->update($data,array('user_id'=>$userId,'order_id'=>$orderId));
+        //         $this->log_debug('update notify',$this->mOrder->getLastQuery());
+        // }
     }
 
     private function getOrderData($orderId){
