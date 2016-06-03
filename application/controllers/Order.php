@@ -128,7 +128,7 @@ class Order extends Main_Controller
     public function notifyRequest($orderId){
         try{
             
-            $this->load->model(array("M_Mail"=>"mail"));
+            $this->load->model(array("M_Message"=>"message"));
             $messageData = $this->message->getDataByCriteria(array("message_type"=>MAIL_REQUEST),null,false);
             $messageData = $messageData[0];
             $messageData['message'] = $mailMessage;
