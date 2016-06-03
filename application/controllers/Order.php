@@ -153,7 +153,7 @@ class Order extends Main_Controller
         $this->paypal->add_field('cancel_return', $cancelURL);
         $this->paypal->add_field('notify_url', $notifyURL);
         $this->paypal->add_field('custom', $userID);
-        $this->paypal->add_field('item_number',  $order['order_id']);
+        $this->paypal->add_field('item_number_1',  $order['order_id']);
         
         if(sizeof($order['name']) > 0){
             $size = sizeof($order['name']);
