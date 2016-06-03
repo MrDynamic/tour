@@ -154,6 +154,7 @@ class Order extends Main_Controller
         $this->paypal->add_field('notify_url', $notifyURL);
         $this->paypal->add_field('custom', $userID);
         $this->paypal->add_field('item_number_1',  $order['order_id']);
+        $this->paypal->add_field('payment_gross',$order['order_id']);
         
         if(sizeof($order['name']) > 0){
             $size = sizeof($order['name']);
@@ -183,13 +184,15 @@ class Order extends Main_Controller
         $this->log_debug('transaction data post',print_r($paypalInfo,true));
         
         $userId  = $paypalInfo['custom'] + 0;
-        $orderId = $paypalInfo["item_number1"] + 0;
+        $orderId = $paypalInfo["item_number1"];
         $data['transaction_id']	= $paypalInfo["txn_id"];
         $data['payment_status']	= $paypalInfo["payment_status"];
         $data['status'] = STATUS_SUCCESS;
         $paypalURL = $this->paypal->paypal_url;
         $result	= $this->paypal->curlPost($paypalURL,$paypalInfo);
         
+        $this->log_debug('paypal verify result',print_r($result,true));
+         
         if(eregi("VERIFIED",$result)){
                 $this->mOrder->update($data,array('user_id'=>$userId,'order_id'=>$orderId));
                 $this->log_debug('update notify',$this->mOrder->getLastQuery());
