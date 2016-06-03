@@ -150,7 +150,10 @@ define('STATUS_ERROR','STATUS_ERROR');
 
 // Mail
 define("MAIL_CHANGE_PASSWORD","CPW");
+define("MAIL_ORDER","ORDER");
+define("MAIL_REQUEST","REQUEST");
 define("MAIL_CUST_NAME","#{name}");
 define("MAIL_TOKEN","#{token}");
+define("MAIL_ORDER","#{order_id}");
 define("MAIL_FROM","tassanee.oc@gmail.com");
 

@@ -101,11 +101,41 @@ class Order extends Main_Controller
             if(!empty($orderId)){
                 $order['order_id'] = $orderId;
                 $order['total'] = $total;
-                
+                $this->sendMailOrder($orderId);
                 $this->my_cart->destroy();
                 $this->submitToPaypal($order);
             }
     
+        }
+    }
+    
+    
+    public function sendMailOrder($orderId){
+        try{
+            
+            $this->load->model(array("M_Message"=>"message","M_Mail"=>"mail"));
+            
+            $messageData = $this->message->getDataByCriteria(array("message_type"=>MAIL_ORDER),null,false);
+            $messageData = $messageData[0];
+            
+            $mailTo="";
+            $mailData = $this->mail->getAllData(false);
+            foreach($mailData as $val){
+                $mailTo .= $val->mail_to . ",";
+            }
+            $mailTo = rtrim($mailTo, ",");
+            
+            $this->load->library('email',getConfigMail());
+            $mailMessage = $messageData->message;
+            $mailMessage = str_replace(MAIL_ORDER,$orderId,$mailMessage);
+            $this->email->from(MAIL_FROM);
+            $this->email->to($mailTo);
+            $this->email->subject($messageData->subject);
+            $this->email->message($mailMessage);
+            $this->email->send();
+                
+        }catch(Exception $e){
+            $this->log_error($e->getMessage);
         }
     }
     
