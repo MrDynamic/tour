@@ -52,7 +52,8 @@ Ottavio.slider = (function(){
                 $nav.removeClass('nav-dot-current');
                 $nav.eq(pos).addClass('nav-dot-current');
             },
-            autoplay : true
+            autoplay : true,
+            interval : 6000
         }),
         init = function() {
             initEvents();
