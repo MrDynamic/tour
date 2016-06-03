@@ -183,7 +183,7 @@ class Order extends Main_Controller
         $this->log_debug('transaction data post',print_r($paypalInfo,true));
         
         $userId  = $paypalInfo['custom'] + 0;
-        $orderId = $paypalInfo["item_number"] + 0;
+        $orderId = $paypalInfo["item_number1"] + 0;
         $data['transaction_id']	= $paypalInfo["txn_id"];
         $data['payment_status']	= $paypalInfo["payment_status"];
         $data['status'] = STATUS_SUCCESS;
