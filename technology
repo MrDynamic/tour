@@ -1,0 +1,11 @@
+css3
+    - border-radius 
+    - background-size: cover;
+    - Linear Gradients
+    - box-sizing
+    - pagination
+
+javascript library
+    - dropzone js
+    - jquery
+    - jquery slider
