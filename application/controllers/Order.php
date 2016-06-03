@@ -101,7 +101,7 @@ class Order extends Main_Controller
             if(!empty($orderId)){
                 $order['order_id'] = $orderId;
                 $order['total'] = $total;
-                $this->sendMailOrder($orderId);
+                $this->notifyOrder($orderId);
                 $this->my_cart->destroy();
                 $this->submitToPaypal($order);
             }
@@ -109,15 +109,41 @@ class Order extends Main_Controller
         }
     }
     
+    public function notifyOrder($orderId){
+         try{
+                $this->load->model(array("M_Message"=>"message"));
+                $messageData = $this->message->getDataByCriteria(array("message_type"=>MAIL_ORDER),null,false);
+                $messageData = $messageData[0];
+                $mailMessage = $messageData->message;
+                $mailMessage = str_replace(MAIL_MAP_ORDER_ID,$orderId,$mailMessage);
+                $messageData['message'] = $mailMessage;
+                $messageData['subject'] = $messageData->subject;
+                $this->sendMail($messageData);
+         }catch(Exception $e){
+              $this->log_error($e->getMessage);
+         }
+       
+    }
     
-    public function sendMailOrder($orderId){
+    public function notifyRequest($orderId){
         try{
             
-            $this->load->model(array("M_Message"=>"message","M_Mail"=>"mail"));
-            
-            $messageData = $this->message->getDataByCriteria(array("message_type"=>MAIL_ORDER),null,false);
+            $this->load->model(array("M_Mail"=>"mail"));
+            $messageData = $this->message->getDataByCriteria(array("message_type"=>MAIL_REQUEST),null,false);
             $messageData = $messageData[0];
+            $messageData['message'] = $mailMessage;
+            $messageData['subject'] = $messageData->subject;
+            $this->sendMail($messageData);
+                
+        }catch(Exception $e){
+            $this->log_error($e->getMessage);
+        }
+    }
+    
+    public function sendMail($mailMessage){
+        try{
             
+            $this->load->model(array("M_Mail"=>"mail"));
             $mailTo="";
             $mailData = $this->mail->getAllData(false);
             foreach($mailData as $val){
@@ -126,12 +152,10 @@ class Order extends Main_Controller
             $mailTo = rtrim($mailTo, ",");
             
             $this->load->library('email',getConfigMail());
-            $mailMessage = $messageData->message;
-            $mailMessage = str_replace(MAIL_MAP_ORDER_ID,$orderId,$mailMessage);
             $this->email->from(MAIL_FROM);
             $this->email->to($mailTo);
-            $this->email->subject($messageData->subject);
-            $this->email->message($mailMessage);
+            $this->email->subject($mailMessage['subject']);
+            $this->email->message($mailMessage['message']);
             $this->email->send();
                 
         }catch(Exception $e){
@@ -264,7 +288,8 @@ class Order extends Main_Controller
                 'status_code'=>REQUEST_STATUS_WAITING
             );
             if ($this->input->post('actionType') == ACTION_ADD) {
-                $this->requestTour->insert($data);
+                $requestId = $this->requestTour->insertAndGetId($data);
+                $this->notifyRequest($requestId);
             }else{
                 $this->requestTour->update($data,array('request_id'=>$this->input->post('requestId')));
             }
