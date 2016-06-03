@@ -154,6 +154,6 @@ define("MAIL_ORDER","ORDER");
 define("MAIL_REQUEST","REQUEST");
 define("MAIL_CUST_NAME","#{name}");
 define("MAIL_TOKEN","#{token}");
-define("MAIL_ORDER","#{order_id}");
+define("MAIL_MAP_ORDER_ID","#{order_id}");
 define("MAIL_FROM","tassanee.oc@gmail.com");
 

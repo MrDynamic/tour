@@ -127,7 +127,7 @@ class Order extends Main_Controller
             
             $this->load->library('email',getConfigMail());
             $mailMessage = $messageData->message;
-            $mailMessage = str_replace(MAIL_ORDER,$orderId,$mailMessage);
+            $mailMessage = str_replace(MAIL_MAP_ORDER_ID,$orderId,$mailMessage);
             $this->email->from(MAIL_FROM);
             $this->email->to($mailTo);
             $this->email->subject($messageData->subject);
