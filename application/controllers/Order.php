@@ -116,9 +116,9 @@ class Order extends Main_Controller
                 $messageData = $messageData[0];
                 $mailMessage = $messageData->message;
                 $mailMessage = str_replace(MAIL_MAP_ORDER_ID,$orderId,$mailMessage);
-                $messageData['message'] = $mailMessage;
-                $messageData['subject'] = $messageData->subject;
-                $this->sendMail($messageData);
+                $mailData['message'] = $mailMessage;
+                $mailData['subject'] = $messageData->subject;
+                $this->sendMail($mailData);
          }catch(Exception $e){
               $this->log_error($e->getMessage);
          }
@@ -131,9 +131,11 @@ class Order extends Main_Controller
             $this->load->model(array("M_Message"=>"message"));
             $messageData = $this->message->getDataByCriteria(array("message_type"=>MAIL_REQUEST),null,false);
             $messageData = $messageData[0];
-            $messageData['message'] = $mailMessage;
-            $messageData['subject'] = $messageData->subject;
-            $this->sendMail($messageData);
+            $mailMessage = $messageData->message;
+            $mailMessage = str_replace(MAIL_MAP_ORDER_ID,$orderId,$mailMessage);
+            $mailData['message'] = $mailMessage;
+            $mailData['subject'] = $messageData->subject;
+            $this->sendMail($mailData);
                 
         }catch(Exception $e){
             $this->log_error($e->getMessage);
