@@ -155,7 +155,7 @@ class Order extends Main_Controller
         $this->paypal->add_field('custom', $userID);
         $this->paypal->add_field('item_number',  $order['order_id']);
         
-        if(sizeof($order['name']) > 1){
+        if(sizeof($order['name']) > 0){
             $size = sizeof($order['name']);
             for($i=0;$i<$size;$i++){
                 $this->paypal->add_field('item_name_'.($i+1), $order['name'][$i]);
