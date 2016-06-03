@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-	$(window).on('beforeunload', function() {
-		callService('authen/logout',"",function(){});
-	});
+	// $(window).on('beforeunload', function() {
+	// 	callService('authen/logout',"",function(){});
+	// });
 
 	$("#provinceId").change(function(){
 		$("#amphurId").html(generatePleaseSelect());
