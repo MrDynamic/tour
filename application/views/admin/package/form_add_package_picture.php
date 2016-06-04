@@ -18,7 +18,7 @@
 			echo create_dropzone(array("Test","Label"), array('action'=>$action,'id'=>'packagePicture'),$hiddenField);
 			echo '<div style="margin:20px 0;">';
 			echo form_button(array('type'=>'submit','class'=>'btn btn-primary','id'=>'btnSubmitId','content'=>'Save'));
-			echo form_button(array('type'=>'reset','class'=>'btn btn-info','content'=>'Cancel'));
+			echo form_button(array('type'=>'reset','class'=>'btn btn-info','id'=>'btnCancel','content'=>'Cancel'));
 			echo '</div>';
 
 		?>

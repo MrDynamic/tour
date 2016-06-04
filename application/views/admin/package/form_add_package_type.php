@@ -24,7 +24,7 @@
 				echo create_input(array('ประเภทแพ็คเกจ','packageTypeName'),$inputName);
 				echo create_input(array('รายละเอียด','packageTypeDesc'),$inputDesc);
 				echo form_button(array('type'=>'submit','class'=>'btn btn-primary','content'=>'Save'));
-				echo form_button(array('type'=>'reset','class'=>'btn btn-info','content'=>'Cancel'));
+				echo form_button(array('type'=>'reset','class'=>'btn btn-info','id'=>'btnCancel','content'=>'Cancel'));
 				echo form_close();
 			?>
 		</div>
