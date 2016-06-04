@@ -37,6 +37,22 @@ $().ready(function() {
 	$("#form-save-status").validate();
 	$("#form-sumary-area").validate();
 	$("#formPackageType").validate();
+	$("#form-mail-config").validate({
+		rules:{
+			mailTo:{
+				remote: {
+					url: "admin/config/checkDupEmail",
+					type: "post"
+				}
+			}
+		},
+		messages: {
+			mailTo: {
+				remote: "Email already in use!"
+			}
+		}
+
+	});
 });
 
 function refreshPictureList(packageId){

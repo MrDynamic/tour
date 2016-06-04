@@ -193,6 +193,17 @@ class Admin_Controller extends Abstract_Controller
 	public function generateMenu(){
 		$this->template['slide_menu'] = array(
 			array(
+				'MENU_NAME'=>'ตั้งค่า',
+				'KEY'=>MENU_MAIN_CONFIG,
+				'SUB_MENU'=> array(
+					array(
+						'NAME'=>'ตั้งค่าเมลแจ้งเตือน',
+						'URL'=>'admin/config/configMail',
+						'KEY'=>MENU_CONFIG_EMAIL
+					)
+				)
+			),
+			array(
 				'MENU_NAME'=>'ผลงาน',
 				'KEY'=>MENU_MAIN_PORTFOLIO,
 				'SUB_MENU'=> array(

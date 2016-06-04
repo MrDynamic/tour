@@ -128,6 +128,9 @@ define("MENU_PORTFOLIO","PORTFOLIO");
 define("MENU_MAIN_CONTACT","MAIN_CONTACT");
 define("MENU_CONTACT","MENU_CONTACT");
 
+define("MENU_MAIN_CONFIG","MAIN_CONFIG");
+define("MENU_CONFIG_EMAIL","MENU_CONF_MAIL");
+
 // Paypal
 define('PAYPAL_TEST_URL','https://www.sandbox.paypal.com/cgi-bin/webscr');
 define('PAYPAL_ID', 'ocharos.th@gmail.com');

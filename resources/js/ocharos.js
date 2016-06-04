@@ -84,6 +84,7 @@ $(document).ready(function() {
 	});
 
 	$("#form-reset-password").validate();
+	
 
 	/* End validate form */
 
