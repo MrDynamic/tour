@@ -156,4 +156,15 @@
 			echo $response;
 		}
 
+		public function delete(){
+			$packageId = $this->uri->segment("4");
+			if(!empty($packageId)){
+				$this->mPackage->deleteByFlag(array('package_id'=>$packageId));
+				$this->session->set_flashdata(array(EXEC_MSG=>STATUS_SUCCESS));
+			}else{
+				 $this->session->set_flashdata(array(EXEC_MSG=>ERROR_MSG));
+			}
+			redirect('admin/package','refresh');
+		}
+
 	}
