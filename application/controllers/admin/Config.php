@@ -45,6 +45,7 @@ class Config extends Admin_Controller
     public function deleteMail(){
         $mailId = $this->uri->segment("4");
         if(!empty($mailId)){
+            $this->mail->delete(array('mail_id'=>$mailId));
             $this->session->set_flashdata(array(EXEC_MSG=>STATUS_SUCCESS));
         }else{
             $this->session->set_flashdata(array(EXEC_MSG=>ERROR_MSG));
@@ -55,7 +56,8 @@ class Config extends Admin_Controller
     public function checkDupEmail(){
         $result = 'false';
         $email = $this->input->post("mailTo");
-        $mailData = $this->authen->getDataSpecifyField("mail_id",array('mail_to'=>$email));
+        $this->log_debug('mail to',$email);
+        $mailData = $this->mail->getDataByCriteria(array('mail_to'=>$email),array(),false);
         if(isset($mailData) && !empty($mailData) && sizeof($mailData) > 0){
             $result = 'false';
         }else{
