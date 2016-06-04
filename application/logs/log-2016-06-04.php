@@ -282,3 +282,10 @@ DEBUG - 2016-06-04 16:10:26 --> [home > index] config  >> Array
 )
 
 DEBUG - 2016-06-04 16:10:27 --> Total execution time: 0.0583
+DEBUG - 2016-06-04 16:13:02 --> UTF-8 Support Enabled
+DEBUG - 2016-06-04 16:13:02 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-06-04 16:13:02 --> Config file loaded: /Users/MacBookPro/Documents/i-work/root/tour/application/config/config_authen.php
+ERROR - 2016-06-04 16:13:02 --> Severity: Warning --> mysqli::real_connect(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known /Users/MacBookPro/Documents/i-work/root/tour/system/database/drivers/mysqli/mysqli_driver.php 202
+ERROR - 2016-06-04 16:13:02 --> Severity: Warning --> mysqli::real_connect(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known /Users/MacBookPro/Documents/i-work/root/tour/system/database/drivers/mysqli/mysqli_driver.php 202
+ERROR - 2016-06-04 16:13:02 --> Unable to connect to the database
+ERROR - 2016-06-04 16:13:02 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at /Users/MacBookPro/Documents/i-work/root/tour/system/core/Exceptions.php:272) /Users/MacBookPro/Documents/i-work/root/tour/system/core/Common.php 573
