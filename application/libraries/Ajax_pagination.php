@@ -194,12 +194,12 @@ class Ajax_pagination{
         }
 
         // Render the "First" link
-        if  ($this->cur_page > $this->num_links)
-        {
-            $output .= $this->first_tag_open
-                . $this->getAJAXlink( '' , $this->first_link)
-                . $this->first_tag_close;
-        }
+//        if  ($this->cur_page > $this->num_links)
+//        {
+//            $output .= $this->first_tag_open
+//                . $this->getAJAXlink( '' , $this->first_link)
+//                . $this->first_tag_close;
+//        }
 
         // Render the "previous" link
         if  ($this->cur_page != 1)
@@ -241,11 +241,11 @@ class Ajax_pagination{
         }
 
         // Render the "Last" link
-        if (($this->cur_page + $this->num_links) < $num_pages)
-        {
-            $i = (($num_pages * $this->per_page) - $this->per_page);
-            $output .= $this->last_tag_open . $this->getAJAXlink( $i, $this->last_link ) . $this->last_tag_close;
-        }
+//        if (($this->cur_page + $this->num_links) < $num_pages)
+//        {
+//            $i = (($num_pages * $this->per_page) - $this->per_page);
+//            $output .= $this->last_tag_open . $this->getAJAXlink( $i, $this->last_link ) . $this->last_tag_close;
+//        }
 
         // Kill double slashes.  Note: Sometimes we can end up with a double slash
         // in the penultimate link so we'll kill all double slashes.
@@ -282,8 +282,8 @@ class Ajax_pagination{
         $config['first_link']  = 'First';
         $config['div']         = 'render-package';
         $config['base_url']    = base_url().'package/renderPackageByAjax';
-        $config['per_page']    = 8;
-
+        $config['per_page']    = 2;
+        
         return $config;
     }
 
