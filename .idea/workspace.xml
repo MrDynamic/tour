@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="adad861c-bf3d-4dca-90d4-76b23daa0464" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tour_db.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/database.php" afterPath="$PROJECT_DIR$/application/config/database.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/Ajax_pagination.php" afterPath="$PROJECT_DIR$/application/libraries/Ajax_pagination.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/My_pagination.php" afterPath="$PROJECT_DIR$/application/libraries/My_pagination.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/technology" afterPath="$PROJECT_DIR$/technology" />
     </list>
     <ignored path="tour.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,6 +54,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Ajax_pagination.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/libraries/Ajax_pagination.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="566">
+              <caret line="284" column="34" selection-start-line="284" selection-start-column="34" selection-end-line="284" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="layout_content.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/layout_content.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -89,7 +94,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/config/database.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
@@ -163,11 +168,11 @@
         <option value="$PROJECT_DIR$/application/views/message_page.php" />
         <option value="$PROJECT_DIR$/resources/styles/main-responsive.css" />
         <option value="$PROJECT_DIR$/technology" />
-        <option value="$PROJECT_DIR$/application/libraries/Ajax_pagination.php" />
         <option value="$PROJECT_DIR$/application/libraries/My_pagination.php" />
         <option value="$PROJECT_DIR$/tour_db.sql" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/config/database.php" />
+        <option value="$PROJECT_DIR$/application/libraries/Ajax_pagination.php" />
       </list>
     </option>
   </component>
@@ -434,7 +439,7 @@
       <option name="presentableId" value="Default" />
       <updated>1462438865732</updated>
       <workItem from="1462438867100" duration="64148000" />
-      <workItem from="1463298369779" duration="80296000" />
+      <workItem from="1463298369779" duration="80527000" />
     </task>
     <task id="LOCAL-00001" summary="last">
       <created>1464532605684</created>
@@ -454,7 +459,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144444000" />
+    <option name="totallyTimeSpent" value="144675000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
@@ -872,14 +877,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/libraries/Ajax_pagination.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="285" column="8" selection-start-line="285" selection-start-column="8" selection-end-line="285" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/libraries/Pagination.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -904,14 +901,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/libraries/My_pagination.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="60" column="41" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -924,6 +913,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/libraries/My_pagination.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="60" column="41" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/libraries/Ajax_pagination.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="284" column="34" selection-start-line="284" selection-start-column="34" selection-end-line="284" selection-end-column="34" />
           <folding />
         </state>
       </provider>

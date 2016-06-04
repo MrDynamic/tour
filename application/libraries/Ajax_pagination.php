@@ -282,7 +282,7 @@ class Ajax_pagination{
         $config['first_link']  = 'First';
         $config['div']         = 'render-package';
         $config['base_url']    = base_url().'package/renderPackageByAjax';
-        $config['per_page']    = 2;
+        $config['per_page']    = 8;
         
         return $config;
     }
