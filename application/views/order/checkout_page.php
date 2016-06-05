@@ -7,15 +7,15 @@
               <div class="row">
                 <div class="col-sm-3 form-group">
                   <label class="sr-only">First Name</label>
-                  <input type="text" value="" placeholder="ชื่อ" name="firstname" id="firstname" class="form-control input-lg" required>
+                  <input type="text" value="" placeholder="ชื่อ *" name="firstname" id="firstname" class="form-control input-lg" required>
                 </div>
                 <div class="col-sm-3 form-group">
                   <label class="sr-only">Last Name</label>
-                  <input type="text" value="" placeholder="นามสกุล" name="lastname" id="lastname" class="form-control input-lg" required>
+                  <input type="text" value="" placeholder="นามสกุล *" name="lastname" id="lastname" class="form-control input-lg" required>
                 </div>
                 <div class="col-sm-6 form-group">
                   <label class="sr-only">Phone</label>
-                  <input type="text" value="" placeholder="เบอร์ติดต่อ" name="phone" id="phone" class="form-control input-lg" maxlength="10" required>
+                  <input type="text" value="" placeholder="เบอร์ติดต่อ *" name="phone" id="phone" class="form-control input-lg" maxlength="10" required>
                 </div>
               </div>
             </div>
