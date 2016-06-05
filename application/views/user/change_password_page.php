@@ -2,7 +2,7 @@
     <?php if($this->session->flashdata(EXEC_MSG) == STATUS_SUCCESS){?>
         <div id="success-alert" class="alert alert-success text-center">
             <p><i class="fa fa-check-circle fa-2x"></i></p>
-            <p>เปลี่ยนรหัสเรียบร้อยแล้วค่ะ</p>
+            <p>เปลี่ยนรหัสเรียบร้อยแล้ว</p>
         </div>
     <?php }else if($this->session->flashdata(EXEC_MSG) == STATUS_ERROR) { ?>
         <div id="error-alert" class="alert alert-danger text-center">

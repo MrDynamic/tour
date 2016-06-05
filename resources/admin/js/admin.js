@@ -20,6 +20,7 @@ $().ready(function() {
 		rules: {
 			image:{
 				filesize:2097152
+				,extension:"JPEG,JPG,GIF,jpeg,png,jpg,gif,png"
 			}
 		},
 		messages: { image: "File must be JPG, GIF or PNG, less than 2MB" }
@@ -96,6 +97,7 @@ $("#formPackage").validate({
 		    },
 		    thumbnail:{
 		    	filesize:2097152
+		    	,extension:"JPEG,JPG,GIF,jpeg,png,jpg,gif,png"
 		    },
 		    price:{
 		    	number:true
